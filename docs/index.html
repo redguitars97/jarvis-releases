@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
@@ -7,20 +7,26 @@
 <meta name="description" content="Jarvis è l'assistente a voce per imprenditori, freelance e professionisti: conosce i tuoi progetti, guida una squadra di agenti, usa prima i modelli AI gratuiti e chiede il tuo ok prima di ogni azione. macOS e Windows.">
 <meta property="og:title" content="Jarvis">
 <meta property="og:description" content="Parli, lui lavora. Una squadra di agenti AI sul tuo computer, con il tuo ok su tutto ciò che esce.">
+<meta property="og:image" content="assets/icon.png">
 <meta name="theme-color" content="#04070c">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans+Condensed:wght@500;600&amp;display=swap">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-apple" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol><symbol id="i-windows" viewBox="0 0 24 24"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></symbol><symbol id="i-telegram" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol></svg>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="#inizio" aria-label="Jarvis, inizio pagina"><span class="brand-mark" aria-hidden="true"></span>JARVIS</a>
+    <a class="brand" href="#inizio" aria-label="Jarvis, inizio pagina"><img src="assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
     <nav aria-label="Sezioni">
+      <a href="#stati">Come lavora</a>
       <a href="#cosa-fa">Cosa fa</a>
-      <a href="#squadra">Squadra</a>
       <a href="#gratis">Modelli AI</a>
+      <a href="#differenza">Perché Jarvis</a>
       <a href="#piani">Piani</a>
+      <a href="#licenza">Licenza</a>
       <a href="#domande">Domande</a>
     </nav>
     <a class="button small" href="#scarica">Scarica</a>
@@ -31,20 +37,53 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="kicker">Per imprenditori, freelance e professionisti · macOS e Windows</p>
+        <p class="kicker">Per imprenditori, freelance e professionisti</p>
         <h1>Parli. Jarvis lavora.</h1>
         <p class="lead">Conosce i tuoi progetti, guida una squadra di agenti che lavora anche quando non ci sei e ti chiede l'ok prima di ogni email, post o spesa. Usa prima i modelli AI gratuiti e passa a quelli a pagamento solo quando serve.</p>
         <div class="actions">
           <a class="button" href="#scarica">Prova la demo</a>
-          <a class="button ghost" href="#cosa-fa">Guarda cosa sa fare</a>
+          <a class="button ghost" href="#stati">Guardalo all'opera</a>
         </div>
+        <ul class="platforms" aria-label="Dove funziona">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg><span><b>macOS</b><small>Apple Silicon e Intel</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg><span><b>Windows</b><small>10 e 11</small></span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span><b>Telegram</b><small>Dal telefono, ovunque</small></span></li>
+        </ul>
         <p class="fine">In italiano. I tuoi dati restano sul tuo computer.</p>
       </div>
-      <div class="presence-stage" aria-hidden="true">
-        <!-- Animated presence: presence.js draws here (same identity as the app). -->
-        <canvas id="presence"></canvas>
-        <div class="presence-fallback"></div>
+      <figure class="presence-stage" aria-label="Jarvis all'opera: ascolta, pensa, parla e ti chiede l'ok">
+        <canvas id="hero-presence" aria-hidden="true"></canvas>
+        <figcaption class="presence-caption" id="hero-caption" aria-live="polite">Pronto</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="works" aria-labelledby="works-title">
+    <div class="wrap">
+      <h2 id="works-title" class="works-title">Lavora con gli strumenti che usi già</h2>
+      <ul class="works-list">
+        <li>Claude</li><li>ChatGPT e Codex</li><li>Ollama</li><li>OmniRoute</li><li>Gmail e ogni casella IMAP*</li><li>Calendari CalDAV e iCloud</li>
+        <li>GitHub</li><li>Meta Ads</li><li>Netlify</li><li>Google Chrome e Edge</li><li>Zoom, Meet e Teams</li><li>Word, Excel, PowerPoint e PDF</li>
+      </ul>
+      <p class="works-note">*Compatibilità email Microsoft (Outlook, Hotmail, Microsoft 365) in arrivo.</p>
+    </div>
+  </section>
+
+  <section id="stati" class="band" aria-labelledby="stati-title">
+    <div class="wrap split states">
+      <div>
+        <h2 id="stati-title" class="section-title">Vedi sempre cosa sta facendo</h2>
+        <p class="section-lead">Al centro c'è il nucleo di Jarvis. Quando lavora escono i pannelli del lavoro in corso; quando serve una tua decisione, la richiesta viene in primo piano in ambra.</p>
+        <div class="state-buttons" role="group" aria-label="Stati di Jarvis">
+          <button type="button" data-state="idle" aria-pressed="true">Pronto</button>
+          <button type="button" data-state="listen" aria-pressed="false">Ti ascolta</button>
+          <button type="button" data-state="think" aria-pressed="false">Lavora</button>
+          <button type="button" data-state="speak" aria-pressed="false">Ti risponde</button>
+          <button type="button" data-state="wait" aria-pressed="false" class="amber">Aspetta il tuo ok</button>
+        </div>
+        <p class="state-text" id="state-text" aria-live="polite">Pronto: dici «Ciao Jarvis» o tieni premuto lo spazio, e ti ascolta.</p>
       </div>
+      <div class="state-stage"><canvas id="state-presence" aria-hidden="true"></canvas></div>
     </div>
   </section>
 
@@ -53,11 +92,11 @@
       <h2 id="scene-title" class="section-title">Un martedì qualsiasi</h2>
       <p class="section-lead">Una richiesta a voce, un piano, il tuo ok. Il resto lo fa la squadra.</p>
       <ol class="script" id="script">
-        <li class="say you"><span class="who">Tu, a voce</span>«Ciao Jarvis, Giada occupati della campagna di primavera di Lavami.»</li>
-        <li class="say jarvis"><span class="who">Giada · Growth manager</span>Ho guardato tre concorrenti e i risultati dell'ultima campagna. Propongo un piano in quattro passi:
+        <li class="say you"><span class="who">Tu, a voce</span>«Ciao Jarvis, Elena occupati della campagna di primavera del salone.»</li>
+        <li class="say jarvis"><span class="who">Elena · Marketing</span>Ho guardato tre concorrenti e i risultati dell'ultima campagna. Propongo un piano in quattro passi:
           <ul class="steps">
-            <li><b>Marco</b> prepara tre grafiche per Instagram</li>
-            <li><b>Elisa</b> scrive i testi e sceglie il pubblico: Bologna, 25–45 anni</li>
+            <li><b>Matteo</b> prepara tre grafiche per Instagram</li>
+            <li>Scrivo i testi e scelgo il pubblico: Bologna, 25–45 anni</li>
             <li>Creo la campagna su Meta, <b>in pausa</b></li>
             <li>Ti mostro il budget prima di farla partire</li>
           </ul>
@@ -72,57 +111,83 @@
     </div>
   </section>
 
-  <section id="cosa-fa" aria-labelledby="cosa-title">
+  <section id="cosa-fa" class="band" aria-labelledby="cosa-title">
     <div class="wrap">
       <h2 id="cosa-title" class="section-title">Cosa sa fare</h2>
       <p class="section-lead">Non è una chat: fa il lavoro con i tuoi strumenti, e ti dice sempre cosa ha fatto.</p>
       <div class="features">
-        <article><h3>Trova clienti</h3><p>Cerca le attività vicino a te senza sito, prepara il sito, lo pubblica e ti dà il link da mostrare al titolare.</p><p class="try">«Trova i ristoranti qui vicino senza sito web»</p></article>
-        <article><h3>Conosce il tuo lavoro</h3><p>Legge le cartelle e i repository che gli indichi e risponde sui tuoi progetti senza che tu debba dire dove guardare.</p><p class="try">«A che punto è Lavami con le prenotazioni?»</p></article>
+        <article><h3>Trova clienti</h3><p>Cerca le attività vicino a te senza sito, prepara il sito, lo pubblica e ti dà il link da mostrare al titolare. Trova anche l'email per scrivergli.</p><p class="try">«Trova i ristoranti qui vicino senza sito web»</p></article>
+        <article><h3>Conosce il tuo lavoro</h3><p>Legge le cartelle e i repository che gli indichi e risponde sui tuoi progetti senza che tu debba dire dove guardare.</p><p class="try">«A che punto è il sito del ristorante Da Mario?»</p></article>
         <article><h3>Documenti pronti</h3><p>Preventivi, offerte, presentazioni e fogli di calcolo in PDF, Word, PowerPoint ed Excel.</p><p class="try">«Fammi il preventivo per il B&amp;B Il Glicine»</p></article>
-        <article><h3>Email e calendario</h3><p>Qualsiasi casella, anche aziendale: legge, riassume, risponde. Il calendario arriva insieme all'email.</p><p class="try">«Rispondi al fornitore e fissa la chiamata giovedì»</p></article>
-        <article><h3>Grafiche e post</h3><p>Loghi, locandine, magliette e post social, pronti da stampare o pubblicare sulle tue pagine.</p><p class="try">«Una locandina per l'evento di sabato»</p></article>
-        <article><h3>Sviluppo software</h3><p>Lavora sui tuoi repository GitHub in copie separate, fa girare i test e apre la pull request.</p><p class="try">«Aggiungi il login con Google e apri la PR»</p></article>
-        <article><h3>Qualsiasi file</h3><p>Foto (anche HEIC), PDF scansionati, Word, Excel, ZIP, audio e video: li legge, li trascrive, li trasforma.</p><p class="try">«Estrai i totali da queste fatture»</p></article>
+        <article><h3>Email e calendario</h3><p>Qualsiasi casella, anche aziendale: legge, riassume, risponde. Fissa gli appuntamenti e manda gli inviti, con il tuo ok.</p><p class="try">«Rispondi al fornitore e fissa la chiamata giovedì»</p></article>
+        <article><h3>Grafiche, foto e post nel brand del cliente</h3><p>Loghi, locandine e post social nei colori, nel tono e con il listino di ogni cliente, ricavati anche dal suo sito. Pronti da stampare o pubblicare. Foto e illustrazioni con il tuo abbonamento ChatGPT; le versioni gratuite passano un controllo di qualità.</p><p class="try">«Una locandina per l'evento di sabato»</p></article>
+        <article><h3>Campagne Meta</h3><p>La squadra prepara la campagna per intero, in pausa. Parte solo quando approvi il budget.</p><p class="try">«Elena, prepara la campagna di primavera»</p></article>
+        <article><h3>Prodotti software completi</h3><p>Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo, sviluppo su un branch dedicato, test e pull request. Anche modifiche e correzioni su software già in produzione.</p><p class="try">«Creami un gestionale per il centro estetico»</p></article>
+        <article><h3>Una voce vera</h3><p>Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: orari, importi, date, sigle e parole inglesi detti come una segretaria, accenti giusti e domande con l'intonazione giusta. I nomi dei tuoi clienti li dice come gli insegni tu.</p><p class="try">«Com'è la giornata?»</p></article>
+        <article><h3>Riunioni con il verbale</h3><p>«Registra la riunione»: trascrive sul computer anche l'audio della call, poi ti dà riassunto, decisioni, cose da fare e la bozza dell'email di follow-up.</p><p class="try">«Jarvis, registra la riunione»</p></article>
+        <article><h3>Detta in qualsiasi app</h3><p>Una scorciatoia, parli, e il testo compare dove stai scrivendo: email, documenti, chat. Tutto sul computer.</p><p class="try">⌘⇧Spazio</p></article>
+        <article><h3>Non si ferma ai limiti</h3><p>Se un modello accetta poche immagini alla volta, Jarvis divide il lavoro. Se tutti i tuoi abbonamenti hanno finito i limiti, ti dice quando tornano e, se vuoi, riprende da solo, anche avvisandoti su Telegram.</p></article>
+        <article><h3>Sempre aggiornato</h3><p>Regole delle piattaforme, hashtag, prezzi e norme li verifica da fonti ufficiali, li salva con la data e li ricontrolla quando scadono.</p></article>
+        <article><h3>Skill di terzi, controllate</h3><p>Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok.</p></article>
+        <article><h3>Usa il browser per te</h3><p>Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu.</p><p class="try">«Prenota un tavolo per due sabato alle 21»</p></article>
         <article><h3>Lavori in più passi</h3><p>Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. Anche ricorrenti.</p><p class="try">«Ogni lunedì alle 9 mandami il riepilogo»</p></article>
       </div>
     </div>
   </section>
 
-  <section id="squadra" class="band" aria-labelledby="squadra-title">
+  <section id="squadra" aria-labelledby="squadra-title">
     <div class="wrap split">
       <div>
         <h2 id="squadra-title" class="section-title">Una squadra, non un chatbot</h2>
-        <p class="section-lead">Ogni progetto ha i suoi agenti, con nome, ruolo, obiettivi e orari. Si parlano in riunione e ti aggiornano nella chat del progetto.</p>
+        <p class="section-lead">Jarvis ha la sua squadra: otto persone, ognuna con un ruolo e più competenze, sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri. Si parlano in riunione e ti aggiornano nella chat del progetto.</p>
         <ul class="ticks">
-          <li>Squadre pronte: sviluppo software, marketing e crescita, amministrazione</li>
+          <li>Lo Studio: prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione</li>
           <li>Lavorano a orari fissi e riprendono da soli quando il computer si libera</li>
           <li>Imparano dai risultati e dai tuoi 👍 e 👎</li>
+          <li>«Presentami la squadra»: la vedi collegata a Jarvis come una rete, intera o progetto per progetto, mentre te la presenta a voce</li>
+          <li>Un revisore indipendente ricontrolla ogni consegna: corregge ciò che è sbagliato, annota le rifiniture, al massimo due giri</li>
+          <li>Progetti pronti per agenzia, prodotto software, app mobile, brand, sito e SEO, negozio; aggiungi uno specialista quando un cliente lo chiede</li>
         </ul>
       </div>
-      <div class="team" aria-label="Esempio di squadra">
-        <div class="member"><span class="avatar">D</span><div><b>Davide</b><small>Project Manager</small></div><span class="state busy">in riunione</span></div>
-        <div class="member"><span class="avatar">S</span><div><b>Sara</b><small>Sviluppatrice</small></div><span class="state busy">sta facendo i test</span></div>
-        <div class="member"><span class="avatar">G</span><div><b>Giada</b><small>Growth manager</small></div><span class="state wait">aspetta il tuo ok</span></div>
-        <div class="member"><span class="avatar">M</span><div><b>Marco</b><small>Grafico</small></div><span class="state">pronto</span></div>
+      <div class="team" role="group" aria-label="Esempio di squadra">
+        <div class="member"><span class="avatar">S</span><div><b>Sofia</b><small>Product manager</small></div><span class="state busy">in riunione</span></div>
+        <div class="member"><span class="avatar">A</span><div><b>Andrea</b><small>Architetto e sviluppatore</small></div><span class="state busy">sta facendo i test</span></div>
+        <div class="member"><span class="avatar">E</span><div><b>Elena</b><small>Marketing, contenuti e SEO</small></div><span class="state wait">aspetta il tuo ok</span></div>
+        <div class="member"><span class="avatar">M</span><div><b>Matteo</b><small>Graphic designer</small></div><span class="state">pronto</span></div>
       </div>
     </div>
   </section>
 
-  <section id="gratis" aria-labelledby="gratis-title">
+  <section id="gratis" class="band" aria-labelledby="gratis-title">
     <div class="wrap">
       <h2 id="gratis-title" class="section-title">Prima i modelli gratuiti</h2>
       <p class="section-lead">Jarvis sceglie da solo il modello giusto per ogni richiesta e sotto ogni risposta ti dice quale ha usato e perché.</p>
       <ol class="ladder">
         <li><b>Sul tuo computer</b><span>Ollama: privato e gratuito. Jarvis lo installa e sceglie il modello adatto alla memoria del computer.</span></li>
-        <li><b>Gratis online</b><span>OmniRoute unisce i livelli gratuiti di decine di fornitori. Jarvis lo configura da solo e collega quelli senza chiave.</span></li>
-        <li><b>I tuoi abbonamenti</b><span>Claude o ChatGPT, se li hai già: per il codice, le immagini e i lavori pesanti.</span></li>
-        <li><b>A consumo, con un tetto</b><span>Chiavi API solo quando servono, con un limite di spesa al giorno e al mese.</span></li>
+        <li><b>Gratis online</b><span>OmniRoute unisce i livelli gratuiti di decine di fornitori. Jarvis lo configura da solo, collega quelli senza chiave e ti mostra quanti token gratuiti hai ogni mese.</span></li>
+        <li><b>I tuoi abbonamenti</b><span>Claude o ChatGPT, se li hai già: per il codice, le foto e i lavori pesanti. Li usa fino in fondo prima di spendere un centesimo in più.</span></li>
+        <li><b>A consumo, con un tetto</b><span>Chiavi API solo quando gli abbonamenti sono al limite o mancano, con un limite di spesa al giorno e al mese.</span></li>
       </ol>
     </div>
   </section>
 
-  <section class="band" aria-labelledby="fiducia-title">
+  <section id="differenza" aria-labelledby="differenza-title">
+    <div class="wrap">
+      <h2 id="differenza-title" class="section-title">Perché Jarvis, se hai già Claude o ChatGPT</h2>
+      <p class="section-lead">Claude Cowork, Claude Code e Codex sono ottimi assistenti di un solo fornitore. Jarvis non li sostituisce: li usa, insieme, e ci mette sopra ciò che serve a chi lavora con i clienti.</p>
+      <div class="features">
+        <article><h3>Tutti i tuoi cervelli, uno sopra l'altro</h3><p>Il tuo abbonamento Claude e quello ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. Quando uno finisce i limiti il lavoro passa al successivo; se li finiscono tutti, Jarvis riprende da solo quando tornano.</p></article>
+        <article><h3>Un controllore di un'altra azienda</h3><p>Il lavoro fatto da un modello lo rivede un modello di un altro fornitore, contro la tua richiesta: corregge ciò che è sbagliato o rischioso, al massimo due giri. Dentro uno strumento di un solo fornitore non si può.</p></article>
+        <article><h3>Lavoro consegnato, non spiegato</h3><p>Il sito arriva con anteprima, link e QR; il preventivo come PDF; l'appuntamento come invito; la riunione come verbale con la bozza di follow-up; la campagna pronta e in pausa. Sempre con il tuo ok su ciò che esce.</p></article>
+        <article><h3>Una squadra che conosce i tuoi clienti</h3><p>Otto persone con nome, ruolo e competenze, sempre le stesse, assegnate ai progetti con obiettivi e orari. Ogni cliente ha il suo brand, le sue chat e le sue memorie, separate dagli altri.</p></article>
+        <article><h3>Spesa chiara, strumenti liberi</h3><p>Jarvis si paga una volta. Usa prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto di spesa; sotto ogni risposta vedi modello e costo.</p></article>
+        <article><h3>I dati restano tuoi, in italiano</h3><p>Progetti, memorie e voce restano sul computer. Un progetto riservato va solo ai modelli locali, senza eccezioni. Voce e ascolto sono in italiano e girano sul computer, senza limiti d'uso.</p></article>
+      </div>
+      <p class="fine">Dove loro sono più forti, onestamente: se scrivi codice tutto il giorno, Claude Code e Codex restano strumenti eccellenti, e Jarvis li usa come motori. Se ti serve lavoro che continua a computer spento, le attività in cloud di Claude lo fanno; Jarvis lavora sul tuo computer: continua anche a schermo bloccato, lo tiene sveglio finché c'è lavoro in corso e, se lo metti in standby, ti avvisa su Telegram e riprende al risveglio.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="fiducia-title">
     <div class="wrap">
       <h2 id="fiducia-title" class="section-title">Tu decidi quanto è autonomo</h2>
       <div class="three">
@@ -134,18 +199,19 @@
     </div>
   </section>
 
-  <section id="telefono" aria-labelledby="tel-title">
+  <section id="telefono" class="band" aria-labelledby="tel-title">
     <div class="wrap split">
       <div>
-        <h2 id="tel-title" class="section-title">Anche fuori casa</h2>
+        <h2 id="tel-title" class="section-title"><svg class="icon title-icon" aria-hidden="true"><use href="#i-telegram"/></svg>Anche fuori casa</h2>
         <p class="section-lead">Su Telegram scrivi, mandi vocali, foto, documenti e la posizione. Un solo gruppo raccoglie tutto: la chat con Jarvis e un argomento per ogni progetto.</p>
         <ul class="ticks">
           <li>Approvazioni con un tocco, o con una risposta</li>
           <li>Riepilogo del mattino e promemoria</li>
           <li>Silenzio di notte: le notifiche arrivano raccolte al risveglio</li>
+          <li>Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano qui</li>
         </ul>
       </div>
-      <div class="phone" aria-label="Esempio di chat su Telegram">
+      <div class="phone" role="group" aria-label="Esempio di chat su Telegram">
         <p class="msg in">🎙️ Ho email importanti stamattina?</p>
         <p class="msg out">Due: il commercialista chiede le fatture di settembre e Rossi conferma la riunione di giovedì alle 15. Rispondo al commercialista con le fatture allegate?</p>
         <p class="msg in">Sì</p>
@@ -154,18 +220,32 @@
     </div>
   </section>
 
-  <section id="piani" class="band" aria-labelledby="piani-title">
+  <section id="chi" class="band" aria-labelledby="chi-title">
+    <div class="wrap">
+      <h2 id="chi-title" class="section-title">Chi c'è dietro Jarvis</h2>
+      <p class="section-lead">Jarvis è progettato e sviluppato da Mattia, Senior Software Engineer e Technical Leader di un team in ambito enterprise. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le stesse regole del software che le aziende usano ogni giorno.</p>
+      <div class="three">
+        <article><h3>Collaudato prima di ogni versione</h3><p>Oltre cento controlli automatici e percorsi completi dell'app provati come li userebbe un cliente, a ogni modifica.</p></article>
+        <article><h3>Sicuro per costruzione</h3><p>Niente parte a tuo nome senza il tuo ok, chiavi nel portachiavi del sistema, backup cifrati, download verificati con l'impronta, aggiornamenti che non toccano i dati.</p></article>
+        <article><h3>In regola</h3><p>Componenti e servizi scelti verificando le loro licenze e condizioni d'uso, con le attribuzioni dovute: nessuna scorciatoia che un giorno smette di funzionare.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="piani" aria-labelledby="piani-title">
     <div class="wrap">
       <h2 id="piani-title" class="section-title">Pro e Max</h2>
       <p class="section-lead">Nell'app le funzioni Max restano visibili, segnate con «Max»: sai sempre cosa ottieni. Nella demo è tutto sbloccato.</p>
       <div class="table-scroll">
         <table class="plans">
           <thead>
-            <tr><th scope="col">Cosa include</th><th scope="col">Pro<small>Per il freelance con un'attività principale</small></th><th scope="col">Max<small>Per chi segue più clienti, sviluppa software e fa campagne</small></th></tr>
+            <tr><th scope="col">Cosa include</th>
+              <th scope="col">Pro<small>Per il freelance con un'attività principale</small><span class="price" data-price="pro"></span></th>
+              <th scope="col">Max<small>Per chi segue più clienti, sviluppa software e fa campagne</small><span class="price" data-price="max"></span></th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Progetti, ognuno con la sua squadra</th><td>1</td><td class="yes">Senza limite</td></tr>
-            <tr><th scope="row">Agenti per progetto</th><td>3</td><td class="yes">Senza limite</td></tr>
+            <tr><th scope="row">Progetti</th><td>1</td><td class="yes">Senza limite</td></tr>
+            <tr><th scope="row">Persone nella squadra di Jarvis</th><td>9 (Studio di 8 + 1 specialista)</td><td class="yes">Senza limite</td></tr>
             <tr><th scope="row">Caselle email, ognuna con il suo calendario</th><td>3</td><td class="yes">Senza limite</td></tr>
             <tr><th scope="row">Riunioni tra agenti</th><td class="no">No</td><td class="yes">Sì</td></tr>
             <tr><th scope="row">Campagne Meta Ads preparate per intero</th><td class="no">No</td><td class="yes">Sì</td></tr>
@@ -180,19 +260,38 @@
     </div>
   </section>
 
+  <section id="licenza" class="band" aria-labelledby="licenza-title">
+    <div class="wrap">
+      <h2 id="licenza-title" class="section-title">Licenza e aggiornamenti</h2>
+      <p class="section-lead">Paghi una volta. Nessun abbonamento a Jarvis: l'AI la scegli tu, anche gratis.</p>
+      <div class="licence">
+        <article><h3>Non scade</h3><p>La licenza vale per sempre. Jarvis continua a funzionare anche quando gli aggiornamenti inclusi sono finiti.</p></article>
+        <article><h3>Aggiornamenti inclusi</h3><p data-updates>Ricevi tutte le versioni nuove fino alla data scritta nella tua licenza.</p></article>
+        <article><h3>Rinnovo facoltativo</h3><p data-renewal>Vuoi le versioni successive? Rinnovi gli aggiornamenti quando vuoi: incolli la nuova licenza e basta.</p></article>
+        <article><h3>Tuo, sui tuoi computer</h3><p data-devices>La licenza è legata ai computer che indichi. Cambi computer? Ti mandiamo la licenza per quello nuovo.</p></article>
+        <article><h3>Sicurezza sempre inclusa</h3><p>Le correzioni di sicurezza sono gratuite per ogni licenza valida, anche dopo il periodo di aggiornamenti.</p></article>
+        <article><h3>Soddisfatto o rimborsato</h3><p>Hai 14 giorni per provarlo: se non fa per te, ti restituiamo quanto hai pagato. <a href="https://github.com/redguitars97/jarvis-releases/blob/main/CONDIZIONI.md">Condizioni complete</a>.</p></article>
+      </div>
+    </div>
+  </section>
+
   <section id="scarica" aria-labelledby="scarica-title">
     <div class="wrap">
       <h2 id="scarica-title" class="section-title">Scarica</h2>
       <div class="downloads">
         <article>
           <h3>Demo</h3>
-          <p>Jarvis con progetti, squadra e conversazioni di esempio. Gratuita, senza account e senza licenza.</p>
-          <p class="soon" role="status">In arrivo per macOS e Windows.</p>
+          <p>Jarvis con progetti, squadra e conversazioni di esempio, risposte simulate. Gratuita, senza account e senza licenza: per collegare i tuoi abbonamenti serve la versione completa.</p>
+          <a class="button ghost" id="demo-link" href="#" hidden>Scarica la demo</a>
+          <p class="soon" id="demo-soon" role="status">In arrivo per macOS e Windows.</p>
         </article>
         <article>
           <h3>Jarvis</h3>
           <p>La versione completa, attivata con la licenza per i tuoi computer. Al primo avvio trova da solo abbonamenti, modelli e progetti.</p>
-          <a class="button ghost" href="https://github.com/redguitars97/jarvis-releases/releases/latest">Ultima versione</a>
+          <div class="actions">
+            <a class="button ghost" href="https://github.com/redguitars97/jarvis-releases/releases/latest"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>macOS</a>
+            <a class="button ghost" href="https://github.com/redguitars97/jarvis-releases/releases/latest"><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg>Windows</a>
+          </div>
         </article>
       </div>
       <ol class="install">
@@ -204,13 +303,23 @@
     </div>
   </section>
 
-  <section id="domande" class="band" aria-labelledby="domande-title">
+  <section id="contatti" class="band" aria-labelledby="contatti-title" hidden>
+    <div class="wrap">
+      <h2 id="contatti-title" class="section-title">Parliamone</h2>
+      <p class="section-lead">Vuoi la licenza, una dimostrazione dal vivo o hai una domanda? Scrivici: ti rispondiamo entro un giorno lavorativo.</p>
+      <ul class="contacts" id="contacts"></ul>
+    </div>
+  </section>
+
+  <section id="domande" aria-labelledby="domande-title">
     <div class="wrap narrow">
       <h2 id="domande-title" class="section-title">Domande frequenti</h2>
       <details><summary>Serve un abbonamento a un'intelligenza artificiale?</summary><p>No. Puoi usare il tuo abbonamento Claude o ChatGPT, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li configura da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, spese) non usano proprio l'AI.</p></details>
       <details><summary>I miei documenti finiscono online?</summary><p>Restano sul tuo computer. A un servizio online va solo il pezzo che serve a rispondere, e solo se usi un modello online. Un progetto «riservato» usa solo i modelli sul tuo computer.</p></details>
       <details><summary>Può fare danni da solo?</summary><p>No: tutto ciò che esce dal computer (email, post, pubblicazioni, pull request, spese) aspetta il tuo ok, in app, a voce o su Telegram.</p></details>
+      <details><summary>La licenza scade?</summary><p>No. Vale per sempre sui computer indicati. Quello che ha una data è il periodo di aggiornamenti inclusi: dopo, Jarvis continua a funzionare con l'ultima versione ricevuta, e puoi rinnovare quando vuoi.</p></details>
       <details><summary>Posso usarlo su più computer?</summary><p>Sì: la licenza può includere più computer. Con Max i progetti si condividono attraverso una cartella cloud che hai già (iCloud Drive, OneDrive, Dropbox).</p></details>
+      <details><summary>E se qualcosa non funziona?</summary><p>Dillo a Jarvis («segnala un problema») o premi il pulsante con l'insetto. Prepara lui la segnalazione, senza dati personali, e la apre tra le <a href="https://github.com/redguitars97/jarvis-releases/issues">issue pubbliche</a>, dove ne segui la risoluzione.</p></details>
       <details><summary>Cosa succede quando aggiorno?</summary><p>Installi la nuova versione sopra la vecchia: i dati restano dove sono e Jarvis ne fa una copia di sicurezza prima di ogni cambiamento.</p></details>
       <details><summary>Cosa succede se cambio computer?</summary><p>Fai un backup cifrato da Impostazioni, installi Jarvis sul computer nuovo, chiedi la licenza con il nuovo codice e ripristini il backup.</p></details>
     </div>
@@ -219,11 +328,13 @@
 
 <footer class="foot">
   <div class="wrap foot-row">
-    <span class="brand small"><span class="brand-mark" aria-hidden="true"></span>JARVIS</span>
+    <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
     <span>© 2026 Jarvis · Tutti i diritti riservati</span>
     <a href="https://github.com/redguitars97/jarvis-releases/releases">Note di rilascio</a>
   </div>
 </footer>
+<script src="config.js"></script>
+<script src="reactor.js"></script>
 <script src="site.js" defer></script>
 <script src="presence.js" defer></script>
 </body>

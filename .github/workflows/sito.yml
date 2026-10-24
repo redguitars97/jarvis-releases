@@ -1,0 +1,56 @@
+# The site (docs/): checks pages and links, then publishes it on GitHub Pages.
+# One-time setting: Settings → Pages → Source: "GitHub Actions".
+name: Sito
+
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**", "README.md", ".github/workflows/sito.yml"]
+  pull_request:
+    paths: ["docs/**", "README.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    name: Controllo pagine e link
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: HTML valido
+        run: npx --yes html-validate@9 docs/index.html
+      - name: Configurazione del sito leggibile
+        run: node -e "const vm=require('vm');const c={window:{}};vm.runInNewContext(require('fs').readFileSync('docs/config.js','utf8'),c);if(!c.window.JARVIS_SITE)process.exit(1)"
+      - name: Link funzionanti
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" README.md docs/index.html
+          fail: true
+
+  pubblica:
+    name: Pubblica su GitHub Pages
+    needs: controllo
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4

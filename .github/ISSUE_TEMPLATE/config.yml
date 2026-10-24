@@ -1,0 +1,3 @@
+# Jarvis files its own reports with the details already filled in (Impostazioni → Diagnostica → Segnala un problema,
+# or "Jarvis, segnala un problema"): the blank issue stays available for those.
+blank_issues_enabled: true

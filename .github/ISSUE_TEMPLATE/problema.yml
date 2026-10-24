@@ -1,0 +1,26 @@
+name: Segnala un problema
+description: Qualcosa in Jarvis non funziona come dovrebbe.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Il modo più rapido è chiederlo a Jarvis: **«Jarvis, segnala un problema»** oppure Impostazioni → Diagnostica → Segnala un problema.
+        Prepara lui la segnalazione con versione, sistema e ultimi errori, senza dati personali.
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa è successo
+      description: Cosa hai fatto, cosa ti aspettavi e cosa è successo invece.
+    validations:
+      required: true
+  - type: input
+    id: versione
+    attributes:
+      label: Versione di Jarvis
+      description: Impostazioni → Aggiornamenti
+  - type: dropdown
+    id: sistema
+    attributes:
+      label: Sistema
+      options: ["macOS", "Windows"]
