@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jarvis · Il socio che lavora anche quando non ci sei</title>
-<meta name="description" content="Jarvis è l'assistente a voce per imprenditori, freelance e professionisti: conosce i tuoi progetti, guida una squadra di agenti, usa prima i modelli AI gratuiti e chiede il tuo ok prima di ogni azione. macOS e Windows.">
+<meta name="description" content="Jarvis è l'assistente a voce per imprenditori, freelance e professionisti: conosce i tuoi progetti, guida una squadra di agenti, usa prima i modelli AI gratuiti e chiede il tuo ok prima di email, post e pubblicazioni. macOS e Windows.">
 <meta property="og:title" content="Jarvis">
 <meta property="og:description" content="Parli, lui lavora. Una squadra di agenti AI sul tuo computer, con il tuo ok su tutto ciò che esce.">
 <meta property="og:image" content="assets/icon.png">
@@ -22,16 +22,31 @@
 <header class="top">
   <div class="wrap top-row">
     <a class="brand" href="#inizio" aria-label="Jarvis, inizio pagina"><img src="assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
-    <nav aria-label="Sezioni">
+    <nav class="nav-main" aria-label="Sezioni">
       <a href="#esempi">Esempi</a>
       <a href="#cosa-fa">Cosa fa</a>
       <a href="#collegamenti">Collegamenti</a>
       <a href="#gratis">Modelli AI</a>
+      <a href="#dietro-le-quinte">Dietro le quinte</a>
       <a href="#piani">Piani</a>
       <a href="#licenza">Licenza</a>
       <a href="#domande">Domande</a>
     </nav>
     <a class="button small" href="#scarica">Scarica</a>
+    <!-- When the sections do not fit in one line (tablet, phone, large text), they fold into this menu. -->
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav class="nav-menu" aria-label="Sezioni (menu)">
+        <a href="#esempi">Esempi</a>
+        <a href="#cosa-fa">Cosa fa</a>
+        <a href="#collegamenti">Collegamenti</a>
+        <a href="#gratis">Modelli AI</a>
+        <a href="#dietro-le-quinte">Dietro le quinte</a>
+        <a href="#piani">Piani</a>
+        <a href="#licenza">Licenza</a>
+        <a href="#domande">Domande</a>
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -51,7 +66,7 @@
           <li><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg><span><b>Windows</b><small>10 e 11</small></span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span><b>Telegram</b><small>Dal telefono, ovunque</small></span></li>
         </ul>
-        <p class="fine">In italiano. I tuoi dati restano sul tuo computer.</p>
+        <p class="fine">In italiano. I tuoi file restano sul tuo computer: online va solo ciò che serve a rispondere.</p>
       </div>
       <figure class="presence-stage" data-depth="0.12" aria-label="Jarvis all'opera: ascolta, pensa, parla e ti chiede l'ok">
         <canvas id="hero-presence" aria-hidden="true"></canvas>
@@ -150,7 +165,7 @@
             <p class="step filler" data-wait="900"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>«Ok, ci penso un attimo.»</p>
             <div class="step card poster-card" data-wait="1400">
               <div class="poster" aria-hidden="true"><i class="moon"></i><i class="note n1"></i><i class="note n2"></i><b>Pizza<br>e musica</b><span>Sabato · ore 21</span></div>
-              <p>Fatta con il tuo abbonamento ChatGPT, senza spese in più. Se usi un modello gratuito, un altro modello la controlla prima di mostrartela.</p>
+              <p>Fatta con il tuo abbonamento ChatGPT, nei limiti del tuo piano. Se usi un modello gratuito, un altro modello la controlla prima di mostrartela.</p>
             </div>
           </div>
 
@@ -299,7 +314,7 @@
           <li>Lavorano a orari fissi e riprendono da soli quando il computer si libera</li>
           <li>Imparano dai risultati e dai tuoi 👍 e 👎</li>
           <li>«Presentami la squadra»: la vedi collegata a Jarvis come una rete, intera o progetto per progetto, mentre te la presenta a voce</li>
-          <li>Un revisore indipendente ricontrolla ogni consegna: corregge ciò che è sbagliato, annota le rifiniture, al massimo due giri</li>
+          <li>Un revisore ricontrolla le consegne: corregge ciò che è sbagliato, annota le rifiniture, al massimo due giri. È un motore diverso dall'autore quando ne hai collegati più d'uno; quando non è possibile, Jarvis te lo dice</li>
           <li>Progetti pronti per agenzia, prodotto software, app mobile, brand, sito e SEO, negozio; aggiungi uno specialista quando un cliente lo chiede</li>
         </ul>
       </div>
@@ -331,7 +346,7 @@
           <li data-step="0"><b>Sul tuo computer</b><span>Ollama: privato e gratuito. Jarvis lo installa e sceglie il modello adatto alla memoria del computer.</span></li>
           <li data-step="1"><b>Gratis online</b><span>OmniRoute unisce i livelli gratuiti di decine di fornitori. Jarvis lo configura da solo, collega quelli senza chiave e ti mostra quanti token gratuiti hai ogni mese.</span></li>
           <li data-step="2"><b>I tuoi abbonamenti</b><span>Claude o ChatGPT, se li hai già: per il codice, le foto e i lavori pesanti. Li usa fino in fondo prima di spendere un centesimo in più.</span></li>
-          <li data-step="3"><b>A consumo, con un tetto</b><span>Chiavi API solo quando gli abbonamenti sono al limite o mancano, con un limite di spesa al giorno e al mese.</span></li>
+          <li data-step="3"><b>A consumo, con un tetto</b><span>Chiavi API solo quando gli abbonamenti sono al limite o mancano, con un limite di spesa al giorno e al mese. Prima di ogni chiamata Jarvis tiene da parte una stima prudente del costo (con i prezzi ufficiali; per i modelli senza prezzo una quota fissa) e la sostituisce con il costo comunicato dal fornitore.</span></li>
         </ol>
       </div>
     </div>
@@ -343,13 +358,60 @@
       <p class="section-lead reveal">Claude Cowork, Claude Code e Codex sono ottimi assistenti di un solo fornitore. Jarvis non li sostituisce: li usa, insieme, e ci mette sopra ciò che serve a chi lavora con i clienti.</p>
       <div class="features reveal">
         <article><h3>Tutti i tuoi cervelli, uno sopra l'altro</h3><p>Il tuo abbonamento Claude e quello ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. Quando uno finisce i limiti il lavoro passa al successivo; se li finiscono tutti, Jarvis riprende da solo quando tornano.</p></article>
-        <article><h3>Un controllore di un'altra azienda</h3><p>Il lavoro fatto da un modello lo rivede un modello di un altro fornitore, contro la tua richiesta: corregge ciò che è sbagliato o rischioso, al massimo due giri. Dentro uno strumento di un solo fornitore non si può.</p></article>
+        <article><h3>Un controllore diverso dall'autore</h3><p>Il lavoro fatto da un modello lo rivede un altro modello, di un'altra azienda se hai collegato fornitori diversi, contro la tua richiesta: corregge ciò che è sbagliato o rischioso, al massimo due giri. Dentro uno strumento di un solo fornitore non si può.</p></article>
         <article><h3>Lavoro consegnato, non spiegato</h3><p>Il sito arriva con anteprima, link e QR; il preventivo come PDF; l'appuntamento come invito; la riunione come verbale con la bozza di follow-up; la campagna pronta e in pausa. Sempre con il tuo ok su ciò che esce.</p></article>
         <article><h3>Una squadra che conosce i tuoi clienti</h3><p>Otto persone con nome, ruolo e competenze, sempre le stesse, assegnate ai progetti con obiettivi e orari. Ogni cliente ha il suo brand, le sue chat e le sue memorie, separate dagli altri.</p></article>
-        <article><h3>Spesa chiara, strumenti liberi</h3><p>Jarvis si paga una volta. Usa prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto di spesa; sotto ogni risposta vedi modello e costo.</p></article>
-        <article><h3>I dati restano tuoi, in italiano</h3><p>Progetti, memorie e voce restano sul computer. Un progetto riservato va solo ai modelli locali, senza eccezioni. Voce e ascolto sono in italiano e girano sul computer, senza limiti d'uso.</p></article>
+        <article><h3>Spesa chiara, strumenti liberi</h3><p>Jarvis si paga una volta. Usa prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto di spesa; sotto ogni risposta vedi motore e costo stimato.</p></article>
+        <article><h3>I dati restano tuoi, in italiano</h3><p>Progetti, memorie e voce restano sul computer. Un progetto riservato va solo ai modelli sul tuo computer. Voce e ascolto sono in italiano e girano sul computer, senza limiti d'uso.</p></article>
       </div>
       <p class="fine">Dove loro sono più forti, onestamente: se scrivi codice tutto il giorno, Claude Code e Codex restano strumenti eccellenti, e Jarvis li usa come motori. Se ti serve lavoro che continua a computer spento, le attività in cloud di Claude lo fanno; Jarvis lavora sul tuo computer: continua anche a schermo bloccato, lo tiene sveglio finché c'è lavoro in corso e, se lo metti in standby, ti avvisa su Telegram e riprende al risveglio.</p>
+    </div>
+  </section>
+
+  <section id="dietro-le-quinte" class="band backstage" aria-labelledby="quinte-title">
+    <div class="wrap">
+      <h2 id="quinte-title" class="section-title reveal">Il dietro le quinte di Jarvis</h2>
+      <p class="section-lead reveal">Per chi vuole sapere come funziona: le scelte tecniche che rendono Jarvis veloce, economico e prevedibile. Senza segreti di fabbrica, ma senza scorciatoie.</p>
+
+      <div class="arch reveal" role="group" aria-label="Come è fatto Jarvis, in tre blocchi">
+        <div class="arch-col">
+          <p class="arch-head">Da dove arrivano le richieste</p>
+          <ul><li>Voce, sul computer</li><li>Chat e Home</li><li>Telegram, dal telefono</li><li>Attività programmate e piani</li></ul>
+        </div>
+        <div class="arch-core">
+          <p class="arch-head">Il nucleo di Jarvis, sul tuo computer</p>
+          <ol>
+            <li><b>Risposte immediate</b><span>ciò che non serve chiedere a un modello</span></li>
+            <li><b>Contesto essenziale</b><span>solo ciò che serve a quella richiesta</span></li>
+            <li><b>Scelta del motore</b><span>gratis prima, poi abbonamenti, poi a consumo</span></li>
+            <li><b>Strumenti e squadra</b><span>file, email, siti, browser, agenti</span></li>
+            <li><b>Regole e approvazioni</b><span>cosa esce, quanto costa, chi lo autorizza</span></li>
+          </ol>
+          <p class="arch-data"><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg>Progetti, memorie, conoscenza e storico: un database sul tuo computer</p>
+        </div>
+        <div class="arch-col">
+          <p class="arch-head">I motori, intercambiabili</p>
+          <ul><li>Modelli sul computer</li><li>Livelli gratuiti online</li><li>I tuoi abbonamenti</li><li>API con un tetto di spesa</li></ul>
+        </div>
+      </div>
+
+      <div class="features reveal">
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Un nucleo, tanti motori</h3><p>Jarvis è un'applicazione desktop con un proprio nucleo: i modelli AI sono motori che si collegano e si scambiano senza cambiare nulla del resto. Gli strumenti sono scritti una volta e li usano tutti i motori, nativamente o tramite il protocollo aperto MCP.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-spark"/></svg><h3>Meno token, stesse risposte</h3><p>Le richieste ricorrenti (ora, meteo, promemoria, stato dei lavori) hanno una risposta senza AI. Al modello arriva un contesto compatto: un riassunto progressivo della conversazione e solo i passaggi pertinenti dei tuoi documenti. Le istruzioni fisse restano stabili, così i fornitori le mettono in cache; le risposte già date e i risultati enormi non si ripagano.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-search"/></svg><h3>Una memoria che sa chi ha detto cosa</h3><p>Distingue ciò che dici tu da ciò che deduce, e una correzione sostituisce il ricordo vecchio invece di sommarsi. I fatti presi dal web hanno fonte, data e scadenza, e vengono ricontrollati. I tuoi file sono indicizzati sul computer e l'indice si aggiorna da solo quando cambiano.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-steps"/></svg><h3>Machine learning dove serve</h3><p>La scelta del motore impara da come vanno le richieste e soprattutto dai tuoi 👍 e 👎: una risposta arrivata non è per forza un buon lavoro, il tuo giudizio pesa di più. Stime statistiche prudenti: cambia abitudine solo quando i dati bastano, mai oltre il budget o le capacità del computer. Nessun addestramento sui tuoi dati: nulla esce «per migliorare il servizio».</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-wave"/></svg><h3>Voce e ascolto in locale</h3><p>Sintesi vocale e riconoscimento del parlato sono reti neurali che girano sul tuo processore, con modelli ottimizzati per occupare poco. La dizione italiana poggia su dizionari di pronuncia aperti: accenti, sigle, numeri e parole inglesi detti come li direbbe una persona.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>Sicuro per costruzione</h3><p>I comandi che i modelli lanciano nei progetti girano, su macOS, in un recinto del sistema. Le azioni di Jarvis verso l'esterno (email, post, pubblicazioni, pull request) sono registrate prima di partire e non vengono ripetute in silenzio; quelle che un motore come Claude Code o Codex fa con i suoi strumenti passano dalle tue approvazioni. Prima di ogni chiamata a consumo Jarvis tiene da parte una stima prudente del costo; le chiavi stanno nel portachiavi del sistema.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-sync"/></svg><h3>Non perde il filo</h3><p>I piani sopravvivono ai riavvii, le richieste scritte senza rete partono quando torna, il lavoro fermo ai limiti di un abbonamento riprende da solo. Ogni aggiornamento dei dati fa prima una copia di sicurezza; i backup con password sono cifrati.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-plug"/></svg><h3>Standard aperti</h3><p>IMAP e CalDAV per posta e calendari, Word, Excel, PowerPoint e PDF veri, Git per il codice, MCP per gli strumenti di terzi. I tuoi dati restano leggibili e portabili, anche senza Jarvis.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-chip"/></svg><h3>Open source e gratuito, prima</h3><p>Jarvis poggia su componenti open source maturi e mette davanti i modelli gratuiti, sul computer e online. Gli abbonamenti che hai già vengono dopo, le API a consumo per ultime e solo con un tetto.</p></article>
+      </div>
+
+      <div class="oss reveal">
+        <p class="arch-head">Costruito anche con</p>
+        <ul><li>Electron</li><li>Node.js</li><li>React</li><li>SQLite</li><li>ONNX Runtime</li><li>Whisper</li><li>Pocket TTS di Kyutai</li><li>Ollama</li><li>OmniRoute</li><li>Playwright</li><li>Model Context Protocol</li></ul>
+        <p class="fine">Le licenze di ogni componente sono nelle <a href="condizioni.html">condizioni d'uso</a>. I componenti sono pubblici; come lavorano insieme è il lavoro di Jarvis.</p>
+      </div>
     </div>
   </section>
 
@@ -357,7 +419,7 @@
     <div class="wrap">
       <h2 id="fiducia-title" class="section-title reveal">Tu decidi quanto è autonomo</h2>
       <div class="three reveal">
-        <article><h3>Chiedi prima</h3><p>Ti chiede conferma per ogni azione che cambia qualcosa.</p></article>
+        <article><h3>Chiedi prima</h3><p>Ti chiede conferma per ogni azione che cambia qualcosa. Le altre autonomie le scegli tu, in Impostazioni.</p></article>
         <article class="picked"><h3>Automatica</h3><p>Fa da solo il lavoro sul computer; ti chiede l'ok per ciò che esce.</p></article>
         <article><h3>Approva per me</h3><p>Massima autonomia. Email, post pubblici, cancellazioni e spese chiedono comunque il tuo ok.</p></article>
       </div>
@@ -391,9 +453,9 @@
       <h2 id="chi-title" class="section-title reveal">Chi c'è dietro Jarvis</h2>
       <p class="section-lead reveal">Jarvis è progettato e sviluppato da Mattia, Senior Software Engineer e Technical Leader con più di 10 anni di esperienza in aziende enterprise. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le stesse regole del software che le aziende usano ogni giorno.</p>
       <div class="three reveal">
-        <article><h3>Collaudato prima di ogni versione</h3><p>Oltre cento controlli automatici e percorsi completi dell'app provati come li userebbe un cliente, a ogni modifica.</p></article>
-        <article><h3>Sicuro per costruzione</h3><p>Niente parte a tuo nome senza il tuo ok, chiavi nel portachiavi del sistema, backup cifrati, download verificati con l'impronta, aggiornamenti che non toccano i dati.</p></article>
-        <article><h3>In regola</h3><p>Componenti e servizi scelti verificando le loro licenze e condizioni d'uso, con le attribuzioni dovute: nessuna scorciatoia che un giorno smette di funzionare.</p></article>
+        <article><h3>Collaudato prima di ogni versione</h3><p>Oltre duecento controlli automatici a ogni modifica e, prima di ogni versione, percorsi completi dell'app provati come li userebbe un cliente.</p></article>
+        <article><h3>Sicuro per costruzione</h3><p>Email e post a tuo nome solo con il tuo ok, chiavi nel portachiavi del sistema, backup cifrati con la tua password, modelli e motori gratuiti installati solo se corrispondono all'impronta di chi li produce, aggiornamenti che non toccano i dati.</p></article>
+        <article><h3>Licenze rispettate</h3><p>Componenti e servizi scelti verificando le loro licenze e condizioni d'uso, con le attribuzioni dovute: nessuna scorciatoia che un giorno smette di funzionare. L'elenco completo dei componenti accompagna la prima versione in vendita.</p></article>
       </div>
     </div>
   </section>
@@ -469,7 +531,7 @@
         <li><b>Attiva.</b> Copi il codice del computer dalla schermata «Attiva Jarvis» e incolli la licenza che ricevi.</li>
         <li><b>Saluta.</b> «Ciao Jarvis». Il resto lo trova lui.</li>
       </ol>
-      <p class="fine">Requisiti: macOS 12 o Windows 10, 8 GB di memoria (16 GB per i modelli sul computer), 2 GB di spazio.</p>
+      <p class="fine">Requisiti: macOS 13 o successivo (Apple Silicon o Intel) oppure Windows 10 o 11 a 64 bit, 8 GB di memoria (16 GB per i modelli sul computer), 2 GB di spazio. Alcune funzioni usano programmi di altri (Git per GitHub, Chrome o Edge per il browser, Node.js per Codex su Windows): <a href="https://github.com/redguitars97/jarvis-releases#cosa-serve-funzione-per-funzione">cosa serve, funzione per funzione</a>.</p>
     </div>
   </section>
 
@@ -485,13 +547,13 @@
     <div class="wrap narrow">
       <h2 id="domande-title" class="section-title reveal">Domande frequenti</h2>
       <details><summary>Serve un abbonamento a un'intelligenza artificiale?</summary><p>No. Puoi usare il tuo abbonamento Claude o ChatGPT, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li configura da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, spese) non usano proprio l'AI.</p></details>
-      <details><summary>I miei documenti finiscono online?</summary><p>Restano sul tuo computer. A un servizio online va solo il pezzo che serve a rispondere, e solo se usi un modello online. Un progetto «riservato» usa solo i modelli sul tuo computer.</p></details>
-      <details><summary>Può fare danni da solo?</summary><p>No: tutto ciò che esce dal computer (email, post, pubblicazioni, pull request, spese) aspetta il tuo ok, in app, a voce o su Telegram.</p></details>
+      <details><summary>I miei documenti finiscono online?</summary><p>Restano sul tuo computer. Esce solo: il pezzo che serve a rispondere, se usi un modello online; ciò che scrivi o ricevi su Telegram; con Max e due computer in gruppo, una copia dei progetti nella tua cartella cloud; le segnalazioni che decidi di inviare. Un progetto «riservato» usa solo i modelli sul tuo computer.</p></details>
+      <details><summary>Può fare danni da solo?</summary><p>Di base no: tutto ciò che esce dal computer (email, post, pubblicazioni, pull request, spese) aspetta il tuo ok, in app, a voce o su Telegram. Solo se scegli tu l'autonomia «Approva per me» pull request e push partono da soli; email e post pubblici chiedono sempre.</p></details>
       <details><summary>La licenza scade?</summary><p>No. Vale per sempre sui computer indicati. Quello che ha una data è il periodo di aggiornamenti inclusi: dopo, Jarvis continua a funzionare con l'ultima versione ricevuta, e puoi rinnovare quando vuoi.</p></details>
       <details><summary>Posso usarlo su più computer?</summary><p>Sì, su due computer con la stessa licenza: ci mandi i codici di tutti e due, anche in momenti diversi. Ogni computer ha i suoi dati; con Max i due computer lavorano sugli stessi progetti, sincronizzati attraverso una cartella cloud che hai già (iCloud Drive, OneDrive, Dropbox).</p></details>
-      <details><summary>Posso provarlo prima di comprarlo?</summary><p>Sì: la demo si scarica subito, con risposte simulate; la prova di 14 giorni del piano Max è Jarvis completo con i tuoi abbonamenti. Una prova per persona e per computer.</p></details>
+      <details><summary>Posso provarlo prima di comprarlo?</summary><p>Sì: la demo (in arrivo) mostra tutto con risposte simulate; la prova di 14 giorni del piano Max è Jarvis completo con i tuoi abbonamenti. Una prova per persona e per computer.</p></details>
       <details><summary>Posso passare da Pro a Max?</summary><p>Sì, quando vuoi: paghi la differenza tra i due prezzi e ricevi la licenza Max, con gli stessi computer e la stessa scadenza degli aggiornamenti.</p></details>
-      <details><summary>E se qualcosa non funziona?</summary><p>Dillo a Jarvis («segnala un problema») o premi il pulsante con l'insetto. Prepara lui la segnalazione, senza dati personali, e la apre tra le <a href="https://github.com/redguitars97/jarvis-releases/issues" target="_blank" rel="noopener">issue pubbliche</a>, dove ne segui la risoluzione.</p></details>
+      <details><summary>E se qualcosa non funziona?</summary><p>Dillo a Jarvis («segnala un problema») o premi il pulsante con l'insetto. Prepara lui la segnalazione nascondendo chiavi, contatti e percorsi, te la fa rileggere e la apre tra le <a href="https://github.com/redguitars97/jarvis-releases/issues" target="_blank" rel="noopener">issue pubbliche</a>, dove ne segui la risoluzione. La pulizia automatica non è una garanzia: se riguarda dati di clienti, scegli «Mandala in privato per email».</p></details>
       <details><summary>Cosa succede quando aggiorno?</summary><p>Installi la nuova versione sopra la vecchia: i dati restano dove sono e Jarvis ne fa una copia di sicurezza prima di ogni cambiamento.</p></details>
       <details><summary>Cosa succede se cambio computer?</summary><p>Fai un backup cifrato da Impostazioni, installi Jarvis sul computer nuovo, chiedi la licenza con il nuovo codice e ripristini il backup.</p></details>
     </div>
@@ -506,8 +568,9 @@
 <footer class="foot">
   <div class="wrap foot-row">
     <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
-    <span>© 2026 Jarvis · Tutti i diritti riservati</span>
+    <span>© 2026 Il vero Jarvis · Tutti i diritti riservati</span>
     <a href="condizioni.html">Condizioni di licenza</a>
+    <a href="privacy.html">Privacy</a>
     <a href="https://github.com/redguitars97/jarvis-releases/releases" target="_blank" rel="noopener">Note di rilascio</a>
   </div>
 </footer>

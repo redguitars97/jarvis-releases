@@ -240,9 +240,83 @@
       li.appendChild(a); list.appendChild(li);
     });
     document.getElementById("contatti").hidden = false;
-    var nav = document.querySelector(".top nav"), contact = document.createElement("a");
-    contact.href = "#contatti"; contact.textContent = "Contatti"; nav.appendChild(contact);
+    document.querySelectorAll(".top nav").forEach(function (nav) {
+      var contact = document.createElement("a");
+      contact.href = "#contatti"; contact.textContent = "Contatti"; nav.appendChild(contact);
+    });
+    fitMenu();
   }
+
+  // The sections fold into the menu as soon as they do not fit in one line, whatever the width, the text size or the
+  // font that loaded; choosing a section closes the menu.
+  function fitMenu() {
+    var top = document.querySelector(".top"), row = document.querySelector(".top-row");
+    if (!top || !row) return;
+    top.classList.remove("compact");
+    if (row.scrollWidth > row.clientWidth + 1) top.classList.add("compact");
+  }
+  fitMenu();
+  window.addEventListener("resize", fitMenu);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMenu);
+  document.querySelectorAll(".nav-menu a").forEach(function (link) {
+    link.addEventListener("click", function () { var menu = link.closest("details"); if (menu) menu.open = false; });
+  });
+
+  // Plans on a phone, built from the table itself (one source): the limits side by side, then one list of what only
+  // Max has and one line of what both have. The table stays for wider screens and for screen readers.
+  (function () {
+    var table = document.querySelector("table.plans");
+    if (!table) return;
+    var limits = [], onlyMax = [], both = [];
+    table.querySelectorAll("tbody tr").forEach(function (row) {
+      var name = row.querySelector("th").textContent.trim(), cells = row.querySelectorAll("td");
+      var pro = cells[0].textContent.trim(), max = cells[1].textContent.trim();
+      if (pro === "No" && max === "Sì") onlyMax.push(name);
+      else if (pro === "Sì" && max === "Sì") both.push(name);
+      else limits.push([name, pro, max]);
+    });
+    var box = document.createElement("div");
+    box.className = "plans-mobile";
+    box.setAttribute("aria-hidden", "true");
+    var heads = table.querySelectorAll("thead th");
+    var cards = "<div class=\"pm-plans\">" + [1, 2].map(function (i) { return "<div class=\"pm-plan" + (i === 2 ? " pm-max" : "") + "\">" + heads[i].innerHTML + "</div>"; }).join("") + "</div>";
+    var rows = limits.map(function (item) { return "<div class=\"pm-row\"><span class=\"pm-name\"></span><span class=\"pm-pro\"></span><span class=\"pm-maxv\"></span></div>"; }).join("");
+    box.innerHTML = cards + "<div class=\"pm-limits\"><div class=\"pm-row pm-head\"><span></span><span>Pro</span><span>Max</span></div>" + rows + "</div>" +
+      (onlyMax.length ? "<div class=\"pm-list\"><p class=\"pm-title\">Solo con Max</p><ul></ul></div>" : "") +
+      (both.length ? "<p class=\"pm-both\"><b>In entrambi:</b> <span></span></p>" : "");
+    box.querySelectorAll(".pm-limits .pm-row:not(.pm-head)").forEach(function (row, i) {
+      row.children[0].textContent = limits[i][0]; row.children[1].textContent = limits[i][1]; row.children[2].textContent = limits[i][2];
+    });
+    var list = box.querySelector(".pm-list ul");
+    onlyMax.forEach(function (name) { var li = document.createElement("li"); li.textContent = name; list.appendChild(li); });
+    if (both.length) box.querySelector(".pm-both span").textContent = both.join("; ");
+    var scroll = table.closest(".table-scroll");
+    scroll.parentNode.insertBefore(box, scroll.nextSibling);
+    scroll.classList.add("has-mobile");
+  })();
+
+  // «Dietro le quinte» on a phone: each card shows its title and opens with a tap (on wider screens all stay open).
+  (function () {
+    var narrow = window.matchMedia("(max-width: 640px)");
+    var cards = document.querySelectorAll(".backstage .features article");
+    cards.forEach(function (card, index) {
+      var title = card.querySelector("h3"), id = "quinte-" + index;
+      var button = document.createElement("button");
+      button.type = "button"; button.className = "card-toggle"; button.textContent = title.textContent;
+      button.setAttribute("aria-controls", id);
+      var body = card.querySelector("p"); body.id = id;
+      title.textContent = ""; title.appendChild(button);
+      button.addEventListener("click", function () { var open = !card.classList.contains("open"); card.classList.toggle("open", open); button.setAttribute("aria-expanded", String(open || !narrow.matches)); });
+    });
+    var apply = function () {
+      document.querySelectorAll(".backstage .card-toggle").forEach(function (button) {
+        button.setAttribute("aria-expanded", String(!narrow.matches || button.closest("article").classList.contains("open")));
+        button.disabled = !narrow.matches;
+      });
+    };
+    apply();
+    if (narrow.addEventListener) narrow.addEventListener("change", apply);
+  })();
 
   var thumb = document.querySelector(".thumb-bar");
   if (thumb) {

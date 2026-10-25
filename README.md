@@ -46,14 +46,14 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 
 | | |
 | --- | --- |
-| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. Capisce in mezzo secondo, sul computer, e se gli serve tempo te lo dice («Ho capito, controllo»). |
+| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. Capisce sul computer in circa un secondo, e se gli serve tempo te lo dice («Ho capito, controllo»). Puoi scegliere l'ascolto «Massimo», il più fedele anche con rumore: costa qualche secondo in più a frase, e l'app te lo dice prima. |
 | **Conosce il tuo lavoro** | Legge i tuoi progetti e documenti, che restano sul tuo computer, e risponde senza che tu dica dove guardare. |
 | **Ha una squadra** | Lo Studio di Jarvis: otto persone con un nome, un ruolo e più competenze (prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione), sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri; se serve, Jarvis chiama al volo chi ha la competenza giusta. «Presentami la squadra» te la mostra collegata a Jarvis, intera o progetto per progetto. |
-| **Fa le cose, non le spiega** | Siti pubblicati con il link, preventivi in PDF e Word, Excel, presentazioni, grafiche, email, pull request su GitHub. Ogni azione verso l'esterno aspetta il tuo ok. |
+| **Fa le cose, non le spiega** | Siti pubblicati con il link, preventivi in PDF e Word, Excel, presentazioni, grafiche, email, pull request su GitHub. Email e post pubblici aspettano sempre il tuo ok; per il resto decidi tu quanta autonomia dargli (di base chiede per tutto ciò che va ad altre persone o non si può annullare). |
 | **Riunioni con il verbale** | «Registra la riunione»: trascrive sul computer anche l'audio della call (Zoom, Meet, Teams), poi riassunto, decisioni, cose da fare e bozza dell'email di follow-up, anche in Word. |
 | **Appuntamenti e inviti** | Fissa l'appuntamento nel calendario e manda gli inviti, sempre con il tuo ok. |
 | **Il brand di ogni cliente** | Colori misurati dal suo sito, tono di voce, listino e logo: grafiche, siti, testi e campagne nascono coerenti. |
-| **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, senza costi in più; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
+| **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, nei limiti del tuo piano; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
 | **Anteprime con link e QR** | Un sito appena fatto si vede subito dal telefono, con link e QR temporanei, senza account; poi lo pubblichi dove vuoi. |
 | **Detta in qualsiasi app** | Una scorciatoia (⌘⇧Spazio), parli, e il testo compare dove stai scrivendo. Tutto sul computer. |
 | **Non si ferma ai limiti** | Divide il lavoro quando un modello accetta poche immagini alla volta; se tutti gli abbonamenti hanno finito i limiti, ti dice quando tornano e riprende da solo, se vuoi, avvisandoti anche su Telegram. |
@@ -61,13 +61,13 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 | **Skill di terzi, controllate** | Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok. |
 | **Usa il browser per te** | Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu. |
 | **Piani in più passi** | Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. |
-| **Un revisore per ogni consegna** | Un secondo modello ricontrolla il lavoro contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri), annota le rifiniture e ti consegna solo lavoro verificato. |
+| **Un revisore sulle consegne** | Un secondo modello ricontrolla siti, documenti, testi e codice contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri) e annota le rifiniture. Se il controllo non si può fare, te lo dice invece di darlo per buono. |
 | **Prodotti software completi** | Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo e splash screen, sviluppo su un branch dedicato, test, revisione e pull request verso il branch di sviluppo. Squadre pronte: prodotto completo, app mobile, brand e grafica, sito e SEO. |
 | **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
-| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo; le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale modello ha usato e perché. |
+| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo; le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
 | **Scegli quanto ragiona** | Per ogni ruolo scegli il modello e quanto deve ragionare (rapido, medio, alto…): Jarvis mostra solo i livelli che quel modello offre davvero. |
-| **Spese sotto controllo** | Tetto di spesa API al giorno e al mese; ogni operazione registrata con modello, tempo e costo. |
-| **I tuoi dati sono tuoi** | Tutto resta sul computer. Backup cifrati, ripristino verificato, aggiornamenti che non toccano i dati. |
+| **Spese sotto controllo** | Tetto di spesa API al giorno e al mese: prima di ogni chiamata una stima prudente del costo (prezzi ufficiali, o una quota fissa per i modelli senza prezzo), poi il costo comunicato dal fornitore; ogni operazione registrata con modello, tempo e costo. |
+| **I tuoi dati sono tuoi** | Progetti, memorie e file stanno sul tuo computer; online va solo ciò che serve al modello o al servizio che usi (vedi le domande in fondo). Backup cifrati con la password che scegli, aggiornamenti che non toccano i dati. |
 
 ## Perché Jarvis, se hai già Claude o ChatGPT
 
@@ -77,11 +77,11 @@ insieme**, e ci mette sopra ciò che serve a chi lavora con i clienti.
 | Leva | Cosa significa per te |
 | --- | --- |
 | **Tutti i tuoi cervelli, uno sopra l'altro** | Gli abbonamenti Claude e ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. Quando uno finisce i limiti il lavoro passa al successivo; se li finiscono tutti, Jarvis riprende da solo quando tornano. |
-| **Un controllore di un'altra azienda** | Il lavoro di un modello lo rivede un modello di un altro fornitore, contro la tua richiesta, al massimo due giri. Dentro uno strumento di un solo fornitore non si può. |
+| **Un controllore diverso dall'autore** | Il lavoro di un modello lo rivede un altro modello, contro la tua richiesta, al massimo due giri; se hai collegato fornitori diversi (per esempio Claude e ChatGPT), di un'altra azienda. Dentro uno strumento di un solo fornitore non si può. |
 | **Lavoro consegnato, non spiegato** | Sito con anteprima, link e QR; preventivo in PDF; appuntamento come invito; riunione come verbale con la bozza di follow-up; campagna pronta e in pausa. Sempre con il tuo ok su ciò che esce. |
 | **Una squadra che conosce i tuoi clienti** | Otto persone con nome, ruolo e competenze, sempre le stesse, assegnate ai progetti. Ogni cliente ha il suo brand, le sue chat e le sue memorie. |
-| **Spesa chiara, strumenti liberi** | Jarvis si paga una volta. Prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto; modello e costo sotto ogni risposta. |
-| **I dati restano tuoi, in italiano** | Progetti, memorie e voce sul computer. Un progetto riservato va solo ai modelli locali. Voce e ascolto in italiano, sul computer, senza limiti d'uso. |
+| **Spesa chiara, strumenti liberi** | Jarvis si paga una volta. Prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto; motore e costo stimato sotto ogni risposta. |
+| **I dati restano tuoi, in italiano** | Progetti, memorie e voce sul computer. Un progetto riservato va solo ai modelli sul tuo computer. Voce e ascolto in italiano, sul computer, senza limiti d'uso. |
 
 Dove loro sono più forti, onestamente: se scrivi codice tutto il giorno, Claude Code e Codex restano eccellenti, e
 Jarvis li usa come motori. Per il lavoro che continua a computer spento ci sono le attività in cloud di Claude; Jarvis
@@ -94,11 +94,13 @@ Jarvis è progettato e sviluppato da **Mattia, Senior Software Engineer e Techni
 esperienza in aziende enterprise**. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le regole del software che
 le aziende usano ogni giorno.
 
-- **Collaudato prima di ogni versione:** oltre cento controlli automatici e percorsi completi dell'app provati come li
-  userebbe un cliente.
-- **Sicuro per costruzione:** niente parte a tuo nome senza il tuo ok, chiavi nel portachiavi del sistema, backup
-  cifrati, download verificati con l'impronta, aggiornamenti che non toccano i dati.
-- **In regola:** componenti e servizi scelti verificando licenze e condizioni d'uso, con le attribuzioni dovute.
+- **Collaudato prima di ogni versione:** oltre duecento controlli automatici a ogni modifica e, prima di ogni versione,
+  percorsi completi dell'app provati come li userebbe un cliente.
+- **Sicuro per costruzione:** email e post a tuo nome solo con il tuo ok, chiavi nel portachiavi del sistema, backup
+  cifrati con la tua password, modelli e motori gratuiti installati solo se corrispondono all'impronta pubblicata da
+  chi li produce, aggiornamenti che non toccano i dati.
+- **Licenze rispettate:** componenti e servizi scelti verificando licenze e condizioni d'uso, con le attribuzioni dovute;
+  l'elenco completo dei componenti accompagna la prima versione in vendita.
 
 ## Pro e Max
 
@@ -134,6 +136,7 @@ Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** �
 - **Da Pro a Max quando vuoi:** paghi solo la differenza (oggi 200 €), ricevi la nuova licenza e la incolli in Impostazioni → Licenza. Progetti, squadra e dati restano dove sono; la scadenza degli aggiornamenti non cambia.
 - **Soddisfatto o rimborsato entro 14 giorni.**
 - Le condizioni complete sono in [CONDIZIONI.md](CONDIZIONI.md).
+- Come Jarvis tratta i dati: [PRIVACY.md](PRIVACY.md).
 - **Come si acquista:** scrivici (contatti qui sotto); paghi con bonifico o con un link di pagamento e ricevi la licenza via email.
 
 ## Contatti
@@ -144,12 +147,12 @@ Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** �
 ## Se qualcosa non va
 
 Dillo a Jarvis: **«Jarvis, segnala un problema»**, oppure premi il pulsante con l'insetto (nella barra laterale e nella Home) o «Segnala» accanto a un errore in Attività. Prepara lui la segnalazione con
-versione, sistema e ultimi errori, senza dati personali, e la apre tra le [issue di questo repository](https://github.com/redguitars97/jarvis-releases/issues),
-dove ne segui la risoluzione.
+versione, sistema e ultimi errori, togliendo chiavi, indirizzi e numeri che riconosce, e la apre tra le [issue di questo repository](https://github.com/redguitars97/jarvis-releases/issues),
+dove ne segui la risoluzione. Le issue sono pubbliche: rileggila prima di inviarla, e per dati riservati scrivi all'email qui sopra.
 
 ## Installazione
 
-**macOS (Apple Silicon e Intel).** Scarica il file `.dmg`, aprilo e trascina Jarvis in Applicazioni.
+**macOS 13 o successivo (Apple Silicon e Intel).** Scarica il file `.dmg` per il tuo Mac (`arm64` per Apple Silicon), aprilo e trascina Jarvis in Applicazioni.
 
 **Windows 10 e 11.** Scarica il file `.exe` e aprilo. Se Windows mostra «PC protetto», scegli *Ulteriori informazioni →
 Esegui comunque*. Lo chiede una sola volta.
@@ -162,14 +165,40 @@ licenza che ricevi.
 
 | | Minimo | Consigliato |
 | --- | --- | --- |
-| Sistema | macOS 12 / Windows 10 | macOS 14+ / Windows 11 |
+| Sistema | macOS 13 / Windows 10 (64 bit) | macOS 14+ / Windows 11 |
 | Memoria | 8 GB | 16 GB (per i modelli gratuiti sul computer) |
 | Spazio | 2 GB | 10 GB con un modello locale |
+
+### Cosa serve, funzione per funzione
+
+Jarvis non chiede di aprire il terminale. Alcune funzioni usano programmi di altri, che Jarvis installa o ti guida a
+installare con il tuo ok:
+
+| Funzione | Cosa serve | Chi lo installa |
+| --- | --- | --- |
+| Voce, chat, documenti, grafiche vettoriali | Niente; l'ascolto preciso si scarica la prima volta (circa 250 MB, «Massimo» circa 1 GB se lo scegli) | Jarvis, da solo |
+| Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
+| Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
+| Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso; su Windows e sui Mac senza Homebrew serve Node.js | Jarvis, oppure tu da nodejs.org |
+| Siti su GitHub, pull request | Git e un account GitHub | Tu (Mac: si installa con gli strumenti di Apple al primo uso) |
+| Browser che compila e prenota | Google Chrome o Microsoft Edge (non Safari) | Tu |
+| Anteprime con link pubblico | cloudflared di Cloudflare | Jarvis, la prima volta |
+| Foto e illustrazioni | Abbonamento ChatGPT, un modello gratuito o una chiave API con tetto di spesa | Tu scegli quale |
+
+Abbonamenti e chiavi API sono contratti tuoi con quei fornitori: limiti e costi li decidono loro. Jarvis ti mostra cosa
+usa e quanto stima di spendere, ma non può garantire le condizioni di un altro fornitore.
+
+**Comandi nei progetti, Mac e Windows.** Quando un cervello lavora su un progetto (test, build, script), su macOS i
+comandi girano in un recinto del sistema: scrivono solo nella cartella del progetto, non leggono chiavi e password, e
+usano la rete solo per scaricare le dipendenze o con il tuo ok. Su ogni sistema Jarvis controlla cosa fa il comando,
+lo tiene nella cartella del progetto senza le chiavi dell'app e chiede le approvazioni che hai scelto. Su progetti di
+terzi di cui non ti fidi, la modalità «Chiedimi tutto» ti fa decidere ogni passo.
 
 ## Aggiornamenti
 
 Jarvis ti avvisa quando esce una versione nuova. La installi sopra la vecchia e i tuoi dati restano dove sono; prima di
-ogni aggiornamento dei dati ne fa una copia di sicurezza. La licenza indica fino a quando gli aggiornamenti sono inclusi.
+ogni aggiornamento dei dati ne fa una copia di sicurezza. La licenza indica fino a quando gli aggiornamenti sono inclusi: le versioni uscite fino a quella data si
+attivano, quelle successive chiedono il rinnovo (la versione che hai continua a funzionare per sempre).
 
 ## Domande frequenti
 
@@ -183,8 +212,9 @@ prepara da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, 
 <details>
 <summary>I miei documenti finiscono online?</summary>
 
-Restano sul tuo computer. A un servizio online va solo il pezzo che serve a rispondere, e solo se usi un modello
-online. Un progetto «riservato» usa solo i modelli sul tuo computer.
+Restano sul tuo computer. Esce solo: il pezzo che serve a rispondere, se usi un modello online; ciò che scrivi o ricevi
+su Telegram; con Max e due computer in gruppo, una copia dei progetti nella tua cartella cloud; le segnalazioni che
+decidi di inviare. Un progetto «riservato» usa solo i modelli sul tuo computer.
 </details>
 
 <details>
@@ -206,7 +236,7 @@ Drive, OneDrive, Dropbox).
 <details>
 <summary>Posso provarlo prima di comprarlo?</summary>
 
-Sì, in due modi. La **demo** si scarica subito e mostra tutto con risposte simulate. La **prova di 14 giorni del piano
+Sì, in due modi. La **demo** (in arrivo) mostra tutto con risposte simulate. La **prova di 14 giorni del piano
 Max** è Jarvis completo, con i tuoi abbonamenti: chiedila con il codice del computer. Una prova per persona e per
 computer. Alla fine incolli la licenza che scegli e continui da dove eri.
 </details>
@@ -227,4 +257,4 @@ ripristini il backup.
 
 ---
 
-<div align="center"><sub>© 2026 Jarvis · Tutti i diritti riservati</sub></div>
+<div align="center"><sub>© 2026 Il vero Jarvis · Tutti i diritti riservati</sub></div>

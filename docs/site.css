@@ -37,11 +37,25 @@ section { padding-block: 88px; }
 .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--void) 82%, transparent); backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--edge); padding-top: env(safe-area-inset-top, 0px); }
 .top-row { display: flex; align-items: center; gap: 24px; min-height: 60px; }
-.top nav { display: flex; gap: 20px; margin-left: auto; }
-.top nav a { color: var(--ink-2); text-decoration: none; font-size: 14px; }
+.nav-main { display: flex; gap: 20px; margin-left: auto; min-width: 0; }
+.top nav a { color: var(--ink-2); text-decoration: none; font-size: 14px; white-space: nowrap; }
 .top nav a:hover { color: var(--ink-1); }
+/* The folded menu: shown when the sections do not fit (set by site.js on the real width; below 1100 px also without JS). */
+.menu { display: none; position: relative; }
+.menu summary { list-style: none; cursor: pointer; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px;
+  border: 1px solid var(--edge-strong); border-radius: 6px; color: var(--ink-1); font-size: 14px; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu[open] summary { border-color: var(--ice); }
+.nav-menu { position: absolute; right: 0; top: calc(100% + 8px); display: grid; min-width: 220px; padding: 8px; gap: 2px;
+  background: var(--plate-1); border: 1px solid var(--edge-strong); border-radius: 10px; box-shadow: 0 18px 48px -18px #000; }
+.nav-menu a { padding: 10px 12px; border-radius: 6px; min-height: 44px; display: flex; align-items: center; }
+.nav-menu a:hover, .nav-menu a:focus-visible { background: var(--plate-2); }
+.top.compact .nav-main { display: none; }
+.top.compact .top-row .button { margin-left: auto; }
+.top.compact .menu { display: block; }
+@media (max-width: 1100px) { .nav-main { display: none; } .top-row .button { margin-left: auto; } .menu { display: block; } }
 .brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--ink-1); text-decoration: none; font: 600 15px var(--font-title); letter-spacing: 0.22em; }
-@media (max-width: 760px) { .top nav { display: none; } .top-row .button { margin-left: auto; } }
+
 
 /* Buttons */
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 22px; border-radius: 6px;
@@ -545,3 +559,90 @@ details summary { min-height: 48px; display: flex; align-items: center; }
 }
 /* The replay button keeps its place while hidden: showing it never moves what follows. */
 .replay[hidden] { display: inline-flex !important; visibility: hidden; }
+
+/* Behind the scenes: the three blocks of the architecture, then the components it stands on. */
+.arch { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: stretch; margin: 8px 0 40px; }
+.arch-col, .arch-core { border: 1px solid var(--edge); border-radius: 10px; padding: 20px; background: var(--void); min-width: 0; }
+.arch-core { border-color: var(--edge-strong); background: linear-gradient(180deg, color-mix(in srgb, var(--ice-deep) 9%, var(--void)), var(--void));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ice-deep) 18%, transparent), 0 18px 60px -30px var(--ice-deep); position: relative; }
+.arch-head { margin: 0 0 12px; font: 600 13px var(--font-title); letter-spacing: .08em; text-transform: uppercase; color: var(--ice); }
+.arch-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; color: var(--ink-2); font-size: 15px; }
+.arch-col li { padding: 8px 12px; border: 1px solid var(--edge); border-radius: 6px; background: var(--plate-1); }
+.arch-core ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: step; }
+.arch-core li { display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 10px; padding: 10px 12px; border-radius: 6px; background: var(--plate-1); counter-increment: step; }
+.arch-core li::before { content: counter(step); grid-row: span 2; align-self: center; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+  font: 600 12px var(--font-title); color: var(--void); background: var(--ice); }
+.arch-core li b { font-weight: 600; }
+.arch-core li span { color: var(--ink-3); font-size: 14px; }
+.arch-data { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--edge-strong); color: var(--ink-2); font-size: 14px; display: flex; gap: 8px; align-items: center; }
+.arch-data .icon { width: 18px; height: 18px; flex: none; }
+.oss { margin-top: 40px; }
+.oss ul { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.oss li { padding: 6px 12px; border: 1px solid var(--edge); border-radius: 999px; color: var(--ink-2); font-size: 14px; background: var(--plate-1); }
+@media (max-width: 860px) {
+  .arch { grid-template-columns: minmax(0, 1fr); }
+  .arch-col ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 420px) { .arch-col ul { grid-template-columns: minmax(0, 1fr); } }
+
+/* Plans on a phone: no sideways scroll. The two plans become two cards on top, every feature a small card with
+   «Pro» and «Max» side by side (the table stays a table for screen readers and the site/app check). */
+@media (max-width: 640px) {
+  .table-scroll { overflow: visible; border: 0; border-radius: 0; }
+  .plans { min-width: 0; display: block; font-size: 15px; }
+  .plans thead, .plans tbody { display: block; }
+  .plans thead tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-bottom: 12px; }
+  .plans thead th:first-child { display: none; }
+  .plans thead th { border: 1px solid var(--edge); border-radius: 10px; padding: 14px; font-size: 20px; }
+  .plans thead th:last-child { border-color: color-mix(in srgb, var(--ice) 45%, var(--edge)); }
+  .plans tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border: 1px solid var(--edge); border-radius: 10px; margin-bottom: 8px; overflow: hidden; background: var(--void); }
+  .plans tbody th { grid-column: 1 / -1; padding: 12px 14px 8px; border-bottom: 0; color: var(--ink-1); font-weight: 500; }
+  .plans tbody td { width: auto; padding: 4px 14px 12px; border-bottom: 0; }
+  .plans tbody td::before { display: block; font: 600 11px var(--font-title); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 2px; }
+  .plans tbody td:nth-of-type(1)::before { content: "Pro"; }
+  .plans tbody td:nth-of-type(2)::before { content: "Max"; color: var(--ice); }
+  .plans tbody tr:last-child > * { border-bottom: 0; }
+}
+
+/* The phone version of the plans, built by site.js from the table (shown instead of the cards above when JS runs). */
+.plans-mobile { display: none; }
+@media (max-width: 640px) {
+  .table-scroll.has-mobile { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .plans-mobile { display: grid; gap: 12px; }
+  .pm-plans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .pm-plan { border: 1px solid var(--edge); border-radius: 10px; padding: 14px; font: 600 20px var(--font-title); }
+  .pm-plan small { display: block; font: 400 13px var(--font); color: var(--ink-3); margin-top: 4px; }
+  .pm-plan .price { display: block; margin-top: 8px; font: 600 17px var(--font-title); color: var(--ice); }
+  .pm-plan .price:empty { display: none; }
+  .pm-max { border-color: color-mix(in srgb, var(--ice) 45%, var(--edge)); }
+  .pm-limits { border: 1px solid var(--edge); border-radius: 10px; overflow: hidden; }
+  .pm-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 10px 14px; border-top: 1px solid var(--edge); font-size: 14px; }
+  .pm-row:first-child { border-top: 0; }
+  .pm-head { font: 600 11px var(--font-title); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); background: var(--plate-1); }
+  .pm-head span:last-child, .pm-maxv { color: var(--ice); }
+  .pm-name { color: var(--ink-2); }
+  .pm-list { border: 1px solid color-mix(in srgb, var(--ice) 35%, var(--edge)); border-radius: 10px; padding: 14px; }
+  .pm-title { margin: 0 0 8px; font: 600 13px var(--font-title); letter-spacing: .06em; text-transform: uppercase; color: var(--ice); }
+  .pm-list ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; color: var(--ink-1); font-size: 15px; }
+  .pm-both { margin: 0; color: var(--ink-2); font-size: 14px; }
+  .pm-both b { color: var(--ink-1); font-weight: 600; }
+}
+
+/* «Dietro le quinte» on a phone: titles that open (site.js); the lists of the architecture as chips. */
+.card-toggle { all: unset; box-sizing: border-box; display: block; width: 100%; cursor: default; }
+.card-toggle:disabled { color: inherit; }
+@media (max-width: 640px) {
+  .backstage .features article { padding: 16px 18px; }
+  .backstage .features .feat-icon { display: none; }
+  .backstage .card-toggle { cursor: pointer; position: relative; padding-right: 28px; }
+  .backstage .card-toggle::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--ice); font: 500 22px/1 var(--font-title); }
+  .backstage article.open .card-toggle::after { content: "–"; }
+  .backstage .card-toggle:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; border-radius: 4px; }
+  .backstage .features h3 { margin: 0; font-size: 18px; }
+  .backstage .features article p { display: none; margin-top: 10px; }
+  .backstage .features article.open p { display: block; }
+  .arch-col ul { display: flex; flex-wrap: wrap; gap: 6px; }
+  .arch-col li { padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+  .arch-core li span { font-size: 13px; }
+}
+.legal .lead-legal { color: var(--ink-2); font-size: 17px; margin: 0 0 8px; }

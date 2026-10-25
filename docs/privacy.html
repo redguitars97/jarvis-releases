@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Mirrors PRIVACY.md at the root of this repository, which stays the source: change both together. -->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy · Jarvis</title>
+<meta name="description" content="Come Jarvis tratta i dati: cosa resta sul computer, cosa esce e verso chi, backup, conservazione e diritti.">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans+Condensed:wght@500;600&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="legal-page">
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html" aria-label="Jarvis, torna al sito"><img src="assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
+    <nav aria-label="Sezioni">
+      <a href="index.html#esempi">Esempi</a>
+      <a href="index.html#piani">Piani</a>
+      <a href="index.html#licenza">Licenza</a>
+      <a href="index.html#domande">Domande</a>
+    </nav>
+    <a class="button small" href="index.html#scarica">Scarica</a>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap narrow">
+    <p class="back"><a href="index.html#licenza">Torna al sito</a></p>
+    <h1>Informativa sulla privacy</h1>
+    <p class="lead-legal">Quali dati usa Jarvis, dove vanno e per quanto tempo restano.</p>
+
+    <section id="chi" aria-labelledby="chi-title">
+      <h2 id="chi-title">1. Chi tratta i dati</h2>
+      <ul>
+        <li><b>Jarvis, sul tuo computer.</b> L'app non ha un server suo: progetti, conversazioni, memorie, file, impostazioni e chiavi restano nella cartella dati di Jarvis sul tuo computer (le chiavi nel portachiavi del sistema). Chi ti vende la licenza non le vede e non le riceve.</li>
+        <li><b>Chi ti vende la licenza</b> di Il vero Jarvis («Jarvis»), titolare del trattamento dei dati di acquisto, contattabile a <a href="mailto:jarvis@macomediaagency.com">jarvis@macomediaagency.com</a>. Riceve solo ciò che serve a emettere e gestire la licenza: nome o ragione sociale, email, telefono se lo dai, codici dei computer, piano e date.</li>
+        <li><b>I fornitori che colleghi tu</b> (intelligenza artificiale, email, calendario, Telegram, GitHub, Meta, cartella cloud): ricevono i dati che servono alla richiesta, secondo le <b>loro</b> condizioni e informative.</li>
+      </ul>
+    </section>
+
+    <section id="uscite" aria-labelledby="uscite-title">
+      <h2 id="uscite-title">2. Quando i dati escono dal computer</h2>
+      <div class="table-scroll">
+        <table class="plans legal-table">
+          <thead><tr><th scope="col">Cosa</th><th scope="col">Dove va</th><th scope="col">Quando</th></tr></thead>
+          <tbody>
+            <tr><td>Il pezzo di conversazione o documento che serve a rispondere</td><td>Il modello online che usi (Claude, ChatGPT, OmniRoute e i fornitori gratuiti che unisce, chiavi API)</td><td>Solo se usi un modello online; i progetti «riservati» usano solo modelli sul computer</td></tr>
+            <tr><td>Messaggi, vocali, foto e posizione</td><td>Telegram</td><td>Solo se colleghi Telegram e scrivi a Jarvis da lì</td></tr>
+            <tr><td>Email, inviti, eventi</td><td>Il tuo servizio di posta e calendario</td><td>Solo quando approvi l'invio</td></tr>
+            <tr><td>Codice, siti, campagne</td><td>GitHub, Netlify, Meta</td><td>Solo quando approvi la pubblicazione</td></tr>
+            <tr><td>Anteprima di un sito</td><td>Cloudflare (link temporaneo di 24 ore)</td><td>Solo quando chiedi un'anteprima</td></tr>
+            <tr><td>Progetti e conversazioni del gruppo di computer (Max)</td><td>La tua cartella cloud (iCloud Drive, OneDrive, Dropbox), nel tuo account</td><td>Solo se attivi il gruppo; le chiavi non viaggiano mai</td></tr>
+            <tr><td>Posizione approssimativa</td><td>MET Norway (meteo), Geoapify (luoghi, con la tua chiave)</td><td>Quando chiedi meteo o luoghi vicini</td></tr>
+            <tr><td>Segnalazione di un problema</td><td>Issue pubblica su GitHub, oppure email privata</td><td>Solo quando la invii tu, dopo averla riletta</td></tr>
+            <tr><td>Controllo degli aggiornamenti</td><td>GitHub (scarica il file della versione)</td><td>All'avvio e quando cerchi aggiornamenti</td></tr>
+            <tr><td>Download di modelli e programmi gratuiti (ascolto preciso, modelli sul computer, anteprime)</td><td>Hugging Face, Ollama, GitHub: arrivano solo i file, non parte nessun tuo dato</td><td>Una volta, quando li usi o li installi la prima volta</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>La voce, l'ascolto, la trascrizione delle riunioni e la lettura del testo nelle immagini girano sul computer. La licenza si verifica sul computer, senza collegarsi a nessun server.</p>
+    </section>
+
+    <section id="sito" aria-labelledby="sito-title">
+      <h2 id="sito-title">3. Il sito</h2>
+      <p>Il sito di Jarvis è ospitato da GitHub Pages, che registra i dati tecnici delle visite (per esempio l'indirizzo IP) secondo le regole di GitHub. I caratteri tipografici delle pagine sono caricati da Google Fonts: il browser contatta i server di Google, che ricevono l'indirizzo IP del visitatore. Il sito non usa cookie né strumenti di statistica.</p>
+    </section>
+
+    <section id="backup" aria-labelledby="backup-title">
+      <h2 id="backup-title">4. Backup</h2>
+      <p>Il backup è un file che crei tu. È cifrato quando scegli una password; senza password chiavi e file con credenziali restano fuori. Contiene anche i file dei progetti che hai nella cartella di lavoro di Jarvis.</p>
+    </section>
+
+    <section id="conservazione" aria-labelledby="conservazione-title">
+      <h2 id="conservazione-title">5. Perché e per quanto tempo</h2>
+      <ul>
+        <li>I dati di acquisto servono a emettere la licenza, darti assistenza e aggiornamenti, e a rispettare gli obblighi di legge (per esempio fiscali). Si conservano per il tempo necessario a questi scopi e per quanto la legge richiede.</li>
+        <li>Sul computer decidi tu: puoi cancellare memorie e conversazioni dall'app; disinstallando Jarvis la cartella dati resta finché non la elimini.</li>
+        <li>Dai fornitori collegati: secondo le loro regole, anche fuori dall'Unione europea con le garanzie che offrono.</li>
+      </ul>
+    </section>
+
+    <section id="diritti" aria-labelledby="diritti-title">
+      <h2 id="diritti-title">6. I tuoi diritti</h2>
+      <p>Puoi chiedere di accedere ai tuoi dati di acquisto, correggerli, cancellarli o limitarne l'uso, nei limiti di legge, scrivendo a <a href="mailto:jarvis@macomediaagency.com">jarvis@macomediaagency.com</a>. Puoi anche presentare reclamo al Garante per la protezione dei dati personali.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
+    <span>© 2026 Il vero Jarvis · Tutti i diritti riservati</span>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/redguitars97/jarvis-releases/releases" target="_blank" rel="noopener">Note di rilascio</a>
+  </div>
+</footer>
+</body>
+</html>

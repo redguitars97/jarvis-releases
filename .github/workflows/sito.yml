@@ -1,13 +1,15 @@
-# The site (docs/): checks pages and links, then publishes it on GitHub Pages.
+# The site (docs/): checks pages and links (also of the conditions and the privacy notice, which the pages mirror), then
+# publishes it on GitHub Pages. Before the first release, /releases/latest has no installer yet: the download buttons
+# land on the releases page, and links to release files are not checked.
 # One-time setting: Settings → Pages → Source: "GitHub Actions".
 name: Sito
 
 on:
   push:
     branches: [main]
-    paths: ["docs/**", "README.md", ".github/workflows/sito.yml"]
+    paths: ["docs/**", "README.md", "CONDIZIONI.md", "PRIVACY.md", ".github/workflows/sito.yml"]
   pull_request:
-    paths: ["docs/**", "README.md"]
+    paths: ["docs/**", "README.md", "CONDIZIONI.md", "PRIVACY.md"]
   workflow_dispatch:
 
 permissions:
@@ -35,7 +37,7 @@ jobs:
       - name: Link funzionanti
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" README.md "docs/**/*.html"
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
           fail: true
 
   pubblica:

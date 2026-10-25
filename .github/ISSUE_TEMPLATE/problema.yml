@@ -6,7 +6,8 @@ body:
     attributes:
       value: |
         Il modo più rapido è chiederlo a Jarvis: **«Jarvis, segnala un problema»** oppure Impostazioni → Diagnostica → Segnala un problema.
-        Prepara lui la segnalazione con versione, sistema e ultimi errori, senza dati personali.
+        Prepara lui la segnalazione con versione, sistema e ultimi errori, nascondendo chiavi, contatti e percorsi; tu la rileggi prima di inviarla.
+        Non scrivere qui dati di clienti: per quelli c'è l'email privata jarvis@macomediaagency.com.
   - type: textarea
     id: cosa
     attributes:
