@@ -37,7 +37,9 @@ jobs:
       - name: Link funzionanti
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
+          # Instagram and TikTok refuse automatic checkers (429/403) even when the profile exists: left out, like the
+          # site itself and the download links.
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" --exclude "instagram\.com" --exclude "tiktok\.com" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
           fail: true
 
   pubblica:
