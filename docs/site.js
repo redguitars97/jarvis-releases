@@ -231,6 +231,21 @@
   if (c.email) items.push(["Email", c.email, "mailto:" + c.email]);
   if (c.whatsapp) items.push(["WhatsApp", c.whatsapp, "https://wa.me/" + c.whatsapp.replace(/[^\d]/g, "")]);
   if (c.telegram) items.push(["Telegram", "@" + c.telegram, "https://t.me/" + c.telegram]);
+  if (c.instagram) items.push(["Instagram", "@" + c.instagram, "https://www.instagram.com/" + c.instagram + "/"]);
+  if (c.tiktok) items.push(["TikTok", "@" + c.tiktok, "https://www.tiktok.com/@" + c.tiktok]);
+  // The same profiles as icons at the foot of every page.
+  var social = document.getElementById("social");
+  if (social) {
+    [["telegram", "Telegram", c.telegram && "https://t.me/" + c.telegram], ["instagram", "Instagram", c.instagram && "https://www.instagram.com/" + c.instagram + "/"],
+      ["tiktok", "TikTok", c.tiktok && "https://www.tiktok.com/@" + c.tiktok]].forEach(function (entry) {
+      if (!entry[2]) return;
+      var a = document.createElement("a");
+      a.href = entry[2]; a.target = "_blank"; a.rel = "noopener"; a.setAttribute("aria-label", entry[1] + " @" + (c[entry[0]]));
+      a.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-' + entry[0] + '"/></svg>';
+      social.appendChild(a);
+    });
+    social.hidden = !social.children.length;
+  }
   if (list && items.length) {
     items.forEach(function (item) {
       var li = document.createElement("li"), a = document.createElement("a");

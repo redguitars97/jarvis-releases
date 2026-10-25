@@ -30,7 +30,7 @@ Per imprenditori, freelance e professionisti · Italiano
 > Le prime versioni pubbliche arriveranno qui. Questo repository contiene solo gli installer e le note di rilascio.
 
 **Lavora con gli strumenti che usi già:** Claude · ChatGPT e Codex · Ollama · OmniRoute · Gmail e ogni casella IMAP\* ·
-calendari CalDAV e iCloud · GitHub · Meta Ads · Netlify · Google Chrome ed Edge · Zoom, Meet e Teams · Word, Excel,
+calendari CalDAV e iCloud · GitHub · Instagram, Facebook e Meta Ads · TikTok (dal browser) · Netlify · Google Chrome ed Edge · Zoom, Meet e Teams · Word, Excel,
 PowerPoint e PDF.
 
 <sub>\* Compatibilità email Microsoft (Outlook, Hotmail, Microsoft 365) in arrivo.</sub>
@@ -54,6 +54,8 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 | **Appuntamenti e inviti** | Fissa l'appuntamento nel calendario e manda gli inviti, sempre con il tuo ok. |
 | **Il brand di ogni cliente** | Colori misurati dal suo sito, tono di voce, listino e logo: grafiche, siti, testi e campagne nascono coerenti. |
 | **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, nei limiti del tuo piano; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
+| **Clienti nuovi, dal nome** | «Rifacciamo il sito di …, a …»: legge da solo scheda Google, sito attuale, social e concorrenti, ricava brand e logo, propone la strategia (anche per i settori con pubblicità limitata) e consegna il sito con l'anteprima. Se l'attività non ha la scheda Google, la prepara pronta da attivare. |
+| **Social pubblicati all'ora giusta** | Piano editoriale, caroselli per Instagram e TikTok, testi e hashtag per piattaforma; pubblica su Instagram e Facebook con il tuo ok, anche a un'ora fissata, sul profilo giusto anche con più punti vendita; per TikTok prepara il post o ti manda il pacchetto pronto; ogni settimana i risultati profilo per profilo. |
 | **Anteprime con link e QR** | Un sito appena fatto si vede subito dal telefono, con link e QR temporanei, senza account; poi lo pubblichi dove vuoi. |
 | **Detta in qualsiasi app** | Una scorciatoia (⌘⇧Spazio), parli, e il testo compare dove stai scrivendo. Tutto sul computer. |
 | **Non si ferma ai limiti** | Divide il lavoro quando un modello accetta poche immagini alla volta; se tutti gli abbonamenti hanno finito i limiti, ti dice quando tornano e riprende da solo, se vuoi, avvisandoti anche su Telegram. |
@@ -143,6 +145,8 @@ Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** �
 
 - Email: **jarvis@macomediaagency.com**
 - Telegram: **[@ilverojarvis](https://t.me/ilverojarvis)**
+- Instagram: **[@ilverojarvis](https://www.instagram.com/ilverojarvis/)**
+- TikTok: **[@ilverojarvis](https://www.tiktok.com/@ilverojarvis)**
 
 ## Se qualcosa non va
 

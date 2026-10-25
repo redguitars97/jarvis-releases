@@ -5,6 +5,9 @@ window.JARVIS_SITE = {
   email: "jarvis@macomediaagency.com",
   whatsapp: "",
   telegram: "ilverojarvis", // a username without @, e.g. "jarvis_vendite"
+  // Social profiles (usernames without @): shown with their icons in the contacts and at the foot of the page.
+  instagram: "ilverojarvis",
+  tiktok: "ilverojarvis",
   // One-off price of the licence, per plan, in euro. Example: { pro: 149, max: 349 }.
   prices: { pro: 149, max: 349 },
   // How many months of updates the licence includes. Example: 12.
