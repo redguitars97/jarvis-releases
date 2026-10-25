@@ -1,7 +1,7 @@
 // The animated presence of Jarvis, the same engine as the app (reactor.js, generated from the app's source).
 // The hero plays a short story on a loop (ready, listens, works, answers, asks for your ok); the "Come lavora"
 // section lets the visitor pick a state. The voice is simulated. Paused when off screen or the tab is hidden; one
-// still frame with reduced motion.
+// still frame with reduced motion. The second canvas starts only when its section comes near.
 (function () {
   if (!window.JarvisReactor) return;
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -67,14 +67,19 @@
       speak: "Ti risponde: il contorno del nucleo segue la sua voce e ogni parola manda un'onda.",
       wait: "Aspetta il tuo ok: tutto diventa ambra e la richiesta, con i pulsanti, viene davanti al nucleo.",
     };
-    var stage = mount(stateCanvas);
+    // Started only when the section comes near: nothing to draw before then.
+    var stage = null, wanted = "idle";
+    var start = function () { if (stage) return; stage = mount(stateCanvas); stage.set(wanted); };
+    if (window.IntersectionObserver) {
+      var near = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { start(); near.disconnect(); } }, { rootMargin: "300px" });
+      near.observe(stateCanvas);
+    } else start();
     var buttons = Array.prototype.slice.call(document.querySelectorAll(".state-buttons button"));
     buttons.forEach(function (b) {
       b.addEventListener("click", function () {
         buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-        stage.set(b.dataset.state); text.textContent = TEXT[b.dataset.state];
+        wanted = b.dataset.state; if (stage) stage.set(wanted); text.textContent = TEXT[b.dataset.state];
       });
     });
-    stage.set("idle");
   }
 })();

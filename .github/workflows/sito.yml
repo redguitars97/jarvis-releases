@@ -29,13 +29,13 @@ jobs:
         with:
           node-version: 22
       - name: HTML valido
-        run: npx --yes html-validate@9 docs/index.html
+        run: npx --yes html-validate@9 "docs/**/*.html"
       - name: Configurazione del sito leggibile
         run: node -e "const vm=require('vm');const c={window:{}};vm.runInNewContext(require('fs').readFileSync('docs/config.js','utf8'),c);if(!c.window.JARVIS_SITE)process.exit(1)"
       - name: Link funzionanti
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" README.md docs/index.html
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" README.md "docs/**/*.html"
           fail: true
 
   pubblica:

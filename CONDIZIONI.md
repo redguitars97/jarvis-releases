@@ -10,6 +10,10 @@
   ricevuta. Il rinnovo degli aggiornamenti per altri 12 mesi è facoltativo.
 - **Correzioni di sicurezza gratuite** per ogni licenza valida, anche dopo i 12 mesi.
 - **Soddisfatto o rimborsato entro 14 giorni** dall'acquisto.
+- **Passaggio da Pro a Max** in qualsiasi momento, pagando la differenza tra i due prezzi in vigore: la licenza Max
+  sostituisce quella Pro, con gli stessi computer e la stessa scadenza degli aggiornamenti.
+- **Licenza di prova**, su richiesta: piano Max per 14 giorni su un computer, una per persona e per computer. Alla
+  scadenza Jarvis chiede la licenza completa; i dati restano sul computer.
 
 Il software resta di proprietà dell'autore. Non è permesso rivenderlo, distribuirlo, decompilarlo o aggirare il
 controllo della licenza, salvo quanto consentito dalla legge.
@@ -65,4 +69,4 @@ danni indiretti derivanti dall'uso del software o dei servizi di terzi collegati
 ## 6. Contatti
 
 - Email: jarvis@macomediaagency.com
-- Telegram: [@iltuojarvis](https://t.me/iltuojarvis)
+- Telegram: [@ilverojarvis](https://t.me/ilverojarvis)

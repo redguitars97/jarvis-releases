@@ -4,7 +4,7 @@ window.JARVIS_SITE = {
   // How customers reach you (at least one). Example: email: "ciao@tuodominio.it", whatsapp: "+39 333 1234567".
   email: "jarvis@macomediaagency.com",
   whatsapp: "",
-  telegram: "iltuojarvis", // a username without @, e.g. "jarvis_vendite"
+  telegram: "ilverojarvis", // a username without @, e.g. "jarvis_vendite"
   // One-off price of the licence, per plan, in euro. Example: { pro: 149, max: 349 }.
   prices: { pro: 149, max: 349 },
   // How many months of updates the licence includes. Example: 12.

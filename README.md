@@ -46,7 +46,7 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 
 | | |
 | --- | --- |
-| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. |
+| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. Capisce in mezzo secondo, sul computer, e se gli serve tempo te lo dice («Ho capito, controllo»). |
 | **Conosce il tuo lavoro** | Legge i tuoi progetti e documenti, che restano sul tuo computer, e risponde senza che tu dica dove guardare. |
 | **Ha una squadra** | Lo Studio di Jarvis: otto persone con un nome, un ruolo e più competenze (prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione), sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri; se serve, Jarvis chiama al volo chi ha la competenza giusta. «Presentami la squadra» te la mostra collegata a Jarvis, intera o progetto per progetto. |
 | **Fa le cose, non le spiega** | Siti pubblicati con il link, preventivi in PDF e Word, Excel, presentazioni, grafiche, email, pull request su GitHub. Ogni azione verso l'esterno aspetta il tuo ok. |
@@ -90,8 +90,8 @@ metti in standby, ti avvisa su Telegram e riprende al risveglio.
 
 ## Chi c'è dietro Jarvis
 
-Jarvis è progettato e sviluppato da **Mattia, Senior Software Engineer e Technical Leader di un team in ambito
-enterprise**. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le regole del software che
+Jarvis è progettato e sviluppato da **Mattia, Senior Software Engineer e Technical Leader con più di 10 anni di
+esperienza in aziende enterprise**. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le regole del software che
 le aziende usano ogni giorno.
 
 - **Collaudato prima di ogni versione:** oltre cento controlli automatici e percorsi completi dell'app provati come li
@@ -121,6 +121,8 @@ le aziende usano ogni giorno.
 
 Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** è tutto sbloccato, con risposte simulate: per collegare i tuoi abbonamenti serve la versione completa.
 
+**Vuoi provarlo sul serio?** Chiedi la **prova gratuita di 14 giorni del piano Max**, con i tuoi abbonamenti e i tuoi progetti: ci mandi il codice del computer e ricevi una licenza di prova. Alla fine scegli Pro o Max, incolli la licenza e ritrovi tutto com'era.
+
 ## Licenza e aggiornamenti
 
 - **Paghi una volta.** Nessun abbonamento a Jarvis: l'intelligenza artificiale la scegli tu, anche gratis.
@@ -128,7 +130,8 @@ Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** �
 - **Aggiornamenti inclusi per 12 mesi.** Dopo, resti sull'ultima versione ricevuta.
 - **Correzioni di sicurezza sempre gratuite** per ogni licenza valida, anche dopo i 12 mesi.
 - **Rinnovo facoltativo** (Pro 59 €, Max 139 € per altri 12 mesi): incolli la nuova licenza in Impostazioni → Licenza.
-- **Due computer per licenza**, per esempio il Mac di casa e il PC dell'ufficio. Cambi computer? Ti mandiamo la licenza per quello nuovo.
+- **Due computer per licenza**, per esempio il Mac di casa e il PC dell'ufficio: una sola licenza, valida su tutti e due. Cambi computer? Ti mandiamo la licenza per quello nuovo.
+- **Da Pro a Max quando vuoi:** paghi solo la differenza (oggi 200 €), ricevi la nuova licenza e la incolli in Impostazioni → Licenza. Progetti, squadra e dati restano dove sono; la scadenza degli aggiornamenti non cambia.
 - **Soddisfatto o rimborsato entro 14 giorni.**
 - Le condizioni complete sono in [CONDIZIONI.md](CONDIZIONI.md).
 - **Come si acquista:** scrivici (contatti qui sotto); paghi con bonifico o con un link di pagamento e ricevi la licenza via email.
@@ -136,7 +139,7 @@ Nell'app le funzioni Max restano visibili, segnate con «Max». Nella **demo** �
 ## Contatti
 
 - Email: **jarvis@macomediaagency.com**
-- Telegram: **[@iltuojarvis](https://t.me/iltuojarvis)**
+- Telegram: **[@ilverojarvis](https://t.me/ilverojarvis)**
 
 ## Se qualcosa non va
 
@@ -194,8 +197,25 @@ a funzionare con l'ultima versione ricevuta, e puoi rinnovare quando vuoi.
 <details>
 <summary>Posso usarlo su più computer?</summary>
 
-Sì: la licenza può includere più computer, e i progetti si sincronizzano attraverso una cartella cloud che hai già
-(iCloud Drive, OneDrive, Dropbox).
+Sì, su due computer con la stessa licenza: quando la chiedi ci mandi i codici di tutti e due (li trovi nella schermata
+«Attiva Jarvis»), oppure aggiungi il secondo più avanti. Ogni computer ha i suoi dati. Con **Max** i due computer
+formano un gruppo e lavorano sugli stessi progetti, sincronizzati attraverso una cartella cloud che hai già (iCloud
+Drive, OneDrive, Dropbox).
+</details>
+
+<details>
+<summary>Posso provarlo prima di comprarlo?</summary>
+
+Sì, in due modi. La **demo** si scarica subito e mostra tutto con risposte simulate. La **prova di 14 giorni del piano
+Max** è Jarvis completo, con i tuoi abbonamenti: chiedila con il codice del computer. Una prova per persona e per
+computer. Alla fine incolli la licenza che scegli e continui da dove eri.
+</details>
+
+<details>
+<summary>Posso passare da Pro a Max?</summary>
+
+Sì, quando vuoi: paghi la differenza tra i due prezzi e ricevi una licenza Max che sostituisce quella Pro, con gli stessi
+computer e la stessa scadenza degli aggiornamenti. Da lì in poi il rinnovo facoltativo è quello del piano Max.
 </details>
 
 <details>
