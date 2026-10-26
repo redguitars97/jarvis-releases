@@ -101,6 +101,10 @@ h1 { font: 600 clamp(44px, 7vw, 84px)/1 var(--font-title); letter-spacing: -0.01
 .features h3, .three h3, .downloads h3 { font: 600 20px var(--font-title); margin: 0 0 8px; }
 .features p { margin: 0; color: var(--ink-2); font-size: 15px; }
 .features .try { margin-top: 14px; color: var(--ice); font-size: 14px; }
+.features article.wide { grid-column: 1 / -1; }
+/* (a last card alone on its row spans it: no empty cell showing the grid's lines) */
+@media (min-width: 961px) { .features > article:last-child:nth-child(3n+1) { grid-column: 1 / -1; } }
+@media (max-width: 960px) and (min-width: 561px) { .features > article:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 @media (max-width: 960px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .features { grid-template-columns: minmax(0, 1fr); } }
 
@@ -108,6 +112,32 @@ h1 { font: 600 clamp(44px, 7vw, 84px)/1 var(--font-title); letter-spacing: -0.01
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
 @media (max-width: 860px) { .split { grid-template-columns: minmax(0, 1fr); } }
 .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; color: var(--ink-2); }
+/* A short sequence of requests (Più progetti insieme): it is a sequence, so it is numbered */
+.sequence { list-style: none; counter-reset: step; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.sequence li { counter-increment: step; position: relative; padding-top: 34px; border-top: 1px solid var(--edge-strong); }
+.sequence li::before { content: counter(step); position: absolute; top: 8px; left: 0; color: var(--ice); font: 600 15px var(--font-title); }
+.sequence b { display: block; color: var(--ink-1); font: 600 17px/1.35 var(--font-title); margin-bottom: 6px; }
+.sequence span { color: var(--ink-2); font-size: 15px; }
+.sequence + .fine { margin-top: 20px; }
+@media (max-width: 860px) { .sequence { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .sequence { grid-template-columns: minmax(0, 1fr); } }
+
+/* Il vero Jarvis: five verbs, the one loud moment of the page. They light up once, one after the other, as the reader
+   reaches them; without JavaScript or with reduced motion they are simply lit. */
+.truth { padding-block: 104px 88px; }
+.truth-list { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid var(--edge); }
+.truth-list li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr) 13em; gap: 8px 32px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--edge); }
+.truth-list .verb { font: 600 clamp(40px, 6vw, 76px)/1 var(--font-title); letter-spacing: -0.015em; color: var(--ink-1); }
+.truth-list p { margin: 0; color: var(--ink-2); font-size: 17px; max-width: 34em; }
+.truth-list a { color: var(--ice); font-size: 14px; justify-self: end; text-align: right; }
+.js .truth-list.live .verb { color: var(--ink-3); transition: color .6s ease, text-shadow .6s ease; }
+.js .truth-list.live p { opacity: .55; transition: opacity .6s ease; }
+.js .truth-list.live li.lit .verb { color: var(--ink-1); text-shadow: 0 0 32px color-mix(in srgb, var(--ice) 45%, transparent); }
+.js .truth-list.live li.lit p { opacity: 1; }
+.truth-more { margin: 28px 0 0; color: var(--ink-2); }
+@media (max-width: 960px) { .truth-list li { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); } .truth-list a { grid-column: 2; justify-self: start; text-align: left; } }
+@media (max-width: 600px) { .truth-list li { grid-template-columns: minmax(0, 1fr); padding: 22px 0; } .truth-list a { grid-column: 1; } }
+@media (prefers-reduced-motion: reduce) { .js .truth-list.live .verb, .js .truth-list.live p { transition: none; } }
 .ticks li { padding-left: 26px; position: relative; }
 .ticks li::before { content: ""; position: absolute; left: 0; top: .6em; width: 12px; height: 2px; background: var(--ice); box-shadow: 0 0 8px var(--ice-deep); }
 

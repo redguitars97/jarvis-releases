@@ -40,6 +40,16 @@
     observe(el, { rootMargin: "100px" }, function (visible) { el.classList.toggle("paused", !visible); });
   });
 
+  // ---- Il vero Jarvis: each verb lights up once as it reaches the middle of the screen, and stays lit ----
+  all(".truth-list").forEach(function (list) {
+    if (reduced || !("IntersectionObserver" in window)) return;
+    list.classList.add("live");
+    all("li", list).forEach(function (item) {
+      // (one passed by a quick scroll or a jump to a later section is lit too: nothing stays dim above the reader)
+      observe(item, { rootMargin: "-40% 0px -45% 0px" }, function (visible, _el, entry) { if (visible || (entry && entry.boundingClientRect.top < 0)) item.classList.add("lit"); });
+    });
+  });
+
   // ---- Counters count up once ----
   all("[data-count]").forEach(function (el) {
     var target = Number(el.dataset.count), done = false;

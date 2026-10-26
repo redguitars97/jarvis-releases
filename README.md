@@ -42,6 +42,55 @@ al nucleo escono i pannelli del lavoro in corso. **Ti risponde**: il nucleo segu
 tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guardalo dal vivo sul
 [sito](https://redguitars97.github.io/jarvis-releases/#stati).
 
+## Il vero Jarvis
+
+Un assistente con questo nome deve fare cinque cose. Jarvis le fa tutte, sul tuo computer e con gli abbonamenti che hai
+già.
+
+| | |
+| --- | --- |
+| **Ti sente.** | Dici «Ciao Jarvis» e chiedi. Ascolto e voce girano sul tuo computer, in italiano, anche mentre sta lavorando ad altro. |
+| **Sa.** | Conosce i tuoi progetti, i clienti e le loro regole, e riprende il filo di ogni lavoro anche il giorno dopo. |
+| **Fa.** | Consegna il lavoro finito: il sito con il link, il preventivo in PDF, l'invito nel calendario, la campagna pronta in pausa. |
+| **Chiede.** | Prima di ogni email, post, pubblicazione o spesa aspetta il tuo ok: dall'app, a voce o da Telegram. |
+| **Impara.** | Dà da solo un voto a ogni risultato controllato e sceglie il modello del tuo abbonamento che rende meglio per quel lavoro. |
+
+## Più progetti insieme, un solo Jarvis
+
+Mentre la squadra lavora a un cliente, puoi già chiedere qualcosa per un altro, o una cosa veloce per te. Ogni
+richiesta resta legata al suo progetto, dall'inizio alla risposta.
+
+| | |
+| --- | --- |
+| **AUTO impara dai risultati** | Jarvis valuta da solo il lavoro verificato: discreto, buono, ottimo, super. Usa i risultati di attività comparabili per scegliere modello e ragionamento; tu dai soltanto un pollice. I criteri sono nella sezione AUTO qui sotto. |
+| **Più progetti, ciascuno con il suo filo** | Puoi far avanzare il sito di un cliente e le modifiche di un altro. Jarvis tiene distinti lavori, file e conversazioni e riprende il contesto pertinente: ogni lavoro segue la sua richiesta, due modifiche alla stessa cartella non si accavallano, e lo sviluppatore ritrova la sessione di quel progetto, anche il giorno dopo. |
+| **Lo guidi a voce, anche mentre lavora** | Chiedi un aggiornamento, passa a un altro progetto o fai una domanda veloce. Jarvis sa a quale lavoro ti riferisci e ti chiede di precisarlo quando serve: «ferma il piano di Ciuffo» mette in pausa solo quello, un «sì» con due richieste in attesa ti chiede quale. Se un lavoro finisce mentre parli d'altro, te lo dice a parte, con il nome del progetto. |
+
+Per esempio, con due progetti di prova: «Crea il sito della Pizzeria Da Mario» → «Cambia il colore del sito di Ciuffo»
+(un secondo lavoro, mentre il primo continua) → «Che ore sono?» (risponde subito, senza cambiare progetto) → «Riprendi
+il primo sito» (torna alla pizzeria, con la sessione dello sviluppatore di quel sito). <sub>Esempio illustrativo: la
+sequenza è simulata; il comportamento è quello che i controlli automatici dell'app verificano a ogni versione.</sub>
+
+## AUTO: il modello giusto per ogni fase, dentro il tuo abbonamento
+
+Con Claude Pro o ChatGPT Plus i limiti finiscono presto se ogni richiesta va al modello più potente con il
+ragionamento al massimo. **AUTO** decide tre cose per ogni fase di un lavoro: chi deve intervenire, quale modello del
+tuo abbonamento usare e quanto deve ragionare.
+
+| | |
+| --- | --- |
+| **Leggero quando basta, potente quando serve** | Una riscrittura o una mail al modello leggero del tuo piano (per esempio Haiku o Luna), un sito con il brief a quello intermedio, un'architettura o una diagnosi difficile al più capace. Ragionamento basso di norma, medio quando la fase lo richiede, alto solo con un motivo (per esempio «pensaci bene»). Se un modello leggero non basta, il lavoro passa una volta a uno più capace dello stesso abbonamento. |
+| **I modelli che hai davvero** | L'elenco dei modelli del tuo account letto da Claude Code, da Codex o dalla tua chiave, senza spendere nulla per provarli. Un modello che il tuo piano non include resta fuori; uno nuovo del tuo abbonamento entra senza aggiornare l'app, e non viene trattato come il più potente finché il fornitore non lo descrive così. |
+| **Se scegli tu, la tua scelta resta** | Un modello scelto in chat («usa Claude») o dato a una persona della squadra vale per tutto quel lavoro: sviluppo, deleghe, revisioni e riassunti, con il ragionamento che hai scelto, senza abbassarlo per risparmiare; quello scelto per un ruolo vale per il lavoro di quel ruolo. Mai un altro modello senza il tuo sì: al limite il lavoro aspetta il ripristino. Una revisione indipendente con un altro modello te la chiede prima. |
+| **Un budget per lavoro, una quota per account** | Deleghe, correzioni, revisioni e riassunti di un lavoro condividono lo stesso budget, con spazio tenuto per il controllo finale: i lavori accessori aspettano, quelli in corso finiscono. Due collegamenti allo stesso account sono una sola quota. La quota residua la vedi solo se il fornitore la comunica; altrimenti Jarvis lo dice e non inventa percentuali. |
+| **Meno lavoro inutile, stessa qualità** | Solo gli strumenti e il contesto che servono, il resto recuperato quando occorre; lo sviluppatore riprende la sua sessione, nelle correzioni e, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio se la scelta del modello è la stessa (gli altri modelli ricevono la cronologia e il riassunto); prima i controlli automatici, poi il revisore, niente revisioni ripetute sullo stesso materiale; la squadra interviene quando serve una competenza, le riunioni si chiudono a decisione presa. |
+| **Vedi dove va il consumo** | Sotto ogni risposta modello, ragionamento e motivo della scelta; in Attività ogni lavoro diviso per fase (sviluppo, revisioni, riassunti, errori). La scelta di prima (il modello di ogni collegamento e il ragionamento per ruolo) resta disponibile nelle Connessioni, in modalità avanzata; le protezioni su budget, quote e scelte tue restano. |
+| **AUTO impara dai risultati** | Ogni risultato controllato riceve da Jarvis un voto (discreto, buono, ottimo, super) con il modello, il ragionamento e il tipo di lavoro che l'hanno prodotto; i giri di correzione dello stesso lavoro valgono un risultato solo. AUTO rilegge le pagelle della combinazione che sta per usare: un modello più leggero prende un lavoro solo dopo buoni risultati suoi su lavori dello stesso tipo e con lo stesso ragionamento, mai per una revisione o un lavoro a rischio; da basso a medio quando basso rende poco, mai ad alto per questo. Tu dai soltanto 👍 o 👎, anche su un singolo passo di un piano: il pollice sul risultato pesa anche su chi l'ha prodotto, e in Attività vedi quando il tuo giudizio e i controlli non coincidono. |
+
+Nessuno può promettere una giornata illimitata con quote finite: dipendono dal piano, dal modello, dal contesto e dagli
+strumenti, e da ciò che fai con lo stesso account fuori da Jarvis. Prima di ogni versione la scelta di AUTO è provata su
+una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo uso e si verifica sugli abbonamenti veri.
+
 ## Cosa sa fare
 
 | | |
@@ -63,13 +112,13 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 | **Sempre aggiornato** | Regole delle piattaforme, hashtag, prezzi e norme verificati da fonti ufficiali, salvati con la data e ricontrollati quando scadono. |
 | **Skill di terzi, controllate** | Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok. |
 | **Usa il browser per te** | Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu. |
-| **Piani in più passi** | Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. |
+| **Piani in più passi** | Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. Ogni passo ti mostra il suo risultato, e puoi giudicarlo con un pollice. |
 | **Un revisore sulle consegne** | Un secondo modello ricontrolla siti, documenti, testi e codice contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri) e annota le rifiniture; se resta qualcosa di aperto arriva come bozza e decidi tu. Se il controllo non si può fare, te lo dice invece di darlo per buono. |
 | **Prodotti software completi** | Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo e splash screen, sviluppo su un branch dedicato, test, revisione e pull request verso il branch di sviluppo. Squadre pronte: prodotto completo, app mobile, brand e grafica, sito e SEO. |
 | **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Quello che chiedi dal telefono ha la risposta sul telefono; le approvazioni chieste dal computer arrivano anche lì; `/squadra` mostra chi c'è nel progetto e ogni persona si chiama con un comando. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
 | **Risposte senza AI, quando basta il computer** | Ora, data, conti detti come vengono, meteo, una ricetta dal sito che la pubblica, un fatto dell'enciclopedia confermato da una seconda fonte, il testo di una foto: Jarvis li riconosce per significato e risponde subito con la fonte, senza consumare un modello. Nel dubbio decide un modello; dai tuoi 👍 e 👎 impara. |
-| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo; le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
-| **Scegli quanto ragiona** | Per ogni ruolo scegli il modello e quanto deve ragionare (rapido, medio, alto…): Jarvis mostra solo i livelli che quel modello offre davvero. |
+| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo e, dentro ciascuno, con il modello adatto a ogni fase (AUTO); le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
+| **Scegli quanto ragiona, o lascia fare ad AUTO** | AUTO sceglie per ogni fase il modello e quanto deve ragionare; se preferisci, scegli tu per ogni ruolo il modello e il livello (rapido, medio, alto…), e la tua scelta vale per il lavoro di quel ruolo. Jarvis mostra solo i livelli che quel modello offre davvero. |
 | **Spese sotto controllo** | Tetto di spesa API al giorno e al mese: prima di ogni chiamata una stima prudente del costo (prezzi ufficiali, o una quota fissa per i modelli senza prezzo), poi il costo comunicato dal fornitore; ogni operazione registrata con modello, tempo e costo. |
 | **I tuoi dati sono tuoi** | Progetti, memorie e file stanno sul tuo computer; online va solo ciò che serve al modello o al servizio che usi (vedi le domande in fondo). Backup cifrati con la password che scegli, aggiornamenti che non toccano i dati. |
 
@@ -80,11 +129,11 @@ insieme**, e ci mette sopra ciò che serve a chi lavora con i clienti.
 
 | Leva | Cosa significa per te |
 | --- | --- |
-| **Tutti i tuoi cervelli, uno sopra l'altro** | Gli abbonamenti Claude e ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. Quando uno finisce i limiti il lavoro passa al successivo; se li finiscono tutti, Jarvis riprende da solo quando tornano. |
+| **Tutti i tuoi cervelli, uno sopra l'altro** | Gli abbonamenti Claude e ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. In automatico, quando uno finisce i limiti il lavoro passa al successivo; se hai scelto tu un modello, Jarvis aspetta quello. Se li finiscono tutti, riprende da solo quando tornano. |
 | **Un controllore diverso dall'autore** | Il lavoro di un modello lo rivede un altro modello, contro la tua richiesta, al massimo due giri; se hai collegato fornitori diversi (per esempio Claude e ChatGPT), di un'altra azienda. Dentro uno strumento di un solo fornitore non si può. |
 | **Lavoro consegnato, non spiegato** | Sito con anteprima, link e QR; preventivo in PDF; appuntamento come invito; riunione come verbale con la bozza di follow-up; campagna pronta e in pausa. Sempre con il tuo ok su ciò che esce. |
 | **Una squadra che conosce i tuoi clienti** | Otto persone con nome, ruolo e competenze, sempre le stesse, assegnate ai progetti. Ogni cliente ha il suo brand, le sue chat e le sue memorie. |
-| **Spesa chiara, strumenti liberi** | Jarvis si paga una volta. Prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto; motore e costo stimato sotto ogni risposta. |
+| **Spesa chiara, strumenti liberi** | Jarvis si paga una volta. Prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto; motore e costo stimato sotto ogni risposta, il consumo di ogni lavoro fase per fase in Attività. |
 | **I dati restano tuoi, in italiano** | Progetti, memorie e voce sul computer. Un progetto riservato va solo ai modelli sul tuo computer. Voce e ascolto in italiano, sul computer, senza limiti d'uso. |
 
 Dove loro sono più forti, onestamente: se scrivi codice tutto il giorno, Claude Code e Codex restano eccellenti, e
