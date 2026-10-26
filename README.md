@@ -46,12 +46,13 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 
 | | |
 | --- | --- |
-| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. Capisce sul computer in circa un secondo, riconosce il suo nome anche quando il riconoscimento lo storpia, alle domande semplici risponde subito e se gli serve tempo te lo dice («Ho capito, controllo»). Se dici qualcosa senza chiamarlo, te lo mostra invece di ignorarti. Puoi scegliere l'ascolto «Massimo», il più fedele anche con rumore: costa qualche secondo in più a frase, e l'app te lo dice prima. |
+| **Si parla come a una persona** | «Ciao Jarvis», e chiedi. Risponde con Giovanni, una voce italiana naturale generata sul tuo computer, senza limiti d'uso: numeri, orari, date, sigle e parole inglesi detti come li direbbe una segretaria, accenti giusti, domande con l'intonazione giusta e pause naturali. I nomi dei tuoi clienti li dice come gli insegni tu. Capisce sul computer in circa un secondo, riconosce il suo nome anche quando il riconoscimento lo storpia, alle domande semplici risponde subito e se gli serve tempo te lo dice («Ho capito, controllo»). Se dici qualcosa senza chiamarlo, te lo mostra invece di ignorarti. Capisce quando stai parlando anche a voce bassa o con il rumore della stanza (un ventilatore, la strada), e ogni frase arriva da sola. L'ascolto è già incluso nell'installer: niente da scegliere né da scaricare. |
 | **Conosce il tuo lavoro** | Legge i tuoi progetti e documenti, che restano sul tuo computer, e risponde senza che tu dica dove guardare. |
 | **Ha una squadra** | Lo Studio di Jarvis: otto persone con un nome, un ruolo e più competenze (prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione), sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri; se serve, Jarvis chiama al volo chi ha la competenza giusta. «Presentami la squadra» te la mostra collegata a Jarvis, intera o progetto per progetto. |
 | **Fa le cose, non le spiega** | Siti pubblicati con il link, preventivi in PDF e Word, Excel, presentazioni, grafiche, email, pull request su GitHub. Email e post pubblici aspettano sempre il tuo ok; per il resto decidi tu quanta autonomia dargli (di base chiede per tutto ciò che va ad altre persone o non si può annullare). |
 | **Riunioni con il verbale** | «Registra la riunione»: trascrive sul computer anche l'audio della call (Zoom, Meet, Teams), poi riassunto, decisioni, cose da fare e bozza dell'email di follow-up, anche in Word. |
 | **Appuntamenti e inviti** | Fissa l'appuntamento nel calendario e manda gli inviti, sempre con il tuo ok. |
+| **Lavoro da professionista, non «da AI»** | Siti, grafiche, testi, post e documenti devono sembrare firmati da un professionista senior che conosce il cliente: i fatti veri del cliente al posto delle frasi da brochure, scelte di design difendibili al posto dei gradienti viola e delle card tutte uguali, immagini senza l'aria finta da AI. Un controllo trova i segni del lavoro generato e lo rimanda indietro prima che tu lo veda; un post pieno di frasi fatte viene riscritto prima di chiederti l'ok. |
 | **Il brand di ogni cliente** | Colori misurati dal suo sito, tono di voce, listino e logo: grafiche, siti, testi e campagne nascono coerenti. |
 | **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, nei limiti del tuo piano; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
 | **Clienti nuovi, dal nome** | «Rifacciamo il sito di …, a …»: legge da solo scheda Google, sito attuale, social e concorrenti, ricava brand e logo, propone la strategia (anche per i settori con pubblicità limitata) e consegna il sito con l'anteprima. Se l'attività non ha la scheda Google, la prepara pronta da attivare. |
@@ -63,9 +64,10 @@ tutto diventa ambra e la richiesta, con i pulsanti, viene in primo piano. Guarda
 | **Skill di terzi, controllate** | Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok. |
 | **Usa il browser per te** | Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu. |
 | **Piani in più passi** | Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. |
-| **Un revisore sulle consegne** | Un secondo modello ricontrolla siti, documenti, testi e codice contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri) e annota le rifiniture. Se il controllo non si può fare, te lo dice invece di darlo per buono. |
+| **Un revisore sulle consegne** | Un secondo modello ricontrolla siti, documenti, testi e codice contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri) e annota le rifiniture; se resta qualcosa di aperto arriva come bozza e decidi tu. Se il controllo non si può fare, te lo dice invece di darlo per buono. |
 | **Prodotti software completi** | Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo e splash screen, sviluppo su un branch dedicato, test, revisione e pull request verso il branch di sviluppo. Squadre pronte: prodotto completo, app mobile, brand e grafica, sito e SEO. |
-| **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
+| **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Quello che chiedi dal telefono ha la risposta sul telefono; le approvazioni chieste dal computer arrivano anche lì; `/squadra` mostra chi c'è nel progetto e ogni persona si chiama con un comando. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
+| **Risposte senza AI, quando basta il computer** | Ora, data, conti detti come vengono, meteo, una ricetta dal sito che la pubblica, un fatto dell'enciclopedia confermato da una seconda fonte, il testo di una foto: Jarvis li riconosce per significato e risponde subito con la fonte, senza consumare un modello. Nel dubbio decide un modello; dai tuoi 👍 e 👎 impara. |
 | **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo; le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
 | **Scegli quanto ragiona** | Per ogni ruolo scegli il modello e quanto deve ragionare (rapido, medio, alto…): Jarvis mostra solo i livelli che quel modello offre davvero. |
 | **Spese sotto controllo** | Tetto di spesa API al giorno e al mese: prima di ogni chiamata una stima prudente del costo (prezzi ufficiali, o una quota fissa per i modelli senza prezzo), poi il costo comunicato dal fornitore; ogni operazione registrata con modello, tempo e costo. |
@@ -96,13 +98,14 @@ Jarvis è progettato e sviluppato da **Mattia, Senior Software Engineer e Techni
 esperienza in aziende enterprise**. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le regole del software che
 le aziende usano ogni giorno.
 
-- **Collaudato prima di ogni versione:** oltre duecento controlli automatici a ogni modifica e, prima di ogni versione,
-  percorsi completi dell'app provati come li userebbe un cliente.
+- **Collaudato prima di ogni versione:** oltre cinquecento controlli automatici a ogni modifica, i percorsi completi
+  dell'app su Windows e macOS provati come li userebbe un cliente, e ogni promessa del sito legata alle sue prove:
+  senza, la versione non esce.
 - **Sicuro per costruzione:** email e post a tuo nome solo con il tuo ok, chiavi nel portachiavi del sistema, backup
   cifrati con la tua password, modelli e motori gratuiti installati solo se corrispondono all'impronta pubblicata da
   chi li produce, aggiornamenti che non toccano i dati.
 - **Licenze rispettate:** componenti e servizi scelti verificando licenze e condizioni d'uso, con le attribuzioni dovute;
-  l'elenco completo dei componenti accompagna la prima versione in vendita.
+  l'elenco completo dei componenti, con le loro licenze, è dentro l'app (Impostazioni → Componenti di terze parti).
 
 ## Pro e Max
 
@@ -180,7 +183,7 @@ installare con il tuo ok:
 
 | Funzione | Cosa serve | Chi lo installa |
 | --- | --- | --- |
-| Voce, chat, documenti, grafiche vettoriali | Niente; l'ascolto preciso si scarica la prima volta (circa 250 MB, «Massimo» circa 1 GB se lo scegli) | Jarvis, da solo |
+| Voce, ascolto, chat, documenti, grafiche vettoriali | Niente: voce e ascolto sono già nell'installer | Jarvis, da solo |
 | Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
 | Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
 | Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso; su Windows e sui Mac senza Homebrew serve Node.js | Jarvis, oppure tu da nodejs.org |
@@ -194,8 +197,10 @@ usa e quanto stima di spendere, ma non può garantire le condizioni di un altro 
 
 **Comandi nei progetti, Mac e Windows.** Quando un cervello lavora su un progetto (test, build, script), su macOS i
 comandi girano in un recinto del sistema: scrivono solo nella cartella del progetto, non leggono chiavi e password, e
-usano la rete solo per scaricare le dipendenze o con il tuo ok. Su ogni sistema Jarvis controlla cosa fa il comando,
-lo tiene nella cartella del progetto senza le chiavi dell'app e chiede le approvazioni che hai scelto. Su progetti di
+usano la rete solo per scaricare le dipendenze o con il tuo ok; il codice e gli script che il modello fa girare non
+hanno rete, e se gliene serve te lo chiede. Su Windows, dove questo recinto del sistema non c'è, uno script o del codice
+scritto al momento chiede sempre il tuo ok. Su ogni sistema Jarvis controlla cosa fa il comando, lo tiene nella
+cartella del progetto senza le chiavi dell'app e chiede le approvazioni che hai scelto. Su progetti di
 terzi di cui non ti fidi, la modalità «Chiedimi tutto» ti fa decidere ogni passo.
 
 ## Aggiornamenti

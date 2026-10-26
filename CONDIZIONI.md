@@ -58,6 +58,8 @@ Se in una versione futura la voce cambia modello, questa sezione riporterà la s
 | CMU Pronouncing Dictionary (Carnegie Mellon University) | BSD |
 | ONNX Runtime (Microsoft) | MIT |
 | Whisper, riconoscimento vocale (OpenAI, versione ONNX) | MIT |
+| Silero VAD, rilevamento del parlato (Silero Team) | MIT |
+| Multilingual E5 small, comprensione delle richieste (intfloat) | MIT |
 | Tesseract, lettura del testo nelle immagini | Apache-2.0 |
 | Electron, React e le altre librerie dell'interfaccia | MIT e licenze simili |
 | cloudflared (Cloudflare), per le anteprime temporanee dei siti, scaricato dalle release ufficiali e verificato con la loro impronta | Apache-2.0 |
