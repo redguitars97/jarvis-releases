@@ -698,3 +698,9 @@ details summary { min-height: 48px; display: flex; align-items: center; }
 .social a:hover { color: var(--ice); }
 .social .icon { width: 20px; height: 20px; fill: currentColor; }
 @media (max-width: 560px) { .social { margin-left: 0; } }
+
+/* Technical depth is optional on first reading; native details works without JavaScript or motion. */
+.technical-details { margin-top: 2rem; border-top: 1px solid var(--edge, #24404f); padding-top: 1rem; }
+.technical-details > summary { cursor: pointer; font-weight: 600; padding: .75rem 0; line-height: 1.5; }
+.technical-details > summary:focus-visible { outline: 2px solid #9fdcff; outline-offset: 4px; }
+.technical-details[open] > summary { margin-bottom: 1.5rem; }

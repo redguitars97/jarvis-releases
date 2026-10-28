@@ -83,7 +83,10 @@ tuo abbonamento usare e quanto deve ragionare.
 | **I modelli che hai davvero** | L'elenco dei modelli del tuo account letto da Claude Code, da Codex o dalla tua chiave, senza spendere nulla per provarli. Un modello che il tuo piano non include resta fuori; uno nuovo del tuo abbonamento entra senza aggiornare l'app, e non viene trattato come il più potente finché il fornitore non lo descrive così. |
 | **Se scegli tu, la tua scelta resta** | Un modello scelto in chat («usa Claude») o dato a una persona della squadra vale per tutto quel lavoro: sviluppo, deleghe, revisioni e riassunti, con il ragionamento che hai scelto, senza abbassarlo per risparmiare; quello scelto per un ruolo vale per il lavoro di quel ruolo. Mai un altro modello senza il tuo sì: al limite il lavoro aspetta il ripristino. Una revisione indipendente con un altro modello te la chiede prima. |
 | **Un budget per lavoro, una quota per account** | Deleghe, correzioni, revisioni e riassunti di un lavoro condividono lo stesso budget, con spazio tenuto per il controllo finale: i lavori accessori aspettano, quelli in corso finiscono. Due collegamenti allo stesso account sono una sola quota. La quota residua la vedi solo se il fornitore la comunica; altrimenti Jarvis lo dice e non inventa percentuali. |
-| **Meno lavoro inutile, stessa qualità** | Solo gli strumenti e il contesto che servono, il resto recuperato quando occorre; lo sviluppatore riprende la sua sessione, nelle correzioni e, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio se la scelta del modello è la stessa (gli altri modelli ricevono la cronologia e il riassunto); prima i controlli automatici, poi il revisore, niente revisioni ripetute sullo stesso materiale; la squadra interviene quando serve una competenza, le riunioni si chiudono a decisione presa. |
+| **Meno lavoro inutile, stessa qualità** | Solo gli strumenti e il contesto che servono, il resto recuperato quando occorre; lo sviluppatore riprende la sua sessione, nelle correzioni e, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio se la scelta del modello è la stessa (le API ricevono la cronologia e il riassunto); prima i controlli automatici, poi il revisore, niente revisioni ripetute sullo stesso materiale; la squadra interviene quando serve una competenza, le riunioni si chiudono a decisione presa. |
+| **Chat e attività con il loro filo** | Claude Code, Codex e Gemini CLI riprendono anche la sessione della chat principale e della persona nel progetto. Se una sessione non si può recuperare Jarvis lo dichiara e passa il punto del lavoro. Le attività indipendenti possono procedere insieme; quelle che usano il risultato di un'altra aspettano. Gli agenti identificati mostrano avvio ed esito in chat e sul telefono collegato: un esito non confermato resta tale. |
+| **Modifiche locali e pull request** | Controlla tutti i repository collegati al progetto, anche frontend e backend separati. Può preparare la PR delle modifiche già presenti: controlli e revisione su una copia, poi sorgente/destinazione visibili nell'ok prima di commit, push e PR. Un branch ambiguo va indicato, uno stato non leggibile è segnalato. |
+| **Gemini con il tuo accesso Google** | Collegamento dedicato tramite il Gemini CLI ufficiale, installato da te, con Google AI Pro/Ultra o livello gratuito disponibile per l'account. Non usa la tua chiave API né abilita spese oltre quota. Il CLI può cambiare modello automaticamente: se chiedi un modello esatto Jarvis lo segnala prima di iniziare. Non offre sottoagenti nativi in Jarvis. |
 | **Vedi dove va il consumo** | Sotto ogni risposta modello, ragionamento e motivo della scelta; in Attività ogni lavoro diviso per fase (sviluppo, revisioni, riassunti, errori). La scelta di prima (il modello di ogni collegamento e il ragionamento per ruolo) resta disponibile nelle Connessioni, in modalità avanzata; le protezioni su budget, quote e scelte tue restano. |
 | **AUTO impara dai risultati** | Ogni risultato controllato riceve da Jarvis un voto (discreto, buono, ottimo, super) con il modello, il ragionamento e il tipo di lavoro che l'hanno prodotto; i giri di correzione dello stesso lavoro valgono un risultato solo. AUTO rilegge le pagelle della combinazione che sta per usare: un modello più leggero prende un lavoro solo dopo buoni risultati suoi su lavori dello stesso tipo e con lo stesso ragionamento, mai per una revisione o un lavoro a rischio; da basso a medio quando basso rende poco, mai ad alto per questo. Tu dai soltanto 👍 o 👎, anche su un singolo passo di un piano: il pollice sul risultato pesa anche su chi l'ha prodotto, e in Attività vedi quando il tuo giudizio e i controlli non coincidono. |
 
@@ -105,7 +108,7 @@ una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo
 | **Il brand di ogni cliente** | Colori misurati dal suo sito, tono di voce, listino e logo: grafiche, siti, testi e campagne nascono coerenti. |
 | **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, nei limiti del tuo piano; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
 | **Clienti nuovi, dal nome** | «Rifacciamo il sito di …, a …»: legge da solo scheda Google, sito attuale, social e concorrenti, ricava brand e logo, propone la strategia (anche per i settori con pubblicità limitata) e consegna il sito con l'anteprima. Se l'attività non ha la scheda Google, la prepara pronta da attivare. |
-| **Social pubblicati all'ora giusta** | Piano editoriale, caroselli per Instagram e TikTok, testi e hashtag per piattaforma; pubblica su Instagram e Facebook a un'ora fissata, con il computer acceso e il tuo ok in quel momento (anche dal telefono), sul profilo giusto anche con più punti vendita; per TikTok prepara il post o ti manda il pacchetto pronto; se lo chiedi, ogni settimana i risultati di Instagram e Facebook profilo per profilo (TikTok non dà i numeri a Jarvis: quelli li porti tu o li legge sul profilo pubblico). |
+| **Social pubblicati all'ora giusta** | Piano editoriale, caroselli per Instagram e TikTok, testi e hashtag per piattaforma; pubblica su Instagram e Facebook a un'ora fissata, con il computer acceso e il tuo ok in quel momento (anche dal telefono), sul profilo giusto anche con più punti vendita; per TikTok usa il browser dove consentito, oppure consegna il pacchetto; musica solo se disponibile e autorizzata. Se lo chiedi, ogni settimana i risultati di Instagram e Facebook profilo per profilo; per TikTok usa i dati accessibili dal browser/MCP o forniti da te, dichiarando quelli mancanti. |
 | **Anteprime con link e QR** | Un sito appena fatto si vede subito dal telefono, con link e QR temporanei, senza account; poi lo pubblichi dove vuoi. |
 | **Detta in qualsiasi app** | Una scorciatoia (⌘⇧Spazio), parli, e il testo compare dove stai scrivendo. Tutto sul computer. |
 | **Non si ferma ai limiti** | Divide il lavoro quando un modello accetta poche immagini alla volta; se tutti gli abbonamenti hanno finito i limiti, ti dice quando tornano e riprende da solo, se vuoi, avvisandoti anche su Telegram. |
@@ -118,7 +121,7 @@ una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo
 | **Prodotti software completi** | Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo e splash screen, sviluppo su un branch dedicato, test, revisione e pull request verso il branch di sviluppo. Vede le pipeline di GitHub Actions: se una è rossa legge il passo e l'errore e propone la correzione con una nuova pull request. Squadre pronte: prodotto completo, app mobile, brand e grafica, sito e SEO. |
 | **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Quello che chiedi dal telefono ha la risposta sul telefono; le approvazioni chieste dal computer arrivano anche lì; `/squadra` mostra chi c'è nel progetto e ogni persona si chiama con un comando. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
 | **Risposte senza AI, quando basta il computer** | Ora, data, conti detti come vengono, meteo, una ricetta dal sito che la pubblica, un fatto dell'enciclopedia confermato da una seconda fonte, il testo di una foto: Jarvis li riconosce per significato e risponde subito con la fonte, senza consumare un modello. Nel dubbio decide un modello; dai tuoi 👍 e 👎 impara. |
-| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT, usati fino in fondo e, dentro ciascuno, con il modello adatto a ogni fase (AUTO); le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
+| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude, ChatGPT o Google con Gemini CLI, usati fino in fondo e, dentro ciascuno, con il modello adatto a ogni fase (AUTO); le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
 | **Scegli quanto ragiona, o lascia fare ad AUTO** | AUTO sceglie per ogni fase il modello e quanto deve ragionare; se preferisci, scegli tu per ogni ruolo il modello e il livello (rapido, medio, alto…), e la tua scelta vale per il lavoro di quel ruolo. Jarvis mostra solo i livelli che quel modello offre davvero. |
 | **Spese sotto controllo** | Tetto di spesa API al giorno e al mese: prima di ogni chiamata una stima prudente del costo (prezzi ufficiali, o una quota fissa per i modelli senza prezzo), poi il costo comunicato dal fornitore; ogni operazione registrata con modello, tempo e costo. |
 | **I tuoi dati sono tuoi** | Progetti, memorie e file stanno sul tuo computer; online va solo ciò che serve al modello o al servizio che usi (vedi le domande in fondo). Backup cifrati con la password che scegli, aggiornamenti che non toccano i dati. |
@@ -228,7 +231,7 @@ licenza che ricevi.
 
 ### Cosa serve, funzione per funzione
 
-Jarvis non chiede di aprire il terminale. Alcune funzioni usano programmi di altri, che Jarvis installa o ti guida a
+Per le funzioni comuni non serve il terminale; Gemini CLI richiede l’installazione indicata sotto. Alcune funzioni usano programmi di altri, che Jarvis installa o ti guida a
 installare con il tuo ok:
 
 | Funzione | Cosa serve | Chi lo installa |
@@ -237,6 +240,7 @@ installare con il tuo ok:
 | Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
 | Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
 | Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso; su Windows e sui Mac senza Homebrew serve Node.js | Jarvis, oppure tu da nodejs.org |
+| Accesso Google per Gemini CLI | Gemini CLI ufficiale, Node.js compatibile e login Google; disponibilità e quote dipendono dal piano/account | Tu: `npm install -g @google/gemini-cli`, poi Accedi da Jarvis |
 | Siti su GitHub, pull request | Git e un account GitHub | Tu (Mac: si installa con gli strumenti di Apple al primo uso) |
 | Browser che compila e prenota | Google Chrome o Microsoft Edge (non Safari) | Tu |
 | Anteprime con link pubblico | cloudflared di Cloudflare | Jarvis, la prima volta |
@@ -264,7 +268,7 @@ attivano, quelle successive chiedono il rinnovo (la versione che hai continua a 
 <details>
 <summary>Serve un abbonamento a un'intelligenza artificiale?</summary>
 
-No. Puoi usare il tuo abbonamento Claude o ChatGPT, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li
+No. Puoi usare il tuo abbonamento Claude, ChatGPT o Google con Gemini CLI, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li
 prepara da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, spese) non usano proprio l'AI.
 </details>
 
@@ -317,3 +321,32 @@ ripristini il backup.
 ---
 
 <div align="center"><sub>© 2026 Il vero Jarvis · Tutti i diritti riservati</sub></div>
+
+## Telegram: progetti, squadra e messaggi in attesa
+
+Nel gruppo con Argomenti e il bot amministratore, un nuovo argomento creato dal titolare diventa un progetto
+nell'app; rinominarlo aggiorna quel progetto. `/squadra` elenca partecipanti e persone chiamabili, `/nome` o `@Nome`
+affida un compito nella chat del progetto. Una richiesta scritta riceve testo; un vocale riceve anche la voce,
+quando la sintesi è disponibile. Modello, ragionamento comunicato, strumenti e fonti sono nel messaggio scritto.
+
+Computer spento o app chiusa: il bot elabora all'avvio solo gli aggiornamenti ancora disponibili su Telegram,
+conservati dal servizio **al massimo per 24 ore**. Ricevuti sul computer, sono salvati nella coda locale prima della
+conferma al servizio. Gli ok arrivano anche mentre un lavoro è in attesa; `/coda` mostra le richieste aperte.
+Un lavoro interrotto senza esito finale richiede verifica prima di ripeterlo. Non è un servizio cloud attivo a
+computer spento e non può recuperare l'intera cronologia passata del gruppo.
+
+Le email e i calendari si associano ai progetti da Collegamenti → Utilizzato in. Con più mittenti o calendari
+compatibili Jarvis chiede quale usare, salvo un'unica associazione specifica. CalDAV consente scrittura e rilettura;
+un link ICS resta di sola lettura. Le API si scelgono dal catalogo per nome, separatamente dai login degli
+abbonamenti; il formato della chiave non viene indovinato o spedito ad altri provider per provarlo.
+
+
+Le notifiche in attesa di rete hanno anche una coda locale durevole in uscita. «In attesa» non significa «consegnato»:
+un invio confermato non si ripete, un invio con risposta persa resta incerto e va verificato sul telefono prima di
+ritentare. Il comando del bot `coda` mostra richieste e consegne aperte. Nessuna promessa di trascrizione perfetta:
+le pronunce si possono insegnare e i contenuti degli invii vanno controllati nell'approvazione.
+
+Svuotare una chat richiede conferma: archivia lo scambio e azzera riassunti e sessioni usati come contesto, mantenendo
+progetto, squadra, file, ricordi e attività programmate. Lo storico locale, i backup e i messaggi già su Telegram
+restano: non è una cancellazione definitiva. Il topic usa poi il nuovo contesto. Con più dispositivi aggiornare entrambi
+e terminare i lavori su tutti prima dello svuotamento. Eliminare il progetto ferma invece anche il lavoro futuro collegato.
