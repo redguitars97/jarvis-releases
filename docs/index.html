@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jarvis · Il socio che lavora anche quando non ci sei</title>
-<meta name="description" content="Jarvis è l'assistente a voce per imprenditori, freelance e professionisti: conosce i tuoi progetti, guida una squadra di agenti, usa prima i modelli AI gratuiti e chiede il tuo ok prima di email, post e pubblicazioni. macOS e Windows.">
+<meta name="description" content="Jarvis è l'assistente a voce per imprenditori, freelance e professionisti: lavora sul tuo computer con il tuo abbonamento Claude o ChatGPT, consegna documenti, siti, email e post pronti e chiede il tuo ok prima di ciò che esce. macOS e Windows, si paga una volta.">
 <meta property="og:title" content="Jarvis">
 <meta property="og:description" content="Parli, lui lavora. Una squadra di agenti AI sul tuo computer, con il tuo ok su tutto ciò che esce.">
 <meta property="og:image" content="assets/icon.png">
@@ -18,6 +18,7 @@
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-apple" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol><symbol id="i-windows" viewBox="0 0 24 24"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></symbol><symbol id="i-telegram" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></symbol><symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M16.6 0h-4v16.3a3.5 3.5 0 1 1-3.5-3.5c.3 0 .7 0 1 .1V8.8a7.5 7.5 0 1 0 6.5 7.5V8.1A9.4 9.4 0 0 0 22 9.8v-4a5.4 5.4 0 0 1-5.4-5.4z"/></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></symbol><symbol id="i-bubble" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-star4" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3c.8 4.6 4.4 8.2 9 9-4.6.8-8.2 4.4-9 9-.8-4.6-4.4-8.2-9-9 4.6-.8 8.2-4.4 9-9z"/></symbol><symbol id="i-chip" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10H7zM10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M7 18h10a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.6 1.2A3.4 3.4 0 0 0 7 18z"/></symbol><symbol id="i-key" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M11.2 12.8a4 4 0 1 1-5.6 5.6 4 4 0 0 1 5.6-5.6zM11.2 12.8 20 4M16.5 7.5l2.5 2.5M14 10l2 2"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 7l9 6 9-6"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v16H3zM3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-sync" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3M18 3v4h-4M6 21v-4h4"/></symbol><symbol id="i-video" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6h13v12H3zM16 10l5-3v10l-5-3"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 6a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0zM5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-branch" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 7v10M18 9c0 5-6 4-11.5 8.5M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 19a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM20 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol><symbol id="i-qr" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></symbol><symbol id="i-megaphone" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4h3l8 4V6l-8 4zM18.5 9a4 4 0 0 1 0 6M7 14l1 5"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0zM13 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 10h18M7 15h4"/></symbol><symbol id="i-page" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></symbol><symbol id="i-browser" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 4h18v16H3zM3 9h18M6.5 6.5h.01M9.5 6.5h.01"/></symbol><symbol id="i-doc" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h4"/></symbol><symbol id="i-folder" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 6h6l2 2h10v11H3z"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0zM12 17v4"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM14.5 10a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M17 11a6 6 0 1 1-12 0 6 6 0 0 1 12 0zM20 20l-4.7-4.7"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-wave" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></symbol><symbol id="i-image" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 16l5-5 4 4 3-3 6 6M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></symbol><symbol id="i-steps" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M15 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM5 20a7 7 0 0 1 14 0M18.5 5.5a3 3 0 0 1 0 5M21 19a6 6 0 0 0-3-5"/></symbol></svg>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l10.5-6.5z"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol><symbol id="i-stop" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 6.5h11v11h-11z"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path stroke="currentColor" fill="none" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol></svg>
 <div class="progress" aria-hidden="true"><i></i></div>
 <header class="top">
   <div class="wrap top-row">
@@ -25,13 +26,13 @@
     <nav class="nav-main" aria-label="Sezioni">
       <a href="#vero">Perché Jarvis</a>
       <a href="#esempi">Esempi</a>
-      <a href="#cosa-fa">Cosa fa</a>
-      <a href="#piu-lavori">Più progetti</a>
-      <a href="#auto">AUTO</a>
-      <a href="#gratis">Modelli AI</a>
-      <a href="#piani">Piani</a>
+      <a href="#come">Come funziona</a>
+      <a href="#fiducia">Privacy</a>
+      <a href="#piani">Prezzi</a>
       <a href="#domande">Domande</a>
     </nav>
+    <!-- «Jarvis parlante»: shown by parlante.js only; without JavaScript the page is simply read. -->
+    <button type="button" class="talk-toggle" aria-pressed="false" aria-controls="parlante" aria-label="Attiva Jarvis parlante" hidden><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg><span class="talk-toggle-label">Jarvis parlante</span></button>
     <a class="button small" href="#scarica">Scarica</a>
     <!-- When the sections do not fit in one line (tablet, phone, large text), they fold into this menu. -->
     <details class="menu">
@@ -39,16 +40,13 @@
       <nav class="nav-menu" aria-label="Sezioni (menu)">
         <a href="#vero">Perché Jarvis</a>
         <a href="#esempi">Esempi</a>
-        <a href="#all-opera">All'opera</a>
         <a href="#cosa-fa">Cosa fa</a>
-        <a href="#piu-lavori">Più progetti</a>
-        <a href="#collegamenti">Collegamenti</a>
-        <a href="#auto">AUTO</a>
-      <a href="#gratis">Modelli AI</a>
-        <a href="#dietro-le-quinte">Dietro le quinte</a>
-        <a href="#piani">Piani</a>
-        <a href="#licenza">Licenza</a>
+        <a href="#come">Come funziona</a>
+        <a href="#fiducia">Privacy</a>
+        <a href="#piani">Prezzi</a>
+        <a href="#scarica">Scarica</a>
         <a href="#domande">Domande</a>
+        <a href="#avanzati">Per utenti avanzati</a>
       </nav>
     </details>
   </div>
@@ -60,17 +58,18 @@
       <div class="hero-copy">
         <p class="kicker">Per imprenditori, freelance e professionisti</p>
         <h1>Parli. Jarvis lavora.</h1>
-        <p class="lead">Conosce i tuoi progetti e coordina una squadra di agenti sul tuo computer. Tu gli affidi il lavoro, lui prepara documenti, siti, email e codice; invii, post e spese aspettano il tuo ok. Usa prima i modelli AI gratuiti, poi i tuoi abbonamenti e le API entro il tetto di spesa.</p>
+        <p class="lead">L'assistente a voce che lavora sul tuo computer con il tuo abbonamento Claude o ChatGPT. Ti consegna documenti, siti, email e post pronti, e prima di inviare, pubblicare o spendere ti chiede l'ok.</p>
         <div class="actions">
-          <a class="button" href="#scarica">Prova la demo</a>
-          <a class="button ghost" href="#esempi">Guardalo lavorare</a>
+          <a class="button" href="#scarica">Scarica Jarvis</a>
+          <a class="button ghost" href="#piani">Prezzi e prova gratuita</a>
         </div>
+        <p class="talk-invite" hidden><button type="button" class="link-button" data-talk-open><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Preferisci ascoltare? <b>Jarvis ti presenta il sito a voce</b></button><span>audio facoltativo, solo se premi; puoi fermarlo quando vuoi</span></p>
         <ul class="platforms">
           <li><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg><span><b>macOS</b><small>Apple Silicon e Intel</small></span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg><span><b>Windows</b><small>10 e 11</small></span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span><b>Telegram</b><small>Dal telefono, ovunque</small></span></li>
         </ul>
-        <p class="fine">In italiano. I tuoi file restano sul tuo computer: online va solo ciò che serve a rispondere.</p>
+        <p class="fine">In italiano. Paghi una volta: nessun abbonamento a Jarvis. I tuoi file restano sul tuo computer.</p>
       </div>
       <figure class="presence-stage" data-depth="0.12" aria-label="Jarvis all'opera: ascolta, pensa, parla e ti chiede l'ok">
         <canvas id="hero-presence" aria-hidden="true"></canvas>
@@ -85,61 +84,40 @@
       <dl class="counters">
         <div><dt>Persone nella squadra di Jarvis</dt><dd><span data-count="8">8</span></dd></div>
         <div><dt>Servizi e modelli da collegare</dt><dd><span data-count="30">30</span>+</dd></div>
-        <div><dt>Controlli automatici a ogni versione</dt><dd><span data-count="100">100</span>+</dd></div>
+        <div><dt>Computer con una licenza</dt><dd><span data-count="2">2</span></dd></div>
         <div><dt>Giorni di prova del piano Max</dt><dd><span data-count="14">14</span></dd></div>
       </dl>
     </div>
     <div class="marquee">
-      <ul class="marquee-track"><li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg>Claude</li><li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg>ChatGPT e Codex</li><li><svg class="icon line" aria-hidden="true"><use href="#i-chip"/></svg>Ollama</li><li><svg class="icon line" aria-hidden="true"><use href="#i-cloud"/></svg>OmniRoute</li><li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg>Gemini</li><li><svg class="icon line" aria-hidden="true"><use href="#i-key"/></svg>API Anthropic e OpenAI</li><li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg>Gmail e IMAP</li><li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg>Google Calendar</li><li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg>iCloud e CalDAV</li><li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg>Zoom, Meet, Teams</li><li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg>GitHub</li><li><svg class="icon line" aria-hidden="true"><use href="#i-globe"/></svg>Netlify</li><li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg>Meta Ads</li><li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg>Pagine Facebook</li><li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</li><li><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</li><li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg>Stripe</li><li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg>Notion</li><li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg>Chrome ed Edge</li><li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg>Word, Excel, PowerPoint, PDF</li><li><svg class="icon line" aria-hidden="true"><use href="#i-plug"/></svg>Strumenti MCP</li><li><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg>Mappe Geoapify</li><li><svg class="icon line" aria-hidden="true"><use href="#i-search"/></svg>Ricerca Brave</li></ul>
-      <ul class="marquee-track" aria-hidden="true"><li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg>Claude</li><li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg>ChatGPT e Codex</li><li><svg class="icon line" aria-hidden="true"><use href="#i-chip"/></svg>Ollama</li><li><svg class="icon line" aria-hidden="true"><use href="#i-cloud"/></svg>OmniRoute</li><li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg>Gemini</li><li><svg class="icon line" aria-hidden="true"><use href="#i-key"/></svg>API Anthropic e OpenAI</li><li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg>Gmail e IMAP</li><li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg>Google Calendar</li><li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg>iCloud e CalDAV</li><li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg>Zoom, Meet, Teams</li><li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg>GitHub</li><li><svg class="icon line" aria-hidden="true"><use href="#i-globe"/></svg>Netlify</li><li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg>Meta Ads</li><li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg>Pagine Facebook</li><li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</li><li><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</li><li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg>Stripe</li><li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg>Notion</li><li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg>Chrome ed Edge</li><li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg>Word, Excel, PowerPoint, PDF</li><li><svg class="icon line" aria-hidden="true"><use href="#i-plug"/></svg>Strumenti MCP</li><li><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg>Mappe Geoapify</li><li><svg class="icon line" aria-hidden="true"><use href="#i-search"/></svg>Ricerca Brave</li></ul>
+      <ul class="marquee-track"><li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg>Claude</li><li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg>ChatGPT</li><li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg>Gemini</li><li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg>Gmail</li><li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg>Google Calendar</li><li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg>iCloud</li><li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg>Zoom, Meet, Teams</li><li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg>Word, Excel, PowerPoint, PDF</li><li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg>Pagine Facebook</li><li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg>Meta Ads</li><li><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</li><li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg>GitHub</li><li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg>Stripe</li><li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg>Notion</li><li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg>Chrome ed Edge</li></ul>
+      <ul class="marquee-track" aria-hidden="true"><li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg>Claude</li><li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg>ChatGPT</li><li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg>Gemini</li><li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg>Gmail</li><li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg>Google Calendar</li><li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg>iCloud</li><li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg>Zoom, Meet, Teams</li><li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg>Word, Excel, PowerPoint, PDF</li><li><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</li><li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg>Pagine Facebook</li><li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg>Meta Ads</li><li><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</li><li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg>GitHub</li><li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg>Stripe</li><li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg>Notion</li><li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg>Chrome ed Edge</li></ul>
     </div>
   </section>
 
-  <section id="vero" class="truth" aria-labelledby="vero-title">
+  <section id="vero" class="truth" aria-labelledby="vero-title" data-parlante="cosa">
     <div class="wrap">
       <h2 id="vero-title" class="section-title">Il vero Jarvis</h2>
-      <p class="section-lead">Un assistente con questo nome deve fare cinque cose. Jarvis le fa tutte, sul tuo computer e con gli abbonamenti che hai già.</p>
+      <p class="section-lead">Un assistente con questo nome deve fare cinque cose. Jarvis le fa tutte.</p>
       <ul class="truth-list">
-        <li><span class="verb">Ti sente.</span><p>Dici «Ciao Jarvis» e chiedi. Ascolto e voce girano sul tuo computer, in italiano, anche mentre sta lavorando ad altro.</p><a href="#stati">Vedi come ti ascolta</a></li>
-        <li><span class="verb">Sa.</span><p>Conosce i tuoi progetti, i clienti e le loro regole, e riprende il filo di ogni lavoro anche il giorno dopo.</p><a href="#piu-lavori">Vedi più progetti insieme</a></li>
-        <li><span class="verb">Fa.</span><p>Consegna il lavoro finito: il sito con il link, il preventivo in PDF, l'invito nel calendario, la campagna pronta in pausa.</p><a href="#esempi">Vedi gli esempi</a></li>
-        <li><span class="verb">Chiede.</span><p>Prima di ogni email, post, pubblicazione o spesa aspetta il tuo ok: dall'app, a voce o da Telegram.</p><a href="#telefono">Vedi l'ok dal telefono</a></li>
-        <li><span class="verb">Impara.</span><p>Dà da solo un voto a ogni risultato controllato e sceglie il modello del tuo abbonamento che rende meglio per quel lavoro.</p><a href="#auto">Vedi AUTO</a></li>
+        <li><span class="verb">Ti sente.</span><p>Dici «Ciao Jarvis» e chiedi, in italiano. Ascolto e voce girano sul tuo computer.</p><a href="#stati">Vedi come ti ascolta</a></li>
+        <li><span class="verb">Sa.</span><p>Conosce i tuoi progetti e i tuoi clienti, e riprende il filo anche il giorno dopo.</p><a href="#piu-lavori">Più progetti insieme</a></li>
+        <li><span class="verb">Fa.</span><p>Consegna il lavoro finito: il preventivo in PDF, il sito con il link, l'invito in calendario.</p><a href="#esempi">Guardalo lavorare</a></li>
+        <li><span class="verb">Chiede.</span><p>Prima di ogni email, post o spesa aspetta il tuo ok. Se manca un dato essenziale, chiede solo quello, con una proposta: basta «decidi tu».</p><a href="#fiducia">Tu decidi cosa esce</a></li>
+        <li><span class="verb">Impara.</span><p>Valuta ogni risultato e sceglie il modello che rende meglio per quel lavoro. Tu dai solo un 👍 o un 👎.</p><a href="#auto">Come sceglie</a></li>
       </ul>
-      <p class="truth-more">Hai già Claude o ChatGPT? <a href="#differenza">Ecco cosa aggiunge Jarvis</a></p>
-    </div>
-  </section>
-
-  <section id="piu-lavori" class="band" aria-labelledby="piu-lavori-title">
-    <div class="wrap">
-      <h2 id="piu-lavori-title" class="section-title reveal">Più progetti insieme, un solo Jarvis</h2>
-      <p class="section-lead reveal">Mentre la squadra lavora a un cliente, puoi già chiedere qualcosa per un altro, o una cosa veloce per te. Ogni richiesta resta legata al suo progetto, dall'inizio alla risposta.</p>
-      <div class="features reveal">
-        <article><h3>AUTO impara dai risultati</h3><p>Jarvis valuta da solo il lavoro verificato: discreto, buono, ottimo, super. Usa i risultati di attività comparabili per scegliere modello e ragionamento; tu dai soltanto un pollice. <a href="#auto">Come sceglie</a></p></article>
-        <article><h3>Più progetti, ciascuno con il suo filo</h3><p>Puoi far avanzare il sito di un cliente e le modifiche di un altro. Jarvis tiene distinti lavori, file e conversazioni e riprende il contesto pertinente: ogni lavoro segue la sua richiesta, due modifiche alla stessa cartella non si accavallano, e lo sviluppatore ritrova la sessione di quel progetto, anche il giorno dopo.</p></article>
-        <article><h3>Lo guidi a voce, anche mentre lavora</h3><p>Chiedi un aggiornamento, passa a un altro progetto o fai una domanda veloce. Jarvis sa a quale lavoro ti riferisci e ti chiede di precisarlo quando serve: «ferma il piano di Ciuffo» mette in pausa solo quello, un «sì» con due richieste in attesa ti chiede quale. Se un lavoro finisce mentre parli d'altro, te lo dice a parte, con il nome del progetto.</p></article>
-      </div>
-      <ol class="sequence reveal">
-        <li><b>«Crea il sito della Pizzeria Da Mario»</b><span>La squadra parte sul sito della pizzeria.</span></li>
-        <li><b>«Cambia il colore del sito di Ciuffo»</b><span>Un secondo lavoro, sull'altro progetto, mentre il primo continua.</span></li>
-        <li><b>«Che ore sono?»</b><span>Risponde subito, senza aspettare i due lavori e senza cambiare progetto.</span></li>
-        <li><b>«Riprendi il primo sito»</b><span>Torna alla pizzeria, con la sessione dello sviluppatore di quel sito.</span></li>
-      </ol>
-      <p class="fine reveal">Esempio illustrativo con progetti di prova: la sequenza è simulata; il comportamento è quello che i controlli automatici dell'app verificano a ogni versione.</p>
     </div>
   </section>
 
   <section id="esempi" class="demos" aria-labelledby="esempi-title">
     <div class="wrap">
       <h2 id="esempi-title" class="section-title reveal">Guardalo lavorare</h2>
-      <p class="section-lead reveal">Sei richieste vere, come le diresti tu. Jarvis risponde, ti dice cosa sta facendo e ti consegna il lavoro finito.</p>
+      <p class="section-lead reveal">Cinque richieste, come le diresti tu. Jarvis risponde, ti dice cosa sta facendo e ti consegna il lavoro finito.</p>
       <div class="demo-grid">
         <div class="demo-tabs" role="tablist" aria-label="Esempi">
           <button type="button" role="tab" id="tab-voce" aria-controls="demo-voce" aria-selected="true"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg><span><b>A voce</b><small>«Com'è messa la giornata?»</small></span><i class="tab-bar"></i></button>
           <button type="button" role="tab" id="tab-clienti" aria-controls="demo-clienti" aria-selected="false" tabindex="-1"><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Trova clienti</b><small>Attività vicine senza sito</small></span><i class="tab-bar"></i></button>
-          <button type="button" role="tab" id="tab-squadra" aria-controls="demo-squadra" aria-selected="false" tabindex="-1"><svg class="icon line" aria-hidden="true"><use href="#i-users"/></svg><span><b>La squadra</b><small>Un piano, il tuo ok</small></span><i class="tab-bar"></i></button>
+          <button type="button" role="tab" id="tab-squadra" aria-controls="demo-squadra" aria-selected="false" tabindex="-1"><svg class="icon line" aria-hidden="true"><use href="#i-users"/></svg><span><b>La squadra</b><small>Una campagna, il tuo ok</small></span><i class="tab-bar"></i></button>
           <button type="button" role="tab" id="tab-telefono" aria-controls="demo-telefono" aria-selected="false" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span><b>Dal telefono</b><small>Telegram, anche fuori casa</small></span><i class="tab-bar"></i></button>
-          <button type="button" role="tab" id="tab-immagini" aria-controls="demo-immagini" aria-selected="false" tabindex="-1"><svg class="icon line" aria-hidden="true"><use href="#i-image"/></svg><span><b>Una locandina</b><small>Con il tuo abbonamento</small></span><i class="tab-bar"></i></button>
           <button type="button" role="tab" id="tab-riunione" aria-controls="demo-riunione" aria-selected="false" tabindex="-1"><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg><span><b>Una riunione</b><small>Dal parlato al verbale</small></span><i class="tab-bar"></i></button>
         </div>
 
@@ -151,8 +129,8 @@
             <p class="step you" data-wait="300"><span class="who">Tu, a voce</span>«Jarvis, com'è messa la giornata?»</p>
             <p class="step typing" data-wait="900"><i></i><i></i><i></i></p>
             <p class="step filler" data-wait="700"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>«Ho capito, controllo.»</p>
-            <p class="step jarvis" data-wait="1800"><span class="who">Jarvis</span>Tre cose. Alle 11 hai la chiamata con il B&amp;B Il Glicine. Il commercialista aspetta le fatture di settembre. E la squadra ha finito i testi del sito della pizzeria: te li mostro?</p>
-            <p class="step note" data-wait="900">Risponde con Giovanni, una voce italiana naturale generata sul tuo computer. Se gli serve tempo te lo dice, invece di lasciarti in silenzio.</p>
+            <p class="step jarvis" data-wait="1800"><span class="who">Jarvis</span>Tre cose. Alle 11 hai la chiamata con il B&amp;B Il Glicine. Alle 16 il dentista. E la squadra ha finito i testi del sito della palestra: te li mostro?</p>
+            <p class="step note" data-wait="900">Risponde con Giovanni, una voce italiana naturale generata sul tuo computer.</p>
           </div>
 
           <div class="run" role="tabpanel" id="demo-clienti" aria-labelledby="tab-clienti" hidden>
@@ -184,7 +162,6 @@
               <p><b>Far partire la campagna?</b> Budget letto da Meta: 10 € al giorno per 14 giorni, al massimo 140 €.</p>
               <span class="approval-actions"><span class="chip ok">Approva</span><span class="chip">No, fai così…</span></span>
             </div>
-            <p class="step note" data-wait="1600">A fine lavoro la squadra fa da sola la retrospettiva: cosa è andato bene, cosa cambiare. Le lezioni restano per il prossimo progetto.</p>
           </div>
 
           <div class="run" role="tabpanel" id="demo-telefono" aria-labelledby="tab-telefono" hidden>
@@ -195,15 +172,6 @@
               <p class="step msg out" data-wait="1000">Inviata. ✓</p>
               <p class="step msg in" data-wait="1400"><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg>Posizione · Trovami una tipografia qui vicino</p>
               <p class="step msg out" data-wait="1600">La più vicina è a 300 m: ti mando indirizzo e telefono.</p>
-            </div>
-          </div>
-
-          <div class="run" role="tabpanel" id="demo-immagini" aria-labelledby="tab-immagini" hidden>
-            <p class="step you" data-wait="300"><span class="who">Tu</span>«Una locandina per la serata pizza e musica di sabato»</p>
-            <p class="step filler" data-wait="900"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>«Ok, ci penso un attimo.»</p>
-            <div class="step card poster-card" data-wait="1400">
-              <div class="poster" aria-hidden="true"><i class="moon"></i><i class="note n1"></i><i class="note n2"></i><b>Pizza<br>e musica</b><span>Sabato · ore 21</span></div>
-              <p>Fatta con il tuo abbonamento ChatGPT, nei limiti del tuo piano. Se usi un modello gratuito, un altro modello la controlla prima di mostrartela.</p>
             </div>
           </div>
 
@@ -226,59 +194,39 @@
           <button type="button" class="replay" hidden>Rivedi l'esempio</button>
         </div>
       </div>
+      <p class="fine reveal">Esempi con nomi e attività di fantasia.</p>
     </div>
   </section>
 
-  <section id="all-opera" class="cases-band" aria-labelledby="opera-title">
+  <section id="cosa-fa" class="band" aria-labelledby="cosa-title">
     <div class="wrap">
-      <h2 id="opera-title" class="section-title reveal">Jarvis all'opera</h2>
-      <p class="section-lead reveal">Lavori veri, dall'inizio alla fine. Dai le indicazioni una volta: Jarvis cerca, decide, produce e ti chiede l'ok solo su ciò che esce. Nomi e attività qui sono di fantasia.</p>
-      <div class="cases">
-        <article class="case reveal">
-          <p class="case-kind">Negozio di sigarette elettroniche · nuovo cliente</p>
-          <h3>Il sito rifatto da zero, partendo dal nome</h3>
-          <p class="case-ask">«Rifacciamo da zero il sito di Nuvola Vape, a Salerno.»</p>
-          <ol class="case-steps">
-            <li><b>La ricerca, da solo.</b> Cerca la scheda Google, il sito vecchio, i profili social e i negozi concorrenti in città. Nella consegna dice cosa ha letto, con fonte e data, e cosa non ha trovato o non è riuscito ad aprire.</li>
-            <li><b>Le regole del settore.</b> Prima della strategia riconosce il settore dai dati trovati, o te lo chiede, e legge le regole su fonti ufficiali aggiornate: i prodotti con nicotina, per esempio, non si sponsorizzano sui social. Tessera fedeltà, serate o quiz restano proposte da verificare per il tuo caso: non è un parere legale.</li>
-            <li><b>Un sito che si usa in negozio.</b> Brand e logo ripresi dal sito vecchio, verifica dell'età all'ingresso e, se le regole lo consentono, un quiz animato «trova il tuo gusto» che consiglia il liquido giusto in cinque tocchi. I prodotti stanno in un file che il titolare modifica da solo.</li>
-          </ol>
-          <p class="case-out"><span>Consegnato</span> anteprima con link e QR da mostrare al cliente, i riferimenti trovati con le fonti e quelli mancanti, la strategia in una pagina.</p>
-        </article>
-        <article class="case reveal">
-          <p class="case-kind">Agenzia social · due punti vendita</p>
-          <h3>Un mese di contenuti, pubblicati all'ora giusta</h3>
-          <p class="case-ask">«Prepara il piano di novembre per i due negozi di Forno Aurora, Instagram e TikTok.»</p>
-          <ol class="case-steps">
-            <li><b>Il piano.</b> Calendario con data, ora, formato, tema, testo e hashtag diversi per Instagram e per TikTok, uno per negozio.</li>
-            <li><b>Le grafiche.</b> Caroselli 4:5 per Instagram e 9:16 per TikTok nei colori del brand, controllati come serie: gancio nella prima slide, invito all'azione nell'ultima, niente testo sotto i pulsanti di TikTok.</li>
-            <li><b>La pubblicazione.</b> Ogni post del piano diventa un'attività programmata che vedi nel calendario. Il giovedì alle 18, con il computer acceso, arriva la richiesta di ok anche sul telefono: al tuo sì il carosello esce sul profilo del negozio giusto. Per TikTok usa il browser quando il profilo permette la pubblicazione; aggiunge musica solo se disponibile e autorizzata. Altrimenti ti manda il pacchetto da completare nell'app.</li>
-          </ol>
-          <p class="case-out"><span>Ogni venerdì, se lo chiedi</span> mi piace, commenti, copertura e follower di Instagram e Facebook, letti da Meta con la fonte (un dato che manca è detto mancante, non zero); per TikTok i numeri che gli dai tu o che legge sul profilo pubblico. Cosa funziona e cosa cambiare nel piano.</p>
-        </article>
-        <article class="case reveal">
-          <p class="case-kind">Attività senza presenza online</p>
-          <h3>La scheda Google che mancava</h3>
-          <p class="case-ask">«Fai il sito alla Ferramenta Bassi di Lecce.»</p>
-          <ol class="case-steps">
-            <li><b>Se ne accorge da solo.</b> La ferramenta non ha una scheda Google: Jarvis lo dice e mostra le tre attività simili che in zona compaiono al suo posto.</li>
-            <li><b>Prepara tutto.</b> Categoria, orari, descrizione, foto consigliate e prima risposta alle recensioni, pronti da incollare, con i passi per la verifica che fa il titolare.</li>
-            <li><b>Chiude il cerchio.</b> Il sito nuovo è collegato alla scheda, con il QR da stampare in negozio per chiedere le prime recensioni.</li>
-          </ol>
-          <p class="case-out"><span>Risultato</span> sito e scheda insieme: appena Google verifica la scheda, il cliente compare su Ricerca e su Maps con il suo sito.</p>
-        </article>
-        <article class="case reveal">
-          <p class="case-kind">Sviluppatore freelance</p>
-          <h3>La modifica al software, fino alla pull request</h3>
-          <p class="case-ask">«Su prenota-app aggiungi il promemoria via email il giorno prima.»</p>
-          <ol class="case-steps">
-            <li><b>Lavora sul tuo codice.</b> Un branch dedicato dal branch di sviluppo, la modifica, i test, un revisore indipendente che la ricontrolla (di un'altra azienda AI, se ne hai collegate due).</li>
-            <li><b>Abbonamenti prima di tutto.</b> Usa il tuo Claude o ChatGPT; se finiscono i limiti ti chiede «uso la chiave API, a pagamento?» oppure aspetta che tornino e riparte da solo.</li>
-            <li><b>Ti dà il link.</b> La pull request con cosa è cambiato, come è stato verificato e la revisione.</li>
-          </ol>
-          <p class="case-out"><span>Spesa</span> sotto ogni risposta vedi motore e costo; le API non partono mai in silenzio.</p>
-        </article>
+      <h2 id="cosa-title" class="section-title reveal">Cosa sa fare</h2>
+      <p class="section-lead reveal">Non è una chat: fa il lavoro con i tuoi strumenti.</p>
+      <div class="features compact reveal">
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-doc"/></svg><h3>Documenti pronti</h3><p>Preventivi, presentazioni e fogli di calcolo in PDF, Word, PowerPoint ed Excel.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-mail"/></svg><h3>Email e agenda</h3><p>Riassume la posta, risponde con il tuo ok, fissa appuntamenti e manda inviti.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-globe"/></svg><h3>Siti e clienti nuovi</h3><p>Trova le attività vicine senza sito e ti prepara la proposta con link e QR.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-image"/></svg><h3>Grafiche e social</h3><p>Loghi, locandine e post nei colori del cliente, pubblicati all'ora che scegli.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Campagne Meta</h3><p>Pronte e in pausa: partono quando approvi il budget. Con Max.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-video"/></svg><h3>Riunioni con il verbale</h3><p>Trascrive anche la call e ti dà decisioni, cose da fare e follow-up.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-branch"/></svg><h3>Software completo</h3><p>Dall'idea alla pull request, con test e revisione. Con Max.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-browser"/></svg><h3>Usa il browser per te</h3><p>Compila moduli e prenota in una finestra che vedi. Password e carte le scrivi tu.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Pronto per il tuo mestiere</h3><p>Procedure pronte per commercialisti (busta paga, F24, scadenze, fatture elettroniche), avvocati (diffide, termini), artigiani ed edilizia (computo metrico, sicurezza), ristorazione (allergeni, HACCP) e B&amp;B (Alloggiati Web, imposta di soggiorno). Sempre bozze, controllate su fonti ufficiali.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-pin"/></svg><h3>Viaggi e trasferte</h3><p>Percorsi con il link della mappa e alloggi filtrati per le tue date. Prenota solo con il tuo ok; la carta la inserisci tu, mai salvata.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-steps"/></svg><h3>Lavori lunghi e ricorrenti</h3><p>Approvi il piano una volta e va avanti da solo, anche ogni lunedì.</p></article>
       </div>
+      <p class="fine reveal">Si collega a ciò che usi già. <a href="#collegamenti">Tutti i collegamenti</a></p>
+    </div>
+  </section>
+
+  <section id="come" aria-labelledby="come-title" data-parlante="come">
+    <div class="wrap">
+      <h2 id="come-title" class="section-title reveal">Come funziona</h2>
+      <ol class="steps3 reveal">
+        <li><b>Installa e attiva</b><span>Su Mac trascini Jarvis in Applicazioni, su Windows apri il file .exe. Copi il codice del computer e incolli la licenza che ricevi.</span></li>
+        <li><b>Collega il tuo abbonamento</b><span>Claude o ChatGPT: al primo avvio Jarvis li trova da solo e, se serve, ti guida a installare il programma ufficiale del fornitore.</span></li>
+        <li><b>Parla</b><span>«Ciao Jarvis», oppure tieni premuto lo spazio. Fuori casa gli scrivi su Telegram.</span></li>
+      </ol>
     </div>
   </section>
 
@@ -287,7 +235,7 @@
     <div class="wrap split states">
       <div>
         <h2 id="stati-title" class="section-title reveal">Vedi sempre cosa sta facendo</h2>
-        <p class="section-lead reveal">Al centro c'è il nucleo di Jarvis. Quando lavora escono i pannelli del lavoro in corso; quando serve una tua decisione, la richiesta viene in primo piano in ambra.</p>
+        <p class="section-lead reveal">Al centro c'è il nucleo di Jarvis: ti mostra quando ascolta, quando lavora (con i pannelli del lavoro in corso) e, in ambra, quando aspetta una tua decisione.</p>
         <div class="state-buttons" role="group" aria-label="Stati di Jarvis">
           <button type="button" data-state="idle" aria-pressed="true">Pronto</button>
           <button type="button" data-state="listen" aria-pressed="false">Ti ascolta</button>
@@ -301,286 +249,32 @@
     </div>
   </section>
 
-  <section id="cosa-fa" class="band" aria-labelledby="cosa-title">
+  <section id="fiducia" aria-labelledby="fiducia-title" data-parlante="privacy">
     <div class="wrap">
-      <h2 id="cosa-title" class="section-title reveal">Cosa sa fare</h2>
-      <p class="section-lead reveal">Non è una chat: fa il lavoro con i tuoi strumenti, e ti dice sempre cosa ha fatto.</p>
-      <div class="features reveal">
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-pin"/></svg><h3>Trova clienti</h3><p>Cerca le attività vicino a te senza sito, prepara il sito, lo pubblica e ti dà il link da mostrare al titolare. Trova anche l'email per scrivergli.</p><p class="try">«Trova i ristoranti qui vicino senza sito web»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-folder"/></svg><h3>Conosce il tuo lavoro</h3><p>Legge le cartelle e i repository collegati: riassume cosa fa un progetto e quali tecnologie usa, e controlla le modifiche locali di frontend e backend.</p><p class="try">«A che punto è il sito del ristorante Da Mario?»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-doc"/></svg><h3>Documenti pronti</h3><p>Preventivi, offerte, presentazioni e fogli di calcolo in PDF, Word, PowerPoint ed Excel.</p><p class="try">«Fammi il preventivo per il B&amp;B Il Glicine»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-mail"/></svg><h3>Email e calendario</h3><p>Gmail e le caselle IMAP, anche aziendali (Outlook e Microsoft 365 in arrivo): legge, riassume, risponde. Con un calendario CalDAV fissa, sposta e annulla gli appuntamenti e lo ricontrolla sul calendario; con il link di Google o Outlook legge gli impegni e manda gli inviti. Gli eventi ricorrenti si cambiano dall'app del calendario. Sempre con il tuo ok.</p><p class="try">«Sposta la call con Rossi a venerdì alle 11»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-image"/></svg><h3>Grafiche, foto e post nel brand del cliente</h3><p>Loghi, locandine e post social nei colori, nel tono e con il listino di ogni cliente, ricavati anche dal suo sito. Pronti da stampare o pubblicare. Foto e illustrazioni con il tuo abbonamento ChatGPT; le versioni gratuite passano un controllo di qualità. Il risultato deve sembrare di un designer senior, non di un'AI: niente gradienti viola, card tutte uguali, frasi da brochure o immagini finte.</p><p class="try">«Una locandina per l'evento di sabato»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-image"/></svg><h3>Social pubblicati all'ora giusta</h3><p>Piano editoriale, caroselli per Instagram e TikTok, testi e hashtag per ogni piattaforma. Pubblica su Instagram e Facebook a un'ora fissata, con il computer acceso e il tuo ok in quel momento, anche dal telefono; per TikTok usa il browser dove consentito, oppure ti manda il pacchetto da completare nell'app. Se glielo chiedi, ogni settimana ti dice come stanno andando, profilo per profilo.</p><p class="try">«Pubblica il carosello giovedì alle 18 sul profilo del negozio in centro»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-target"/></svg><h3>Campagne Meta</h3><p>La squadra prepara la campagna per intero, in pausa. Parte solo quando approvi il budget.</p><p class="try">«Elena, prepara la campagna di primavera»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-branch"/></svg><h3>Prodotti software completi</h3><p>Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo, sviluppo su un branch dedicato, test e pull request. Lavora anche su software esistente: legge gli errori delle pipeline GitHub e prepara le PR delle modifiche locali, mostrando branch sorgente e destinazione prima di commit e push.</p><p class="try">«Creami un gestionale per il centro estetico»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-wave"/></svg><h3>Una voce vera</h3><p>Giovanni, una voce italiana naturale generata sul tuo computer, senza una quota API: prepara orari, importi, date, sigle e parole inglesi per la lettura e cura accenti e intonazione. I nomi dei tuoi clienti li dice come gli insegni tu.</p><p class="try">«Com'è la giornata?»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-video"/></svg><h3>Riunioni con il verbale</h3><p>«Registra la riunione»: trascrive sul computer anche l'audio della call, poi ti dà riassunto, decisioni, cose da fare e la bozza dell'email di follow-up.</p><p class="try">«Jarvis, registra la riunione»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-mic"/></svg><h3>Detta in qualsiasi app</h3><p>Una scorciatoia, parli, e il testo compare dove stai scrivendo: email, documenti, chat. Tutto sul computer.</p><p class="try">⌘⇧Spazio</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Non si ferma ai limiti</h3><p>Se un modello accetta poche immagini alla volta, Jarvis divide il lavoro. Se tutti i tuoi abbonamenti hanno finito i limiti, ti dice quando tornano e, se vuoi, riprende da solo, anche avvisandoti su Telegram.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-search"/></svg><h3>Sempre aggiornato</h3><p>Regole delle piattaforme, hashtag, prezzi e norme li verifica da fonti ufficiali, li salva con la data e, se sono scaduti, li ricontrolla prima di riusarli.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Procedure di lavoro incluse</h3><p>Jarvis include 40 procedure di lavoro per sviluppo, ricerca, design, marketing e revisione. Affiancano la squadra con metodi e criteri di consegna: versioni da verificare, fonti da citare e risultati da controllare prima di presentarli. Claude Code e Codex le ricevono come skill native; con le altre connessioni Jarvis le carica con un suo strumento. Sono una guida per il modello, non la garanzia che le segua sempre.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-plug"/></svg><h3>Skill di terzi, controllate</h3><p>Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-browser"/></svg><h3>Usa il browser per te</h3><p>Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu.</p><p class="try">«Prenota un tavolo per due sabato alle 21»</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-steps"/></svg><h3>Lavori in più passi</h3><p>Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli; ciò che esce (un invio, una pubblicazione) ti chiede comunque l'ok. Ogni passo ti mostra il suo risultato, e puoi giudicarlo con un pollice. Anche ricorrenti.</p><p class="try">«Ogni lunedì alle 9 mandami il riepilogo»</p></article>
+      <h2 id="fiducia-title" class="section-title reveal">I tuoi dati restano tuoi. Decidi tu cosa esce.</h2>
+      <p class="section-lead reveal">Progetti, documenti e voce restano sul tuo computer. Online va solo il pezzo che serve a rispondere; un progetto «riservato» non esce affatto.</p>
+      <div class="shield reveal">
+        <h3><svg class="icon line" aria-hidden="true"><use href="#i-shield"/></svg>Nasconde i dati sensibili</h3>
+        <p>Prima di inviare qualcosa a Claude o ChatGPT, codice fiscale, IBAN, partita IVA, carte, nomi e indirizzi (anche di una busta paga) diventano segnaposto. I dati veri restano sul computer e tornano nella risposta; su Telegram e sugli altri dispositivi arrivano solo i segnaposto. Automatica, regolabile per chat o progetto. È una pseudonimizzazione: il massimo resta il progetto «riservato».</p>
       </div>
-    </div>
-  </section>
-
-  <div class="aurora" aria-hidden="true"><i></i></div>
-  <section id="collegamenti" class="connectors" aria-labelledby="collegamenti-title">
-    <div class="wrap">
-      <h2 id="collegamenti-title" class="section-title reveal">Si collega a quello che usi già</h2>
-      <p class="section-lead reveal">Al primo avvio Jarvis trova da solo abbonamenti, modelli e progetti. Il resto lo colleghi da «Collegamenti», con una guida passo passo per ciascuno.</p>
-      <div class="wall" id="wall">
-        <div class="wall-group">
-          <h3>Cervelli AI</h3>
-          <ul>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg><b>Claude</b><small>Abbonamento Pro o Max, anche Claude Code</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg><b>ChatGPT e Codex</b><small>Abbonamento Plus o Pro, anche per le immagini</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-chip"/></svg><b>Ollama</b><small>Gratis sul tuo computer</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-cloud"/></svg><b>OmniRoute</b><small>Gratis online, decine di fornitori</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg><b>Gemini</b><small>Accesso Google tramite Gemini CLI; API separata, anche per immagini</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-key"/></svg><b>API Anthropic e OpenAI</b><small>A consumo, con un tetto di spesa</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-layers"/></svg><b>Grok, Mistral, DeepSeek, Groq, OpenRouter</b><small>Provider API selezionabili per nome</small></li>
-          </ul>
-        </div>
-        <div class="wall-group">
-          <h3>Email e agenda</h3>
-          <ul>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg><b>Gmail e ogni casella IMAP</b><small>Anche aziendale, ognuna con il suo calendario</small></li>
-            <li class="soon-item"><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg><b>Outlook, Hotmail, Microsoft 365</b><small>In arrivo</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg><b>Google Calendar</b><small>Con il link: lettura e inviti</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg><b>iCloud, Fastmail, Zoho, Nextcloud</b><small>Calendari CalDAV</small></li>
-          </ul>
-        </div>
-        <div class="wall-group">
-          <h3>Telefono e riunioni</h3>
-          <ul>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><b>Telegram</b><small>Messaggi, vocali, foto, posizione, approvazioni; le risposte tornano sul telefono</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg><b>Zoom, Meet, Teams</b><small>L'audio della call, trascritto sul computer</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-mic"/></svg><b>Dettatura</b><small>In qualsiasi app, con una scorciatoia</small></li>
-          </ul>
-        </div>
-        <div class="wall-group">
-          <h3>Pubblicare e vendere</h3>
-          <ul>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg><b>GitHub</b><small>Repository, pull request, pipeline, GitHub Pages</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-globe"/></svg><b>Netlify</b><small>Siti online con un link</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-qr"/></svg><b>Anteprime con QR</b><small>Un link temporaneo, senza account</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg><b>Pagine Facebook</b><small>Post, con il tuo ok</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg><b>Meta Ads</b><small>Campagne pronte e in pausa</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg><b>Stripe</b><small>Clienti e link di pagamento</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg><b>Notion</b><small>Pagine e database</small></li>
-          </ul>
-        </div>
-        <div class="wall-group">
-          <h3>Sul tuo computer</h3>
-          <ul>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg><b>Cartelle e repository</b><small>La conoscenza dei tuoi progetti</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg><b>Word, Excel, PowerPoint, PDF</b><small>Li legge e li crea</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg><b>Chrome ed Edge</b><small>Moduli e prenotazioni in una finestra che vedi</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg><b>iCloud Drive, OneDrive, Dropbox</b><small>Stessi progetti su più computer (Max)</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-plug"/></svg><b>Strumenti MCP</b><small>Qualsiasi server compatibile (Max)</small></li>
-          </ul>
-        </div>
-        <div class="wall-group">
-          <h3>Dal web</h3>
-          <ul>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg><b>Mappe Geoapify</b><small>Attività vicine, indirizzi, telefoni</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-search"/></svg><b>Ricerca Brave</b><small>Ricerche sul web con le fonti</small></li>
-            <li><svg class="icon line" aria-hidden="true"><use href="#i-sun"/></svg><b>Meteo MET Norway</b><small>Gratis, nel saluto del mattino</small></li>
-          </ul>
-        </div>
-      </div>
-      <p class="works-note">I nomi dei servizi appartengono ai rispettivi proprietari; Jarvis li usa con i tuoi account e le tue chiavi.</p>
-    </div>
-  </section>
-
-  <section id="squadra" aria-labelledby="squadra-title">
-    <div class="wrap split">
-      <div>
-        <h2 id="squadra-title" class="section-title reveal">Una squadra, non un chatbot</h2>
-        <p class="section-lead reveal">Jarvis ha la sua squadra: otto persone, ognuna con un ruolo e più competenze, sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri. Si parlano in riunione e ti aggiornano nella chat del progetto.</p>
-        <ul class="ticks">
-          <li>Lo Studio: prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione</li>
-          <li>Lavorano a orari fissi e riprendono da soli quando il computer si libera</li>
-          <li>Imparano dai risultati e dai tuoi 👍 e 👎</li>
-          <li>«Presentami la squadra»: la vedi collegata a Jarvis come una rete, intera o progetto per progetto, mentre te la presenta a voce</li>
-          <li>Un revisore ricontrolla le consegne: corregge ciò che è sbagliato, annota le rifiniture, al massimo due giri; se resta qualcosa di aperto il lavoro arriva come bozza e decidi tu. È un motore diverso dall'autore quando ne hai collegati più d'uno; quando non è possibile, Jarvis te lo dice</li>
-          <li>Progetti pronti per agenzia, prodotto software, app mobile, brand, sito e SEO, negozio; aggiungi uno specialista quando un cliente lo chiede</li>
-        </ul>
-      </div>
-      <div class="team reveal" role="group" aria-label="Esempio di squadra">
-        <div class="member"><span class="avatar">S</span><div><b>Sofia</b><small>Product manager</small></div><span class="state busy">in riunione</span></div>
-        <div class="member"><span class="avatar">A</span><div><b>Andrea</b><small>Architetto e sviluppatore</small></div><span class="state busy">sta facendo i test</span></div>
-        <div class="member"><span class="avatar">E</span><div><b>Elena</b><small>Marketing, contenuti e SEO</small></div><span class="state wait">aspetta il tuo ok</span></div>
-        <div class="member"><span class="avatar">M</span><div><b>Matteo</b><small>Graphic designer</small></div><span class="state">pronto</span></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="aurora" aria-hidden="true"><i></i></div>
-  <section id="auto" aria-labelledby="auto-title">
-    <div class="wrap">
-      <h2 id="auto-title" class="section-title reveal">AUTO: il modello giusto per ogni fase, dentro il tuo abbonamento</h2>
-      <p class="section-lead reveal">Con Claude Pro o ChatGPT Plus i limiti finiscono presto se ogni richiesta va al modello più potente con il ragionamento al massimo. AUTO decide tre cose per ogni fase di un lavoro: chi deve intervenire, quale modello del tuo abbonamento usare e quanto deve ragionare.</p>
-      <div class="features reveal">
-        <article><h3>Leggero quando basta, potente quando serve</h3><p>Una riscrittura o una mail vanno al modello leggero del tuo piano (per esempio Haiku o Luna), un sito con il brief a quello intermedio, un'architettura o una diagnosi difficile al più capace. Il ragionamento è basso di norma, medio quando la fase lo richiede, alto solo con un motivo, per esempio se gli chiedi «pensaci bene». Se un modello leggero non basta, il lavoro passa una volta a uno più capace dello stesso abbonamento, invece di ripetere correzioni.</p></article>
-        <article><h3>I modelli che hai davvero</h3><p>AUTO legge l'elenco dei modelli del tuo account da Claude Code, da Codex o dalla tua chiave, senza spendere nulla per provarli. Un modello che il tuo piano non include resta fuori; uno nuovo del tuo abbonamento entra senza aggiornare l'app, e non viene trattato come il più potente finché il fornitore non lo descrive così.</p></article>
-        <article><h3>Se scegli tu, la tua scelta resta</h3><p>Un modello scelto in chat («usa Claude») o dato a una persona della squadra vale per tutto quel lavoro: sviluppo, deleghe, revisioni e riassunti restano su quello, con il ragionamento che hai scelto, senza abbassarlo per risparmiare. Quello scelto per un ruolo (chat, squadra, codice) vale per il lavoro di quel ruolo. Jarvis non passa a un altro modello senza il tuo sì: se quel modello è al limite, salva il lavoro e riprende al ripristino. Una revisione indipendente con un altro modello te la chiede prima.</p></article>
-        <article><h3>Un budget per lavoro, una quota per account</h3><p>Deleghe, correzioni, revisioni e riassunti di un lavoro condividono lo stesso budget, con spazio tenuto da parte per il controllo finale: i lavori accessori aspettano, quelli in corso finiscono. Due collegamenti allo stesso account restano una sola quota. La quota residua la vedi solo se il fornitore la comunica; altrimenti Jarvis lo dice e non inventa percentuali.</p></article>
-        <article><h3>Meno lavoro inutile, stessa qualità</h3><p>Al modello arrivano strumenti e contesto pertinenti. Lo sviluppatore riprende la sessione, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio, se la scelta è compatibile. I tre CLI riprendono anche chat e persone del progetto; una sostituzione inevitabile è dichiarata. Le API ricevono cronologia e riassunto. Le attività indipendenti possono affiancarsi; dipendenze e scritture sulla stessa risorsa aspettano. Avvio ed esito degli agenti identificati sono visibili in chat e sul telefono.</p></article>
-        <article><h3>Vedi dove va il consumo</h3><p>Sotto ogni risposta vedi il modello usato, il livello di ragionamento e il motivo della scelta. In Attività ogni lavoro è diviso per fase: sviluppo, revisioni, riassunti, errori. Se preferisci la scelta di prima (il modello di ogni collegamento e il ragionamento per ruolo), la ritrovi nelle Connessioni, in modalità avanzata; le protezioni su budget, quote e scelte tue restano.</p></article>
-        <article class="wide"><h3>AUTO impara dai risultati</h3><p>Ogni risultato controllato riceve da Jarvis un voto (discreto, buono, ottimo, super) con il modello, il ragionamento e il tipo di lavoro che l'hanno prodotto; i giri di correzione dello stesso lavoro valgono un risultato solo. AUTO rilegge le pagelle della combinazione che sta per usare: un modello più leggero prende un lavoro solo dopo buoni risultati suoi su lavori dello stesso tipo e con lo stesso ragionamento, mai per una revisione o un lavoro a rischio; da basso a medio quando basso rende poco, mai ad alto per questo. Tu dai soltanto 👍 o 👎, anche su un singolo passo di un piano: il pollice sul risultato pesa anche su chi l'ha prodotto, e in Attività vedi quando il tuo giudizio e i controlli non coincidono.</p></article>
-      </div>
-      <p class="fine">Nessuno può promettere una giornata illimitata con quote finite: dipendono dal piano, dal modello, dal contesto e dagli strumenti, e anche da ciò che fai con lo stesso account fuori da Jarvis. Prima di ogni versione la scelta di AUTO è provata su una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo uso e si verifica sugli abbonamenti veri.</p>
-    </div>
-  </section>
-
-  <section id="gratis" class="band story" aria-labelledby="gratis-title">
-    <div class="wrap">
-      <h2 id="gratis-title" class="section-title reveal">Prima i modelli gratuiti</h2>
-      <p class="section-lead reveal">Jarvis sceglie da solo il modello giusto per ogni richiesta e sotto ogni risposta ti dice quale ha usato e perché. Scendi: sale di un gradino solo quando serve.</p>
-      <div class="story-grid">
-        <div class="story-pin" aria-hidden="true">
-          <div class="stack" data-active="0">
-            <i data-layer="3"><b>A consumo, con un tetto</b></i>
-            <i data-layer="2"><b>I tuoi abbonamenti</b></i>
-            <i data-layer="1"><b>Gratis online</b></i>
-            <i data-layer="0"><b>Sul tuo computer</b></i>
-          </div>
-          <p class="stack-cost"><span data-cost="0">Gratis, sul tuo computer</span><span data-cost="1">Gratis, online</span><span data-cost="2">Incluso nel tuo abbonamento</span><span data-cost="3">A consumo, con un tetto di spesa</span></p>
-        </div>
-        <ol class="ladder story-steps">
-          <li data-step="0"><b>Sul tuo computer</b><span>Ollama: privato e gratuito. Jarvis lo installa e sceglie il modello adatto alla memoria del computer.</span></li>
-          <li data-step="1"><b>Gratis online</b><span>OmniRoute unisce i livelli gratuiti di decine di fornitori. Jarvis lo configura da solo, collega quelli senza chiave e ti mostra quanti token gratuiti hai ogni mese.</span></li>
-          <li data-step="2"><b>I tuoi abbonamenti</b><span>Claude, ChatGPT o Google con Gemini CLI, se li hai già: per il codice, le foto e i lavori pesanti. Dentro ciascuno AUTO sceglie il modello adatto a ogni fase, e li usa fino in fondo prima di spendere un centesimo in più.</span></li>
-          <li data-step="3"><b>A consumo, con un tetto</b><span>Chiavi API solo quando gli abbonamenti sono al limite o mancano, con un limite di spesa al giorno e al mese. Prima di ogni chiamata Jarvis tiene da parte una stima prudente del costo (con i prezzi ufficiali; per i modelli senza prezzo una quota fissa) e la sostituisce con il costo comunicato dal fornitore.</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section id="differenza" aria-labelledby="differenza-title">
-    <div class="wrap">
-      <h2 id="differenza-title" class="section-title reveal">Perché Jarvis, se hai già Claude o ChatGPT</h2>
-      <p class="section-lead reveal">Claude Cowork, Claude Code e Codex sono ottimi assistenti di un solo fornitore. Jarvis non li sostituisce: li usa, insieme, e ci mette sopra ciò che serve a chi lavora con i clienti.</p>
-      <div class="features reveal">
-        <article><h3>Tutti i tuoi cervelli, uno sopra l'altro</h3><p>Il tuo abbonamento Claude e quello ChatGPT diventano motori di Jarvis, insieme ai modelli gratuiti sul computer e online. In automatico, quando uno finisce i limiti il lavoro passa al successivo; se hai scelto tu un modello, Jarvis aspetta quello. Se li finiscono tutti, riprende da solo quando tornano.</p></article>
-        <article><h3>Un controllore diverso dall'autore</h3><p>Il lavoro fatto da un modello lo rivede un altro modello, di un'altra azienda se hai collegato fornitori diversi, contro la tua richiesta: corregge ciò che è sbagliato o rischioso, al massimo due giri. Dentro uno strumento di un solo fornitore non si può.</p></article>
-        <article><h3>Lavoro consegnato, non spiegato</h3><p>Il sito arriva con anteprima, link e QR; il preventivo come PDF; l'appuntamento come invito; la riunione come verbale con la bozza di follow-up; la campagna pronta e in pausa. Sempre con il tuo ok su ciò che esce.</p></article>
-        <article><h3>Una squadra che conosce i tuoi clienti</h3><p>Otto persone con nome, ruolo e competenze, sempre le stesse, assegnate ai progetti con obiettivi e orari. Ogni cliente ha il suo brand, le sue chat e le sue memorie, separate dagli altri.</p></article>
-        <article><h3>Spesa chiara, strumenti liberi</h3><p>Jarvis si paga una volta. Usa prima strumenti gratuiti e open source, poi gli abbonamenti che hai già, le API solo con un tetto di spesa; sotto ogni risposta vedi motore e costo stimato, in Attività il consumo di ogni lavoro fase per fase.</p></article>
-        <article><h3>I dati restano tuoi, in italiano</h3><p>Progetti, memorie e voce restano sul computer. Un progetto riservato va solo ai modelli sul tuo computer. Voce e ascolto sono in italiano e girano sul computer, senza limiti d'uso.</p></article>
-      </div>
-      <p class="fine">Dove loro sono più forti, onestamente: se scrivi codice tutto il giorno, Claude Code e Codex restano strumenti eccellenti, e Jarvis li usa come motori. Se ti serve lavoro che continua a computer spento, le attività in cloud di Claude lo fanno; Jarvis lavora sul tuo computer: continua anche a schermo bloccato, lo tiene sveglio finché c'è lavoro in corso e, se lo metti in standby, ti avvisa su Telegram e riprende al risveglio.</p>
-    </div>
-  </section>
-
-  <section id="dietro-le-quinte" class="band backstage" aria-labelledby="quinte-title">
-    <div class="wrap">
-      <h2 id="quinte-title" class="section-title reveal">Il dietro le quinte di Jarvis</h2>
-      <p class="section-lead reveal">Il nucleo coordina il lavoro sul computer; i modelli sono motori intercambiabili. Qui trovi la struttura, con i dettagli tecnici da aprire quando ti servono.</p>
-
-      <div class="arch reveal" role="group" aria-label="Come è fatto Jarvis, in tre blocchi">
-        <div class="arch-col">
-          <p class="arch-head">Da dove arrivano le richieste</p>
-          <ul><li>Voce, sul computer</li><li>Chat e Home</li><li>Telegram, dal telefono</li><li>Attività programmate e piani</li></ul>
-        </div>
-        <div class="arch-core">
-          <p class="arch-head">Il nucleo di Jarvis, sul tuo computer</p>
-          <ol>
-            <li><b>Risposte immediate</b><span>ciò che non serve chiedere a un modello</span></li>
-            <li><b>Contesto essenziale</b><span>solo ciò che serve a quella richiesta</span></li>
-            <li><b>Scelta del motore</b><span>gratis prima, poi abbonamenti, poi a consumo</span></li>
-            <li><b>Strumenti e squadra</b><span>file, email, siti, browser, agenti</span></li>
-            <li><b>Regole e approvazioni</b><span>cosa esce, quanto costa, chi lo autorizza</span></li>
-          </ol>
-          <p class="arch-data"><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg>Progetti, memorie, conoscenza e storico: un database sul tuo computer</p>
-        </div>
-        <div class="arch-col">
-          <p class="arch-head">I motori, intercambiabili</p>
-          <ul><li>Modelli sul computer</li><li>Livelli gratuiti online</li><li>I tuoi abbonamenti</li><li>API con un tetto di spesa</li></ul>
-        </div>
-      </div>
-
-      <details class="technical-details">
-        <summary>Dati, memoria, strumenti e sicurezza: i dettagli tecnici</summary>
-      <div class="features reveal">
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Un nucleo, tanti motori</h3><p>Jarvis è un'applicazione desktop con un proprio nucleo: i modelli AI sono motori che si collegano e si scambiano senza cambiare nulla del resto. Gli strumenti sono scritti una volta e li usano tutti i motori, nativamente o tramite il protocollo aperto MCP.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-spark"/></svg><h3>Contesto mirato e risposte senza modello</h3><p>Jarvis capisce per significato, sul tuo computer, quali richieste non hanno bisogno di un modello: l'ora, la data, i conti detti come vengono («dividi 1000 per 8»), il meteo, una ricetta presa dal sito che la pubblica, un fatto scritto nell'enciclopedia e confermato da una seconda fonte, il testo di una foto, le chiacchiere. Rispondono subito, senza AI, con la fonte; nel dubbio decide un modello, e dai tuoi 👍 e 👎 impara quali sono quali; i modelli sul tuo computer rispondono senza perdersi in ragionamenti quando la domanda non li chiede. Al modello arriva un contesto compatto: un riassunto progressivo della conversazione e solo i passaggi pertinenti dei tuoi documenti. Le istruzioni fisse restano stabili, così i fornitori le mettono in cache; la cache evita alcune ripetizioni e i risultati enormi vengono ridotti con un avviso. Il consumo effettivo resta quello comunicato dai fornitori.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-search"/></svg><h3>Una memoria che sa chi ha detto cosa</h3><p>Distingue ciò che dici tu da ciò che deduce, e una correzione sostituisce il ricordo vecchio invece di sommarsi. I fatti presi dal web hanno fonte, data e scadenza, e vengono ricontrollati. I tuoi file sono indicizzati sul computer e l'indice si aggiorna da solo quando cambiano.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-steps"/></svg><h3>Machine learning dove serve</h3><p>La scelta del motore impara da come vanno le richieste e soprattutto dai tuoi 👍 e 👎: una risposta arrivata non è per forza un buon lavoro, il tuo giudizio pesa di più. Stime statistiche prudenti: cambia abitudine solo quando i dati bastano, mai oltre il budget o le capacità del computer. Jarvis non si addestra sui tuoi dati e non manda nulla «per migliorare il servizio»; i fornitori AI che colleghi trattano le richieste secondo le loro condizioni e impostazioni.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-wave"/></svg><h3>Voce e ascolto in locale</h3><p>Sintesi vocale, rilevamento del parlato e riconoscimento sono reti neurali incluse nell'installer, che girano sul tuo processore: una rete dedicata capisce quando stai parlando, anche a voce bassa o con il rumore della stanza, e un'altra trascrive la frase appena finisci di parlare, in un tempo che dipende dal computer e dalla lunghezza della frase. La dizione italiana poggia su dizionari di pronuncia aperti: accenti, sigle, numeri e parole inglesi detti come li direbbe una persona.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-shield"/></svg><h3>Sicuro per costruzione</h3><p>I comandi che i modelli lanciano nei progetti girano, su macOS, in un recinto del sistema. Le azioni di Jarvis verso l'esterno (email, post, pubblicazioni, pull request) sono registrate prima di partire e non vengono ripetute in silenzio; quelle che un motore come Claude Code o Codex fa con i suoi strumenti passano dalle tue approvazioni. Prima di ogni chiamata a consumo Jarvis tiene da parte una stima prudente del costo; le chiavi stanno nel portachiavi del sistema.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-sync"/></svg><h3>Non perde il filo</h3><p>I piani sopravvivono ai riavvii, le richieste scritte senza rete partono quando torna, il lavoro fermo ai limiti di un abbonamento riprende da solo. Ogni aggiornamento dei dati fa prima una copia di sicurezza; i backup con password sono cifrati.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-plug"/></svg><h3>Standard aperti</h3><p>IMAP e CalDAV per posta e calendari, Word, Excel, PowerPoint e PDF veri, Git per il codice, MCP per gli strumenti di terzi. I tuoi dati restano leggibili e portabili, anche senza Jarvis.</p></article>
-      </div>
-
-      <div class="oss reveal">
-        <p class="arch-head">Costruito anche con</p>
-        <ul><li>Electron</li><li>Node.js</li><li>React</li><li>SQLite</li><li>ONNX Runtime</li><li>Whisper</li><li>Silero VAD</li><li>Pocket TTS di Kyutai</li><li>Ollama</li><li>OmniRoute</li><li>Playwright</li><li>Model Context Protocol</li></ul>
-        <p class="fine">Le licenze di ogni componente sono nelle <a href="condizioni.html">condizioni d'uso</a>. I componenti sono pubblici; come lavorano insieme è il lavoro di Jarvis.</p>
-      </div>
-      </details>
-    </div>
-  </section>
-
-  <section aria-labelledby="fiducia-title">
-    <div class="wrap">
-      <h2 id="fiducia-title" class="section-title reveal">Tu decidi quanto è autonomo</h2>
       <div class="three reveal">
-        <article><h3>Chiedi prima</h3><p>Ti chiede conferma per ogni azione che cambia qualcosa. Le altre autonomie le scegli tu, in Impostazioni.</p></article>
-        <article class="picked"><h3>Automatica</h3><p>Fa da solo il lavoro sul computer; ti chiede l'ok per ciò che esce.</p></article>
-        <article><h3>Approva per me</h3><p>Massima autonomia. Email, post pubblici, cancellazioni e spese chiedono comunque il tuo ok.</p></article>
+        <article><h3>Chiedi prima</h3><p>Conferma ogni azione che cambia qualcosa.</p></article>
+        <article class="picked"><h3>Automatica</h3><p>Lavora da solo sul computer; ciò che esce aspetta il tuo ok.</p></article>
+        <article><h3>Approva per me</h3><p>Massima autonomia, ma email, post, cancellazioni e spese chiedono sempre.</p></article>
       </div>
-      <p class="fine center">Ogni richiesta mostra destinatari e file che escono. Rispondi «sì», «no» o «fai così», anche da Telegram.</p>
-    </div>
-  </section>
-
-  <section id="telefono" class="band" aria-labelledby="tel-title">
-    <div class="wrap split">
-      <div>
-        <h2 id="tel-title" class="section-title reveal"><svg class="icon title-icon" aria-hidden="true"><use href="#i-telegram"/></svg>Anche fuori casa</h2>
-        <p class="section-lead reveal">Su Telegram scrivi, mandi vocali, foto, documenti e la posizione. Un solo gruppo raccoglie tutto: la chat con Jarvis e un argomento per ogni progetto.</p>
-        <ul class="ticks">
-          <li>Approvazioni con un tocco, o con una risposta</li>
-          <li>Riepilogo del mattino, promemoria e avvisi di avvio/esito</li>
-          <li>Silenzio di notte: le notifiche arrivano raccolte al risveglio</li>
-          <li>Squadra e partecipanti con /squadra; chiami una persona con /nome</li>
-          <li>Un nuovo argomento creato da te nel quartier generale diventa un progetto nell'app</li>
-          <li>Ai vocali risponde anche a voce; modello, strumenti e fonti restano nel testo</li>
-          <li>Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano qui</li>
-        </ul>
-        <p class="fine">Per rispondere, il computer deve essere acceso e Jarvis avviato. Telegram conserva gli aggiornamenti non ancora ricevuti dal bot per un massimo di 24 ore: all'avvio Jarvis acquisisce quelli disponibili. Richieste e notifiche in attesa restano sul computer e ripartono alla riconnessione; un invio dall'esito incerto non viene ripetuto da solo. Il comando /coda mostra le richieste e le consegne aperte.</p>
-      </div>
-      <div class="phone" role="group" aria-label="Esempio di chat su Telegram">
-        <p class="msg in">🎙️ Ho email importanti stamattina?</p>
-        <p class="msg out">Due: il commercialista chiede le fatture di settembre e Rossi conferma la riunione di giovedì alle 15. Rispondo al commercialista con le fatture allegate?</p>
-        <p class="msg in">Sì</p>
-        <p class="msg out">Inviata. ✓</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="chi" class="band" aria-labelledby="chi-title">
-    <div class="wrap">
-      <h2 id="chi-title" class="section-title reveal">Chi c'è dietro Jarvis</h2>
-      <p class="section-lead reveal">Jarvis è progettato e sviluppato da Mattia, Senior Software Engineer e Technical Leader con più di 10 anni di esperienza in aziende enterprise. Non è un esperimento messo insieme con qualche strumento AI: è costruito con le stesse regole del software che le aziende usano ogni giorno.</p>
-      <div class="three reveal">
-        <article><h3>Collaudato prima di ogni versione</h3><p>Oltre cinquecento controlli automatici a ogni modifica, percorsi completi dell'app previsti nella pipeline per Windows e macOS, e ogni promessa di questa pagina legata alle sue prove: senza, la versione non esce.</p></article>
-        <article><h3>Sicuro per costruzione</h3><p>Email e post a tuo nome solo con il tuo ok, chiavi nel portachiavi del sistema, backup cifrati con la tua password, modelli e motori gratuiti installati solo se corrispondono all'impronta di chi li produce, aggiornamenti che non toccano i dati.</p></article>
-        <article><h3>Licenze rispettate</h3><p>Componenti e servizi scelti verificando le loro licenze e condizioni d'uso, con le attribuzioni dovute: le integrazioni dipendono anche dalle condizioni e dalle modifiche dei fornitori. L'elenco completo dei componenti, con le loro licenze, è dentro l'app: Impostazioni → Componenti di terze parti.</p></article>
+      <p class="fine reveal">Chiavi nel portachiavi del sistema, backup cifrati con la tua password. Jarvis non si addestra sui tuoi dati.</p>
+      <div id="chi" class="maker reveal">
+        <h3>Chi c'è dietro Jarvis</h3>
+        <p>Lo progetta e sviluppa Mattia, Senior Software Engineer e Technical Leader con più di 10 anni in aziende enterprise. Oltre cinquecento controlli automatici a ogni modifica; ogni promessa di questa pagina è legata alle sue prove.</p>
       </div>
     </div>
   </section>
 
   <div class="aurora" aria-hidden="true"><i></i></div>
-  <section id="piani" aria-labelledby="piani-title">
+  <section id="piani" class="band" aria-labelledby="piani-title" data-parlante="prezzi">
     <div class="wrap">
       <h2 id="piani-title" class="section-title reveal">Pro e Max</h2>
-      <p class="section-lead reveal">Nell'app le funzioni Max restano visibili, segnate con «Max»: sai sempre cosa ottieni. Nella demo è tutto sbloccato.</p>
+      <p class="section-lead reveal">Paghi una volta, nessun abbonamento a Jarvis.</p>
       <div class="table-scroll">
         <table class="plans">
           <thead>
@@ -602,59 +296,48 @@
           </tbody>
         </table>
       </div>
-    </div>
-  </section>
-
-  <section id="licenza" class="band" aria-labelledby="licenza-title">
-    <div class="wrap">
-      <h2 id="licenza-title" class="section-title reveal">Licenza e aggiornamenti</h2>
-      <p class="section-lead reveal">Paghi una volta. Nessun abbonamento a Jarvis: l'AI la scegli tu, anche gratis.</p>
-      <div class="licence reveal">
-        <article><h3>Non scade</h3><p>La licenza vale per sempre. Jarvis continua a funzionare anche quando gli aggiornamenti inclusi sono finiti.</p></article>
+      <div id="licenza" class="licence reveal" role="group" aria-label="Licenza e aggiornamenti">
+        <article><h3>Non scade</h3><p>La licenza vale per sempre, anche dopo gli aggiornamenti inclusi.</p></article>
         <article><h3>Aggiornamenti inclusi</h3><p data-updates>Ricevi tutte le versioni nuove fino alla data scritta nella tua licenza.</p></article>
-        <article><h3>Rinnovo facoltativo</h3><p data-renewal>Vuoi le versioni successive? Rinnovi gli aggiornamenti quando vuoi: incolli la nuova licenza e basta.</p></article>
         <article><h3>Tuo, sui tuoi computer</h3><p data-devices>La licenza è legata ai computer che indichi. Cambi computer? Ti mandiamo la licenza per quello nuovo.</p></article>
-        <article><h3>Da Pro a Max quando vuoi</h3><p>Paghi solo la differenza e incolli la nuova licenza: progetti, squadra e dati restano dove sono.</p></article>
-        <article><h3>Sicurezza sempre inclusa</h3><p>Le correzioni di sicurezza sono gratuite per ogni licenza valida, anche dopo il periodo di aggiornamenti.</p></article>
-        <article><h3>Soddisfatto o rimborsato</h3><p>Hai 14 giorni per provarlo: se non fa per te, ti restituiamo quanto hai pagato. <a href="condizioni.html">Condizioni complete</a>.</p></article>
+        <article><h3>Soddisfatto o rimborsato</h3><p>Entro 14 giorni, se non fa per te, ti restituiamo quanto hai pagato.</p></article>
       </div>
+      <ul class="ticks licence-more reveal">
+        <li data-renewal>Vuoi le versioni successive? Rinnovi gli aggiornamenti quando vuoi: incolli la nuova licenza e basta.</li>
+        <li>Da Pro a Max paghi solo la differenza; le correzioni di sicurezza restano gratuite per ogni licenza valida.</li>
+        <li><b>Come si acquista:</b> <a href="#contatti">scrivici</a>; paghi con bonifico o con un link di pagamento e ricevi la licenza via email. <a href="condizioni.html">Condizioni complete</a>.</li>
+      </ul>
     </div>
   </section>
 
-  <div class="aurora" aria-hidden="true"><i></i></div>
   <section id="scarica" aria-labelledby="scarica-title">
     <div class="wrap">
       <h2 id="scarica-title" class="section-title reveal">Scarica</h2>
       <div class="downloads reveal">
         <article>
           <h3>Demo</h3>
-          <p>Jarvis con progetti, squadra e conversazioni di esempio, risposte simulate. Gratuita, senza account e senza licenza: per collegare i tuoi abbonamenti serve la versione completa.</p>
+          <p>Jarvis con progetti e conversazioni di esempio e risposte simulate. Gratuita, senza account né licenza.</p>
           <a class="button ghost" id="demo-link" href="#" hidden>Scarica la demo</a>
           <p class="soon" id="demo-soon" role="status">In arrivo per macOS e Windows.</p>
-          <p>Vuoi provarlo sul serio? Chiedi la <strong>prova gratuita di 14 giorni del piano Max</strong>, con i tuoi abbonamenti: alla fine scegli il piano e ritrovi tutto com'era.</p>
+          <p>Vuoi provarlo sul serio? Chiedi la <strong>prova gratuita di 14 giorni del piano Max</strong> con i tuoi abbonamenti: alla fine scegli il piano e ritrovi tutto com'era.</p>
         </article>
         <article>
           <h3>Jarvis</h3>
-          <p>La versione completa, attivata con la licenza per i tuoi computer. Al primo avvio trova da solo abbonamenti, modelli e progetti.</p>
+          <p>La versione completa, attivata con la licenza per i tuoi computer.</p>
           <div class="actions">
             <a class="button ghost" href="https://github.com/redguitars97/jarvis-releases/releases/latest" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>macOS</a>
             <a class="button ghost" href="https://github.com/redguitars97/jarvis-releases/releases/latest" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg>Windows</a>
           </div>
         </article>
       </div>
-      <ol class="install">
-        <li><b>Installa.</b> Su Mac trascini Jarvis in Applicazioni; su Windows apri il file .exe, senza password di amministratore.</li>
-        <li><b>Attiva.</b> Copi il codice del computer dalla schermata «Attiva Jarvis» e incolli la licenza che ricevi.</li>
-        <li><b>Saluta.</b> «Ciao Jarvis». Il resto lo trova lui.</li>
-      </ol>
-      <p class="fine">Requisiti: macOS 13 o successivo (Apple Silicon o Intel) oppure Windows 10 o 11 a 64 bit, 8 GB di memoria (16 GB per i modelli sul computer), 2 GB di spazio. Alcune funzioni usano programmi di altri (Git per GitHub, Chrome o Edge per il browser, Node.js per Codex su Windows): <a href="https://github.com/redguitars97/jarvis-releases#cosa-serve-funzione-per-funzione">cosa serve, funzione per funzione</a>.</p>
+      <p class="fine">Requisiti: macOS 13 o successivo (Apple Silicon o Intel) oppure Windows 10 o 11 a 64 bit, 8 GB di memoria, 2 GB di spazio. <a href="https://github.com/redguitars97/jarvis-releases#cosa-serve-funzione-per-funzione">Cosa serve, funzione per funzione</a>.</p>
     </div>
   </section>
 
   <section id="contatti" class="band" aria-labelledby="contatti-title" hidden>
     <div class="wrap">
       <h2 id="contatti-title" class="section-title reveal">Parliamone</h2>
-      <p class="section-lead reveal">Vuoi la licenza, una dimostrazione dal vivo o hai una domanda? Scrivici: ti rispondiamo entro un giorno lavorativo.</p>
+      <p class="section-lead reveal">Vuoi la licenza, la prova di 14 giorni, una dimostrazione dal vivo o hai una domanda? Scrivici: ti rispondiamo entro un giorno lavorativo.</p>
       <ul class="contacts" id="contacts"></ul>
     </div>
   </section>
@@ -662,22 +345,232 @@
   <section id="domande" aria-labelledby="domande-title">
     <div class="wrap narrow">
       <h2 id="domande-title" class="section-title reveal">Domande frequenti</h2>
-      <details><summary>Serve un abbonamento a un'intelligenza artificiale?</summary><p>No. Puoi usare il tuo abbonamento Claude, ChatGPT o Google con Gemini CLI, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li configura da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, spese) non usano proprio l'AI.</p></details>
-      <details><summary>Quanto lavoro faccio con il mio abbonamento?</summary><p>Dipende dal piano e da cosa chiedi: le quote dei servizi AI sono finite e cambiano con il modello, il contesto e gli strumenti usati. AUTO è fatto per farle durare di più: il modello leggero e poco ragionamento dove bastano, i modelli più capaci solo dove servono. Quanto resta lo vedi nelle Connessioni quando il fornitore lo comunica; quando non lo comunica, Jarvis non lo stima a caso.</p></details>
-      <details><summary>Gemini con Google e Gemini API sono la stessa cosa?</summary><p>No. Il collegamento Google usa il Gemini CLI ufficiale, installato da te, con il login e le quote disponibili per il tuo piano o account. La voce Google Gemini API usa una chiave separata ed è a consumo. Jarvis non abilita spese oltre quota nel CLI. Il CLI può cambiare modello automaticamente: se richiedi un modello esatto Jarvis rifiuta prima di iniziare. L'integrazione CLI attuale non offre sottoagenti nativi né un livello di ragionamento selezionabile.</p></details>
+      <details><summary>Serve un abbonamento a un'intelligenza artificiale?</summary><p>Basta il tuo abbonamento Claude o ChatGPT: Jarvis lo usa al posto tuo. Non ce l'hai? Puoi usare modelli gratuiti o una chiave API con un tetto di spesa: trovi tutto in <a href="#gratis">Per utenti avanzati</a>. Molte risposte (ora, calcoli, promemoria, stato della squadra) non usano proprio l'AI.</p></details>
+      <details><summary>Ho già Claude o ChatGPT: cosa aggiunge Jarvis?</summary><p>Li usa come motori, anche insieme, e ci mette sopra ciò che serve a chi lavora con i clienti: la voce in italiano, una squadra che conosce i tuoi progetti, il lavoro consegnato finito, un secondo modello che ricontrolla le consegne e il tuo ok su ciò che esce. Se scrivi codice tutto il giorno, Claude Code e Codex restano strumenti eccellenti: Jarvis li usa come motori.</p></details>
+      <details><summary>Quanto lavoro faccio con il mio abbonamento?</summary><p>Dipende dal piano e da cosa chiedi: le quote le decide il fornitore. Jarvis usa il modello leggero dove basta e quello più capace solo dove serve, per farle durare di più. Se finiscono, ti dice quando tornano e, se vuoi, riprende da solo.</p></details>
       <details><summary>I miei documenti finiscono online?</summary><p>Restano sul tuo computer. Esce solo: il pezzo che serve a rispondere, se usi un modello online; ciò che scrivi o ricevi su Telegram; con Max e due computer in gruppo, una copia dei progetti nella tua cartella cloud; le segnalazioni che decidi di inviare. Un progetto «riservato» usa solo i modelli sul tuo computer.</p></details>
       <details><summary>Può fare danni da solo?</summary><p>Di base no: tutto ciò che esce dal computer (email, post, pubblicazioni, pull request, spese) aspetta il tuo ok, in app, a voce o su Telegram. Solo se scegli tu l'autonomia «Approva per me» pull request e push partono da soli; email e post pubblici chiedono sempre.</p></details>
+      <details><summary>Funziona anche dal telefono?</summary><p>Sì, con Telegram: scrivi, mandi vocali, foto e la posizione, e approvi con un tocco. Per risponderti il computer deve essere acceso e Jarvis avviato. <a href="#telegram">I dettagli</a>.</p></details>
       <details><summary>La licenza scade?</summary><p>No. Vale per sempre sui computer indicati. Quello che ha una data è il periodo di aggiornamenti inclusi: dopo, Jarvis continua a funzionare con l'ultima versione ricevuta, e puoi rinnovare quando vuoi.</p></details>
-      <details><summary>Posso usarlo su più computer?</summary><p>Sì, su due computer con la stessa licenza: ci mandi i codici di tutti e due, anche in momenti diversi. Ogni computer ha i suoi dati; con Max i due computer lavorano sugli stessi progetti, sincronizzati attraverso una cartella cloud che hai già (iCloud Drive, OneDrive, Dropbox).</p></details>
+      <details><summary>Posso usarlo su più computer?</summary><p>Sì, su due computer con la stessa licenza: ci mandi i codici di tutti e due, anche in momenti diversi. Ogni computer ha i suoi dati; con Max i due computer lavorano sugli stessi progetti, attraverso una cartella cloud che hai già (iCloud Drive, OneDrive, Dropbox).</p></details>
       <details><summary>Posso provarlo prima di comprarlo?</summary><p>Sì: la demo (in arrivo) mostra tutto con risposte simulate; la prova di 14 giorni del piano Max è Jarvis completo con i tuoi abbonamenti. Una prova per persona e per computer.</p></details>
-      <details><summary>Posso passare da Pro a Max?</summary><p>Sì, quando vuoi: paghi la differenza tra i due prezzi e ricevi la licenza Max, con gli stessi computer e la stessa scadenza degli aggiornamenti.</p></details>
-      <details><summary>E se qualcosa non funziona?</summary><p>Dillo a Jarvis («segnala un problema») o premi il pulsante con l'insetto. Prepara lui la segnalazione nascondendo chiavi, contatti e percorsi, te la fa rileggere e la apre tra le <a href="https://github.com/redguitars97/jarvis-releases/issues" target="_blank" rel="noopener">issue pubbliche</a>, dove ne segui la risoluzione. La pulizia automatica non è una garanzia: se riguarda dati di clienti, scegli «Mandala in privato per email».</p></details>
-      <details><summary>Posso svuotare una chat senza eliminare il progetto?</summary><p>Sì, con conferma. Jarvis archivia lo scambio e azzera il contesto della conversazione; conserva progetto, squadra, file, ricordi salvati e attività programmate. I messaggi già su Telegram e i backup restano. Svuotare la chat non equivale a cancellare definitivamente i dati.</p></details>
-      <details><summary>Cosa succede quando aggiorno?</summary><p>Installi la nuova versione sopra la vecchia: i dati restano dove sono e Jarvis ne fa una copia di sicurezza prima di ogni cambiamento.</p></details>
-      <details><summary>Cosa succede se cambio computer?</summary><p>Fai un backup cifrato da Impostazioni, installi Jarvis sul computer nuovo, chiedi la licenza con il nuovo codice e ripristini il backup.</p></details>
+      <details><summary>Cosa succede quando aggiorno o cambio computer?</summary><p>Installi la nuova versione sopra la vecchia: i dati restano dove sono e Jarvis ne fa una copia di sicurezza prima di ogni cambiamento. Per cambiare computer fai un backup cifrato da Impostazioni, installi Jarvis sul nuovo, chiedi la licenza con il nuovo codice e ripristini il backup.</p></details>
+      <details><summary>E se qualcosa non funziona?</summary><p>Dillo a Jarvis («segnala un problema») o premi il pulsante con l'insetto. Prepara lui la segnalazione nascondendo chiavi, contatti e percorsi, te la fa rileggere e la apre tra le <a href="https://github.com/redguitars97/jarvis-releases/issues" target="_blank" rel="noopener">issue pubbliche</a>. La pulizia automatica non è una garanzia: se riguarda dati di clienti, scegli «Mandala in privato per email».</p></details>
+    </div>
+  </section>
+
+  <section id="avanzati" class="band advanced" aria-labelledby="avanzati-title">
+    <div class="wrap narrow">
+      <h2 id="avanzati-title" class="section-title">Per utenti avanzati</h2>
+      <p class="section-lead">Non serve leggerla per usare Jarvis. Qui trovi i dettagli: come sceglie i modelli, i motori gratuiti e le chiavi API, i collegamenti e come è fatto.</p>
+      <nav class="adv-index" aria-label="Per utenti avanzati"><a href="#auto">AUTO</a><a href="#piu-lavori">Più progetti</a><a href="#gratis">Modelli gratuiti e API</a><a href="#procedure">Procedure</a><a href="#collegamenti">Collegamenti</a><a href="#squadra">La squadra</a><a href="#telegram">Telegram</a><a href="#facoltative">Facoltative</a><a href="#dietro-le-quinte">Dietro le quinte</a></nav>
+
+      <details id="auto" class="adv">
+        <summary>AUTO: il modello giusto per ogni fase, dentro il tuo abbonamento</summary>
+        <p>Con Claude Pro o ChatGPT Plus i limiti finiscono presto se ogni richiesta va al modello più potente con il ragionamento al massimo. AUTO decide per ogni fase di un lavoro chi deve intervenire, quale modello del tuo abbonamento usare e quanto deve ragionare.</p>
+        <ul class="ticks">
+          <li><b>Leggero quando basta, potente quando serve.</b> Una mail va al modello leggero del tuo piano, un'architettura o una diagnosi difficile al più capace. Il ragionamento è basso di norma, alto solo con un motivo, per esempio se gli chiedi «pensaci bene».</li>
+          <li><b>I modelli che hai davvero.</b> L'elenco arriva dal tuo account (Claude Code, Codex o la tua chiave), senza spendere nulla per provarli.</li>
+          <li><b>Se scegli tu, la tua scelta resta.</b> Un modello scelto in chat vale per tutto quel lavoro; Jarvis non passa a un altro modello senza il tuo sì.</li>
+          <li><b>Un budget per lavoro, una quota per account.</b> La quota residua la vedi solo se il fornitore la comunica; altrimenti Jarvis lo dice e non inventa percentuali.</li>
+          <li><b>Meno lavoro inutile.</b> Lo sviluppatore riprende la sessione, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio, se la scelta è compatibile.</li>
+          <li><b>Vedi dove va il consumo.</b> Sotto ogni risposta modello, ragionamento e motivo della scelta; in Attività ogni lavoro diviso per fase. La scelta classica resta nelle Connessioni, in modalità avanzata.</li>
+        </ul>
+        <h3>AUTO impara dai risultati</h3>
+        <p>Ogni risultato controllato riceve da Jarvis un voto (discreto, buono, ottimo, super) con il modello, il ragionamento e il tipo di lavoro che l'hanno prodotto. Un modello più leggero prende un lavoro solo dopo buoni risultati suoi su lavori dello stesso tipo, mai per una revisione o un lavoro a rischio; il ragionamento passa da basso a medio quando basso rende poco, mai ad alto per questo. Tu dai soltanto 👍 o 👎, anche su un singolo passo di un piano.</p>
+        <p class="fine">Nessuno può promettere una giornata illimitata con quote finite: dipendono dal piano, dal modello, dal contesto e dagli strumenti, e anche da ciò che fai con lo stesso account fuori da Jarvis. Prima di ogni versione la scelta è provata su una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo uso.</p>
+      </details>
+
+      <details id="piu-lavori" class="adv">
+        <summary>Più progetti insieme, un solo Jarvis</summary>
+        <p>Mentre la squadra lavora a un cliente, puoi già chiedere qualcosa per un altro, o una cosa veloce per te. Ogni richiesta resta legata al suo progetto, dall'inizio alla risposta.</p>
+        <h3>Più progetti, ciascuno con il suo filo</h3>
+        <p>Jarvis tiene distinti lavori, file e conversazioni: due modifiche alla stessa cartella non si accavallano, e lo sviluppatore ritrova la sessione di quel progetto, anche il giorno dopo.</p>
+        <h3>Lo guidi a voce, anche mentre lavora</h3>
+        <p>Chiedi un aggiornamento o passi a un altro progetto: «ferma il piano di Ciuffo» mette in pausa solo quello, e un «sì» con due richieste in attesa ti chiede quale. Se un lavoro finisce mentre parli d'altro, te lo dice a parte, con il nome del progetto.</p>
+        <ol class="sequence">
+          <li><b>«Crea il sito della Pizzeria Da Mario»</b><span>La squadra parte sul sito della pizzeria.</span></li>
+          <li><b>«Cambia il colore del sito di Ciuffo»</b><span>Un secondo lavoro, sull'altro progetto, mentre il primo continua.</span></li>
+          <li><b>«Che ore sono?»</b><span>Risponde subito, senza aspettare i due lavori.</span></li>
+          <li><b>«Riprendi il primo sito»</b><span>Torna alla pizzeria, con la sessione dello sviluppatore di quel sito.</span></li>
+        </ol>
+        <p class="fine">Esempio illustrativo con progetti di prova: la sequenza è simulata; il comportamento è quello che i controlli automatici dell'app verificano a ogni versione.</p>
+      </details>
+
+      <details id="gratis" class="adv">
+        <summary>Modelli gratuiti, chiavi API e Gemini</summary>
+        <p>Oltre agli abbonamenti, Jarvis può usare motori gratuiti e chiavi API. In automatico sceglie il meno costoso che sa fare la richiesta e sotto ogni risposta ti dice quale ha usato e perché.</p>
+        <ol class="ladder">
+          <li><b>Sul tuo computer</b><span>Ollama: privato e gratuito. Jarvis lo installa e sceglie il modello adatto alla memoria del computer.</span></li>
+          <li><b>Gratis online</b><span>OmniRoute unisce i livelli gratuiti di decine di fornitori: Jarvis lo configura da solo e ti mostra quanti token gratuiti hai ogni mese.</span></li>
+          <li><b>I tuoi abbonamenti</b><span>Claude o ChatGPT, per il codice, le foto e i lavori pesanti, usati fino in fondo prima di spendere un centesimo in più.</span></li>
+          <li><b>A consumo, con un tetto</b><span>Chiavi API solo quando gli abbonamenti sono al limite o mancano, con un limite di spesa al giorno e al mese; di norma prima ti chiede l'ok.</span></li>
+        </ol>
+        <p>Si collegano anche Grok, Mistral, DeepSeek, Groq e OpenRouter con la loro chiave. <b>Gemini</b>: con una chiave di Google AI Studio, che si crea gratis (alcuni modelli sono gratuiti entro i limiti di Google, gli altri a consumo). Dal 18 giugno 2026 Google non permette più di usare Gemini CLI con un account personale, e Antigravity non si può usare da un'app come Jarvis con un piano personale: il CLI resta per chi ha una licenza aziendale Gemini Code Assist, con il login e le quote della licenza.</p>
+      </details>
+
+      <details id="procedure" class="adv">
+        <summary>Procedure di lavoro incluse</summary>
+        <p>Jarvis include 55 procedure di lavoro per sviluppo, ricerca, design, marketing e revisione, e per mestieri e piccole attività (commercialisti, avvocati, artigiani ed edilizia, ristorazione, B&amp;B): metodi e criteri di consegna, come versioni da verificare, fonti da citare e risultati da controllare prima di presentarli. Claude Code e Codex le ricevono come skill native; con le altre connessioni Jarvis le carica con un suo strumento. Sono una guida per il modello, non la garanzia che le segua sempre.</p>
+        <p>Puoi aggiungere competenze di terzi da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok.</p>
+      </details>
+
+      <details id="collegamenti" class="adv">
+        <summary>Tutti i collegamenti</summary>
+        <p>Al primo avvio Jarvis trova da solo abbonamenti, modelli e progetti. Il resto lo colleghi da «Collegamenti», con una guida passo passo per ciascuno.</p>
+        <div class="wall" id="wall">
+          <div class="wall-group">
+            <h3>Cervelli AI</h3>
+            <ul>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-spark"/></svg><b>Claude</b><small>Abbonamento Pro o Max, anche Claude Code</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-bubble"/></svg><b>ChatGPT e Codex</b><small>Abbonamento Plus o Pro, anche per le immagini</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-chip"/></svg><b>Ollama</b><small>Gratis sul tuo computer</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-cloud"/></svg><b>OmniRoute</b><small>Gratis online, decine di fornitori</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-star4"/></svg><b>Gemini</b><small>Con la chiave gratuita di Google AI Studio; Gemini CLI con licenza aziendale</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-key"/></svg><b>API Anthropic e OpenAI</b><small>A consumo, con un tetto di spesa</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
+            <h3>Email e agenda</h3>
+            <ul>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg><b>Gmail e ogni casella IMAP</b><small>Anche aziendale, ognuna con il suo calendario</small></li>
+              <li class="soon-item"><svg class="icon line" aria-hidden="true"><use href="#i-mail"/></svg><b>Outlook, Hotmail, Microsoft 365</b><small>In arrivo</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-calendar"/></svg><b>Google Calendar</b><small>Sola lettura (con il link) e inviti via email</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg><b>iCloud, Fastmail, Zoho, Nextcloud</b><small>Calendari CalDAV: fissa, sposta e annulla</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
+            <h3>Telefono e riunioni</h3>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><b>Telegram</b><small>Messaggi, vocali, foto, posizione, approvazioni</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-video"/></svg><b>Zoom, Meet, Teams</b><small>L'audio della call, trascritto sul computer</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-mic"/></svg><b>Dettatura</b><small>In qualsiasi app, con una scorciatoia</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
+            <h3>Pubblicare e vendere</h3>
+            <ul>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-branch"/></svg><b>GitHub</b><small>Repository, pull request, pipeline, GitHub Pages</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-globe"/></svg><b>Netlify</b><small>Siti online con un link</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-qr"/></svg><b>Anteprime con QR</b><small>Un link temporaneo, senza account</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-megaphone"/></svg><b>Instagram e Pagine Facebook</b><small>Post all'ora fissata, con il tuo ok; TikTok dal browser dove consentito</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-target"/></svg><b>Meta Ads</b><small>Campagne pronte e in pausa</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-card"/></svg><b>Stripe</b><small>Clienti e link di pagamento</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-page"/></svg><b>Notion</b><small>Pagine e database</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
+            <h3>Sul tuo computer</h3>
+            <ul>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg><b>Cartelle e repository</b><small>La conoscenza dei tuoi progetti</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-doc"/></svg><b>Word, Excel, PowerPoint, PDF</b><small>Li legge e li crea</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-browser"/></svg><b>Chrome ed Edge</b><small>Moduli e prenotazioni in una finestra che vedi</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-sync"/></svg><b>iCloud Drive, OneDrive, Dropbox</b><small>Stessi progetti su più computer (Max)</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-plug"/></svg><b>Strumenti MCP</b><small>Qualsiasi server compatibile (Max)</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
+            <h3>Dal web</h3>
+            <ul>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-pin"/></svg><b>Mappe Geoapify</b><small>Attività vicine, indirizzi, telefoni</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-search"/></svg><b>Ricerca Brave</b><small>Ricerche sul web con le fonti</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-sun"/></svg><b>Meteo MET Norway</b><small>Gratis, nel saluto del mattino</small></li>
+            </ul>
+          </div>
+        </div>
+        <p class="works-note">I nomi dei servizi appartengono ai rispettivi proprietari; Jarvis li usa con i tuoi account e le tue chiavi.</p>
+      </details>
+
+      <details id="squadra" class="adv">
+        <summary>La squadra di Jarvis</summary>
+        <p>Otto persone, ognuna con un ruolo e più competenze, sempre le stesse: lo Studio di prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria e revisione. Ogni progetto ne usa una parte, con obiettivi e orari propri; si parlano in riunione e ti aggiornano nella chat del progetto.</p>
+        <ul class="ticks">
+          <li>Lavorano a orari fissi e riprendono da soli quando il computer si libera.</li>
+          <li>Un revisore ricontrolla le consegne, al massimo due giri, con un motore diverso dall'autore quando ne hai collegati più d'uno; se resta qualcosa di aperto il lavoro arriva come bozza e decidi tu.</li>
+          <li>Progetti pronti per agenzia, prodotto software, app mobile, brand, sito e SEO, negozio; aggiungi uno specialista quando un cliente lo chiede.</li>
+        </ul>
+      </details>
+
+      <details id="telegram" class="adv">
+        <summary>Telegram nel dettaglio</summary>
+        <p>Un solo gruppo raccoglie tutto: la chat con Jarvis e un argomento per ogni progetto. Approvazioni con un tocco, riepilogo del mattino, promemoria, silenzio di notte; ai vocali risponde anche a voce. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì.</p>
+        <p class="fine">Per rispondere, il computer deve essere acceso e Jarvis avviato. Telegram conserva gli aggiornamenti non ancora ricevuti dal bot per un massimo di 24 ore: all'avvio Jarvis acquisisce quelli disponibili. Un invio dall'esito incerto non viene ripetuto da solo; il comando /coda mostra le richieste e le consegne aperte.</p>
+      </details>
+
+      <details id="facoltative" class="adv">
+        <summary>Funzioni facoltative e per sviluppatori</summary>
+        <ul class="ticks">
+          <li><b>Lettura accurata dei documenti.</b> LightOnOCR-3 nel tuo Ollama (747 MB): tabelle, colonne e scansioni rovinate lette meglio, sul computer.</li>
+          <li><b>Trascrizione accurata.</b> Riunioni e file audio con Whisper large-v3-turbo (1,1 GB), scaricato con un clic.</li>
+          <li><b>Chi parla nelle riunioni.</b> Riconosce le voci sul computer (28 MB): nel verbale Persona 1, Persona 2… e poi «Persona 1 è Marco». L'audio non viene salvato.</li>
+          <li><b>Comandi lunghi in background.</b> Server, build e test che restano attivi mentre lo sviluppatore lavora, controllati e fermati da Jarvis.</li>
+          <li><b>Git LFS.</b> I file grandi gestiti con Git LFS entrano nelle pull request.</li>
+          <li><b>Mappe.</b> Con la chiave gratuita di Geoapify; senza, i servizi pubblici di OpenStreetMap, più lenti.</li>
+          <li><b>Comandi isolati anche su Windows.</b> Un recinto del sistema (AppContainer) come su macOS: scrivono solo nel progetto e non vedono le chiavi.</li>
+          <li><b>Skill di terzi controllate.</b> Prima di installarle Jarvis le controlla e blocca quelle con problemi gravi.</li>
+          <li><b>Più letture in un passo.</b> Con i cervelli a consumo (API), più ricerche e pagine in un solo passaggio, con meno testo inviato.</li>
+        </ul>
+      </details>
+
+      <details id="dietro-le-quinte" class="adv">
+        <summary>Dietro le quinte: struttura, dati e sicurezza</summary>
+        <div class="arch" role="group" aria-label="Come è fatto Jarvis, in tre blocchi">
+          <div class="arch-col">
+            <p class="arch-head">Da dove arrivano le richieste</p>
+            <ul><li>Voce, sul computer</li><li>Chat e Home</li><li>Telegram, dal telefono</li><li>Attività programmate e piani</li></ul>
+          </div>
+          <div class="arch-core">
+            <p class="arch-head">Il nucleo di Jarvis, sul tuo computer</p>
+            <ol>
+              <li><b>Risposte immediate</b><span>ciò che non serve chiedere a un modello</span></li>
+              <li><b>Contesto essenziale</b><span>solo ciò che serve a quella richiesta</span></li>
+              <li><b>Scelta del motore</b><span>gratis prima, poi abbonamenti, poi a consumo</span></li>
+              <li><b>Strumenti e squadra</b><span>file, email, siti, browser, agenti</span></li>
+              <li><b>Regole e approvazioni</b><span>cosa esce, quanto costa, chi lo autorizza</span></li>
+            </ol>
+            <p class="arch-data"><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg>Progetti, memorie, conoscenza e storico: un database sul tuo computer</p>
+          </div>
+          <div class="arch-col">
+            <p class="arch-head">I motori, intercambiabili</p>
+            <ul><li>Modelli sul computer</li><li>Livelli gratuiti online</li><li>I tuoi abbonamenti</li><li>API con un tetto di spesa</li></ul>
+          </div>
+        </div>
+        <ul class="ticks">
+          <li><b>Contesto mirato.</b> Ora, conti, meteo e chiacchiere rispondono senza AI; al modello arriva un riassunto compatto e solo i passaggi pertinenti dei tuoi documenti.</li>
+          <li><b>Una memoria che sa chi ha detto cosa.</b> Distingue ciò che dici tu da ciò che deduce; i fatti presi dal web hanno fonte, data e scadenza.</li>
+          <li><b>Voce e ascolto in locale.</b> Sintesi vocale, rilevamento del parlato e trascrizione sono reti neurali incluse nell'installer, che girano sul tuo processore.</li>
+          <li><b>Sicuro per costruzione.</b> Su macOS e su Windows i comandi nei progetti girano in un recinto del sistema; le azioni verso l'esterno sono registrate prima di partire e non vengono ripetute in silenzio; motori gratuiti installati solo se corrispondono all'impronta di chi li produce.</li>
+          <li><b>Non perde il filo.</b> I piani sopravvivono ai riavvii e il lavoro fermo ai limiti di un abbonamento riprende da solo; ogni aggiornamento dei dati fa prima una copia di sicurezza.</li>
+          <li><b>Standard aperti.</b> IMAP e CalDAV, Word, Excel, PowerPoint e PDF veri, Git, MCP: i tuoi dati restano leggibili anche senza Jarvis.</li>
+        </ul>
+        <div class="oss">
+          <p class="arch-head">Costruito anche con</p>
+          <ul><li>Electron</li><li>Node.js</li><li>React</li><li>SQLite</li><li>ONNX Runtime</li><li>Whisper</li><li>Silero VAD</li><li>Pocket TTS di Kyutai</li><li>Ollama</li><li>OmniRoute</li><li>Playwright</li><li>Model Context Protocol</li></ul>
+          <p class="fine">Le licenze di ogni componente sono nelle <a href="condizioni.html">condizioni d'uso</a> e, nell'app, in Impostazioni → Componenti di terze parti. Le integrazioni dipendono anche dalle condizioni e dalle modifiche dei fornitori.</p>
+        </div>
+      </details>
     </div>
   </section>
 </main>
+
+<!-- «Jarvis parlante»: the player, revealed by parlante.js when the visitor turns the mode on. -->
+<aside id="parlante" class="talk" aria-labelledby="talk-title" hidden>
+  <div class="talk-head">
+    <p id="talk-title" class="talk-title"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>Jarvis parlante</p>
+    <button type="button" class="talk-icon" data-talk-off aria-label="Disattiva Jarvis parlante"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="talk-presets" role="group" aria-label="Scegli cosa ascoltare"></div>
+  <p class="talk-now" aria-hidden="true"></p>
+  <p class="talk-caption" id="talk-caption">Scegli cosa ascoltare: l'audio parte solo quando premi.</p>
+  <div class="talk-controls">
+    <button type="button" class="talk-icon" data-talk-pause aria-label="Pausa" disabled><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
+    <button type="button" class="talk-icon" data-talk-stop aria-label="Ferma" disabled><svg class="icon" aria-hidden="true"><use href="#i-stop"/></svg></button>
+    <span class="talk-bar" aria-hidden="true"><i></i></span>
+    <span class="talk-time" aria-hidden="true"></span>
+  </div>
+  <details class="talk-text"><summary>Testo completo</summary><ol></ol></details>
+  <p class="talk-credit">Voce «Giovanni» di Pocket TTS (Kyutai), <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, la stessa dell'app: audio generato in anticipo e compresso.</p>
+</aside>
 
 <nav class="thumb-bar" aria-label="Azioni rapide">
   <a class="button" href="#scarica">Scarica Jarvis</a>
@@ -693,10 +586,12 @@
     <a href="https://github.com/redguitars97/jarvis-releases/releases" target="_blank" rel="noopener">Note di rilascio</a>
     <span class="social" id="social" hidden></span>
   </div>
+  <p class="wrap foot-credit">Voce di «Jarvis parlante»: Pocket TTS di Kyutai, voce «Giovanni» (<a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>), convertita in ONNX e quantizzata int8; struttura ONNX da KevinAHM/pocket-tts-onnx (CC BY 4.0). Audio generato in anticipo dai testi mostrati e compresso.</p>
 </footer>
 <script src="config.js"></script>
 <script src="reactor.js"></script>
 <script src="site.js" defer></script>
 <script src="presence.js" defer></script>
+<script src="parlante.js" defer></script>
 </body>
 </html>

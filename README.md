@@ -29,6 +29,11 @@ Per imprenditori, freelance e professionisti · Italiano
 
 > Le prime versioni pubbliche arriveranno qui. Questo repository contiene solo gli installer e le note di rilascio.
 
+**Il modo più semplice:** installi Jarvis, colleghi il tuo abbonamento Claude o ChatGPT (al primo avvio lo trova da solo)
+e gli parli. Modelli gratuiti, chiavi API e Gemini sono per chi vuole di più: li trovi più sotto e, sul sito, in «Per
+utenti avanzati». Sul sito puoi anche attivare **Jarvis parlante**: brevi spiegazioni a voce, facoltative, con la stessa
+voce dell'app (Pocket TTS di Kyutai, voce «Giovanni», CC BY 4.0), generate in anticipo e mostrate anche come testo.
+
 **Lavora con gli strumenti che usi già:** Claude · ChatGPT e Codex · Ollama · OmniRoute · Gmail e ogni casella IMAP\* ·
 calendari CalDAV e iCloud · GitHub · Instagram, Facebook e Meta Ads · TikTok (dal browser) · Netlify · Google Chrome ed Edge · Zoom, Meet e Teams · Word, Excel,
 PowerPoint e PDF.
@@ -52,7 +57,7 @@ già.
 | **Ti sente.** | Dici «Ciao Jarvis» e chiedi. Ascolto e voce girano sul tuo computer, in italiano, anche mentre sta lavorando ad altro. |
 | **Sa.** | Conosce i tuoi progetti, i clienti e le loro regole, e riprende il filo di ogni lavoro anche il giorno dopo. |
 | **Fa.** | Consegna il lavoro finito: il sito con il link, il preventivo in PDF, l'invito nel calendario, la campagna pronta in pausa. |
-| **Chiede.** | Prima di ogni email, post, pubblicazione o spesa aspetta il tuo ok: dall'app, a voce o da Telegram. |
+| **Chiede.** | Prima di ogni email, post, pubblicazione o spesa aspetta il tuo ok: dall'app, a voce o da Telegram. Se manca un dato essenziale chiede solo quello, in un messaggio, con una proposta: basta «decidi tu». |
 | **Impara.** | Dà da solo un voto a ogni risultato controllato e sceglie il modello del tuo abbonamento che rende meglio per quel lavoro. |
 
 ## Più progetti insieme, un solo Jarvis
@@ -86,7 +91,7 @@ tuo abbonamento usare e quanto deve ragionare.
 | **Meno lavoro inutile, stessa qualità** | Solo gli strumenti e il contesto che servono, il resto recuperato quando occorre; lo sviluppatore riprende la sua sessione, nelle correzioni e, con Claude Code e Codex, anche nella richiesta successiva sullo stesso progetto o dopo un riavvio se la scelta del modello è la stessa (le API ricevono la cronologia e il riassunto); prima i controlli automatici, poi il revisore, niente revisioni ripetute sullo stesso materiale; la squadra interviene quando serve una competenza, le riunioni si chiudono a decisione presa. |
 | **Chat e attività con il loro filo** | Claude Code, Codex e Gemini CLI riprendono anche la sessione della chat principale e della persona nel progetto. Se una sessione non si può recuperare Jarvis lo dichiara e passa il punto del lavoro. Le attività indipendenti possono procedere insieme; quelle che usano il risultato di un'altra aspettano. Gli agenti identificati mostrano avvio ed esito in chat e sul telefono collegato: un esito non confermato resta tale. |
 | **Modifiche locali e pull request** | Controlla tutti i repository collegati al progetto, anche frontend e backend separati. Può preparare la PR delle modifiche già presenti: controlli e revisione su una copia, poi sorgente/destinazione visibili nell'ok prima di commit, push e PR. Un branch ambiguo va indicato, uno stato non leggibile è segnalato. |
-| **Gemini con il tuo accesso Google** | Collegamento dedicato tramite il Gemini CLI ufficiale, installato da te, con Google AI Pro/Ultra o livello gratuito disponibile per l'account. Non usa la tua chiave API né abilita spese oltre quota. Il CLI può cambiare modello automaticamente: se chiedi un modello esatto Jarvis lo segnala prima di iniziare. Non offre sottoagenti nativi in Jarvis. |
+| **Gemini** | Con un account Google personale: la chiave di Google AI Studio, che si crea gratis (alcuni modelli gratuiti entro i limiti di Google, gli altri a consumo). Dal 18 giugno 2026 Google non serve più Gemini CLI agli account personali (AI Pro, Ultra o gratuito) e non consente di usare Antigravity da un'app come Jarvis con un piano personale. Con una licenza aziendale Gemini Code Assist: collegamento dedicato tramite il Gemini CLI ufficiale, installato da te, senza spese oltre quota. Il CLI può cambiare modello automaticamente: se chiedi un modello esatto Jarvis lo segnala prima di iniziare. Non offre sottoagenti nativi in Jarvis. |
 | **Vedi dove va il consumo** | Sotto ogni risposta modello, ragionamento e motivo della scelta; in Attività ogni lavoro diviso per fase (sviluppo, revisioni, riassunti, errori). La scelta di prima (il modello di ogni collegamento e il ragionamento per ruolo) resta disponibile nelle Connessioni, in modalità avanzata; le protezioni su budget, quote e scelte tue restano. |
 | **AUTO impara dai risultati** | Ogni risultato controllato riceve da Jarvis un voto (discreto, buono, ottimo, super) con il modello, il ragionamento e il tipo di lavoro che l'hanno prodotto; i giri di correzione dello stesso lavoro valgono un risultato solo. AUTO rilegge le pagelle della combinazione che sta per usare: un modello più leggero prende un lavoro solo dopo buoni risultati suoi su lavori dello stesso tipo e con lo stesso ragionamento, mai per una revisione o un lavoro a rischio; da basso a medio quando basso rende poco, mai ad alto per questo. Tu dai soltanto 👍 o 👎, anche su un singolo passo di un piano: il pollice sul risultato pesa anche su chi l'ha prodotto, e in Attività vedi quando il tuo giudizio e i controlli non coincidono. |
 
@@ -103,7 +108,7 @@ una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo
 | **Ha una squadra** | Lo Studio di Jarvis: otto persone con un nome, un ruolo e più competenze (prodotto, sviluppo, UX, grafica, marketing e SEO, commerciale, segreteria, revisione), sempre le stesse. Ogni progetto ne usa una parte, con obiettivi e orari propri; se serve, Jarvis chiama al volo chi ha la competenza giusta. «Presentami la squadra» te la mostra collegata a Jarvis, intera o progetto per progetto. |
 | **Fa le cose, non le spiega** | Siti pubblicati con il link, preventivi in PDF e Word, Excel, presentazioni, grafiche, email, pull request su GitHub. Email e post pubblici aspettano sempre il tuo ok; per il resto decidi tu quanta autonomia dargli (di base chiede per tutto ciò che va ad altre persone o non si può annullare). |
 | **Riunioni con il verbale** | «Registra la riunione»: trascrive sul computer anche l'audio della call (Zoom, Meet, Teams), poi riassunto, decisioni, cose da fare e bozza dell'email di follow-up, anche in Word. |
-| **Appuntamenti e inviti** | Fissa, sposta e annulla gli appuntamenti nel calendario e avvisa gli invitati, sempre con il tuo ok. Con iCloud e gli altri calendari CalDAV cambia l'appuntamento direttamente; con Google (collegato con il link, in sola lettura) per quelli fissati da te manda l'aggiornamento agli invitati, che entra nei calendari quando lo accettano. Gli eventi ricorrenti si cambiano dall'app del calendario. |
+| **Appuntamenti e inviti** | Fissa, sposta e annulla gli appuntamenti nel calendario e avvisa gli invitati, sempre con il tuo ok. Con iCloud e gli altri calendari CalDAV cambia l'appuntamento direttamente; con Google (collegato con il link, in sola lettura) per quelli fissati da te manda l'aggiornamento agli invitati, che entra nei calendari quando lo accettano. Google Calendar resta in sola lettura: per scrivere direttamente serve un calendario CalDAV. Crea anche appuntamenti che si ripetono (ogni settimana nei giorni scelti, ogni mese…, per un certo numero di volte o fino a una data) e ne sposta o annulla una sola volta o tutta la serie; «da questa in poi» si fa dall'app del calendario. |
 | **Lavoro da professionista, non «da AI»** | Siti, grafiche, testi, post e documenti devono sembrare firmati da un professionista senior che conosce il cliente: i fatti veri del cliente al posto delle frasi da brochure, scelte di design difendibili al posto dei gradienti viola e delle card tutte uguali, immagini senza l'aria finta da AI. Un controllo trova i segni del lavoro generato e lo rimanda indietro prima che tu lo veda; un post pieno di frasi fatte viene riscritto prima di chiederti l'ok. |
 | **Il brand di ogni cliente** | Colori misurati dal suo sito, tono di voce, listino e logo: grafiche, siti, testi e campagne nascono coerenti. |
 | **Foto e illustrazioni** | Con il tuo abbonamento ChatGPT, nei limiti del tuo piano; gratis quando un modello gratuito basta, dopo un controllo di qualità; loghi e grafiche vettoriali sempre gratis. Una chiave API (Gemini o OpenAI) entra solo se nessun abbonamento può farle. |
@@ -113,18 +118,21 @@ una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo
 | **Detta in qualsiasi app** | Una scorciatoia (⌘⇧Spazio), parli, e il testo compare dove stai scrivendo. Tutto sul computer. |
 | **Non si ferma ai limiti** | Divide il lavoro quando un modello accetta poche immagini alla volta; se tutti gli abbonamenti hanno finito i limiti, ti dice quando tornano e riprende da solo, se vuoi, avvisandoti anche su Telegram. |
 | **Sempre aggiornato** | Regole delle piattaforme, hashtag, prezzi e norme verificati da fonti ufficiali, salvati con la data e, se scaduti, ricontrollati prima di riusarli. |
-| **Procedure di lavoro incluse** | Jarvis include 40 procedure di lavoro per sviluppo, ricerca, design, marketing e revisione. Affiancano la squadra con metodi e criteri di consegna: versioni da verificare, fonti da citare e risultati da controllare prima di presentarli. Claude Code e Codex le ricevono come skill native; con le altre connessioni Jarvis le carica con un suo strumento. Sono una guida per il modello, non la garanzia che le segua sempre. |
+| **Procedure di lavoro incluse** | Jarvis include 55 procedure di lavoro per sviluppo, ricerca, design, marketing e revisione, e per mestieri e piccole attività (commercialisti, avvocati, artigiani ed edilizia, ristorazione, B&B). Affiancano la squadra con metodi e criteri di consegna: versioni da verificare, fonti da citare e risultati da controllare prima di presentarli. Claude Code e Codex le ricevono come skill native; con le altre connessioni Jarvis le carica con un suo strumento. Sono una guida per il modello, non la garanzia che le segua sempre. |
+| **Pronto per il tuo mestiere** | Procedure pronte per commercialisti (busta paga, F24, scadenze, fatture elettroniche), avvocati (diffide, termini), artigiani ed edilizia (computo metrico, sicurezza), ristorazione (allergeni, HACCP) e B&B (Alloggiati Web, imposta di soggiorno). Sempre bozze, controllate su fonti ufficiali. |
 | **Skill di terzi, controllate** | Aggiungi competenze da un link: Jarvis lascia fuori script ed eseguibili, segnala le istruzioni sospette e installa solo dopo il tuo ok. |
 | **Usa il browser per te** | Apre i siti, compila i moduli e prenota in una finestra di Chrome che vedi. Prima di inviare o pagare ti chiede l'ok; password e carte le scrivi sempre tu. |
+| **Viaggi e trasferte** | Percorsi tappa per tappa con il link della mappa, alloggi con le ricerche già filtrate per le tue date, la prenotazione nel browser solo con il tuo ok e poi l'appuntamento in calendario. Carta, CVV e codici li inserisci tu: Jarvis non li legge e non li salva. |
 | **Piani in più passi** | Un lavoro lungo diventa un piano: lo approvi una volta e i passi vanno avanti da soli, con i controlli. Ogni passo ti mostra il suo risultato, e puoi giudicarlo con un pollice. |
 | **Un revisore sulle consegne** | Un secondo modello ricontrolla siti, documenti, testi e codice contro la tua richiesta: corregge ciò che è sbagliato o rischioso (al massimo due giri) e annota le rifiniture; se resta qualcosa di aperto arriva come bozza e decidi tu. Se il controllo non si può fare, te lo dice invece di darlo per buono. |
 | **Prodotti software completi** | Dall'idea al prodotto: requisiti, concorrenti, architettura, design system, logo e splash screen, sviluppo su un branch dedicato, test, revisione e pull request verso il branch di sviluppo. Vede le pipeline di GitHub Actions: se una è rossa legge il passo e l'errore e propone la correzione con una nuova pull request. Squadre pronte: prodotto completo, app mobile, brand e grafica, sito e SEO. |
 | **Anche dal telefono** | Su Telegram: messaggi, vocali, foto, posizione, approvazioni con un tocco. Quello che chiedi dal telefono ha la risposta sul telefono; le approvazioni chieste dal computer arrivano anche lì; `/squadra` mostra chi c'è nel progetto e ogni persona si chiama con un comando. Con il computer bloccato la squadra continua a lavorare e i messaggi arrivano lì. |
 | **Risposte senza AI, quando basta il computer** | Ora, data, conti detti come vengono, meteo, una ricetta dal sito che la pubblica, un fatto dell'enciclopedia confermato da una seconda fonte, il testo di una foto: Jarvis li riconosce per significato e risponde subito con la fonte, senza consumare un modello. Nel dubbio decide un modello; dai tuoi 👍 e 👎 impara. |
-| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude, ChatGPT o Google con Gemini CLI, usati fino in fondo e, dentro ciascuno, con il modello adatto a ogni fase (AUTO); le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
+| **Prima i modelli gratuiti** | Ollama sul tuo computer e OmniRoute, che unisce i livelli gratuiti di decine di fornitori: Jarvis li installa e li configura da solo. Poi i tuoi abbonamenti Claude o ChatGPT (o la licenza aziendale Gemini Code Assist), usati fino in fondo e, dentro ciascuno, con il modello adatto a ogni fase (AUTO); le chiavi API solo quando gli abbonamenti sono al limite o mancano. Sotto ogni risposta ti dice quale motore ha risposto e perché. |
 | **Scegli quanto ragiona, o lascia fare ad AUTO** | AUTO sceglie per ogni fase il modello e quanto deve ragionare; se preferisci, scegli tu per ogni ruolo il modello e il livello (rapido, medio, alto…), e la tua scelta vale per il lavoro di quel ruolo. Jarvis mostra solo i livelli che quel modello offre davvero. |
 | **Spese sotto controllo** | Tetto di spesa API al giorno e al mese: prima di ogni chiamata una stima prudente del costo (prezzi ufficiali, o una quota fissa per i modelli senza prezzo), poi il costo comunicato dal fornitore; ogni operazione registrata con modello, tempo e costo. |
 | **I tuoi dati sono tuoi** | Progetti, memorie e file stanno sul tuo computer; online va solo ciò che serve al modello o al servizio che usi (vedi le domande in fondo). Backup cifrati con la password che scegli, aggiornamenti che non toccano i dati. |
+| **Nasconde i dati sensibili** | Prima di inviare qualcosa a un cervello online (Claude, ChatGPT…), codice fiscale, IBAN, partita IVA, carte, email, telefoni, nomi e indirizzi, anche dei campi di buste paga e certificati, diventano segnaposto ([CF_1], [NOME_1]…); il rilevamento è sul computer e gli importi restano in chiaro. I dati veri restano qui e tornano al loro posto nella risposta; su Telegram e sugli altri dispositivi arrivano solo i segnaposto. Si attiva da sola con un dato o un documento sensibile e si regola per chat o progetto. È una pseudonimizzazione, non un'anonimizzazione: il progetto «riservato» resta la protezione massima. |
 
 ## Perché Jarvis, se hai già Claude o ChatGPT
 
@@ -210,6 +218,18 @@ Dillo a Jarvis: **«Jarvis, segnala un problema»**, oppure premi il pulsante co
 versione, sistema e ultimi errori, togliendo chiavi, indirizzi e numeri che riconosce, e la apre tra le [issue di questo repository](https://github.com/redguitars97/jarvis-releases/issues),
 dove ne segui la risoluzione. Le issue sono pubbliche: rileggila prima di inviarla, e per dati riservati scrivi all'email qui sopra.
 
+## Funzioni facoltative e per sviluppatori
+
+- **Lettura accurata dei documenti:** LightOnOCR-3 nel tuo Ollama (747 MB), per tabelle, colonne e scansioni rovinate; tutto sul computer, con il lettore standard come riserva.
+- **Trascrizione accurata:** riunioni e file audio con Whisper large-v3-turbo (1,1 GB), scaricato solo con un clic.
+- **Chi parla nelle riunioni:** riconosce le voci sul computer (28 MB); nel verbale Persona 1, Persona 2… e poi «Persona 1 è Marco». L'audio non viene salvato e le impronte delle voci si cancellano appena il verbale è scritto.
+- **Comandi lunghi in background** per lo sviluppo (server, build, test), controllati e fermati da Jarvis.
+- **Git LFS:** i file grandi gestiti con Git LFS entrano nelle pull request.
+- **Mappe:** con la chiave gratuita di Geoapify; senza, i servizi pubblici di OpenStreetMap, più lenti.
+- **Comandi isolati anche su Windows** (AppContainer), come su macOS.
+- **Skill di terzi controllate** prima dell'installazione: quelle con problemi gravi sono bloccate.
+- **Più letture in un passo** con i cervelli a consumo (API): più ricerche e pagine in un solo passaggio, meno testo inviato.
+
 ## Installazione
 
 **macOS 13 o successivo (Apple Silicon e Intel).** Scarica il file `.dmg` per il tuo Mac (`arm64` per Apple Silicon), aprilo e trascina Jarvis in Applicazioni.
@@ -240,7 +260,7 @@ installare con il tuo ok:
 | Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
 | Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
 | Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso; su Windows e sui Mac senza Homebrew serve Node.js | Jarvis, oppure tu da nodejs.org |
-| Accesso Google per Gemini CLI | Gemini CLI ufficiale, Node.js compatibile e login Google; disponibilità e quote dipendono dal piano/account | Tu: `npm install -g @google/gemini-cli`, poi Accedi da Jarvis |
+| Gemini CLI (licenza aziendale Gemini Code Assist) | Gemini CLI ufficiale, Node.js compatibile, login con l'account di lavoro e il progetto Google Cloud della licenza; quote della licenza | Tu: `npm install -g @google/gemini-cli`, poi Accedi da Jarvis |
 | Siti su GitHub, pull request | Git e un account GitHub | Tu (Mac: si installa con gli strumenti di Apple al primo uso) |
 | Browser che compila e prenota | Google Chrome o Microsoft Edge (non Safari) | Tu |
 | Anteprime con link pubblico | cloudflared di Cloudflare | Jarvis, la prima volta |
@@ -252,9 +272,15 @@ usa e quanto stima di spendere, ma non può garantire le condizioni di un altro 
 **Comandi nei progetti, Mac e Windows.** Quando un cervello lavora su un progetto (test, build, script), su macOS i
 comandi girano in un recinto del sistema: scrivono solo nella cartella del progetto, non leggono chiavi e password, e
 usano la rete solo per scaricare le dipendenze o con il tuo ok; il codice e gli script che il modello fa girare non
-hanno rete, e se gliene serve te lo chiede. Su Windows, dove questo recinto del sistema non c'è, uno script o del codice
-scritto al momento chiede sempre il tuo ok. Su ogni sistema Jarvis controlla cosa fa il comando, lo tiene nella
-cartella del progetto senza le chiavi dell'app e chiede le approvazioni che hai scelto. Su progetti di
+hanno rete, e se gliene serve te lo chiede. Su Windows i comandi girano in un recinto del sistema analogo
+(AppContainer): scrivono solo nel progetto e in una cartella temporanea privata, non vedono chiavi e segreti, e usano la
+rete solo per i comandi approvati come tali; dove il recinto non è disponibile, uno script o del codice scritto al
+momento chiede sempre il tuo ok. Su ogni sistema Jarvis controlla cosa fa il comando, lo tiene nella
+cartella del progetto senza le chiavi dell'app e chiede le approvazioni che hai scelto; su Windows i processi lasciati
+in background da un comando vengono fermati quando il comando finisce. Codex lavora con un profilo di permessi di
+Jarvis: legge e scrive solo nel progetto (più strumenti e sistema in lettura), non vede chiavi né il proprio login e
+non ha rete; su macOS sempre, su Windows 11 24H2 o successivo con il sandbox MXC di Windows, altrimenti su Windows
+limita solo le scritture. Su progetti di
 terzi di cui non ti fidi, la modalità «Chiedimi tutto» ti fa decidere ogni passo.
 
 ## Aggiornamenti
@@ -268,7 +294,7 @@ attivano, quelle successive chiedono il rinnovo (la versione che hai continua a 
 <details>
 <summary>Serve un abbonamento a un'intelligenza artificiale?</summary>
 
-No. Puoi usare il tuo abbonamento Claude, ChatGPT o Google con Gemini CLI, una chiave API, oppure i modelli gratuiti: Jarvis li installa e li
+No. Puoi usare il tuo abbonamento Claude o ChatGPT, una chiave API (anche quella gratuita di Gemini), oppure i modelli gratuiti: Jarvis li installa e li
 prepara da solo. Molte risposte (ora, calcoli, promemoria, stato della squadra, spese) non usano proprio l'AI.
 </details>
 
@@ -348,5 +374,6 @@ le pronunce si possono insegnare e i contenuti degli invii vanno controllati nel
 
 Svuotare una chat richiede conferma: archivia lo scambio e azzera riassunti e sessioni usati come contesto, mantenendo
 progetto, squadra, file, ricordi e attività programmate. Lo storico locale, i backup e i messaggi già su Telegram
-restano: non è una cancellazione definitiva. Il topic usa poi il nuovo contesto. Con più dispositivi aggiornare entrambi
+restano: non è una cancellazione definitiva. Dallo stesso pannello, con un secondo passaggio, puoi eliminare per sempre
+l'archivio di quella chat, anche sugli altri tuoi dispositivi. Il topic usa poi il nuovo contesto. Con più dispositivi aggiornare entrambi
 e terminare i lavori su tutti prima dello svuotamento. Eliminare il progetto ferma invece anche il lavoro futuro collegato.

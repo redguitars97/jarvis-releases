@@ -351,4 +351,15 @@
     observe(document.querySelector(".hero"), { threshold: 0 }, function (visible) { pastHero = !visible; update(); });
     observe(document.getElementById("scarica"), { threshold: 0 }, function (visible) { atDownload = visible; update(); });
   }
+
+  // «Per utenti avanzati» is closed on first reading: a link to one of its parts (from the page or from outside) opens it.
+  function openTarget(id) {
+    var el = id && document.getElementById(id);
+    for (var node = el; node; node = node.parentElement) if (node.tagName === "DETAILS" && !node.classList.contains("menu")) node.open = true;
+  }
+  all('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function () { openTarget(decodeURIComponent(link.getAttribute("href").slice(1))); });
+  });
+  window.addEventListener("hashchange", function () { openTarget(decodeURIComponent(location.hash.slice(1))); });
+  if (location.hash) { openTarget(decodeURIComponent(location.hash.slice(1))); var start = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (start) start.scrollIntoView(); }
 })();

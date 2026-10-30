@@ -49,12 +49,24 @@
     document.querySelector(".presence-stage").classList.add("live");
     var story = [["idle", "Pronto", 3], ["listen", "Ti ascolto…", 3.5], ["think", "Ci lavoro: piano, ricerca, documenti", 5],
       ["speak", "Ti rispondo", 4], ["wait", "Aspetto il tuo ok", 4.5]], step = 0, elapsed = 0;
+    var speaking = false;
     var hero = mount(heroCanvas, function (dt) {
+      if (speaking) return;
       elapsed += dt;
       if (elapsed > story[step][2]) { elapsed = 0; step = (step + 1) % story.length; hero.set(story[step][0]); caption.textContent = story[step][1]; caption.dataset.state = story[step][0]; }
     });
     hero.set(reduced ? "think" : "idle");
     if (reduced) caption.textContent = story[2][1];
+    // «Jarvis parlante» (parlante.js): while a spoken explanation plays, the hero speaks; then the story resumes.
+    window.JarvisPresence = {
+      speak: function (on, label) {
+        if (!on && !speaking) return;
+        speaking = on;
+        var state = on ? "speak" : (reduced ? "think" : story[step][0]);
+        hero.set(state); caption.dataset.state = state;
+        caption.textContent = on ? (label || "Ti parlo") : (reduced ? story[2][1] : story[step][1]);
+      },
+    };
   }
 
   // "Come lavora": the visitor picks the state.

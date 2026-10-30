@@ -704,3 +704,113 @@ details summary { min-height: 48px; display: flex; align-items: center; }
 .technical-details > summary { cursor: pointer; font-weight: 600; padding: .75rem 0; line-height: 1.5; }
 .technical-details > summary:focus-visible { outline: 2px solid #9fdcff; outline-offset: 4px; }
 .technical-details[open] > summary { margin-bottom: 1.5rem; }
+
+/* ======== Round 3 (29/10): shorter page, «Per utenti avanzati», «Jarvis parlante» ======== */
+.features.compact article { padding: 20px 22px; }
+.features.compact h3 { font-size: 18px; margin-bottom: 4px; }
+.features.compact .feat-icon { width: 26px; height: 26px; margin-bottom: 10px; }
+
+/* Come funziona: three numbered steps */
+.steps3 { list-style: none; counter-reset: s3; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.steps3 li { counter-increment: s3; padding: 24px; border: 1px solid var(--edge); border-radius: 10px; background: var(--plate-1); min-width: 0; }
+.steps3 li::before { content: counter(s3); display: block; font: 600 34px/1 var(--font-title); color: var(--ice); margin-bottom: 12px; }
+.steps3 b { display: block; font: 600 20px var(--font-title); margin-bottom: 6px; }
+.steps3 span { color: var(--ink-2); font-size: 15px; }
+@media (max-width: 760px) { .steps3 { grid-template-columns: minmax(0, 1fr); } }
+
+.maker { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--edge); max-width: 46em; }
+.maker h3 { font: 600 20px var(--font-title); margin: 0 0 6px; }
+.maker p { margin: 0; color: var(--ink-2); }
+#fiducia .three { margin-bottom: 0; }
+#fiducia .three + .fine { margin-top: 18px; }
+.licence { margin-top: 32px; }
+.licence-more { margin-top: 22px; }
+
+/* Per utenti avanzati: everything closed on first reading */
+.advanced .section-lead { margin-bottom: 20px; }
+.adv-index { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.adv-index a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--edge-strong); border-radius: 999px; font-size: 14px; text-decoration: none; }
+.adv > summary { font: 600 19px/1.3 var(--font-title); }
+.adv[open] > summary { color: var(--ice); margin-bottom: 4px; }
+.adv h3 { font: 600 18px var(--font-title); margin: 22px 0 0; }
+.adv .ticks { margin: 14px 0 0; }
+.adv .ticks li { font-size: 15px; }
+.adv .ticks b { color: var(--ink-1); }
+.adv .sequence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.adv .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; }
+.adv .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; }
+.adv .arch { grid-template-columns: minmax(0, 1fr); margin: 16px 0 8px; }
+.adv .oss { margin-top: 20px; }
+@media (max-width: 560px) { .adv .sequence, .adv .ladder, .adv .wall { grid-template-columns: minmax(0, 1fr); } }
+.foot-credit { color: var(--ink-3); font-size: 12px; margin-top: 14px; margin-bottom: 0; }
+.foot-credit a { color: var(--ink-2); }
+
+/* Jarvis parlante */
+.talk-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 6px; border: 1px solid var(--edge-strong);
+  background: transparent; color: var(--ice); font: 500 14px var(--font); cursor: pointer; white-space: nowrap; }
+.talk-toggle[hidden] { display: none; }
+.talk-toggle .icon { width: 18px; height: 18px; }
+.talk-toggle:hover { border-color: var(--ice); }
+.talk-toggle[aria-pressed="true"] { background: color-mix(in srgb, var(--ice) 16%, transparent); border-color: var(--ice); }
+.nav-main + .talk-toggle { margin-left: 4px; }
+@media (max-width: 1100px) { .top-row .talk-toggle { margin-left: auto; } .top-row .talk-toggle:not([hidden]) + .button { margin-left: 0; } }
+.top.compact .top-row .talk-toggle { margin-left: auto; }
+.top.compact .top-row .talk-toggle:not([hidden]) + .button { margin-left: 0; }
+@media (max-width: 760px) { .talk-toggle { padding: 0; width: 44px; justify-content: center; } .talk-toggle-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }
+@media (max-width: 520px) { .top-row { gap: 10px; } }
+
+.talk-invite { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 16px 0 0; }
+.talk-invite[hidden] { display: none; }
+.talk-invite span { color: var(--ink-3); font-size: 13px; }
+.link-button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--ice); font: 500 15px var(--font); cursor: pointer; text-align: left; }
+.link-button .icon { width: 28px; height: 28px; padding: 6px; border-radius: 50%; border: 1px solid var(--edge-strong); flex: none; }
+.link-button:hover .icon { border-color: var(--ice); }
+
+.talk-here { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin: 0 0 18px; padding: 0 14px 0 10px; border: 1px solid var(--edge-strong); border-radius: 999px;
+  background: transparent; color: var(--ice); font: 500 14px var(--font); cursor: pointer; }
+.talk-here[hidden] { display: none; }
+.talk-here .icon { width: 16px; height: 16px; }
+.talk-here:hover { border-color: var(--ice); }
+
+.talk { position: fixed; z-index: 20; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(400px, calc(100vw - 32px));
+  max-height: min(70vh, 560px); overflow: auto; padding: 14px 16px 12px; border: 1px solid var(--edge-strong); border-radius: 12px;
+  background: color-mix(in srgb, var(--plate-1) 94%, transparent); backdrop-filter: blur(14px); box-shadow: 0 18px 48px rgba(0, 0, 0, .55); }
+.talk[hidden] { display: none; }
+.talk-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.talk-title { margin: 0; display: inline-flex; align-items: center; gap: 8px; font: 600 16px var(--font-title); color: var(--ice); }
+.talk-title .icon { width: 18px; height: 18px; }
+.talk-presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.talk-chip { min-height: 40px; background: transparent; cursor: pointer; font-family: var(--font); }
+.talk-chip:hover { border-color: var(--ice); color: var(--ink-1); }
+.talk-chip[aria-pressed="true"] { border-color: var(--ice); color: var(--ice); background: color-mix(in srgb, var(--ice) 12%, transparent); }
+.talk-caption { margin: 10px 0; min-height: 3.2em; font-size: 17px; line-height: 1.45; color: var(--ink-1); }
+.talk-controls { display: flex; align-items: center; gap: 10px; }
+.talk-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 50%; border: 1px solid var(--edge-strong); background: transparent; color: var(--ink-1); cursor: pointer; }
+.talk-icon:hover:not(:disabled) { border-color: var(--ice); color: var(--ice); }
+.talk-icon:disabled { opacity: .4; cursor: default; }
+.talk-icon .icon { width: 18px; height: 18px; }
+.talk-bar { flex: 1; height: 4px; border-radius: 2px; background: var(--edge); overflow: hidden; }
+.talk-bar i { display: block; height: 100%; width: 0; background: var(--ice); box-shadow: 0 0 10px var(--ice-deep); }
+.talk-time { min-width: 6.5em; text-align: right; color: var(--ink-3); font-size: 13px; font-variant-numeric: tabular-nums; }
+.talk-text { padding-block: 10px; border-bottom: 0; }
+.talk-text summary { font-size: 15px; min-height: 40px; }
+.talk-text ol { margin: 8px 0 0; padding-left: 20px; color: var(--ink-2); font-size: 15px; display: grid; gap: 4px; }
+.talk-text li.now { color: var(--ice); }
+.talk-credit { margin: 4px 0 0; color: var(--ink-3); font-size: 12px; }
+.talk-credit a { color: var(--ink-2); }
+body.talking-mode { padding-bottom: var(--talk-room, 0px); }
+@media (max-width: 760px) {
+  .talk { left: 0; right: 0; bottom: 0; width: auto; max-height: 58vh; border-radius: 14px 14px 0 0; border-inline: 0; border-bottom: 0;
+    padding: 12px var(--gutter-r) calc(12px + env(safe-area-inset-bottom, 0px)) var(--gutter); }
+  .talk-presets { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .talk-chip { flex: none; }
+  .talk-caption { font-size: 16px; min-height: 2.9em; }
+  body.talking-mode .thumb-bar { display: none; }
+  body.talking-mode { padding-bottom: var(--talk-room, 76px); }
+}
+.talk-now { margin: 8px 0 0; min-height: 1.2em; color: var(--ink-3); font-size: 13px; }
+.talk-chip.talk-all { border-color: var(--ice); color: var(--ice); }
+.shield { margin: 0 0 24px; padding: 20px 22px; border: 1px solid var(--ice-deep); border-radius: 10px; background: linear-gradient(180deg, color-mix(in srgb, var(--ice-deep) 10%, var(--void)), var(--void)); max-width: 52em; }
+.shield h3 { display: flex; align-items: center; gap: 10px; font: 600 20px var(--font-title); margin: 0 0 6px; }
+.shield h3 .icon { width: 22px; height: 22px; color: var(--ice); flex: none; }
+.shield p { margin: 0; color: var(--ink-2); }
