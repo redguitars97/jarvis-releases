@@ -15,7 +15,7 @@
       "Faccio: ti consegno il lavoro finito, come un preventivo, o un sito con il suo link.",
       "Chiedo: prima di un'email, di un post o di una spesa, aspetto il tuo ok.",
       "E se mi manca un dato, ti chiedo solo quello, con una proposta.",
-      "E imparo: valuto ogni risultato, e scelgo il modello che rende meglio.",
+      "E imparo: do un voto a ogni risultato, e scelgo il modello che rende meglio.",
       "A te basta un pollice, in su o in giù.",
     ] },
     { id: "esempi", label: "Guardalo lavorare", section: "esempi", sentences: [
@@ -94,7 +94,7 @@
   // How the voice must say a few words, given to the app's speech plan exactly like the owner's lexicon in the app.
   var LESSICO = [["ok", "okèi"], ["post", "pòst"], ["ChatGPT", "Ciat-Gipitì"]];
   // Start of each sentence and length of the file, in seconds (written by tools/parlante.mjs).
-  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":39.5,"frasi":[0,1.84,7.45,11.71,16.53,22.38,27.83,32.32,37.26]},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.33,27.74]},"cosa":{"durata":40,"frasi":[0,3.83,6.92,12.25,15.39,20.04,25.48,33.91,37.44]},"come":{"durata":24.8,"frasi":[0,1.91,7.29,11.2,16.85,21.48]},"stati":{"durata":22.1,"frasi":[0,3.24,5.34,8,12.13,17.85]},"privacy":{"durata":36.6,"frasi":[0,2.99,6.29,16.36,20.42,23.52,27.43,30.07,34.98]},"prezzi":{"durata":27.3,"frasi":[0,4.03,9.51,16.44,19.91,22.87]},"scarica":{"durata":23.1,"frasi":[0,4.57,6.77,11.99,15.56,19.35]},"domande":{"durata":26.6,"frasi":[0,2.27,6.45,10.73,16.83,21.53]}}/*FINE TEMPI*/;
+  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":39.8,"frasi":[0,1.84,7.45,11.71,16.53,22.38,27.83,32.32,37.58]},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.34,27.75]},"cosa":{"durata":40,"frasi":[0,3.74,6.83,12.27,15.21,19.86,25.3,33.73,37.26]},"come":{"durata":24.6,"frasi":[0,1.91,7.06,10.97,16.62,21.25]},"stati":{"durata":22.1,"frasi":[0,3.24,5.32,7.98,12.13,17.85]},"privacy":{"durata":36.9,"frasi":[0,2.95,6.25,16.26,20.32,23.51,27.42,30.06,35.3]},"prezzi":{"durata":27.2,"frasi":[0,4.03,9.51,16.43,19.9,22.79]},"scarica":{"durata":23.1,"frasi":[0,4.56,6.76,11.98,15.55,19.34]},"domande":{"durata":26.6,"frasi":[0,2.27,6.45,10.73,16.83,21.54]}}/*FINE TEMPI*/;
   if (typeof window !== "undefined") { window.JARVIS_PARLANTE = PRESETS; window.JARVIS_PARLANTE_LESSICO = LESSICO; }
   if (typeof document === "undefined") return;
 
