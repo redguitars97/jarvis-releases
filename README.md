@@ -31,8 +31,11 @@ Per imprenditori, freelance e professionisti · Italiano
 
 **Il modo più semplice:** installi Jarvis, colleghi il tuo abbonamento Claude o ChatGPT (al primo avvio lo trova da solo)
 e gli parli. Modelli gratuiti, chiavi API e Gemini sono per chi vuole di più: li trovi più sotto e, sul sito, in «Per
-utenti avanzati». Sul sito puoi anche attivare **Jarvis parlante**: brevi spiegazioni a voce, facoltative, con la stessa
-voce dell'app (Pocket TTS di Kyutai, voce «Giovanni», CC BY 4.0), generate in anticipo e mostrate anche come testo.
+utenti avanzati». Sul sito, se vuoi, **Jarvis ti accoglie a voce**: ti chiede che lavoro fai (tocchi il tuo o lo
+scrivi in due parole, riconosciuto sul tuo computer), ti dice cosa ti consegnerebbe, cosa non fa mai e quale piano ti
+serve, con la stessa voce dell'app (Pocket TTS di Kyutai, voce «Giovanni», CC BY 4.0), generata in anticipo e mostrata
+sempre come sottotitoli; oppure leggi, senza audio. Il sito non usa il microfono: la conversazione a voce vera è
+nell'app. Ogni mestiere ha la sua pagina in [Per chi è](https://redguitars97.github.io/jarvis-releases/per/).
 
 **Lavora con gli strumenti che usi già:** Claude · ChatGPT e Codex · Ollama · OmniRoute · Gmail e ogni casella IMAP\* ·
 calendari CalDAV e iCloud · GitHub · Instagram, Facebook e Meta Ads · TikTok (dal browser) · Netlify · Google Chrome ed Edge · Zoom, Meet e Teams · Word, Excel,
@@ -98,6 +101,25 @@ tuo abbonamento usare e quanto deve ragionare.
 Nessuno può promettere una giornata illimitata con quote finite: dipendono dal piano, dal modello, dal contesto e dagli
 strumenti, e da ciò che fai con lo stesso account fuori da Jarvis. Prima di ogni versione la scelta di AUTO è provata su
 una giornata di lavoro di riferimento simulata; il consumo reale dipende dal tuo uso e si verifica sugli abbonamenti veri.
+
+## Si adatta a ogni lavoro, anche al tuo
+
+Jarvis capisce cosa fai, studia il tuo mestiere sulle fonti autorevoli, si dà procedure e controlli e migliora con i
+risultati, aggiornando da solo il suo fascicolo del mestiere. 57 mestieri sono già pronti come esempi
+(professionisti, imprese e negozi, sviluppo software e IT, design, contenuti e prodotto, creator e vendita online,
+freelance, aziende e associazioni, ruoli in azienda: una pagina ciascuno sul [sito](https://redguitars97.github.io/jarvis-releases/per/)); per un lavoro che
+non è in elenco studia il mestiere e lo diventa. Unisce il mestiere con 6 funzioni (marketing, legale, amministrazione,
+IT, vendite e siti e app) e studia i tuoi concorrenti. Gli atti riservati
+restano tuoi: non firma, non deposita, non trasmette, non rappresenta e non fa diagnosi.
+
+- **Risponde ai tuoi clienti su Telegram**, con il computer acceso e Jarvis aperto: un bot separato dal tuo, che sa
+  solo ciò che gli dai tu (le informazioni dell'attività, le risposte che approvi, il sito); ciò che non sa lo chiede a
+  te e impara la risposta approvata, propone gli orari e prende gli appuntamenti (da solo con un calendario CalDAV,
+  altrimenti li confermi tu), ti passa la conversazione e ti manda i riepiloghi.
+- **Si collega ai tuoi strumenti:** HubSpot, Pipedrive e Odoo (letture libere, scritture con il tuo ok), e Make, n8n e
+  Zapier con un webhook in uscita, firmato. Da internet verso Jarvis non arriva nulla.
+
+Le novità di ogni versione sono sul sito, in [Novità](https://redguitars97.github.io/jarvis-releases/novita.html).
 
 ## Cosa sa fare
 
@@ -259,10 +281,10 @@ installare con il tuo ok:
 | Voce, ascolto, chat, documenti, grafiche vettoriali | Niente: voce e ascolto sono già nell'installer | Jarvis, da solo |
 | Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
 | Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
-| Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso; su Windows e sui Mac senza Homebrew serve Node.js | Jarvis, oppure tu da nodejs.org |
-| Gemini CLI (licenza aziendale Gemini Code Assist) | Gemini CLI ufficiale, Node.js compatibile, login con l'account di lavoro e il progetto Google Cloud della licenza; quote della licenza | Tu: `npm install -g @google/gemini-cli`, poi Accedi da Jarvis |
-| Siti su GitHub, pull request | Git e un account GitHub | Tu (Mac: si installa con gli strumenti di Apple al primo uso) |
-| Browser che compila e prenota | Google Chrome o Microsoft Edge (non Safari) | Tu |
+| Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso | Jarvis, con un clic, dal pacchetto ufficiale di OpenAI (circa 170 MB, controllato byte per byte; niente Homebrew né Node.js) |
+| Gemini CLI (licenza aziendale Gemini Code Assist) | Gemini CLI ufficiale, login con l'account di lavoro e il progetto Google Cloud della licenza; quote della licenza | Jarvis, con un clic, dal pacchetto ufficiale di Google (circa 21 MB, controllato byte per byte; niente Node.js da installare), poi Accedi da Jarvis |
+| Siti su GitHub, pull request | Git e un account GitHub | Jarvis avvia l'installazione ufficiale da Collegamenti → Programmi (Mac: strumenti di Apple; Windows: winget); l'account è tuo |
+| Browser che compila e prenota | Google Chrome o Microsoft Edge (non Safari) | Tu (Collegamenti → Programmi apre la pagina di Chrome) |
 | Anteprime con link pubblico | cloudflared di Cloudflare | Jarvis, la prima volta |
 | Foto e illustrazioni | Abbonamento ChatGPT, un modello gratuito o una chiave API con tetto di spesa | Tu scegli quale |
 

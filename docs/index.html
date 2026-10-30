@@ -25,14 +25,13 @@
     <a class="brand" href="#inizio" aria-label="Jarvis, inizio pagina"><img src="assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
     <nav class="nav-main" aria-label="Sezioni">
       <a href="#vero">Perché Jarvis</a>
+      <a href="#per-chi">Per chi è</a>
       <a href="#esempi">Esempi</a>
       <a href="#come">Come funziona</a>
       <a href="#fiducia">Privacy</a>
       <a href="#piani">Prezzi</a>
       <a href="#domande">Domande</a>
     </nav>
-    <!-- «Jarvis parlante»: shown by parlante.js only; without JavaScript the page is simply read. -->
-    <button type="button" class="talk-toggle" aria-pressed="false" aria-controls="parlante" aria-label="Attiva Jarvis parlante" hidden><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg><span class="talk-toggle-label">Jarvis parlante</span></button>
     <a class="button small" href="#scarica">Scarica</a>
     <!-- When the sections do not fit in one line (tablet, phone, large text), they fold into this menu. -->
     <details class="menu">
@@ -41,40 +40,87 @@
         <a href="#vero">Perché Jarvis</a>
         <a href="#esempi">Esempi</a>
         <a href="#cosa-fa">Cosa fa</a>
+        <a href="#per-chi">Per chi è</a>
         <a href="#come">Come funziona</a>
         <a href="#fiducia">Privacy</a>
         <a href="#piani">Prezzi</a>
         <a href="#scarica">Scarica</a>
         <a href="#domande">Domande</a>
         <a href="#avanzati">Per utenti avanzati</a>
+        <a href="aiuto.html">Aiuto</a>
+        <a href="novita.html">Novità</a>
       </nav>
     </details>
   </div>
 </header>
 
 <main id="inizio">
-  <section class="hero">
+  <section class="hero welcome-hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="kicker">Per imprenditori, freelance e professionisti</p>
-        <h1>Parli. Jarvis lavora.</h1>
-        <p class="lead">L'assistente a voce che lavora sul tuo computer con il tuo abbonamento Claude o ChatGPT. Ti consegna documenti, siti, email e post pronti, e prima di inviare, pubblicare o spendere ti chiede l'ok.</p>
-        <div class="actions">
-          <a class="button" href="#scarica">Scarica Jarvis</a>
-          <a class="button ghost" href="#piani">Prezzi e prova gratuita</a>
+        <p class="kicker">Per imprenditori, freelance, professionisti e chi lavora da solo</p>
+        <h1 id="hero-title">Dimmi che lavoro fai. Jarvis diventa il tuo esperto.</h1>
+        <p class="lead">L'assistente a voce che lavora sul tuo computer con il tuo abbonamento Claude o ChatGPT: ti consegna il lavoro pronto, e prima di inviare, pubblicare o spendere ti chiede l'ok.</p>
+        <!-- The welcome (benvenuto.js): shown only with JavaScript; without it the hero links to the trades. -->
+        <div class="welcome" id="benvenuto">
+          <div class="wl-nojs actions">
+            <a class="button" href="#per-chi">Scegli il tuo mestiere</a>
+            <a class="button ghost" href="#piani">Prezzi e prova gratuita</a>
+          </div>
+          <div class="wl-gate" hidden>
+            <div class="actions">
+              <button type="button" class="button" data-wl-voce><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Entra con la voce di Jarvis</button>
+              <button type="button" class="button ghost" data-wl-leggi>Preferisco leggere</button>
+            </div>
+            <p class="fine">Jarvis ti parla un minuto, con i sottotitoli, e lo fermi quando vuoi. Il sito non usa il microfono: la conversazione a voce vera è nell'app.</p>
+          </div>
+          <div class="voce" data-voce hidden>
+            <div class="voce-say" data-voce-say></div>
+            <div class="voce-controls" role="group" aria-label="Controlli della voce">
+              <button type="button" class="voce-btn" data-voce-pausa aria-label="Pausa"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
+              <button type="button" class="voce-btn wide" data-voce-salta>Salta</button>
+              <button type="button" class="voce-btn wide" data-voce-muto aria-pressed="false">Senza audio</button>
+              <span class="voce-bar" aria-hidden="true"><i></i></span>
+            </div>
+          </div>
+          <div class="wl-step" data-wl="domanda" hidden>
+            <div class="wl-intro" hidden></div>
+            <h2 class="wl-q">Che lavoro fai?</h2>
+            <form class="wl-form" novalidate>
+              <label for="wl-input" class="visually-hidden">Il tuo lavoro, in due parole</label>
+              <div class="wl-field">
+                <input id="wl-input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="120" enterkeyhint="go" placeholder="Es. idraulico, insegnante">
+                <button type="submit" class="button">Vai</button>
+              </div>
+            </form>
+            <div class="wl-hint" role="status" hidden></div>
+            <p class="wl-or" id="wl-or">Oppure tocca il tuo:</p>
+            <div class="wl-chips" role="group" aria-labelledby="wl-or"></div>
+            <div class="wl-more" id="wl-more" hidden></div>
+            <p class="wl-or" id="wl-life-title">Non lavori, o non ancora?</p>
+            <div class="wl-chips wl-life" role="group" aria-labelledby="wl-life-title"></div>
+          </div>
+          <p class="wl-back fine" hidden>Bentornato: ecco la risposta dell'ultima volta, ricordata solo in questo browser.</p>
+          <div class="wl-step wl-out" data-wl="esito" hidden></div>
+          <p class="wl-credit">Voce «Giovanni» di Pocket TTS (Kyutai), <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, la stessa dell'app, generata in anticipo dai testi che leggi.</p>
         </div>
-        <p class="talk-invite" hidden><button type="button" class="link-button" data-talk-open><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Preferisci ascoltare? <b>Jarvis ti presenta il sito a voce</b></button><span>audio facoltativo, solo se premi; puoi fermarlo quando vuoi</span></p>
-        <ul class="platforms">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg><span><b>macOS</b><small>Apple Silicon e Intel</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-windows"/></svg><span><b>Windows</b><small>10 e 11</small></span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><span><b>Telegram</b><small>Dal telefono, ovunque</small></span></li>
-        </ul>
-        <p class="fine">In italiano. Paghi una volta: nessun abbonamento a Jarvis. I tuoi file restano sul tuo computer.</p>
       </div>
       <figure class="presence-stage" data-depth="0.12" aria-label="Jarvis all'opera: ascolta, pensa, parla e ti chiede l'ok">
         <canvas id="hero-presence" aria-hidden="true"></canvas>
         <figcaption class="presence-caption" id="hero-caption" aria-live="polite">Pronto</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="guarantees" aria-labelledby="garanzie-title">
+    <div class="wrap">
+      <h2 id="garanzie-title" class="visually-hidden">Le garanzie</h2>
+      <ul class="pledges hero-pledges">
+        <li><b>I tuoi file restano sul computer</b><span>Online va solo il pezzo che serve a rispondere.</span></li>
+        <li><b>Niente esce senza il tuo ok</b><span>Email, post, invii e spese aspettano te.</span></li>
+        <li><b>Paghi una volta</b><span>La licenza non scade.</span></li>
+        <li><b>Soddisfatto o rimborsato</b><span>Entro 14 giorni dall'acquisto. <a href="condizioni.html#acquisti">Condizioni</a></span></li>
+      </ul>
     </div>
   </section>
 
@@ -94,7 +140,7 @@
     </div>
   </section>
 
-  <section id="vero" class="truth" aria-labelledby="vero-title" data-parlante="cosa">
+  <section id="vero" class="truth" aria-labelledby="vero-title">
     <div class="wrap">
       <h2 id="vero-title" class="section-title">Il vero Jarvis</h2>
       <p class="section-lead">Un assistente con questo nome deve fare cinque cose. Jarvis le fa tutte.</p>
@@ -129,7 +175,7 @@
             <p class="step you" data-wait="300"><span class="who">Tu, a voce</span>«Jarvis, com'è messa la giornata?»</p>
             <p class="step typing" data-wait="900"><i></i><i></i><i></i></p>
             <p class="step filler" data-wait="700"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>«Ho capito, controllo.»</p>
-            <p class="step jarvis" data-wait="1800"><span class="who">Jarvis</span>Tre cose. Alle 11 hai la chiamata con il B&amp;B Il Glicine. Alle 16 il dentista. E la squadra ha finito i testi del sito della palestra: te li mostro?</p>
+            <p class="step jarvis" data-wait="1800"><span class="who">Jarvis</span>Tre cose. Alle 11 hai la chiamata con il B&amp;B La Corte. Alle 16 il dentista. E la squadra ha finito i testi del sito della palestra: te li mostro?</p>
             <p class="step note" data-wait="900">Risponde con Giovanni, una voce italiana naturale generata sul tuo computer.</p>
           </div>
 
@@ -211,7 +257,7 @@
         <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-video"/></svg><h3>Riunioni con il verbale</h3><p>Trascrive anche la call e ti dà decisioni, cose da fare e follow-up.</p></article>
         <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-branch"/></svg><h3>Software completo</h3><p>Dall'idea alla pull request, con test e revisione. Con Max.</p></article>
         <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-browser"/></svg><h3>Usa il browser per te</h3><p>Compila moduli e prenota in una finestra che vedi. Password e carte le scrivi tu.</p></article>
-        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Pronto per il tuo mestiere</h3><p>Procedure pronte per commercialisti (busta paga, F24, scadenze, fatture elettroniche), avvocati (diffide, termini), artigiani ed edilizia (computo metrico, sicurezza), ristorazione (allergeni, HACCP) e B&amp;B (Alloggiati Web, imposta di soggiorno). Sempre bozze, controllate su fonti ufficiali.</p></article>
+        <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-layers"/></svg><h3>Pronto per il tuo mestiere</h3><p>Procedure pronte per commercialisti (busta paga, F24, scadenze, fatture elettroniche), avvocati (diffide, termini), artigiani ed edilizia (computo metrico, sicurezza), ristorazione (allergeni, HACCP) e B&amp;B (Alloggiati Web, imposta di soggiorno). Sempre bozze, controllate su fonti ufficiali.</p><p class="try"><a href="#per-chi">Jarvis nel tuo mestiere</a></p></article>
         <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-pin"/></svg><h3>Viaggi e trasferte</h3><p>Percorsi con il link della mappa e alloggi filtrati per le tue date. Prenota solo con il tuo ok; la carta la inserisci tu, mai salvata.</p></article>
         <article><svg class="icon line feat-icon" aria-hidden="true"><use href="#i-steps"/></svg><h3>Lavori lunghi e ricorrenti</h3><p>Approvi il piano una volta e va avanti da solo, anche ogni lunedì.</p></article>
       </div>
@@ -219,9 +265,46 @@
     </div>
   </section>
 
-  <section id="come" aria-labelledby="come-title" data-parlante="come">
+  <section id="per-chi" aria-labelledby="per-chi-title">
+    <div class="wrap">
+      <h2 id="per-chi-title" class="section-title reveal">Si adatta a ogni lavoro. Anche al tuo.</h2>
+      <p class="section-lead reveal">Jarvis capisce cosa fai, studia il tuo mestiere sulle fonti ufficiali e diventa il tuo esperto. Gli atti riservati restano tuoi: non firma, non deposita, non fa diagnosi.</p>
+      <div class="morph" data-morph>
+        <div class="morph-core" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div>
+          <ol class="morph-list">
+            <li><p class="morph-name">Jarvis <b>il commercialista</b></p><p class="morph-ask">«Controllami la busta paga di Rossi»</p><p class="morph-meta">Conti rifatti in Excel, fonti dell'Agenzia delle Entrate e dell'INPS. Non invia e non firma.</p></li>
+            <li><p class="morph-name">Jarvis <b>l'artigiano</b></p><p class="morph-ask">«Prepara la dichiarazione di conformità dell'impianto»</p><p class="morph-meta">Campi obbligatori e allegati da unire. La firma resta tua.</p></li>
+            <li><p class="morph-name">Jarvis <b>il ristoratore</b></p><p class="morph-ask">«Rifai il menù d'autunno con gli allergeni»</p><p class="morph-meta">Allergeni secondo il Reg. UE 1169/2011, dalle ricette e dalle etichette.</p></li>
+            <li><p class="morph-name">Jarvis <b>l'avvocato</b></p><p class="morph-ask">«Entro quando posso appellare?»</p><p class="morph-meta">Conteggio giorno per giorno e norme lette sulla fonte ufficiale. Non deposita e non notifica.</p></li>
+            <li><p class="morph-name">Jarvis <b>lo sviluppatore</b></p><p class="morph-ask">«La pipeline è rossa: guarda cosa si è rotto»</p><p class="morph-meta">Legge l'errore e propone la correzione con una pull request, con il tuo ok.</p></li>
+            <li><p class="morph-name">Jarvis <b>il barbiere</b></p><p class="morph-ask">«Ho una barberia in centro, lavoro su appuntamento»</p><p class="morph-meta">Non è tra gli esempi: studia il mestiere e lo diventa. <a href="per/index.html#il-tuo">Come</a></p></li>
+          </ol>
+          <button type="button" class="morph-pause" aria-pressed="false" hidden>Pausa</button>
+        </div>
+      </div>
+      <nav class="role-links" aria-label="Jarvis per mestiere">
+        <div><h3>Professionisti</h3><ul><li><a href="per/commercialista.html">Commercialisti</a></li><li><a href="per/consulente-lavoro.html">Consulenti del lavoro</a></li><li><a href="per/avvocato.html">Avvocati</a></li><li><a href="per/notaio.html">Notai</a></li><li><a href="per/tecnico-edile.html">Tecnici dell'edilizia</a></li><li><a href="per/studio-medico.html">Studi medici</a></li><li><a href="per/amministratore-condominio.html">Amministratori di condominio</a></li><li><a href="per/caf-patronato.html">CAF e patronati</a></li></ul></div>
+        <div><h3>Imprese e negozi</h3><ul><li><a href="per/artigiano.html">Artigiani</a></li><li><a href="per/ristorazione.html">Ristoranti e bar</a></li><li><a href="per/ricettiva.html">B&amp;B e affitti brevi</a></li><li><a href="per/commercio.html">Negozi</a></li><li><a href="per/estetica.html">Estetica e parrucchieri</a></li><li><a href="per/agente-immobiliare.html">Agenzie immobiliari</a></li><li><a href="per/officina.html">Officine</a></li></ul></div>
+        <div><h3>Sviluppo software e IT</h3><ul><li><a href="per/sviluppatore.html">Sviluppatori</a></li><li><a href="per/sviluppatore-backend.html">Backend</a></li><li><a href="per/sviluppatore-frontend.html">Frontend</a></li><li><a href="per/sviluppatore-fullstack.html">Full stack</a></li><li><a href="per/sviluppatore-mobile.html">App mobili</a></li><li><a href="per/architetto-software.html">Architetti software</a></li><li><a href="per/tester-qa.html">Tester e QA</a></li><li><a href="per/devops-sre.html">DevOps e SRE</a></li><li><a href="per/cybersecurity.html">Sicurezza informatica</a></li><li><a href="per/data-analyst.html">Analisti dati</a></li><li><a href="per/sistemista-it.html">Sistemisti IT</a></li><li><a href="per/technical-leader.html">Tech lead</a></li><li><a href="per/cto.html">CTO</a></li></ul></div>
+        <div><h3>Design, contenuti e prodotto</h3><ul><li><a href="per/graphic-designer.html">Graphic designer</a></li><li><a href="per/ux-ui-designer.html">UX e UI designer</a></li><li><a href="per/copywriter-content.html">Copywriter</a></li><li><a href="per/seo-specialist.html">Specialisti SEO</a></li><li><a href="per/social-media-manager.html">Social media manager</a></li><li><a href="per/product-manager.html">Product manager</a></li><li><a href="per/project-manager.html">Project manager</a></li></ul></div>
+        <div><h3>Creator e vendita online</h3><ul><li><a href="per/content-creator.html">Content creator</a></li><li><a href="per/ugc-creator.html">UGC creator</a></li><li><a href="per/community-manager.html">Community manager</a></li><li><a href="per/podcaster.html">Podcaster</a></li><li><a href="per/ecommerce-seller.html">Venditori online</a></li><li><a href="per/affiliate-marketer.html">Affiliate marketer</a></li></ul></div>
+        <div><h3>Freelance</h3><ul><li><a href="per/freelance-creativo.html">Freelance e creativi</a></li><li><a href="per/fotografo-videomaker.html">Fotografi e videomaker</a></li><li><a href="per/event-planner.html">Wedding ed event planner</a></li><li><a href="per/personal-trainer.html">Personal trainer e coach</a></li><li><a href="per/agenzia-marketing.html">Agenzie di marketing</a></li></ul></div>
+        <div><h3>Aziende</h3><ul><li><a href="per/pmi.html">Piccole e medie imprese</a></li><li><a href="per/associazione.html">Associazioni</a></li></ul></div>
+        <div><h3>Ruoli in azienda</h3><ul><li><a href="per/founder-ceo.html">Fondatori e CEO</a></li><li><a href="per/cfo.html">Direttori finanziari</a></li><li><a href="per/hr-manager.html">Risorse umane</a></li><li><a href="per/recruiter.html">Recruiter</a></li><li><a href="per/account-manager.html">Account manager</a></li><li><a href="per/business-analyst.html">Business analyst</a></li><li><a href="per/pmo.html">PMO</a></li><li><a href="per/scrum-master.html">Scrum master</a></li><li><a href="per/delivery-manager.html">Delivery manager</a></li></ul></div>
+      </nav>
+      <div class="yours reveal">
+        <p><b>Il tuo lavoro non è qui?</b> Diglielo: capisce il contesto, studia le fonti autorevoli, si dà procedure e controlli e migliora con i risultati. Unisce il mestiere con marketing, legale, amministrazione, IT, vendite e siti e app, e studia i tuoi concorrenti.</p>
+        <a class="button ghost" href="per/index.html#il-tuo">E il tuo lavoro?</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="come" aria-labelledby="come-title">
     <div class="wrap">
       <h2 id="come-title" class="section-title reveal">Come funziona</h2>
+      <!-- TEMPI DEI TRE PASSI: da inserire solo dopo averli misurati su un computer vero (installazione, primo avvio,
+           prima risposta), per esempio «Installa e attiva · circa N minuti». Nessun tempo è scritto finché non è misurato. -->
       <ol class="steps3 reveal">
         <li><b>Installa e attiva</b><span>Su Mac trascini Jarvis in Applicazioni, su Windows apri il file .exe. Copi il codice del computer e incolli la licenza che ricevi.</span></li>
         <li><b>Collega il tuo abbonamento</b><span>Claude o ChatGPT: al primo avvio Jarvis li trova da solo e, se serve, ti guida a installare il programma ufficiale del fornitore.</span></li>
@@ -249,7 +332,7 @@
     </div>
   </section>
 
-  <section id="fiducia" aria-labelledby="fiducia-title" data-parlante="privacy">
+  <section id="fiducia" aria-labelledby="fiducia-title">
     <div class="wrap">
       <h2 id="fiducia-title" class="section-title reveal">I tuoi dati restano tuoi. Decidi tu cosa esce.</h2>
       <p class="section-lead reveal">Progetti, documenti e voce restano sul tuo computer. Online va solo il pezzo che serve a rispondere; un progetto «riservato» non esce affatto.</p>
@@ -271,16 +354,17 @@
   </section>
 
   <div class="aurora" aria-hidden="true"><i></i></div>
-  <section id="piani" class="band" aria-labelledby="piani-title" data-parlante="prezzi">
+  <section id="piani" class="band" aria-labelledby="piani-title">
     <div class="wrap">
       <h2 id="piani-title" class="section-title reveal">Pro e Max</h2>
       <p class="section-lead reveal">Paghi una volta, nessun abbonamento a Jarvis.</p>
+      <p class="per-te" id="per-te" hidden></p>
       <div class="table-scroll">
         <table class="plans">
           <thead>
             <tr><th scope="col">Cosa include</th>
-              <th scope="col">Pro<small>Per il freelance con un'attività principale</small><span class="price" data-price="pro"></span></th>
-              <th scope="col">Max<small>Per chi segue più clienti, sviluppa software e fa campagne</small><span class="price" data-price="max"></span></th></tr>
+              <th scope="col">Pro<small>Per chi lavora da solo con un'attività principale</small><span class="price" data-price="pro"></span></th>
+              <th scope="col">Max<small>Per chi segue più clienti come progetti separati, sviluppa software o fa campagne</small><span class="price" data-price="max"></span></th></tr>
           </thead>
           <tbody>
             <tr><th scope="row">Progetti</th><td>1</td><td class="yes">Senza limite</td></tr>
@@ -346,6 +430,7 @@
     <div class="wrap narrow">
       <h2 id="domande-title" class="section-title reveal">Domande frequenti</h2>
       <details><summary>Serve un abbonamento a un'intelligenza artificiale?</summary><p>Basta il tuo abbonamento Claude o ChatGPT: Jarvis lo usa al posto tuo. Non ce l'hai? Puoi usare modelli gratuiti o una chiave API con un tetto di spesa: trovi tutto in <a href="#gratis">Per utenti avanzati</a>. Molte risposte (ora, calcoli, promemoria, stato della squadra) non usano proprio l'AI.</p></details>
+      <details><summary>Funziona anche per il mio lavoro?</summary><p>Sì, anche se non è tra i <a href="per/index.html">57 mestieri già pronti</a>: Jarvis capisce cosa fai, studia il mestiere sulle fonti autorevoli e si dà procedure e controlli. Gli atti riservati (firmare, depositare, trasmettere, rappresentare, fare diagnosi) restano sempre a te: prepara il lavoro per il professionista.</p></details>
       <details><summary>Ho già Claude o ChatGPT: cosa aggiunge Jarvis?</summary><p>Li usa come motori, anche insieme, e ci mette sopra ciò che serve a chi lavora con i clienti: la voce in italiano, una squadra che conosce i tuoi progetti, il lavoro consegnato finito, un secondo modello che ricontrolla le consegne e il tuo ok su ciò che esce. Se scrivi codice tutto il giorno, Claude Code e Codex restano strumenti eccellenti: Jarvis li usa come motori.</p></details>
       <details><summary>Quanto lavoro faccio con il mio abbonamento?</summary><p>Dipende dal piano e da cosa chiedi: le quote le decide il fornitore. Jarvis usa il modello leggero dove basta e quello più capace solo dove serve, per farle durare di più. Se finiscono, ti dice quando tornano e, se vuoi, riprende da solo.</p></details>
       <details><summary>I miei documenti finiscono online?</summary><p>Restano sul tuo computer. Esce solo: il pezzo che serve a rispondere, se usi un modello online; ciò che scrivi o ricevi su Telegram; con Max e due computer in gruppo, una copia dei progetti nella tua cartella cloud; le segnalazioni che decidi di inviare. Un progetto «riservato» usa solo i modelli sul tuo computer.</p></details>
@@ -460,6 +545,14 @@
             </ul>
           </div>
           <div class="wall-group">
+            <h3>Clienti e automazioni</h3>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-telegram"/></svg><b>Telegram per i clienti</b><small>Un bot separato che risponde ai tuoi clienti, con il computer acceso</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-users"/></svg><b>HubSpot, Pipedrive, Odoo</b><small>Contatti e lavori nel tuo CRM</small></li>
+              <li><svg class="icon line" aria-hidden="true"><use href="#i-plug"/></svg><b>Make, n8n, Zapier</b><small>Con un webhook in uscita</small></li>
+            </ul>
+          </div>
+          <div class="wall-group">
             <h3>Sul tuo computer</h3>
             <ul>
               <li><svg class="icon line" aria-hidden="true"><use href="#i-folder"/></svg><b>Cartelle e repository</b><small>La conoscenza dei tuoi progetti</small></li>
@@ -553,25 +646,6 @@
   </section>
 </main>
 
-<!-- «Jarvis parlante»: the player, revealed by parlante.js when the visitor turns the mode on. -->
-<aside id="parlante" class="talk" aria-labelledby="talk-title" hidden>
-  <div class="talk-head">
-    <p id="talk-title" class="talk-title"><svg class="icon line" aria-hidden="true"><use href="#i-wave"/></svg>Jarvis parlante</p>
-    <button type="button" class="talk-icon" data-talk-off aria-label="Disattiva Jarvis parlante"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-  </div>
-  <div class="talk-presets" role="group" aria-label="Scegli cosa ascoltare"></div>
-  <p class="talk-now" aria-hidden="true"></p>
-  <p class="talk-caption" id="talk-caption">Scegli cosa ascoltare: l'audio parte solo quando premi.</p>
-  <div class="talk-controls">
-    <button type="button" class="talk-icon" data-talk-pause aria-label="Pausa" disabled><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
-    <button type="button" class="talk-icon" data-talk-stop aria-label="Ferma" disabled><svg class="icon" aria-hidden="true"><use href="#i-stop"/></svg></button>
-    <span class="talk-bar" aria-hidden="true"><i></i></span>
-    <span class="talk-time" aria-hidden="true"></span>
-  </div>
-  <details class="talk-text"><summary>Testo completo</summary><ol></ol></details>
-  <p class="talk-credit">Voce «Giovanni» di Pocket TTS (Kyutai), <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>, la stessa dell'app: audio generato in anticipo e compresso.</p>
-</aside>
-
 <nav class="thumb-bar" aria-label="Azioni rapide">
   <a class="button" href="#scarica">Scarica Jarvis</a>
   <a class="button ghost" href="#contatti" id="thumb-contact">Scrivici</a>
@@ -581,17 +655,27 @@
   <div class="wrap foot-row">
     <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
     <span>© 2026 Il vero Jarvis · Tutti i diritti riservati</span>
+    <a href="per/index.html">Per chi è</a>
+    <a href="novita.html">Novità</a>
+    <a href="aiuto.html">Aiuto</a>
     <a href="condizioni.html">Condizioni di licenza</a>
     <a href="privacy.html">Privacy</a>
     <a href="https://github.com/redguitars97/jarvis-releases/releases" target="_blank" rel="noopener">Note di rilascio</a>
     <span class="social" id="social" hidden></span>
   </div>
-  <p class="wrap foot-credit">Voce di «Jarvis parlante»: Pocket TTS di Kyutai, voce «Giovanni» (<a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>), convertita in ONNX e quantizzata int8; struttura ONNX da KevinAHM/pocket-tts-onnx (CC BY 4.0). Audio generato in anticipo dai testi mostrati e compresso.</p>
+  <p class="wrap foot-credit">Voce di Jarvis sul sito: Pocket TTS di Kyutai, voce «Giovanni» (<a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener">CC BY 4.0</a>), convertita in ONNX e quantizzata int8; struttura ONNX da KevinAHM/pocket-tts-onnx (CC BY 4.0). Audio generato in anticipo dai testi mostrati e compresso.</p>
 </footer>
 <script src="config.js"></script>
 <script src="reactor.js"></script>
 <script src="site.js" defer></script>
 <script src="presence.js" defer></script>
+<script src="mestieri.js" defer></script>
+<script src="voce/testi.js" defer></script>
+<script src="voce/tempi.js" defer></script>
 <script src="parlante.js" defer></script>
+<script src="trova.js" defer></script>
+<script src="voce.js" defer></script>
+<script src="benvenuto.js" defer></script>
+<script src="trasforma.js" defer></script>
 </body>
 </html>

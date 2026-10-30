@@ -745,72 +745,249 @@ details summary { min-height: 48px; display: flex; align-items: center; }
 .foot-credit { color: var(--ink-3); font-size: 12px; margin-top: 14px; margin-bottom: 0; }
 .foot-credit a { color: var(--ink-2); }
 
-/* Jarvis parlante */
-.talk-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 6px; border: 1px solid var(--edge-strong);
-  background: transparent; color: var(--ice); font: 500 14px var(--font); cursor: pointer; white-space: nowrap; }
-.talk-toggle[hidden] { display: none; }
-.talk-toggle .icon { width: 18px; height: 18px; }
-.talk-toggle:hover { border-color: var(--ice); }
-.talk-toggle[aria-pressed="true"] { background: color-mix(in srgb, var(--ice) 16%, transparent); border-color: var(--ice); }
-.nav-main + .talk-toggle { margin-left: 4px; }
-@media (max-width: 1100px) { .top-row .talk-toggle { margin-left: auto; } .top-row .talk-toggle:not([hidden]) + .button { margin-left: 0; } }
-.top.compact .top-row .talk-toggle { margin-left: auto; }
-.top.compact .top-row .talk-toggle:not([hidden]) + .button { margin-left: 0; }
-@media (max-width: 760px) { .talk-toggle { padding: 0; width: 44px; justify-content: center; } .talk-toggle-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }
-@media (max-width: 520px) { .top-row { gap: 10px; } }
-
-.talk-invite { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 16px 0 0; }
-.talk-invite[hidden] { display: none; }
-.talk-invite span { color: var(--ink-3); font-size: 13px; }
-.link-button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--ice); font: 500 15px var(--font); cursor: pointer; text-align: left; }
-.link-button .icon { width: 28px; height: 28px; padding: 6px; border-radius: 50%; border: 1px solid var(--edge-strong); flex: none; }
-.link-button:hover .icon { border-color: var(--ice); }
-
-.talk-here { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; margin: 0 0 18px; padding: 0 14px 0 10px; border: 1px solid var(--edge-strong); border-radius: 999px;
-  background: transparent; color: var(--ice); font: 500 14px var(--font); cursor: pointer; }
-.talk-here[hidden] { display: none; }
-.talk-here .icon { width: 16px; height: 16px; }
-.talk-here:hover { border-color: var(--ice); }
-
-.talk { position: fixed; z-index: 20; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(400px, calc(100vw - 32px));
-  max-height: min(70vh, 560px); overflow: auto; padding: 14px 16px 12px; border: 1px solid var(--edge-strong); border-radius: 12px;
-  background: color-mix(in srgb, var(--plate-1) 94%, transparent); backdrop-filter: blur(14px); box-shadow: 0 18px 48px rgba(0, 0, 0, .55); }
-.talk[hidden] { display: none; }
-.talk-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.talk-title { margin: 0; display: inline-flex; align-items: center; gap: 8px; font: 600 16px var(--font-title); color: var(--ice); }
-.talk-title .icon { width: 18px; height: 18px; }
-.talk-presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
-.talk-chip { min-height: 40px; background: transparent; cursor: pointer; font-family: var(--font); }
-.talk-chip:hover { border-color: var(--ice); color: var(--ink-1); }
-.talk-chip[aria-pressed="true"] { border-color: var(--ice); color: var(--ice); background: color-mix(in srgb, var(--ice) 12%, transparent); }
-.talk-caption { margin: 10px 0; min-height: 3.2em; font-size: 17px; line-height: 1.45; color: var(--ink-1); }
-.talk-controls { display: flex; align-items: center; gap: 10px; }
-.talk-icon { display: inline-grid; place-items: center; width: 44px; height: 44px; flex: none; border-radius: 50%; border: 1px solid var(--edge-strong); background: transparent; color: var(--ink-1); cursor: pointer; }
-.talk-icon:hover:not(:disabled) { border-color: var(--ice); color: var(--ice); }
-.talk-icon:disabled { opacity: .4; cursor: default; }
-.talk-icon .icon { width: 18px; height: 18px; }
-.talk-bar { flex: 1; height: 4px; border-radius: 2px; background: var(--edge); overflow: hidden; }
-.talk-bar i { display: block; height: 100%; width: 0; background: var(--ice); box-shadow: 0 0 10px var(--ice-deep); }
-.talk-time { min-width: 6.5em; text-align: right; color: var(--ink-3); font-size: 13px; font-variant-numeric: tabular-nums; }
-.talk-text { padding-block: 10px; border-bottom: 0; }
-.talk-text summary { font-size: 15px; min-height: 40px; }
-.talk-text ol { margin: 8px 0 0; padding-left: 20px; color: var(--ink-2); font-size: 15px; display: grid; gap: 4px; }
-.talk-text li.now { color: var(--ice); }
-.talk-credit { margin: 4px 0 0; color: var(--ink-3); font-size: 12px; }
-.talk-credit a { color: var(--ink-2); }
-body.talking-mode { padding-bottom: var(--talk-room, 0px); }
-@media (max-width: 760px) {
-  .talk { left: 0; right: 0; bottom: 0; width: auto; max-height: 58vh; border-radius: 14px 14px 0 0; border-inline: 0; border-bottom: 0;
-    padding: 12px var(--gutter-r) calc(12px + env(safe-area-inset-bottom, 0px)) var(--gutter); }
-  .talk-presets { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
-  .talk-chip { flex: none; }
-  .talk-caption { font-size: 16px; min-height: 2.9em; }
-  body.talking-mode .thumb-bar { display: none; }
-  body.talking-mode { padding-bottom: var(--talk-room, 76px); }
-}
-.talk-now { margin: 8px 0 0; min-height: 1.2em; color: var(--ink-3); font-size: 13px; }
-.talk-chip.talk-all { border-color: var(--ice); color: var(--ice); }
 .shield { margin: 0 0 24px; padding: 20px 22px; border: 1px solid var(--ice-deep); border-radius: 10px; background: linear-gradient(180deg, color-mix(in srgb, var(--ice-deep) 10%, var(--void)), var(--void)); max-width: 52em; }
 .shield h3 { display: flex; align-items: center; gap: 10px; font: 600 20px var(--font-title); margin: 0 0 6px; }
 .shield h3 .icon { width: 22px; height: 22px; color: var(--ice); flex: none; }
 .shield p { margin: 0; color: var(--ink-2); }
+
+/* ======== Per chi è: the pages of each trade (docs/per/, made by tools/ruoli.mjs), the home section and its demo ======== */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 30; padding: 10px 16px; border-radius: 6px; background: var(--ice); color: var(--void); font-weight: 600; text-decoration: none; }
+.skip:focus { top: 12px; }
+.sub-nav { display: flex; gap: 20px; margin-left: auto; min-width: 0; }
+.sub-nav a[aria-current="page"] { color: var(--ink-1); }
+@media (max-width: 720px) { .sub-nav { display: none; } .sub-page .top-row .button { margin-left: auto; } }
+.role-hero { padding-block: 40px 72px; position: relative; isolation: isolate; overflow: hidden; }
+.role-hero::before { content: ""; position: absolute; inset: -30% -20% auto auto; width: 60vw; height: 60vw; max-width: 720px; max-height: 720px; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--ice-deep) 16%, transparent), transparent); }
+.role h1 { font-size: clamp(34px, 6.4vw, 68px); line-height: 1.04; overflow-wrap: break-word; hyphens: auto; }
+.role-name { color: var(--ice); text-shadow: 0 0 28px color-mix(in srgb, var(--ice-deep) 45%, transparent); }
+.role .back a, .doc-page .back a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; text-decoration: none; }
+.role .back a::before, .doc-page .back a::before { content: "‹"; margin-right: 8px; font-size: 20px; }
+.asks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.asks li { border: 1px solid var(--edge); border-radius: 10px; padding: 20px; background: var(--void); min-width: 0; }
+.asks .ask { margin: 0 0 10px; padding: 10px 14px; border-left: 2px solid var(--ice); background: color-mix(in srgb, var(--ice) 7%, transparent); border-radius: 0 8px 8px 0; color: var(--ink-1); font-weight: 500; }
+.asks p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.role-extra { margin-top: 28px; max-width: 52em; }
+.split-role { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
+.never, .sources { min-width: 0; }
+.never p, .sources p { color: var(--ink-2); margin: 0 0 16px; }
+.never ul, .sources ul { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+.never li { padding: 12px 14px 12px 40px; position: relative; border: 1px solid color-mix(in srgb, var(--amber) 40%, var(--edge)); border-radius: 8px; color: var(--ink-1); }
+.never li::before { content: ""; position: absolute; left: 14px; top: 50%; width: 14px; height: 2px; background: var(--amber); }
+.sources li a { display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--edge); border-radius: 8px; background: var(--plate-1); text-decoration: none; }
+.sources li a:hover { border-color: var(--ice); }
+.sources li > span { display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--edge); border-radius: 8px; background: var(--plate-1); color: var(--ink-1); }
+.sources li small { color: var(--ink-3); font-size: 14px; margin-left: 4px; }
+.sources .allow { font-size: 14px; color: var(--ink-3); overflow-wrap: anywhere; }
+.never li b { display: block; font-weight: 500; }
+.never li span { display: block; margin-top: 4px; color: var(--ink-2); font-size: 15px; }
+.become { list-style: none; counter-reset: step; margin: 0 0 8px; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.become li { counter-increment: step; position: relative; padding: 52px 20px 20px; border: 1px solid var(--edge); border-radius: 10px; background: var(--void); min-width: 0; }
+.become li::before { content: counter(step); position: absolute; top: 16px; left: 20px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font: 600 13px var(--font-title); color: var(--void); background: var(--ice); box-shadow: 0 0 14px var(--ice-deep); }
+.become h3 { font: 600 19px var(--font-title); margin: 0 0 6px; }
+.become p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.become + .ticks, .become + .fine { margin-top: 24px; }
+.pledges { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--edge); border: 1px solid var(--edge); border-radius: 10px; overflow: hidden; }
+.pledges li { background: var(--plate-1); padding: 16px 18px; min-width: 0; display: grid; gap: 2px; }
+.pledges b { font: 600 16px var(--font-title); color: var(--ink-1); }
+.pledges span { color: var(--ink-2); font-size: 14px; }
+.role-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+.role-group { min-width: 0; }
+.role-group h3, .role-links h3 { margin: 0 0 10px; font: 600 13px var(--font-title); letter-spacing: .08em; text-transform: uppercase; color: var(--ice); }
+.role-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.role-group a { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--edge); border-radius: 8px; background: var(--void); text-decoration: none; min-height: 44px; }
+.role-group a:hover, .role-group a:focus-visible { border-color: var(--ice); }
+.role-group b { color: var(--ink-1); font-weight: 500; }
+.role-group span { color: var(--ink-3); font-size: 14px; }
+.narrow .sequence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 960px) {
+  .become, .pledges { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .role-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) { .asks, .split-role { grid-template-columns: minmax(0, 1fr); } .split-role { gap: 40px; } }
+@media (max-width: 520px) { .become, .pledges, .role-groups, .narrow .sequence { grid-template-columns: minmax(0, 1fr); } }
+
+/* Home: the guarantees under the hero */
+.pledges.hero-pledges { margin: 0; }
+.guarantees { padding-block: 0 56px; }
+
+/* Home «Per chi è»: Jarvis becomes a trade. Without JavaScript or with reduced motion the examples are simply listed;
+   with motion they take turns in one place, the core of Jarvis turning faster at each change (trasforma.js). */
+.morph { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 32px; align-items: center; padding: 28px; margin-bottom: 36px;
+  border: 1px solid var(--edge-strong); border-radius: 12px; background: linear-gradient(180deg, color-mix(in srgb, var(--ice-deep) 7%, var(--void)), var(--void)); }
+.morph-core { position: relative; width: 132px; aspect-ratio: 1; align-self: start; }
+.morph-core i { position: absolute; inset: 0; border-radius: 50%; }
+.morph-core i:nth-child(1) { border: 1px solid color-mix(in srgb, var(--ice) 40%, transparent); box-shadow: 0 0 24px -6px var(--ice-deep), inset 0 0 18px -8px var(--ice-deep); }
+.morph-core i:nth-child(2) { inset: 12px; border: 2px dashed color-mix(in srgb, var(--ice) 55%, transparent); animation: morph-spin 14s linear infinite; }
+.morph-core i:nth-child(3) { inset: 38px; background: radial-gradient(circle, var(--ice-hot), var(--ice) 35%, color-mix(in srgb, var(--ice-deep) 30%, transparent) 70%, transparent 72%);
+  filter: blur(.4px); animation: morph-breathe 3.2s ease-in-out infinite; }
+.morph.shift .morph-core i:nth-child(2) { animation-duration: 1.6s; }
+.morph.shift .morph-core i:nth-child(3) { animation: morph-flare .9s ease-out; }
+@keyframes morph-spin { to { transform: rotate(360deg); } }
+@keyframes morph-breathe { 50% { transform: scale(.92); opacity: .85; } }
+@keyframes morph-flare { 30% { transform: scale(1.18); opacity: 1; } }
+.morph-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; min-width: 0; }
+.morph-list li { min-width: 0; }
+.morph-name { margin: 0 0 8px; font: 600 clamp(26px, 4vw, 40px)/1.1 var(--font-title); color: var(--ink-1); overflow-wrap: break-word; }
+.morph-name b { color: var(--ice); font-weight: 600; text-shadow: 0 0 24px color-mix(in srgb, var(--ice-deep) 45%, transparent); }
+.morph-ask { margin: 0 0 6px; color: var(--ink-1); font-size: 17px; }
+.morph-meta { margin: 0; color: var(--ink-3); font-size: 14px; }
+.morph-meta a { color: var(--ice); }
+.morph-pause { margin-top: 18px; min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid var(--edge-strong); background: transparent; color: var(--ink-2); font: 500 14px var(--font); cursor: pointer; }
+.morph-pause:hover { color: var(--ink-1); border-color: var(--ice); }
+.morph.live .morph-list { gap: 0; }
+.morph.live .morph-list li { grid-area: 1 / 1; opacity: 0; transform: translateY(10px); filter: blur(4px); transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1), filter .55s ease; visibility: hidden; }
+.morph.live .morph-list li.on { opacity: 1; transform: none; filter: none; visibility: visible; }
+@media (prefers-reduced-motion: reduce) { .morph-core i { animation: none !important; } }
+@media (max-width: 640px) {
+  .morph { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 20px; }
+  .morph-core { width: 84px; }
+  .morph-core i:nth-child(2) { inset: 8px; } .morph-core i:nth-child(3) { inset: 24px; }
+}
+.role-links { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; margin-bottom: 24px; }
+.role-links div { min-width: 0; }
+.role-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.role-links a { display: inline-flex; align-items: center; min-height: 36px; color: var(--ink-2); font-size: 15px; text-decoration: none; }
+.role-links a:hover, .role-links a:focus-visible { color: var(--ice); }
+@media (max-width: 960px) { .role-links { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .role-links { grid-template-columns: repeat(2, minmax(0, 1fr)); } .role-links a { min-height: 44px; } }
+.yours { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; padding: 20px 24px; border: 1px solid color-mix(in srgb, var(--ice) 35%, var(--edge)); border-radius: 10px; }
+.yours p { margin: 0; color: var(--ink-2); flex: 1 1 22em; }
+.yours b { color: var(--ink-1); }
+
+/* Novità and Aiuto (novita.html, aiuto.html): reading pages like the conditions. */
+.doc-page main { padding-block: 40px 96px; }
+.doc-page h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.05; margin-bottom: 16px; }
+.doc-page section { padding-block: 0; margin-top: 48px; scroll-margin-top: 80px; }
+.doc-page h2 { font: 600 clamp(24px, 3.2vw, 30px)/1.2 var(--font-title); margin: 0 0 14px; }
+.doc-page h3 { font: 600 19px var(--font-title); margin: 28px 0 8px; }
+.doc-page p, .doc-page li { color: var(--ink-2); font-size: 17px; line-height: 1.7; }
+.doc-page b { color: var(--ink-1); font-weight: 600; }
+.doc-page .ticks { gap: 12px; }
+.release-tag { display: inline-block; margin: 0 0 6px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--ice); color: var(--ice); font: 600 13px var(--font-title); letter-spacing: .06em; }
+.not-yet li::before { background: var(--ink-3); box-shadow: none; }
+.help-index { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; }
+.help-index a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--edge); border-radius: 999px; text-decoration: none; font-size: 15px; }
+.help-index a:hover { border-color: var(--ice); }
+
+@media (max-width: 520px) { .top-row { gap: 10px; } }
+
+/* ======== The welcome of the home (benvenuto.js) and the voice of the site (voce.js) ========
+   One bold thing: the sentence Jarvis is saying, large, next to the presence that speaks it. Everything else is quiet:
+   the trade buttons, the plan, the trial. Without JavaScript only the two links of .wl-nojs show. */
+.welcome-hero h1 { font-size: clamp(38px, 5.6vw, 68px); }
+.welcome-hero .lead { margin-bottom: 24px; }
+.welcome { display: grid; gap: 16px; min-width: 0; scroll-margin-top: 76px; }
+.welcome [hidden] { display: none !important; }
+.wl-gate .fine { margin-top: 12px; max-width: 34em; }
+.wl-gate .button .icon { margin-right: 8px; }
+.wl-step { display: grid; gap: 14px; min-width: 0; }
+.wl-q { font: 600 clamp(26px, 3.4vw, 34px)/1.15 var(--font-title); margin: 0; }
+.wl-intro p { margin: 0 0 6px; color: var(--ink-2); }
+.wl-field { display: flex; gap: 8px; }
+.wl-field input { flex: 1; min-width: 0; min-height: 50px; padding: 0 16px; border-radius: 8px; border: 1px solid var(--edge-strong); background: var(--plate-1);
+  color: var(--ink-1); font: 17px var(--font); }
+.wl-field input::placeholder { color: var(--ink-3); }
+.wl-field input:focus-visible { outline: 2px solid var(--ice); outline-offset: 1px; border-color: var(--ice); }
+.wl-field .button { min-height: 50px; }
+.wl-or { margin: 4px 0 0; color: var(--ink-3); font-size: 14px; }
+.wl-chips, .wl-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.wl-chip { min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--edge-strong); background: transparent; color: var(--ink-1);
+  font: 500 15px var(--font); cursor: pointer; text-align: left; }
+.wl-chip:hover { border-color: var(--ice); color: var(--ice); }
+.wl-chip-more, .wl-chip-tour { color: var(--ice); border-style: dashed; }
+.wl-chip-life { color: var(--ink-2); }
+.wl-more { display: grid; gap: 16px; padding: 16px; border: 1px solid var(--edge); border-radius: 12px; background: var(--glass); }
+.wl-group h3 { margin: 0 0 8px; font: 600 15px var(--font-title); color: var(--ink-2); }
+.wl-hint { padding: 14px 16px; border-radius: 10px; border: 1px solid var(--edge-strong); background: var(--plate-1); }
+.wl-hint p { margin: 0 0 6px; }
+.wl-help { margin-top: 10px; align-items: center; }
+
+/* The voice panel: the sentence being said, then the controls, always visible while it speaks. */
+.voce { padding: 18px 18px 14px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--ice) 40%, var(--edge));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ice-deep) 9%, var(--void)), var(--void)); }
+.voce-say { min-height: 3.6em; }
+.voce-say p { margin: 0; font: 500 clamp(21px, 2.4vw, 27px)/1.3 var(--font-title); color: var(--ice-hot); text-wrap: pretty; }
+.voce-say p + p { margin-top: 8px; font: 400 17px/1.5 var(--font); color: var(--ink-2); }
+.voce-say .voce-note { font: 400 14px var(--font); color: var(--amber); }
+.voce.speaking .voce-say p { animation: say-in .35s ease-out; }
+@keyframes say-in { from { opacity: .2; } }
+.voce-controls { display: flex; align-items: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.voce-btn { display: inline-grid; place-items: center; min-width: 44px; height: 44px; padding: 0; border-radius: 999px; border: 1px solid var(--edge-strong);
+  background: transparent; color: var(--ink-1); font: 500 14px var(--font); cursor: pointer; }
+.voce-btn.wide { padding: 0 16px; }
+.voce-btn:hover { border-color: var(--ice); color: var(--ice); }
+.voce-btn .icon { width: 18px; height: 18px; }
+.voce-bar { flex: 1 1 80px; height: 4px; border-radius: 2px; background: var(--edge); overflow: hidden; }
+.voce-bar i { display: block; height: 100%; width: 0; background: var(--ice); box-shadow: 0 0 10px var(--ice-deep); }
+.voce-credit, .wl-credit { margin: 10px 0 0; color: var(--ink-3); font-size: 12px; }
+.voce-credit a, .wl-credit a { color: var(--ink-2); }
+.wl-credit { margin: 0; }
+
+/* The answer: who Jarvis becomes, what it delivers (lit while said), the plan and the trial. */
+.wl-out { gap: 16px; }
+.wl-name { margin: 0; font: 600 clamp(30px, 4.4vw, 46px)/1.08 var(--font-title); overflow-wrap: break-word; }
+.wl-works { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.wl-works li, .wl-lines li { padding: 12px 14px; border: 1px solid var(--edge); border-radius: 10px; background: var(--void); transition: border-color .2s, background-color .2s; }
+.wl-works .ask { margin: 0 0 4px; color: var(--ink-1); font-weight: 500; }
+.wl-works p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.wl-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; color: var(--ink-2); }
+.wl-works li.now, .wl-lines li.now, .asks li.now { border-color: var(--ice); background: color-mix(in srgb, var(--ice) 8%, var(--void)); }
+.wl-lines li.now { color: var(--ink-1); }
+.wl-never { margin: 0; padding: 12px 14px; border: 1px solid color-mix(in srgb, var(--amber) 45%, var(--edge)); border-radius: 10px; color: var(--ink-1); }
+.wl-never b { color: var(--amber); margin-right: 4px; }
+.wl-never.now { border-color: var(--amber); }
+.wl-also { margin: 0; color: var(--ink-2); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.wl-plan { padding: 18px; border-radius: 12px; border: 1px solid var(--edge-strong); background: var(--plate-1); }
+.wl-plan > p { margin: 0 0 10px; color: var(--ink-2); }
+.wl-plan .wl-plan-name { font: 600 22px var(--font-title); color: var(--ink-1); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.wl-plan-name b { color: var(--ice); font-weight: 600; }
+.wl-price { font: 400 15px var(--font); color: var(--ink-2); }
+.wl-plan .wl-privacy { color: var(--ink-1); }
+.wl-plan .actions { margin: 14px 0 0; }
+.wl-plan .fine { margin-top: 12px; }
+.wl-foot { display: flex; flex-wrap: wrap; gap: 8px; }
+.wl-extra-title { margin: 0 0 8px; color: var(--ink-3); font-size: 14px; }
+.wl-extra-text { margin-top: 12px; color: var(--ink-2); }
+.wl-extra-text p { margin: 0 0 6px; }
+.per-te { margin: -24px 0 28px; padding: 12px 16px; border-left: 2px solid var(--ice); background: color-mix(in srgb, var(--ice) 7%, transparent); border-radius: 0 8px 8px 0; color: var(--ink-1); max-width: 40em; }
+@media (max-width: 860px) {
+  .wl-on .lead, .wl-on .kicker { display: none; }
+  .wl-on .wl-intro p { font-size: 15px; }
+  .welcome-hero .presence-stage { max-width: 200px; }
+  .welcome-hero .presence-caption { display: none; }
+}
+@media (max-width: 560px) {
+  .welcome-hero h1 { font-size: clamp(32px, 9vw, 40px); margin-bottom: 14px; }
+  .welcome-hero .lead { font-size: 17px; }
+  .welcome-hero.hero { padding-top: 16px; }
+  .welcome-hero .presence-stage { max-width: 150px; }
+  .wl-chip { padding: 0 14px; font-size: 14px; }
+  .voce { padding: 14px 14px 12px; }
+  .wl-plan .actions .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .voce.speaking .voce-say p { animation: none; } .wl-works li, .wl-lines li { transition: none; } }
+
+/* Trade pages as sales pages: the trade's problem as the headline, three works, the plan and the trial, the doubts. */
+.role-tag { display: block; font-size: .5em; line-height: 1.2; margin-bottom: 12px; color: var(--ink-2); }
+.role-problem { display: block; text-wrap: balance; }
+.role h1 { font-size: clamp(32px, 5.2vw, 58px); }
+.role-hero .voce { margin-top: 24px; max-width: 46em; }
+.asks.asks-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); counter-reset: none; }
+.asks li { transition: border-color .2s, background-color .2s; }
+.also { margin: 20px 0 0; color: var(--ink-2); max-width: 60em; font-size: 15px; }
+.plan-pick { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.plan-for > p { color: var(--ink-2); margin: 0 0 16px; max-width: 40em; }
+.plan-for .plan-price { font: 600 22px var(--font-title); color: var(--ice); }
+.trial { padding: 22px; border-radius: 12px; border: 1px solid var(--ice-deep); background: var(--void); }
+.trial h3 { margin: 0 0 14px; font: 600 20px var(--font-title); }
+.trial > p { margin: 14px 0 0; color: var(--ink-2); font-size: 15px; }
+.trial-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: 12px; }
+.trial-steps li { counter-increment: step; position: relative; padding-left: 40px; display: grid; gap: 2px; }
+.trial-steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font: 600 13px var(--font-title); color: var(--void); background: var(--ice); }
+.trial-steps span { color: var(--ink-2); font-size: 15px; }
+.role-cta .pledges { margin-top: 32px; }
+@media (max-width: 860px) { .asks.asks-3 { grid-template-columns: minmax(0, 1fr); } .plan-pick { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+@media (prefers-reduced-motion: reduce) { .asks li { transition: none; } }
