@@ -38,8 +38,10 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # Instagram and TikTok refuse automatic checkers (429/403) even when the profile exists: left out, like the
-          # site itself and the download links.
-          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" --exclude "instagram\.com" --exclude "tiktok\.com" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
+          # site itself and the download links. The ministries of enterprise and transport (mimit, mise, mit) do not
+          # answer GitHub's runners (timeouts from outside Italy) while they open from Italy: left out too; the app's
+          # tests/app-links.test.ts reads the same pages as Jarvis does.
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" --exclude "instagram\.com" --exclude "tiktok\.com" --exclude "(mimit|mise|mit)\.gov\.it" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
           fail: true
 
   pubblica:
