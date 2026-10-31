@@ -39,8 +39,9 @@ server di Google, che ricevono l'indirizzo IP del visitatore. Il sito non usa co
 
 ## 4. Backup
 
-Il backup è un file che crei tu. È cifrato quando scegli una password; senza password chiavi e file con credenziali
-restano fuori. Contiene anche i file dei progetti che hai nella cartella di lavoro di Jarvis.
+Il backup è un file che crei tu. Le chiavi non entrano mai (si reinseriscono dopo il ripristino). È cifrato quando scegli una
+password; senza password restano fuori anche i file con credenziali dei progetti (.env, chiavi, certificati) e il file
+è leggibile da chi lo apre. Contiene anche i file dei progetti che hai nella cartella di lavoro di Jarvis.
 
 ## 5. Perché e per quanto tempo
 

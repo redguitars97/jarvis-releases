@@ -174,7 +174,7 @@
       : which ? "Per un'attività principale, o per te, basta Pro: 1 progetto, la squadra di 9 persone e 3 caselle email. Se poi segui più clienti, passi a Max pagando solo la differenza."
       : "Pro per un'attività principale; Max se segui più clienti, sviluppi software o fai campagne.";
     card.appendChild(el("p", null, why));
-    card.appendChild(el("p", "wl-privacy", "I tuoi documenti restano sul tuo computer, e niente esce senza il tuo ok."));
+    card.appendChild(el("p", "wl-privacy", "I tuoi documenti restano sul tuo computer, ed email, post e pagamenti aspettano il tuo ok."));
     var actions = el("div", "actions");
     var trial = el("a", "button", "Chiedi la prova gratuita di 14 giorni");
     trial.href = "#scarica";
@@ -183,7 +183,7 @@
     if (result.tipo === "mestiere") { var page = el("a", "button ghost", "La pagina di Jarvis " + data.nome); page.href = "per/" + data.id + ".html"; actions.appendChild(page); }
     else { var how = el("a", "button ghost", "Come diventa il tuo esperto"); how.href = "per/index.html#il-tuo"; actions.appendChild(how); }
     card.appendChild(actions);
-    card.appendChild(el("p", "fine", "La prova è il piano Max completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi tutto com'era."));
+    card.appendChild(el("p", "fine", "La prova è il piano Max completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate."));
     if (data && data.pagine && data.pagine.length) {
       var near = el("p", "fine"); near.appendChild(document.createTextNode("Mestieri vicini, già pronti: "));
       data.pagine.forEach(function (id, i) { var a = el("a", null, roleById[id] ? roleById[id].chip : id); a.href = "per/" + id + ".html"; if (i) near.appendChild(document.createTextNode(", ")); near.appendChild(a); });

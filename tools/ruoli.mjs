@@ -191,7 +191,7 @@ const PAGINE = {
   ristorazione: { gruppo: "imprese", titolo: "Ristoranti, bar e pizzerie",
     perChi: "Per il locale che vuole menù chiari, registri in ordine e clienti che trovano risposta anche quando sei in cucina.",
     fa: [
-      ["«Rifai il menù d'autunno con gli allergeni»", "Il menù con prezzi chiari e gli allergeni di ogni piatto secondo il Reg. UE 1169/2011, ricavati dalle ricette e dalle etichette."],
+      ["«Rifai il menù d'autunno con gli allergeni»", "Il menù con prezzi chiari e la bozza degli allergeni di ogni piatto secondo il Reg. UE 1169/2011, ricavata dalle ricette e dalle etichette, da controllare tu."],
       ["«Prepara i registri HACCP di temperature e pulizie»", "La struttura del piano di autocontrollo e i registri da compilare."],
       ["«Tre post per la serata di sabato»", "Testi e grafiche nei colori del locale, pubblicati all'ora che scegli con il tuo ok."],
       ["«Chi sono i concorrenti qui intorno?»", "Chi sono, prezzi, punti forti e deboli, con le fonti lette."],
@@ -830,7 +830,7 @@ function dubbi(r) {
   const privacy = r.privacy ?? "Per i lavori più delicati usa un progetto «riservato»: lavora solo con i modelli sul tuo computer.";
   const atti = r.reserved.map((item) => item.act);
   const riservati = atti.length ? ` Gli atti riservati restano tuoi: mai ${esc(atti.join("; mai "))}. Se glielo chiedi, ti dice chi li compie.` : "";
-  return `<details><summary>${esc(clienti)}</summary><p>Progetti, documenti e voce restano sul tuo computer. Online va solo il pezzo che serve a rispondere, e prima di inviarlo a Claude o ChatGPT codice fiscale, IBAN, nomi e indirizzi diventano segnaposto: è una pseudonimizzazione, non un'anonimizzazione. ${esc(privacy)} Jarvis non si addestra sui tuoi dati. <a href="../privacy.html">L'informativa sulla privacy</a>.</p></details>
+  return `<details><summary>${esc(clienti)}</summary><p>Progetti, documenti e voce restano sul tuo computer. Online va solo il pezzo che serve a rispondere, e prima di inviarlo a Claude o ChatGPT codice fiscale, IBAN, nomi e indirizzi diventano segnaposto: è una pseudonimizzazione, non un'anonimizzazione. ${esc(privacy)} Jarvis non si addestra sui tuoi dati; i fornitori online che colleghi seguono le loro regole. <a href="../privacy.html">L'informativa sulla privacy</a>.</p></details>
       <details><summary>Prende il posto del professionista?</summary><p>No. Prepara il lavoro e te lo consegna in bozza, con fonti e date; lo rileggi tu e decidi cosa esce.${riservati}</p></details>
       <details><summary>Serve essere esperti di computer?</summary><p>No. Installi Jarvis come un'app, incolli la licenza e colleghi Claude o ChatGPT: al primo avvio li trova da solo e, se serve, ti guida a installare il programma ufficiale. Poi parli: «Ciao Jarvis», oppure tieni premuto lo spazio. Fuori casa gli scrivi su Telegram.</p></details>
       <details><summary>Quanto costa davvero, con Claude o ChatGPT?</summary><p>Jarvis si paga una volta, senza abbonamento: il piano ${piano}<span data-price-inline="${r.piano}"></span>. Per l'intelligenza artificiale usa il tuo abbonamento Claude o ChatGPT, se ce l'hai già: il prezzo lo decide il fornitore e lo paghi a lui, come oggi. Non ce l'hai? Puoi partire con i modelli gratuiti (Ollama sul computer, OmniRoute online) o con una chiave API e un tetto di spesa. Molte risposte (ora, calcoli, promemoria) non usano proprio l'AI.</p></details>
@@ -858,7 +858,7 @@ function rolePage(r) {
       <div class="actions">
         <a class="button" href="../index.html#scarica" data-prova data-mestiere="${esc(r.chip)}">Chiedi la prova gratuita</a>
 ${vertical ? `        <button type="button" class="button ghost" data-voce-play hidden><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Ascolta Jarvis ${esc(r.nome)}</button>\n` : ""}      </div>
-      <p class="fine">14 giorni del piano Max, completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi tutto com'era.</p>
+      <p class="fine">14 giorni del piano Max, completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.</p>
 ${vertical ? `      ${pannelloVoce(CREDITO)}\n      <script type="application/json" id="voce-mestiere">${datiVoce(r)}</script>\n` : ""}    </div>
   </section>
 
@@ -910,7 +910,7 @@ ${INCLUSO[r.piano].map((line) => `          <li>${esc(line)}</li>`).join("\n")}
           <li><b>Copia il codice del computer</b><span>Lo trovi nella schermata di attivazione.</span></li>
           <li><b>Mandacelo</b><span>Ricevi la licenza di prova del piano Max, per 14 giorni, con i tuoi abbonamenti.</span></li>
         </ol>
-        <p>Alla fine scegli Pro o Max, incolli la licenza e ritrovi tutto com'era.</p>
+        <p>Alla fine scegli Pro o Max, incolli la licenza e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.</p>
       </div>
     </div>
   </section>

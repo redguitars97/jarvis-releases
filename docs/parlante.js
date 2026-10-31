@@ -62,7 +62,7 @@
       "Su Telegram arrivano solo i segnaposto.",
       "Un progetto riservato, invece, non esce affatto.",
       "Decidi tu quanta autonomia darmi.",
-      "Anche con la massima, le email, i post pubblici e le spese te li chiedo sempre.",
+      "Anche con la massima, le email, i post pubblici e i pagamenti te li chiedo sempre.",
       "E non mi addestro sui tuoi dati.",
     ] },
     { id: "prezzi", label: "Prezzi e licenza", section: "piani", sentences: [
@@ -77,7 +77,7 @@
       "Puoi scaricare Jarvis per Mac e per Windows, e attivarlo con la licenza.",
       "Preferisci provarlo prima?",
       "Chiedi la prova gratuita di quattordici giorni del piano Max, con i tuoi abbonamenti.",
-      "Alla fine scegli il piano, e ritrovi tutto com'era.",
+      "Alla fine scegli il piano, e ritrovi i tuoi dati.",
       "La demo gratuita, con risposte simulate, è in arrivo.",
       "Per la licenza o per la prova, scrivici: i contatti sono qui sotto.",
     ] },
@@ -93,6 +93,6 @@
   // How the voice must say a few words, given to the app's speech plan exactly like the owner's lexicon in the app.
   var LESSICO = [["ok", "okèi"], ["post", "pòst"], ["ChatGPT", "Ciat-Gipitì"]];
   // Start of each sentence and length of the file, in seconds (written by tools/parlante.mjs).
-  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":40,"frasi":[0,1.84,7.63,11.89,16.71,22.56,28.01,32.5,37.76],"testo":"213d100790cd"},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.34,27.75],"testo":"35348a4b45a4"},"cosa":{"durata":40,"frasi":[0,3.74,6.83,12.27,15.21,19.86,25.3,33.73,37.26],"testo":"8d6171a72bdf"},"come":{"durata":24.5,"frasi":[0,1.91,7.06,10.86,16.51,21.14],"testo":"5ac2c988aa21"},"stati":{"durata":22.1,"frasi":[0,3.24,5.32,7.98,12.13,17.85],"testo":"d73fa638760a"},"privacy":{"durata":37,"frasi":[0,2.95,6.25,16.39,20.45,23.55,27.46,30.1,35.34],"testo":"7974ad1bdb0b"},"prezzi":{"durata":27.2,"frasi":[0,4.03,9.51,16.43,19.9,22.79],"testo":"639b7848372b"},"scarica":{"durata":23.1,"frasi":[0,4.56,6.76,11.98,15.55,19.34],"testo":"cbc039e60c99"},"domande":{"durata":26.9,"frasi":[0,2.27,6.45,11.01,17.11,21.82],"testo":"c793a57f9c28"}}/*FINE TEMPI*/;
+  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":40,"frasi":[0,1.84,7.63,11.89,16.71,22.56,28.01,32.5,37.76],"testo":"213d100790cd"},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.34,27.75],"testo":"35348a4b45a4"},"cosa":{"durata":40,"frasi":[0,3.74,6.83,12.27,15.21,19.86,25.3,33.73,37.26],"testo":"8d6171a72bdf"},"come":{"durata":24.5,"frasi":[0,1.91,7.06,10.86,16.51,21.14],"testo":"5ac2c988aa21"},"stati":{"durata":22.1,"frasi":[0,3.24,5.32,7.98,12.13,17.85],"testo":"d73fa638760a"},"privacy":{"durata":37,"frasi":[0,2.95,6.25,16.39,20.45,23.55,27.46,30.1,35.33],"testo":"92dc846a5927"},"prezzi":{"durata":27.2,"frasi":[0,4.03,9.51,16.43,19.9,22.79],"testo":"639b7848372b"},"scarica":{"durata":23.2,"frasi":[0,4.56,6.76,11.98,15.58,19.37],"testo":"4ce6b0753c29"},"domande":{"durata":26.9,"frasi":[0,2.27,6.45,11.01,17.11,21.82],"testo":"c793a57f9c28"}}/*FINE TEMPI*/;
   if (typeof window !== "undefined") { window.JARVIS_PARLANTE = PRESETS; window.JARVIS_PARLANTE_LESSICO = LESSICO; window.JARVIS_PARLANTE_TEMPI = TEMPI; }
 })();

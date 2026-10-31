@@ -18,19 +18,19 @@ window.JARVIS_VOCE_TESTI = [
     "Gli atti riservati restano tuoi: non firmo, non deposito e non faccio diagnosi.",
   ] },
   { id: "fine-pro", label: "Il piano per te", sentences: [
-    "I tuoi documenti restano sul tuo computer, e niente esce senza il tuo ok.",
+    "I tuoi documenti restano sul tuo computer, ed email, post e pagamenti aspettano il tuo ok.",
     "Per un lavoro come il tuo basta il piano Pro: si paga una volta, senza abbonamento.",
     "E puoi provarmi gratis per quattordici giorni, completo, con i tuoi abbonamenti.",
     "Qui ti parlo soltanto: la conversazione a voce vera è nell'app.",
   ] },
   { id: "fine-max", label: "Il piano per te", sentences: [
-    "I tuoi documenti restano sul tuo computer, e niente esce senza il tuo ok.",
+    "I tuoi documenti restano sul tuo computer, ed email, post e pagamenti aspettano il tuo ok.",
     "Per un lavoro come il tuo serve il piano Max: si paga una volta, senza abbonamento.",
     "E puoi provarmi gratis per quattordici giorni, completo, con i tuoi abbonamenti.",
     "Qui ti parlo soltanto: la conversazione a voce vera è nell'app.",
   ] },
   { id: "fine-scelta", label: "Il piano per te", sentences: [
-    "I tuoi documenti restano sul tuo computer, e niente esce senza il tuo ok.",
+    "I tuoi documenti restano sul tuo computer, ed email, post e pagamenti aspettano il tuo ok.",
     "Se hai un'attività principale basta il piano Pro; se segui più clienti, sviluppi software o fai campagne, c'è Max.",
     "Si pagano una volta, senza abbonamento, e puoi provarmi gratis per quattordici giorni.",
     "Qui ti parlo soltanto: la conversazione a voce vera è nell'app.",
