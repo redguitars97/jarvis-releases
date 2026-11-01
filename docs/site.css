@@ -529,6 +529,9 @@ details.more h3 { font-size: var(--t-16); font-stretch: 104%; margin: 18px 0 6px
   overflow-wrap: break-word; hyphens: auto;
 }
 .role-hero h1 .role-problem { display: block; margin-top: 18px; font-size: var(--t-22); color: var(--paper); font-stretch: 104%; max-width: 30ch; font-weight: 500; line-height: 1.3; }
+/* A trade's name never breaks inside a word: with JavaScript its size steps down until the longest word fits
+   (site.js fitNames); without it, the browser may still break a word rather than overflow. */
+.js .hero h1.chosen-role .role-name, .js .role-hero h1 .role-name { overflow-wrap: normal; hyphens: manual; text-wrap: balance; }
 @media (min-width: 760px) { .role-hero h1 .role-name { font-stretch: 100%; } .role-hero h1 .role-problem { font-size: var(--t-30); } }
 @media (min-width: 1200px) { .role-hero h1 .role-name { font-stretch: 114%; } }
 .role-hero .lead { margin-top: 8px; }

@@ -767,7 +767,7 @@ const headHtml = (title, description, path) => `<!DOCTYPE html>
 `;
 
 // The version of the shared assets in the pages' links, so that a visit never mixes old scripts with new markup.
-const VERSIONE = "20261101b";
+const VERSIONE = "20261101c";
 
 const footer = (scripts = [], thumb = "") => `
 ${thumb ? `<nav class="thumb-bar" aria-label="Azione rapida">\n  ${thumb}\n</nav>\n` : ""}

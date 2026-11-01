@@ -55,6 +55,20 @@
     menu.addEventListener("keydown", function (event) { if (event.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
   });
 
+  // ---- A trade's name in a headline: from its design size down, until its longest word fits the column ----
+  function fitNames() {
+    all(".hero h1.chosen-role .role-name, .role-hero h1 .role-name").forEach(function (el) {
+      el.style.fontSize = "";
+      var size = parseFloat(getComputedStyle(el).fontSize), floor = 24;
+      for (var step = 0; step < 40 && el.scrollWidth > el.clientWidth + 1 && size > floor; step += 1) { size = Math.max(floor, size * 0.94); el.style.fontSize = size + "px"; }
+    });
+  }
+  window.JarvisFitNames = fitNames;
+  fitNames();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitNames);
+  var fitting = false;
+  window.addEventListener("resize", function () { if (fitting) return; fitting = true; requestAnimationFrame(function () { fitting = false; fitNames(); }); });
+
   // ---- The phone's thumb bar: after the first screen, never over the download, the voice player or a field ----
   var thumb = document.querySelector(".thumb-bar");
   if (thumb && "IntersectionObserver" in window) {

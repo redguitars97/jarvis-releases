@@ -151,7 +151,7 @@
     else if (result.tipo === "vita") head.appendChild(el("span", "role-name", data.label));
     else { head.appendChild(document.createTextNode("Il tuo mestiere: ")); head.appendChild(el("span", "role-name", "«" + result.etichetta + "»")); }
     var chosenName = head.textContent;
-    if (titleEl) { titleEl.innerHTML = ""; Array.prototype.forEach.call(head.childNodes, function (n) { titleEl.appendChild(n.cloneNode(true)); }); titleEl.classList.add("chosen-role"); }
+    if (titleEl) { titleEl.innerHTML = ""; Array.prototype.forEach.call(head.childNodes, function (n) { titleEl.appendChild(n.cloneNode(true)); }); titleEl.classList.add("chosen-role"); if (window.JarvisFitNames) window.JarvisFitNames(); }
     head.textContent = result.tipo === "mestiere" ? "Tre lavori, per cominciare." : "Come può aiutarti.";
     out.appendChild(head);
     if (stageRole) stageRole.textContent = result.tipo === "mestiere" ? "JARVIS " + data.nome : chosenName;
