@@ -9,6 +9,8 @@
 
   // ---- Prices and licence, from config.js ----
   all("[data-amount]").forEach(function (el) { var v = c.prices && c.prices[el.getAttribute("data-amount")]; if (v) el.textContent = euro(v); });
+  // The one payment spread over three years of use: plain arithmetic on the configured price, said as such.
+  all("[data-per-month]").forEach(function (el) { var v = c.prices && c.prices[el.getAttribute("data-per-month")]; if (!v) return; el.textContent = "Circa " + Math.round(v / 36) + " € al mese su tre anni di uso."; el.hidden = false; });
   all("[data-price]").forEach(function (el) { var v = c.prices && c.prices[el.getAttribute("data-price")]; if (v) el.textContent = euro(v) + " una tantum"; });
   all("[data-updates]").forEach(function (el) { if (c.updatesMonths) el.textContent = c.updatesMonths + " mesi di aggiornamenti inclusi"; });
   all("[data-devices]").forEach(function (el) { if (c.devicesIncluded) el.textContent = "Vale su " + c.devicesIncluded + " computer tuoi"; });

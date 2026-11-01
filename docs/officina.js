@@ -112,9 +112,9 @@
     documento: function (req) {
       var text = req.get.replace(/\s+/g, " ").trim().replace(/\.$/, ""), sentences = text.split(/\.\s+(?=[A-ZÀ-Ú])/), first = sentences[0];
       var cut = first.indexOf(", "), title = cut > 8 ? first.slice(0, cut) : first, rest = cut > 8 ? first.slice(cut + 2) : "";
-      var box = holo(title, sentences.some(function (s) { return /^Con Max\.?$/.test(s); }) ? "Con Max" : "Bozza");
+      var box = holo(title, sentences.some(function (s) { return /^Con (?:il piano )?Max\.?$/.test(s); }) ? "Con il piano Max" : "Bozza");
       var rows = rest ? rest.split(/,\s+|;\s+/).map(function (part) { return [part.charAt(0).toUpperCase() + part.slice(1), ""]; }) : [];
-      sentences.slice(1).filter(function (s) { return !/^Con Max\.?$/.test(s); }).forEach(function (s) { rows.push([s.replace(/\.$/, ""), ""]); });
+      sentences.slice(1).filter(function (s) { return !/^Con (?:il piano )?Max\.?$/.test(s); }).forEach(function (s) { rows.push([s.replace(/\.$/, ""), ""]); });
       var n = rows.length ? lines(box, rows) : 0;
       var meta = el("p", "holo-meta holo-body", "Bozza da controllare, con fonti e date."); meta.style.setProperty("--i", n);
       box.appendChild(meta);

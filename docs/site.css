@@ -139,7 +139,10 @@ button { cursor: pointer; }
 .hero-stage { position: relative; height: clamp(220px, 31svh, 290px); margin-inline: auto; max-width: 980px; }
 .hero-stage canvas { width: 100%; height: 100%; }
 .hero-grid { display: grid; gap: 22px; }
-.hero h1 { font-size: clamp(2.15rem, 1.05rem + 4.6vw, 5rem); font-stretch: 102%; font-weight: 680; line-height: 0.98; letter-spacing: -0.02em; max-width: 13ch; }
+/* Phones and tablets: one sentence per line, sized so the longer one («Dimmi che lavoro fai.», 9.6em in Archivo)
+   fills the column; 10em leaves room for the system font shown before Archivo arrives. Desktop keeps the 13ch block. */
+.hero h1 { font-size: clamp(1.75rem, calc((100vw - 2 * var(--gutter)) / 10), 4.5rem); font-stretch: 102%; font-weight: 680; line-height: 1; letter-spacing: -0.02em; text-wrap: wrap; }
+@media (min-width: 1000px) { .hero h1 { font-size: clamp(2.15rem, 1.05rem + 4.6vw, 5rem); line-height: 0.98; max-width: 13ch; text-wrap: balance; } }
 .hero h1.chosen-role { max-width: none; font-size: var(--t-22); font-stretch: 108%; color: var(--mist); font-weight: 500; letter-spacing: 0; }
 .hero h1.chosen-role .role-name { display: block; margin-top: 4px; color: var(--paper); font-size: clamp(2.6rem, 0.9rem + 8vw, 6.4rem); font-weight: 720; font-stretch: 80%; line-height: 0.92; letter-spacing: -0.015em; overflow-wrap: break-word; }
 .hero .lead { margin: 18px 0 0; }
@@ -337,6 +340,8 @@ html:not(.js) .of-bench { display: none; }
 .plan-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .plan h3 { font-size: var(--t-30); font-stretch: 122%; margin: 0; }
 .plan .amount { font-size: clamp(var(--t-30), 1.4rem + 1.4vw, var(--t-44)); font-weight: 650; font-stretch: 112%; color: var(--ice); margin: 0; line-height: 1.1; }
+.plan .per-month { margin: 10px 0 0; font-size: var(--t-14); color: var(--mist); }
+.guarantee { margin: 10px 0 0; font-size: var(--t-16); color: var(--paper); }
 .plan .once { font-size: var(--t-14); font-weight: 400; font-stretch: 100%; color: var(--mist); }
 .plan-top { margin-bottom: 8px; }
 .plan > p:last-child { margin: 0; font-size: var(--t-16); }
@@ -392,6 +397,12 @@ table.plans td.no { color: #8796ab; }
 .contacts { list-style: none; display: flex; flex-wrap: wrap; gap: 0 22px; }
 .contacts li { display: inline-flex; gap: 6px; align-items: center; min-height: 44px; font-size: var(--t-16); }
 .contacts li span { color: var(--mist); }
+.contacts a { padding-block: 10px; } /* a 44px tap area, not just the 25px line */
+/* Phones: the trial and download buttons span the column, under the thumb */
+@media (max-width: 599px) {
+  .trial-grid .actions .button, .dl .actions .button, .role-hero .actions .button { flex: 1 1 100%; justify-content: center; }
+  .role-hero h1 .role-problem { max-width: none; text-wrap: pretty; }
+}
 
 /* ---------- Questions ---------- */
 .faq details { border-top: 1px solid var(--wire); }

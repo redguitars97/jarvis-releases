@@ -48,7 +48,7 @@
     ] },
     { id: "stati", label: "Cosa vedi mentre lavora", section: "stati", sentences: [
       "Mentre lavoro, vedi sempre cosa sto facendo.",
-      "Al centro c'è il mio nucleo.",
+      "Al centro, il mio nucleo.",
       "Quando ti ascolto, segue la tua voce.",
       "Quando lavoro, intorno compaiono i pannelli del lavoro in corso.",
       "E quando mi serve una tua decisione, tutto diventa ambra, e la richiesta ti viene davanti.",
@@ -85,7 +85,7 @@
       "Serve un abbonamento?",
       "Basta il tuo Claude o ChatGPT: lo uso io, al posto tuo.",
       "Se lavori già con ChatGPT o con Claude, io ci aggiungo tre cose.",
-      "La voce in italiano, una squadra che conosce i tuoi progetti, e il lavoro consegnato finito.",
+      "Una squadra che conosce i tuoi progetti, lo studio del tuo mestiere sulle fonti ufficiali, e il lavoro consegnato finito.",
       "E mi trovi anche sul telefono, con Telegram, quando il computer è acceso.",
       "E se qualcosa non va, dimmelo: preparo io la segnalazione, e te la faccio rileggere.",
     ] },
@@ -93,6 +93,6 @@
   // How the voice must say a few words, given to the app's speech plan exactly like the owner's lexicon in the app.
   var LESSICO = [["ok", "okèi"], ["post", "pòst"], ["ChatGPT", "Ciat-Gipitì"]];
   // Start of each sentence and length of the file, in seconds (written by tools/parlante.mjs).
-  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":40,"frasi":[0,1.84,7.63,11.89,16.71,22.56,28.01,32.5,37.76],"testo":"213d100790cd"},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.34,27.75],"testo":"35348a4b45a4"},"cosa":{"durata":40,"frasi":[0,3.74,6.83,12.27,15.21,19.86,25.3,33.73,37.26],"testo":"8d6171a72bdf"},"come":{"durata":24.5,"frasi":[0,1.91,7.06,10.86,16.51,21.14],"testo":"5ac2c988aa21"},"stati":{"durata":22.1,"frasi":[0,3.24,5.32,7.98,12.13,17.85],"testo":"d73fa638760a"},"privacy":{"durata":37,"frasi":[0,2.95,6.25,16.39,20.45,23.55,27.46,30.1,35.33],"testo":"92dc846a5927"},"prezzi":{"durata":27.2,"frasi":[0,4.03,9.51,16.43,19.9,22.79],"testo":"639b7848372b"},"scarica":{"durata":23.2,"frasi":[0,4.56,6.76,11.98,15.58,19.37],"testo":"4ce6b0753c29"},"domande":{"durata":26.9,"frasi":[0,2.27,6.45,11.01,17.11,21.82],"testo":"c793a57f9c28"}}/*FINE TEMPI*/;
+  var TEMPI = /*TEMPI*/{"vantaggi":{"durata":40,"frasi":[0,1.84,7.63,11.89,16.71,22.56,28.01,32.5,37.76],"testo":"213d100790cd"},"esempi":{"durata":31.1,"frasi":[0,1.85,7.11,10.49,14.73,18.22,23.31,27.72],"testo":"a1472216cec9"},"cosa":{"durata":39.9,"frasi":[0,3.74,6.83,12.27,15.21,19.86,25.3,33.73,37.26],"testo":"049260cafa7d"},"come":{"durata":24.5,"frasi":[0,1.91,7.06,10.86,16.51,21.14],"testo":"5ac2c988aa21"},"stati":{"durata":22.4,"frasi":[0,3.24,5.63,8.29,12.44,18.16],"testo":"c737ea2a1a27"},"privacy":{"durata":37,"frasi":[0,2.95,6.25,16.39,20.45,23.55,27.46,30.1,35.33],"testo":"92dc846a5927"},"prezzi":{"durata":27.1,"frasi":[0,4.03,9.51,16.36,19.83,22.72],"testo":"bfcb55e52dd9"},"scarica":{"durata":23.2,"frasi":[0,4.56,6.75,11.97,15.57,19.36],"testo":"0881fd368383"},"domande":{"durata":28,"frasi":[0,2.27,6.45,11.01,18.25,22.96],"testo":"6a812f9c2a3a"}}/*FINE TEMPI*/;
   if (typeof window !== "undefined") { window.JARVIS_PARLANTE = PRESETS; window.JARVIS_PARLANTE_LESSICO = LESSICO; window.JARVIS_PARLANTE_TEMPI = TEMPI; }
 })();

@@ -80,7 +80,7 @@ window.JARVIS_VOCE_TESTI = [
       "Per chi lavora nel sociale o nella cura delle persone: nell'app mi racconti il tuo lavoro, e lo studio sulle fonti ufficiali.",
       "Già da subito preparo relazioni e verbali in bozza, tengo agenda e appuntamenti, e riassumo la posta.",
       "I dati delle persone che segui li tieni in un progetto riservato: lavora solo con i modelli sul tuo computer.",
-      "Non faccio diagnosi e non valuto le persone: le decisioni restano tue.",
+      "Non faccio diagnosi e non giudico le persone: le decisioni restano tue.",
     ] },
   { id: "f-creativi", kind: "famiglia", label: "Arte, spettacolo e mestieri creativi", piano: "pro", pagine: ["freelance-creativo", "graphic-designer"],
     parole: ["musicista", "cantante", "artista", "pittore", "pittrice", "scultore", "scrittore", "scrittrice", "attore", "attrice", "ballerino", "ballerina",
@@ -153,7 +153,7 @@ window.JARVIS_VOCE_TESTI = [
       "Jarvis nasce per il lavoro, ma ti aiuta anche a studiare.",
       "Riassumo dispense e articoli, preparo schemi e presentazioni, e cerco le fonti con il link e la data.",
       "Trascrivo le registrazioni delle lezioni, e ti tengo il calendario degli esami.",
-      "E quando lavorerai, mi racconti il tuo mestiere, e lo studio per diventare il tuo esperto.",
+      "E quando troverai lavoro, mi racconti il tuo mestiere, e lo studio per diventare il tuo esperto.",
     ] },
   { id: "v-casa", kind: "vita", label: "Per te e la tua famiglia", piano: "pro", poi: "E per la tua attività",
     parole: ["casalinga", "casalingo", "casalinghe", "a casa", "sto a casa", "mamma", "papa", "genitore", "faccio la mamma", "mamma a tempo pieno",
@@ -171,7 +171,7 @@ window.JARVIS_VOCE_TESTI = [
       "Mi parli in italiano, e ti rispondo a voce: niente menu da imparare.",
       "Ti ricordo appuntamenti e scadenze, ti riassumo la posta, e preparo lettere e documenti.",
       "Organizzo i viaggi, con percorsi e alloggi, e prenoto solo con il tuo ok.",
-      "Per medicine e terapie, invece, chiedi sempre al tuo medico.",
+      "Su medicine e terapie ti do una mano, ma chiedi sempre conferma al tuo medico.",
     ] },
   { id: "v-cerco", kind: "vita", label: "Per chi cerca lavoro", piano: "pro", poi: "Il lavoro che cerchi",
     parole: ["disoccupato", "disoccupata", "cerco lavoro", "cerco un lavoro", "in cerca di lavoro", "senza lavoro", "inoccupato", "inoccupata",
@@ -185,7 +185,6 @@ window.JARVIS_VOCE_TESTI = [
 ];
 // How the voice must say a few words, given to the app's speech plan exactly like the owner's lexicon in the app.
 window.JARVIS_VOCE_LESSICO = [["ok", "okèi"], ["post", "pòst"], ["ChatGPT", "Ciat-Gipitì"], ["Reg. UE", "regolamento europeo"], ["millecentosessantanove/duemilaundici", "millecentosessantanove del duemilaundici"],
-  ["F24", "effe ventiquattro"], ["DevOps", "dev-òps"], ["Dockerfile", "Dockerfile"], ["SIAN", "SIAN"], ["wireframe", "uàier-freim"], ["milestone", "màil-ston"],
-  ["end to end", "end tu end"], ["palette", "palèt"], ["home", "hòum"], ["Actions", "ècscions"], ["Alloggiati Web", "alloggiati uèb"],
-  ["as is", "es ìs"], ["to be", "tu bì"], ["CAF", "caf"], ["ISEE", "ìsee"], ["RED", "rèd"], ["RAID", "rèid"], ["affiliate", "affìliet"], ["Odoo", "odù"],
-  ["kit", "kit"], ["description", "description"], ["pitch", "pitch"]];
+  ["F24", "effe ventiquattro"], ["DevOps", "dev-òps"], ["SIAN", "SIAN"], ["milestone", "màil-ston"],
+  ["end to end", "end tu end"], ["home", "hòum"], ["Actions", "ècscions"], ["Alloggiati Web", "alloggiati uèb"],
+  ["CAF", "caf"], ["ISEE", "ìsee"], ["RED", "rèd"], ["RAID", "rèid"], ["pitch", "pitch"]];

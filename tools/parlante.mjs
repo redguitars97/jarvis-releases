@@ -31,7 +31,12 @@ const touching = (preset, lessico) => { const text = preset.sentences.join(" ").
 // (the app's own lexicon counts too: a respelling fixed in ai-studio's lexicon.it.ts remakes the clips with that word.
 // Read as text here, before the voice code is bundled: only its plain [written, spoken] pairs matter for the fingerprint)
 const appLexicon = (() => { try { return [...readFileSync(join(resolve(process.argv[2] ?? join(dirname(fileURLToPath(import.meta.url)), "..", "..", "ai-studio")), "src", "shared", "i18n", "lexicon.it.ts"), "utf8").matchAll(/\["([^"\]]+)",\s*"([^"\]]+)"\]/g)].map((m) => [m[1], m[2]]); } catch { return []; } })();
-const fingerprint = (preset, lessico) => createHash("sha256").update(JSON.stringify([preset.sentences, touching(preset, lessico), touching(preset, appLexicon)])).digest("hex").slice(0, 12);
+// How the questions of some clips are said: their last syllable sounded best without the final pitch glide, or with a
+// calmer voice and more takes (chosen by ear, clip by clip). The other clips keep the app's settings.
+const QUESTIONS = { calm: { questionTemp: 0.35, questionTries: 8 }, plain: { glideBelow: 0 } };
+const QUESTION_STYLE = { saluto: "plain", "r-avvocato": "plain", "r-tecnico-edile": "plain", "r-agente-immobiliare": "plain", "r-consulente-lavoro": "calm", scarica: "calm" };
+const questionOptions = (preset) => QUESTIONS[QUESTION_STYLE[preset.id]] ?? {};
+const fingerprint = (preset, lessico) => createHash("sha256").update(JSON.stringify([preset.sentences, touching(preset, lessico), touching(preset, appLexicon), ...(QUESTION_STYLE[preset.id] ? [QUESTION_STYLE[preset.id]] : [])])).digest("hex").slice(0, 12);
 export const legacyFingerprint = (preset, lessico) => createHash("sha256").update(JSON.stringify([preset.sentences, lessico])).digest("hex").slice(0, 12);
 
 // The texts: the same files the pages use, evaluated without a page.
@@ -115,7 +120,7 @@ async function explanation(preset, lessico) {
     if (open) { starts.push(Math.round((length / rate) * 100) / 100); open = false; }
     const prepared = v.prepareForVoice(part.text, dictionaries, PROTECT, RESPELLED, LITERAL);
     spoken.push(prepared);
-    const { audio } = await v.renderSentence((input, options) => voice.speak(input, options), prepared, seedOf(part.text), { rate: 1.26 });
+    const { audio } = await v.renderSentence((input, options) => voice.speak(input, options), prepared, seedOf(part.text), { rate: 1.26, ...questionOptions(preset) });
     const polished = v.polish(audio);
     // A part that starts or ends loud was probably cut in the middle of a sound.
     const edge = Math.round(rate * 0.012), body = rms(polished, 0, polished.length) || 1;
