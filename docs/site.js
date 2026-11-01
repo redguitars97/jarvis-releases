@@ -58,6 +58,8 @@
   // ---- A trade's name in a headline: from its design size down, until its longest word fits the column ----
   function fitNames() {
     all(".hero h1.chosen-role .role-name, .role-hero h1 .role-name").forEach(function (el) {
+      // (the article stays with its noun: «il commercialista», never «il» alone on a line)
+      if (el.firstChild && el.firstChild.nodeType === 3) el.firstChild.data = el.firstChild.data.replace(/^(il|lo|la|i|gli|le|un|uno|una|per) /i, "$1\u00a0");
       el.style.fontSize = "";
       var size = parseFloat(getComputedStyle(el).fontSize), floor = 24;
       for (var step = 0; step < 40 && el.scrollWidth > el.clientWidth + 1 && size > floor; step += 1) { size = Math.max(floor, size * 0.94); el.style.fontSize = size + "px"; }
