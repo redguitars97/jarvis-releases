@@ -187,4 +187,5 @@ window.JARVIS_VOCE_TESTI = [
 window.JARVIS_VOCE_LESSICO = [["ok", "okèi"], ["post", "pòst"], ["ChatGPT", "Ciat-Gipitì"], ["Reg. UE", "regolamento europeo"], ["millecentosessantanove/duemilaundici", "millecentosessantanove del duemilaundici"],
   ["F24", "effe ventiquattro"], ["DevOps", "dev-òps"], ["Dockerfile", "Dockerfile"], ["SIAN", "SIAN"], ["wireframe", "uàier-freim"], ["milestone", "màil-ston"],
   ["end to end", "end tu end"], ["palette", "palèt"], ["home", "hòum"], ["Actions", "ècscions"], ["Alloggiati Web", "alloggiati uèb"],
-  ["as is", "es ìs"], ["to be", "tu bì"], ["CAF", "caf"], ["ISEE", "ìsee"], ["RED", "rèd"], ["RAID", "rèid"], ["affiliate", "affìliet"], ["Odoo", "odù"]];
+  ["as is", "es ìs"], ["to be", "tu bì"], ["CAF", "caf"], ["ISEE", "ìsee"], ["RED", "rèd"], ["RAID", "rèid"], ["affiliate", "affìliet"], ["Odoo", "odù"],
+  ["kit", "kit"], ["description", "description"], ["pitch", "pitch"]];

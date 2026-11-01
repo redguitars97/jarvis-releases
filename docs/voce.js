@@ -56,13 +56,16 @@
     function next() {
       halt();
       current = queue.shift() || null; sentence = -1;
-      if (!current) { el.classList.remove("speaking"); presence(false); if (bar) bar.style.width = "0"; if (options.onEnd) options.onEnd(); return; }
+      if (!current) { controls(false); if (pause) pause.disabled = true; if (skip) skip.disabled = true; el.classList.remove("speaking"); presence(false); if (bar) bar.style.width = "0"; if (options.onEnd) options.onEnd(); return; }
+      if (pause) pause.disabled = false; if (skip) skip.disabled = false;
       label = current.label || "Ti parlo";
       if (options.onClip) options.onClip(current);
-      render(current, 0);
+      render(current, 0); sentence = 0;
+      if (options.onSentence) options.onSentence(current, 0);
       var me = audio = new Audio();
       var mine = function (handler) { return function (event) { if (me === audio) handler(event); }; };
       me.preload = "auto"; me.src = current.src;
+      if (window.JarvisPresence && window.JarvisPresence.audio) window.JarvisPresence.audio(me);
       me.addEventListener("timeupdate", mine(tick));
       me.addEventListener("playing", mine(function () { controls(true); el.classList.add("speaking"); presence(true); }));
       me.addEventListener("pause", mine(function () { if (!me.ended) { controls(false); presence(false); } }));
@@ -74,7 +77,7 @@
     // Without audio the words are still there: the panel says so once and the page goes on as text.
     function unavailable() {
       var rest = [current].concat(queue).filter(Boolean);
-      halt(); queue = []; current = null; presence(false); el.classList.remove("speaking");
+      halt(); queue = []; current = null; controls(false); if (pause) pause.disabled = true; if (skip) skip.disabled = true; presence(false); el.classList.remove("speaking");
       show(rest, "Audio non disponibile: ecco il testo.");
       if (options.onMute) options.onMute(true);
     }
@@ -95,6 +98,7 @@
       if (options.onMute) options.onMute(false);
       if (options.onEnd) options.onEnd(true);
     });
+    document.addEventListener("visibilitychange", function () { if (document.hidden && audio && !audio.paused) audio.pause(); });
     document.addEventListener("keydown", function (event) { if (event.key === "Escape" && audio && !audio.paused) audio.pause(); });
 
     return {
@@ -124,7 +128,7 @@
   function prova(link, mestiere) {
     if (!link || !site.email) return;
     var body = "Ciao, vorrei provare Jarvis per 14 giorni con il piano Max.\n\n" + (mestiere ? "Il mio lavoro: " + mestiere + "\n" : "") +
-      "Codice del computer: (lo trovi aprendo Jarvis, nella schermata di attivazione)\n\nGrazie";
+      "Se hai già installato Jarvis, codice del computer (nella schermata di attivazione):\n\nGrazie";
     link.href = "mailto:" + site.email + "?subject=" + encodeURIComponent("Prova gratuita di Jarvis" + (mestiere ? " · " + mestiere : "")) + "&body=" + encodeURIComponent(body);
   }
 

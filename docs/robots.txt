@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://redguitars97.github.io/jarvis-releases/sitemap.xml

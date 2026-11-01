@@ -4,7 +4,7 @@
 // dossier accepts) and reserved acts come from src/main/roles/profiles*.ts of the ai-studio checkout next to this
 // repository, bundled with its esbuild (as tools/parlante.mjs does; ai-studio is only read). What the catalog has no
 // words for (who the page is for, the example requests and what Jarvis hands back) is written below, by hand. Every line
-// is a promise of the site: say only what the app does, as the app's proofs check it (build/release-checks.json, W94).
+// is a promise of the site: say only what the app does, as the app's own checks verify it.
 // A role added to the catalog stops the tool until its page texts are written here. The generated pages are committed
 // as they are (no JavaScript needed to read them).
 //
@@ -742,52 +742,60 @@ const headHtml = (title, description, path) => `<!DOCTYPE html>
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
-<meta property="og:image" content="../assets/icon.png">
-<meta name="theme-color" content="#04070c">
+<meta property="og:image" content="https://redguitars97.github.io/jarvis-releases/assets/icon.png">
+<link rel="canonical" href="https://redguitars97.github.io/jarvis-releases/per/${path === "index" ? "" : esc(path) + ".html"}">
+<meta property="og:url" content="https://redguitars97.github.io/jarvis-releases/per/${path === "index" ? "" : esc(path) + ".html"}">
+<meta name="theme-color" content="#060a10">
 <link rel="icon" type="image/png" href="../assets/favicon.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans+Condensed:wght@500;600&amp;display=swap">
-<link rel="stylesheet" href="../site.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+<link rel="stylesheet" href="../site.css?v=${VERSIONE}">
+<script>document.documentElement.classList.add("js");</script>
 </head>
-<body class="sub-page">
+<body>
 <a class="skip" href="#contenuto">Vai al contenuto</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="../index.html" aria-label="Jarvis, torna al sito"><img src="../assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
-    <nav class="sub-nav" aria-label="Sezioni">
-      <a href="index.html"${path === "index" ? ' aria-current="page"' : ""}>Per chi è</a>
-      <a href="../index.html#esempi">Esempi</a>
-      <a href="../index.html#piani">Prezzi</a>
-      <a href="../aiuto.html">Aiuto</a>
-    </nav>
-    <a class="button small" href="../index.html#scarica">Scarica</a>
+    <a class="brand" href="../index.html" aria-label="Jarvis, torna al sito"><img src="../assets/favicon.png" alt="" width="24" height="24"><span>JARVIS</span></a>
+    <nav class="nav-main" aria-label="Sezioni"><a href="index.html"${path === "index" ? ' aria-current="page"' : ""}>Mestieri</a><a href="../index.html#piani">Prezzi</a><a href="../dettagli.html#domande">Domande</a><a href="../dettagli.html">Come funziona</a></nav>
+    <a class="button small" href="../index.html#scarica">Prova gratis</a>
+    <details class="menu"><summary>Menu</summary><nav class="nav-menu" aria-label="Sezioni (menu)"><a href="../index.html">Home</a><a href="index.html">Tutti i mestieri</a><a href="../index.html#piani">Prezzi</a><a href="../index.html#scarica">Prova e download</a><a href="../dettagli.html">Come funziona, in dettaglio</a><a href="../aiuto.html">Aiuto</a></nav></details>
   </div>
 </header>
 `;
 
-const footer = (scripts = []) => `
+// The version of the shared assets in the pages' links, so that a visit never mixes old scripts with new markup.
+const VERSIONE = "20261101b";
+
+const footer = (scripts = [], thumb = "") => `
+${thumb ? `<nav class="thumb-bar" aria-label="Azione rapida">\n  ${thumb}\n</nav>\n` : ""}
 <footer class="foot">
-  <div class="wrap foot-row">
-    <span class="brand small"><img src="../assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
-    <span>© 2026 Il vero Jarvis · Tutti i diritti riservati</span>
-    <a href="index.html">Per chi è</a>
-    <a href="../aiuto.html">Aiuto</a>
-    <a href="../condizioni.html">Condizioni di licenza</a>
-    <a href="../privacy.html">Privacy</a>
+  <div class="wrap">
+    <div class="foot-row">
+      <span class="brand small"><img src="../assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Mestieri</a>
+      <a href="../dettagli.html">Come funziona</a>
+      <a href="../aiuto.html">Aiuto</a>
+      <a href="../condizioni.html">Condizioni di licenza</a>
+      <a href="../privacy.html">Privacy</a>
+      <span class="social" id="social" hidden></span>
+    </div>
+    <p class="foot-copy">© 2026 Il vero Jarvis · Tutti i diritti riservati</p>
   </div>
 </footer>
-${scripts.map((src) => `<script src="${src}" defer></script>\n`).join("")}</body>
+${scripts.map((src) => `<script src="${src}${/config\.js$|reactor\.js$|testi\.js$|tempi\.js$/.test(src) ? "" : `?v=${VERSIONE}`}"${/config\.js$|reactor\.js$/.test(src) ? "" : " defer"}></script>\n`).join("")}</body>
 </html>
 `;
-const foot = footer();
 
 // The four steps by which Jarvis becomes the expert of a trade, the same on every page.
 const COME = [
   ["Capisce il tuo lavoro", "Dal tuo progetto, dai tuoi documenti e dal sito dell'attività: cosa fai, per chi, con quali strumenti."],
   ["Studia le fonti autorevoli", "Le fonti ufficiali del mestiere, lette con la data; quello che trova sul web ha fonte e scadenza."],
   ["Si dà procedure e controlli", "Come si fa quel lavoro, cosa va verificato prima di consegnarlo, cosa non deve mai fare."],
-  ["Migliora con i risultati", "Dà un voto a ogni risultato e aggiorna da solo il suo fascicolo del mestiere, dalle fonti ufficiali e dai voti; tu dai solo 👍 o 👎."],
+  ["Migliora con i risultati", "Dà un voto a ogni risultato e aggiorna da solo il suo fascicolo del mestiere, dalle fonti ufficiali e dai voti; tu dai solo un pollice, in su o in giù."],
 ];
 
 const comeHtml = (level) => `<ol class="become">
@@ -834,11 +842,11 @@ function dubbi(r) {
       <details><summary>Serve essere esperti di computer?</summary><p>No. Installi Jarvis come un'app, incolli la licenza e colleghi Claude o ChatGPT: al primo avvio li trova da solo e, se serve, ti guida a installare il programma ufficiale. Poi parli: «Ciao Jarvis», oppure tieni premuto lo spazio. Fuori casa gli scrivi su Telegram.</p></details>
       <details><summary>Quanto costa davvero, con Claude o ChatGPT?</summary><p>Jarvis si paga una volta, senza abbonamento: il piano ${piano}<span data-price-inline="${r.piano}"></span>. Per l'intelligenza artificiale usa il tuo abbonamento Claude o ChatGPT, se ce l'hai già: il prezzo lo decide il fornitore e lo paghi a lui, come oggi. Non ce l'hai? Puoi partire con i modelli gratuiti (Ollama sul computer, OmniRoute online) o con una chiave API e un tetto di spesa. Molte risposte (ora, calcoli, promemoria) non usano proprio l'AI.</p></details>
       <details><summary>Funziona senza internet?</summary><p>In parte. Voce e ascolto girano sul computer, e senza connessione lavora con i modelli di Ollama sul tuo computer (scaricati la prima volta), come in un progetto «riservato». Claude, ChatGPT, la posta, Telegram e le ricerche sul web hanno bisogno di internet.</p></details>
-      <details><summary>Come fa a conoscere il mio mestiere?</summary><p>Capisce il tuo lavoro dal progetto, dai documenti e dal sito dell'attività; studia le fonti ufficiali, lette con la data; si dà procedure e controlli; migliora con i risultati, dai voti che dà a ogni consegna e dai tuoi 👍 e 👎. I riferimenti si aggiornano solo dalle fonti ufficiali, e un dato scaduto è detto «da verificare». Le procedure sono una guida per il modello, non la garanzia che le segua sempre: per questo ogni bozza riporta fonti e date, e la rileggi tu.</p></details>`;
+      <details><summary>Come fa a conoscere il mio mestiere?</summary><p>Capisce il tuo lavoro dal progetto, dai documenti e dal sito dell'attività; studia le fonti ufficiali, lette con la data; si dà procedure e controlli; migliora con i risultati, dai voti che dà a ogni consegna e dai tuoi pollici in su o in giù. I riferimenti si aggiornano solo dalle fonti ufficiali, e un dato scaduto è detto «da verificare». Le procedure sono una guida per il modello, non la garanzia che le segua sempre: per questo ogni bozza riporta fonti e date, e la rileggi tu.</p></details>`;
 }
 
 // The data the page's voice needs: its sentences and plan (the closing words are in docs/voce/testi.js).
-const datiVoce = (r) => JSON.stringify({ id: r.id, nome: r.nome, chip: r.chip, piano: r.piano, frasi: r.frasi, quale: r.quale }).replace(/</g, "\\u003c");
+const datiVoce = (r) => JSON.stringify({ id: r.id, nome: r.nome, chip: r.chip, piano: r.piano, frasi: r.frasi, quale: r.quale, fa: r.fa }).replace(/</g, "\\u003c");
 
 function rolePage(r) {
   const group = r.kind === "horizontal" ? "Funzioni di ogni azienda" : GRUPPI.find(([id]) => id === r.gruppo)[1];
@@ -846,125 +854,162 @@ function rolePage(r) {
   const three = r.fa.slice(0, 3), more = r.fa.slice(3);
   const vertical = r.kind === "vertical";
   const piano = PIANO[r.piano];
-  return head(roleTitle(r), `${r.problema} ${r.perChi} Prova gratuita di 14 giorni.`, r.id) + `${SPRITE}
+  const prova = `<a class="button" href="../index.html#scarica" data-prova data-mestiere="${esc(r.chip)}">Chiedi la prova gratuita</a>`;
+  const altro = [...more.map(([ask, get]) => `${esc(ask)}: ${esc(get.charAt(0).toLowerCase() + get.slice(1))}`), ...(r.extra ?? []).map(esc)];
+  return head(roleTitle(r), `${r.problema} Prova JARVIS per 14 giorni.`.slice(0, 160), r.id) + `${SPRITE}
 <main id="contenuto" class="role">
   <section class="role-hero">
     <div class="wrap">
       <p class="back"><a href="index.html">Tutti i mestieri</a></p>
-      <p class="kicker">${esc(group)} · ${esc(r.titolo)}</p>
-      <h1><span class="role-tag">Jarvis <span class="role-name">${esc(r.nome)}</span></span> <span class="role-problem">${esc(r.problema)}</span></h1>
+      <p class="role-kicker">${esc(group)} · ${esc(r.titolo)}</p>
+      <h1><span class="role-tag">Jarvis</span> <span class="role-name">${esc(r.nome)}</span> <span class="role-problem">${esc(r.problema)}</span></h1>
       <p class="lead">${esc(r.perChi)}</p>
       <div class="actions">
-        <a class="button" href="../index.html#scarica" data-prova data-mestiere="${esc(r.chip)}">Chiedi la prova gratuita</a>
+        ${prova}
 ${vertical ? `        <button type="button" class="button ghost" data-voce-play hidden><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Ascolta Jarvis ${esc(r.nome)}</button>\n` : ""}      </div>
-      <p class="fine">14 giorni del piano Max, completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.</p>
-${vertical ? `      ${pannelloVoce(CREDITO)}\n      <script type="application/json" id="voce-mestiere">${datiVoce(r)}</script>\n` : ""}    </div>
+      <p class="fine">14 giorni del piano Max, completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.${vertical ? " La voce parte solo se la chiedi, con i sottotitoli." : ""}</p>
+    </div>
   </section>
 
-  <section class="band" aria-labelledby="fa-title">
-    <div class="wrap">
-      <h2 id="fa-title" class="section-title">Tre lavori che ti consegna</h2>
-      <p class="section-lead">Richieste come le diresti tu, a voce, in chat o da Telegram. Esempi con nomi di fantasia.</p>
-      <ol class="asks asks-3">
-${three.map(([ask, get]) => `        <li><p class="ask">${esc(ask)}</p><p>${esc(get)}</p></li>`).join("\n")}
-      </ol>
-${more.length ? `      <p class="also"><b>E anche:</b> ${more.map(([ask, get]) => `${esc(ask)}: ${esc(get.charAt(0).toLowerCase() + get.slice(1))}`).join(" ")}</p>\n` : ""}${(r.extra ?? []).length ? `      <ul class="ticks role-extra">\n${r.extra.map((e) => `        <li>${esc(e)}</li>`).join("\n")}\n      </ul>\n` : ""}    </div>
+  <section id="officina" class="officina" aria-labelledby="fa-title">
+    <div class="wrap of-grid">
+      <div class="of-side">
+        <h2 id="fa-title">Tre lavori che ti consegna</h2>
+        <p class="of-who" data-of-who>Richieste come le diresti tu, a voce, in chat o da Telegram. Toccane una: Jarvis la prepara, poi aspetta il tuo ok.</p>
+        <ol class="of-reqs asks-3" data-of-reqs>
+${three.map(([ask, get]) => `          <li data-of-kind="documento"><div class="of-card"><span class="of-ask">${esc(ask)}</span><span class="of-get">${esc(get)}</span></div></li>`).join("\n")}
+        </ol>
+        <p class="fine of-note">Esempio illustrativo, con nomi di fantasia. Le consegne sono bozze da controllare: le rileggi tu.</p>
+${altro.length ? `        <details class="more">
+          <summary>Altro che fa per te</summary>
+          <ul class="ticks role-extra">
+${altro.map((line) => `            <li>${line}</li>`).join("\n")}
+          </ul>
+        </details>\n` : ""}      </div>
+      <div class="of-bench${vertical ? " presence-stage" : ""}" data-of-bench data-state="idle"${vertical ? ` role="group" aria-label="Dimostrazione di Jarvis ${esc(r.nome)}"` : ""}>
+        <div class="of-reactor"><canvas id="${vertical ? "hero-presence" : "officina-presence"}" aria-hidden="true"></canvas></div>
+${vertical ? `        <p class="visually-hidden" id="hero-caption" aria-live="off">Pronto</p>
+        ${pannelloVoce(CREDITO)}\n` : ""}        <p class="of-status" data-of-status role="status">Pronto.</p>
+        <div class="of-out" data-of-out></div>
+      </div>
+${vertical ? `      <script type="application/json" id="voce-mestiere">${datiVoce(r)}</script>\n` : ""}    </div>
   </section>
 
-  <section aria-labelledby="mai-title">
-    <div class="wrap split-role">
-      <div class="never">
-        <h2 id="mai-title" class="section-title">Cosa non fa mai</h2>
+  <section class="section" aria-labelledby="mai-title">
+    <div class="wrap two-col">
+      <div>
+        <h2 id="mai-title">Cosa non fa mai</h2>
         <p>Gli atti riservati restano tuoi: Jarvis prepara il lavoro per il professionista, non lo sostituisce. Se glielo chiedi, ti dice chi lo compie.</p>
-        <ul>
+        <ul class="never-list">
 ${never.join("\n")}
         </ul>
       </div>
       <div class="sources">
-        <h2 class="section-title">Su cosa studia</h2>
+        <h2>Su cosa studia</h2>
         <p>Le pagine ufficiali che legge per prime, con la data della lettura; se un dato è scaduto, lo ricontrolla prima di usarlo.</p>
-        <ul>
-          ${r.seeds.map(source).join("\n          ")}
-        </ul>
-        <p class="allow">Nel suo fascicolo entra solo ciò che ritrova sui siti ufficiali del mestiere (${esc(r.domains.join(", "))}); il resto resta «da confermare» finché non lo confermi tu.</p>
+        <details class="more">
+          <summary>Le fonti ufficiali</summary>
+          <ul>
+            ${r.seeds.map(source).join("\n            ")}
+          </ul>
+          <p class="fine">Nel suo fascicolo entra solo ciò che ritrova sui siti ufficiali del mestiere (${esc(r.domains.join(", "))}); il resto resta «da confermare» finché non lo confermi tu.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="piano" class="band" aria-labelledby="piano-title">
-    <div class="wrap plan-pick">
+  <section id="piano" class="section" aria-labelledby="piano-title">
+    <div class="wrap two-col">
       <div class="plan-for">
-        <h2 id="piano-title" class="section-title">Il piano per te: ${piano}</h2>
-        <p class="plan-price"><span data-price="${r.piano}">Si paga una volta, senza abbonamento.</span></p>
+        <h2 id="piano-title">Il piano per te: ${piano}</h2>
+        <p class="amount" data-amount="${r.piano}"></p>
+        <p class="fine">Si paga una volta, senza abbonamento.</p>
         <p>${esc(r.motivo)}</p>
         <ul class="ticks">
 ${INCLUSO[r.piano].map((line) => `          <li>${esc(line)}</li>`).join("\n")}
         </ul>
         <p class="fine"><a href="../index.html#piani">Confronta Pro e Max</a></p>
       </div>
-      <div class="trial">
+      <div>
         <h3>La prova gratuita, in tre passi</h3>
-        <ol class="trial-steps">
+        <ol class="steps">
           <li><b>Scarica Jarvis</b><span>Per Mac o per Windows.</span></li>
           <li><b>Copia il codice del computer</b><span>Lo trovi nella schermata di attivazione.</span></li>
           <li><b>Mandacelo</b><span>Ricevi la licenza di prova del piano Max, per 14 giorni, con i tuoi abbonamenti.</span></li>
         </ol>
-        <p>Alla fine scegli Pro o Max, incolli la licenza e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.</p>
+        <p class="fine">Alla fine scegli Pro o Max, incolli la licenza e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="dubbi-title">
-    <div class="wrap narrow">
-      <h2 id="dubbi-title" class="section-title">Prima di provarlo</h2>
+  <section class="section" aria-labelledby="dubbi-title">
+    <div class="wrap narrow faq">
+      <h2 id="dubbi-title">Prima di provarlo</h2>
       ${dubbi(r)}
     </div>
   </section>
 
-  <section class="band role-cta" aria-labelledby="cta-title">
+  <section class="section role-cta" aria-labelledby="cta-title">
     <div class="wrap">
-      <h2 id="cta-title" class="section-title">Prova Jarvis ${esc(r.nome)} sul tuo lavoro</h2>
-      <p class="section-lead">14 giorni gratis del piano Max, con i tuoi abbonamenti e i tuoi documenti. Ti rispondiamo entro un giorno lavorativo.</p>
+      <h2 id="cta-title">Prova Jarvis ${esc(r.nome)} sul tuo lavoro</h2>
+      <p class="lead">14 giorni gratis del piano Max, con i tuoi abbonamenti e i tuoi documenti. Ti rispondiamo entro un giorno lavorativo.</p>
       <div class="actions">
-        <a class="button" href="../index.html#scarica" data-prova data-mestiere="${esc(r.chip)}">Chiedi la prova gratuita</a>
+        ${prova}
       </div>
       ${garanzie}
       <p class="fine">Il tuo lavoro è un po' diverso? Jarvis si adatta anche al tuo modo di lavorare, e unisce il mestiere con ${esc(FUNZIONI_TESTO)}. <a href="index.html#il-tuo">Come si adatta</a>.</p>
     </div>
   </section>
 </main>
-` + footer(["../config.js", "../voce.js", "../voce/testi.js", "../voce/tempi.js", "../mestiere.js"]);
+` + footer(["../config.js", "../reactor.js", "../presence.js", "../voce.js", "../voce/testi.js", "../voce/tempi.js", "../officina.js", "../site.js", "../mestiere.js"],
+    `<a class="button" href="../index.html#scarica" data-prova data-mestiere="${esc(r.chip)}">Prova gratis per 14 giorni</a>`);
 }
 
 function hubPage() {
   const groups = GRUPPI.map(([id, label]) => {
     const roles = RUOLI.filter((r) => r.kind === "vertical" && r.gruppo === id);
-    return `      <div class="role-group">
-        <h3>${esc(label)}</h3>
+    return `      <details class="role-group">
+        <summary>${esc(label)}</summary>
         <ul>
 ${roles.map((r) => `          <li><a href="${r.id}.html"><b>${esc(r.titolo)}</b><span>Jarvis ${esc(r.nome)}</span></a></li>`).join("\n")}
         </ul>
-      </div>`;
+      </details>`;
   }).join("\n");
   const fnList = functions.map((role) => PAGINE[role.id] ? `<a href="${role.id}.html">${esc(role.title)}</a>` : esc(role.title)).join(", ");
   return head("Per chi è Jarvis · Si adatta a ogni lavoro, anche al tuo", "Commercialisti, avvocati, artigiani, ristoranti, B&B, negozi, sviluppatori, designer, aziende: Jarvis studia il tuo mestiere sulle fonti ufficiali e diventa il tuo esperto. Mai gli atti riservati.", "index") + `
 <main id="contenuto" class="role">
   <section class="role-hero">
     <div class="wrap">
-      <p class="kicker">Per chi è</p>
-      <h1>Si adatta a ogni lavoro. <span class="role-name">Anche al tuo.</span></h1>
-      <p class="lead">Jarvis non è un assistente uguale per tutti. Capisce cosa fai, studia il tuo mestiere sulle fonti autorevoli e diventa il tuo esperto: il commercialista, l'artigiano, il ristoratore, lo sviluppatore. Qui sotto ${MESTIERI} mestieri già pronti; il tuo lavoro può non esserci, e va bene lo stesso.</p>
+      <p class="role-kicker">Per chi è</p>
+      <h1><span class="role-tag">Si adatta a ogni lavoro.</span> <span class="role-name">Anche al tuo.</span></h1>
+      <p class="lead">Jarvis capisce cosa fai, studia il tuo mestiere sulle fonti autorevoli e diventa il tuo esperto: il commercialista, l'artigiano, il ristoratore, lo sviluppatore. Qui sotto ${MESTIERI} mestieri già pronti; il tuo lavoro può non esserci, e va bene lo stesso.</p>
       <div class="actions">
-        <a class="button" href="#il-tuo">E il tuo lavoro?</a>
-        <a class="button ghost" href="#mestieri">${MESTIERI} mestieri</a>
+        <a class="button" href="#mestieri">Trova il tuo mestiere</a>
+        <a class="button ghost" href="#il-tuo">E il tuo lavoro?</a>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-labelledby="come-title">
+  <section id="mestieri" class="section" aria-labelledby="mestieri-title">
     <div class="wrap">
-      <h2 id="come-title" class="section-title">Come diventa il tuo esperto</h2>
-      <p class="section-lead">Lo stesso metodo per ogni mestiere, anche per uno che non è in elenco.</p>
+      <div class="section-head">
+        <h2 id="mestieri-title">${MESTIERI} mestieri, già pronti</h2>
+        <p>Per questi mestieri Jarvis parte già con procedure, fonti ufficiali e controlli.</p>
+      </div>
+      <div class="catalogue-search" data-catalogue-search hidden><label for="catalogue-input">Trova il tuo mestiere</label><input id="catalogue-input" type="search" placeholder="Es. commercialista, fotografo, sviluppatore" autocomplete="off"><p role="status" data-catalogue-status></p></div>
+      <div class="role-groups">
+${groups}
+      </div>
+      <p class="fine">E ${functions.length} funzioni che si uniscono a ogni mestiere: ${fnList}.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="come-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="come-title">Come diventa il tuo esperto</h2>
+        <p>Lo stesso metodo per ogni mestiere, anche per uno che non è in elenco.</p>
+      </div>
       ${comeHtml("h3")}
       <ul class="ticks">
         <li><b>Il mestiere e le funzioni di ogni azienda.</b> Unisce il ruolo del tuo lavoro con ${esc(FUNZIONI_TESTO)}: lo stesso Jarvis fa il menù con gli allergeni e i post della settimana.</li>
@@ -974,40 +1019,30 @@ ${roles.map((r) => `          <li><a href="${r.id}.html"><b>${esc(r.titolo)}</b>
     </div>
   </section>
 
-  <section id="il-tuo" aria-labelledby="tuo-title">
+  <section id="il-tuo" class="section" aria-labelledby="tuo-title">
     <div class="wrap narrow">
-      <h2 id="tuo-title" class="section-title">E il tuo lavoro?</h2>
-      <p class="section-lead">Fai il barbiere, il fotografo di matrimoni, il vivaista? Diglielo, come a una persona nuova in negozio.</p>
+      <h2 id="tuo-title">E il tuo lavoro?</h2>
+      <p class="lead">Fai il barbiere, il fotografo di matrimoni, il vivaista? Diglielo, come a una persona nuova in negozio.</p>
       <ol class="sequence">
         <li><b>«Jarvis, ho una barberia in centro, lavoro su appuntamento»</b><span>Legge il tuo progetto e il sito della barberia, e ti chiede solo quello che manca, con una proposta.</span></li>
         <li><b>Diventa Jarvis il barbiere</b><span>Studia sulle fonti autorevoli quello che serve al tuo mestiere e si dà le sue procedure e i suoi controlli.</span></li>
         <li><b>«Prepara il listino e i post per dicembre»</b><span>Lavora come il tuo esperto, con il marketing e l'amministrazione che servono a un'attività come la tua.</span></li>
-        <li><b>Ogni risultato lo rende migliore</b><span>Dà un voto a ciò che consegna e aggiorna da solo il suo fascicolo; tu dai solo 👍 o 👎.</span></li>
+        <li><b>Ogni risultato lo rende migliore</b><span>Dà un voto a ciò che consegna e aggiorna da solo il suo fascicolo; tu dai solo un pollice, in su o in giù.</span></li>
       </ol>
       <p class="fine">Esempio illustrativo con un'attività di fantasia.</p>
     </div>
   </section>
 
-  <section id="mestieri" class="band" aria-labelledby="mestieri-title">
+  <section class="section role-cta" aria-labelledby="garanzie-title">
     <div class="wrap">
-      <h2 id="mestieri-title" class="section-title">${MESTIERI} mestieri, già pronti</h2>
-      <p class="section-lead">Per questi mestieri Jarvis parte già con procedure, fonti ufficiali e controlli.</p>
-      <div class="role-groups">
-${groups}
-      </div>
-      <p class="fine">E ${functions.length} funzioni che si uniscono a ogni mestiere: ${fnList}.</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="garanzie-title">
-    <div class="wrap">
-      <h2 id="garanzie-title" class="section-title">Le garanzie, per ogni mestiere</h2>
+      <h2 id="garanzie-title">Le garanzie, per ogni mestiere</h2>
       ${garanzie}
+      <div class="actions"><a class="button" href="../index.html#scarica">Prova gratis per 14 giorni</a></div>
       <p class="fine">Le condizioni complete sono nelle <a href="../condizioni.html">condizioni di licenza</a>; come Jarvis tratta i dati nell'<a href="../privacy.html">informativa sulla privacy</a>.</p>
     </div>
   </section>
 </main>
-` + foot;
+` + footer(["../config.js", "../voce.js", "../site.js", "../mestiere.js"], `<a class="button" href="../index.html#scarica">Prova gratis per 14 giorni</a>`);
 }
 
 // The trades for the home's welcome (docs/benvenuto.js) and for the voice tool: names, the words that recognise them
@@ -1030,3 +1065,9 @@ for (const r of RUOLI) writeFileSync(join(out, `${r.id}.html`), rolePage(r));
 writeFileSync(resolve(here, "..", "docs", "mestieri.js"), mestieriJs());
 console.log(`docs/per: ${MESTIERI} mestieri, ${RUOLI.length - MESTIERI} funzione con la sua pagina, ${functions.length} funzioni in tutto, e l'indice; docs/mestieri.js per il benvenuto`);
 console.log(`Piano Max: ${RUOLI.filter((r) => r.piano === "max").map((r) => r.id).join(", ")}`);
+
+// Preserve every published URL while exposing canonical pages to crawlers.
+const publicBase = "https://redguitars97.github.io/jarvis-releases/";
+const publicPaths = ["", "dettagli.html", "aiuto.html", "privacy.html", "condizioni.html", "per/", ...RUOLI.map((r) => "per/" + r.id + ".html")];
+writeFileSync(resolve(out, "..", "sitemap.xml"), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + publicPaths.map((path) => "<url><loc>" + publicBase + path + "</loc></url>").join("\n") + "\n</urlset>\n");
+writeFileSync(resolve(out, "..", "robots.txt"), "User-agent: *\nAllow: /\nSitemap: " + publicBase + "sitemap.xml\n");

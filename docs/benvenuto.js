@@ -1,10 +1,12 @@
-// The home's welcome, the site's onboarding: after one click («Entra con la voce di Jarvis» or «Preferisco leggere»)
-// Jarvis greets, asks «Che lavoro fai?», and the visitor answers with a tap or a few typed words. The answer is matched
+// The profession picker is available on arrival. Voice is optional, explicit and paired with a delivery preview.
+// The visitor answers with a tap or a few typed words. The answer is matched
 // on the visitor's computer (trova.js) to a trade, a family of work, a life situation, a job the app would learn or a
 // friendly «dimmi in due parole»; then Jarvis says what it would deliver, what it never does, and leads to the plan
 // and the free trial. Voice and captions from voce.js; the same words as text without audio. The answer is remembered
 // in this browser only (localStorage), to greet the visitor with it next time; nothing is sent anywhere. No
 // microphone: the real spoken conversation is in the app. Without JavaScript the hero simply links to the trades.
+// A chosen trade's three works go to the Officina below the hero (officina.js), where they are delivered one by one,
+// also while the voice says them.
 (function () {
   var box = document.getElementById("benvenuto");
   if (!box || !window.JarvisVoce || !window.JarvisTrova || !window.JARVIS_MESTIERI || !window.JARVIS_VOCE_TESTI) return;
@@ -15,24 +17,52 @@
   var gate = $(".wl-gate"), ask = $("[data-wl='domanda']"), out = $("[data-wl='esito']"), voiceBox = $("[data-voce]");
   var form = $(".wl-form"), input = $("#wl-input"), intro = $(".wl-intro"), hint = $(".wl-hint");
   var voice = false, last = null, highlight = [];
+  var officina = window.JarvisOfficina || null;
+  var titleEl = document.getElementById("hero-title"), titleHtml = titleEl ? titleEl.innerHTML : "";
+  var stage = document.querySelector(".presence-stage");
+  var stageAsk = document.querySelector("[data-stage-ask]"), stageResult = document.querySelector("[data-stage-result]");
+  var stageRole = document.querySelector("[data-stage-role]"), stageHint = document.querySelector("[data-stage-hint]");
+  // One panel, moved into the shared stage: its captions and controls stay together on every screen.
+  if (stage) stage.appendChild(voiceBox);
+  function preview(data, index, start) {
+    if (officina && data && data.fa) { officina.show(index, start); return; }
+    if (!data || !data.fa || !stageAsk || !stageResult) return;
+    var pair = data.fa[Math.max(0, index)] || data.fa[0];
+    stageAsk.textContent = pair[0]; stageResult.textContent = pair[1];
+  }
   var read = function () { try { return JSON.parse(window.localStorage.getItem(KEY) || "null"); } catch (e) { return null; } };
   var write = function (value) { try { window.localStorage.setItem(KEY, JSON.stringify(value)); } catch (e) { /* private window: not remembered */ } };
   var clipText = function (id) { var c = JarvisVoce.clip(id); return c ? c.sentences : []; };
   var el = function (tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 
   var panel = JarvisVoce.panel(voiceBox, {
-    onSentence: function (clip, index) { highlight.forEach(function (item) { item.el.classList.toggle("now", item.clip === clip.id && item.index.indexOf(index) >= 0); }); },
+    onSentence: function (clip, index) {
+      if (clip.id.indexOf("r-") === 0) {
+        var data = roleById[clip.id.slice(2)];
+        if (data && data.quale) {
+          // (each work starts on its «Mi chiedi: …» sentence: the Officina delivers it while it is said)
+          if (data.quale[index] >= 0) preview(data, data.quale[index], data.quale[index] !== data.quale[index - 1]);
+        }
+      }
+      highlight.forEach(function (item) { item.el.classList.toggle("now", item.clip === clip.id && item.index.indexOf(index) >= 0); }); },
     onEnd: function () { highlight.forEach(function (item) { item.el.classList.remove("now"); }); },
     onMute: function () { setVoice(false); },
   });
   function setVoice(on) {
     voice = on;
     box.classList.toggle("wl-voice", on);
+    if (stage) stage.classList.toggle("voice-mode", on);
+    document.querySelector("[data-wl-voce]").setAttribute("aria-pressed", String(on));
     var stored = read() || {};
     stored.voce = on; write(stored);
     if (!on) voiceBox.hidden = true;
   }
-  function speak(ids) { if (voice) panel.say(ids); else panel.stop(); }
+  function speak(ids) {
+    if (voice) {
+      panel.say(ids);
+      if (window.matchMedia("(max-width: 860px)").matches && stage) stage.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    } else panel.stop();
+  }
   function focus(target) { if (target) { target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true }); } }
   function into(view) { if (view.getBoundingClientRect().top < 0 || view.getBoundingClientRect().top > window.innerHeight * 0.6) view.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); }
 
@@ -44,10 +74,10 @@
   }
   var roleById = {}; M.ruoli.forEach(function (r) { roleById[r.id] = r; });
   var first = $(".wl-chips");
-  trova.inPrimoPiano.forEach(function (id) { first.appendChild(chip(roleById[id].chip, function () { choose({ tipo: "mestiere", id: id }, roleById[id].chip); })); });
-  var moreButton = chip("Tutti i mestieri", function () {
+  ["commercialista", "agente-immobiliare", "artigiano", "ristorazione", "agenzia-marketing", "sviluppatore"].filter(function (id) { return roleById[id]; }).forEach(function (id) { first.appendChild(chip(roleById[id].chip, function () { choose({ tipo: "mestiere", id: id }, roleById[id].chip); })); });
+  var moreButton = chip("Cerca tra tutti i mestieri", function () {
     var open = more.hidden; more.hidden = !open; moreButton.setAttribute("aria-expanded", String(open));
-    if (open) focus(more.querySelector("h3"));
+    if (open) focus(more.querySelector("summary"));
   }, "wl-chip-more");
   moreButton.setAttribute("aria-expanded", "false"); moreButton.setAttribute("aria-controls", "wl-more");
   first.appendChild(moreButton);
@@ -55,7 +85,7 @@
   M.gruppi.forEach(function (g) {
     var list = M.ruoli.filter(function (r) { return r.gruppo === g[0]; });
     if (!list.length) return;
-    var group = el("div", "wl-group"); group.appendChild(el("h3", null, g[1]));
+    var group = el("details", "wl-group"); group.appendChild(el("summary", null, g[1]));
     var row = el("div", "wl-row");
     list.forEach(function (r) { row.appendChild(chip(r.chip, function () { choose({ tipo: "mestiere", id: r.id }, r.chip); })); });
     group.appendChild(row); more.appendChild(group);
@@ -80,11 +110,11 @@
 
   // ---- The answer ----
   function choose(result, said) {
-    last = result;
     if (result.tipo === "aiuto") { helpMe(); return; }
+    last = result;
     var stored = read() || {}; stored.r = result; write(stored);
     render(result);
-    ask.hidden = true; out.hidden = false;
+    ask.hidden = true; out.hidden = false; gate.hidden = true;
     into(box);
     focus(out.querySelector("h2"));
     speak(clipsFor(result));
@@ -120,10 +150,30 @@
     else if (result.tipo === "famiglia") { head.appendChild(document.createTextNode("Jarvis per ")); head.appendChild(el("span", "role-name", data.label.charAt(0).toLowerCase() + data.label.slice(1))); }
     else if (result.tipo === "vita") head.appendChild(el("span", "role-name", data.label));
     else { head.appendChild(document.createTextNode("Il tuo mestiere: ")); head.appendChild(el("span", "role-name", "«" + result.etichetta + "»")); }
+    var chosenName = head.textContent;
+    if (titleEl) { titleEl.innerHTML = ""; Array.prototype.forEach.call(head.childNodes, function (n) { titleEl.appendChild(n.cloneNode(true)); }); titleEl.classList.add("chosen-role"); }
+    head.textContent = result.tipo === "mestiere" ? "Tre lavori, per cominciare." : "Come può aiutarti.";
     out.appendChild(head);
+    if (stageRole) stageRole.textContent = result.tipo === "mestiere" ? "JARVIS " + data.nome : chosenName;
+    if (stageHint) stageHint.textContent = "Ecco da dove potremmo cominciare.";
+    if (result.tipo === "mestiere") preview(data, 0);
+    else if (stageAsk && stageResult) { stageAsk.textContent = chosenName; stageResult.textContent = clipText(result.tipo === "nuovo" ? "nuovo" : result.id)[0] || "Scopri come può aiutarti."; }
 
-    if (result.tipo === "mestiere") {
-      var works = el("ol", "wl-works");
+    var works = null;
+    if (result.tipo === "mestiere" && officina) {
+      var buttons = officina.mestiere(data);
+      buttons.forEach(function (b, i) { highlight.push({ el: b, clip: "r-" + data.id, index: data.quale.reduce(function (acc, w, k) { if (w === i) acc.push(k); return acc; }, []) }); });
+      var lead = el("p", "wl-out-lead", "Tre lavori del tuo mestiere sono qui sotto, nell'officina: toccane uno e guardami prepararlo. ");
+      var go = el("a", null, "Guarda i tre lavori"); go.href = "#officina"; lead.appendChild(go);
+      out.appendChild(lead);
+      works = lead;
+      if (data.mai) {
+        var never0 = el("p", "wl-never"); never0.appendChild(el("b", null, "Mai")); never0.appendChild(document.createTextNode(" " + data.mai + "."));
+        out.appendChild(never0);
+        highlight.push({ el: never0, clip: "r-" + data.id, index: [data.frasi.length - 1] });
+      }
+    } else if (result.tipo === "mestiere") {
+      works = el("ol", "wl-works");
       data.fa.forEach(function (pair, i) {
         var li = el("li"); li.appendChild(el("p", "ask", pair[0])); li.appendChild(el("p", null, pair[1]));
         works.appendChild(li);
@@ -150,8 +200,18 @@
     out.appendChild(plan(result, data));
     var foot = el("div", "wl-foot");
     foot.appendChild(chip(voice ? "Riascolta" : "Ascolta con la voce di Jarvis", function () { setVoice(true); speak(clipsFor(result)); }));
-    foot.appendChild(chip("Cambia risposta", function () { panel.stop(); out.hidden = true; ask.hidden = false; hint.hidden = true; input.value = ""; focus(ask.querySelector("h2")); }));
-    out.appendChild(foot);
+    foot.appendChild(chip("Cambia risposta", function () { panel.stop(); setVoice(false); out.hidden = true; ask.hidden = false;
+      var back = $(".wl-back"); if (back) back.hidden = true;
+      if (titleEl) { titleEl.innerHTML = titleHtml; titleEl.classList.remove("chosen-role"); }
+      if (officina) officina.reset();
+      gate.hidden = false; last = null;
+      if (stageRole) stageRole.textContent = "Il tuo prossimo lavoro, insieme.";
+      if (stageHint) stageHint.textContent = "Scegli il tuo mestiere. Guarda cosa potresti delegare.";
+      if (stageAsk) stageAsk.textContent = "«JARVIS, prepara il verbale della riunione.»";
+      if (stageResult) stageResult.textContent = "Decisioni, cose da fare e una bozza dell’email di follow-up.";
+      hint.hidden = true; input.value = ""; focus(ask.querySelector("h2")); }));
+    var anchor = works || out.querySelector(".wl-lines");
+    out.insertBefore(foot, anchor ? anchor.nextSibling : null);
     out.appendChild(extra());
   }
 
@@ -173,7 +233,6 @@
     var why = result.tipo === "mestiere" ? data.motivo
       : which ? "Per un'attività principale, o per te, basta Pro: 1 progetto, la squadra di 9 persone e 3 caselle email. Se poi segui più clienti, passi a Max pagando solo la differenza."
       : "Pro per un'attività principale; Max se segui più clienti, sviluppi software o fai campagne.";
-    card.appendChild(el("p", null, why));
     card.appendChild(el("p", "wl-privacy", "I tuoi documenti restano sul tuo computer, ed email, post e pagamenti aspettano il tuo ok."));
     var actions = el("div", "actions");
     var trial = el("a", "button", "Chiedi la prova gratuita di 14 giorni");
@@ -183,11 +242,15 @@
     if (result.tipo === "mestiere") { var page = el("a", "button ghost", "La pagina di Jarvis " + data.nome); page.href = "per/" + data.id + ".html"; actions.appendChild(page); }
     else { var how = el("a", "button ghost", "Come diventa il tuo esperto"); how.href = "per/index.html#il-tuo"; actions.appendChild(how); }
     card.appendChild(actions);
-    card.appendChild(el("p", "fine", "La prova è il piano Max completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate."));
+    var reasons = el("details", "wl-why");
+    reasons.appendChild(el("summary", null, which ? "Perché " + (which === "max" ? "Max" : "Pro") + ", e come funziona la prova" : "Quale scegliere, e come funziona la prova"));
+    reasons.appendChild(el("p", null, why));
+    reasons.appendChild(el("p", null, "La prova è il piano Max completo, con i tuoi abbonamenti. Alla fine scegli Pro o Max e ritrovi i tuoi dati; con Pro le funzioni Max restano visibili ma bloccate."));
+    card.appendChild(reasons);
     if (data && data.pagine && data.pagine.length) {
       var near = el("p", "fine"); near.appendChild(document.createTextNode("Mestieri vicini, già pronti: "));
       data.pagine.forEach(function (id, i) { var a = el("a", null, roleById[id] ? roleById[id].chip : id); a.href = "per/" + id + ".html"; if (i) near.appendChild(document.createTextNode(", ")); near.appendChild(a); });
-      card.appendChild(near);
+      reasons.appendChild(near);
     }
     return card;
   }
@@ -222,14 +285,14 @@
   // ---- Entering ----
   function start(withVoice) {
     setVoice(withVoice);
-    gate.hidden = true; ask.hidden = false;
+    gate.hidden = false;
+    if (out.hidden) ask.hidden = false;
     var hero = box.closest(".hero"); if (hero) hero.classList.add("wl-on");
     intro.innerHTML = "";
     if (!withVoice) clipText("saluto").forEach(function (s) { intro.appendChild(el("p", null, s)); });
     intro.hidden = withVoice;
-    focus(ask.querySelector("h2"));
-    into(box);
-    if (withVoice) panel.say(["saluto"]);
+    if (withVoice) { if (last) speak(clipsFor(last)); else speak(["saluto"]); }
+    else panel.stop();
   }
   box.querySelector("[data-wl-voce]").addEventListener("click", function () { start(true); });
   box.querySelector("[data-wl-leggi]").addEventListener("click", function () { start(false); });
@@ -242,9 +305,13 @@
     // Back again: the answer of last time, silent until a click.
     voice = false;
     gate.hidden = true; ask.hidden = true; out.hidden = false;
+    last = stored.r;
     box.closest(".hero").classList.add("wl-on");
     var welcome = $(".wl-back"); if (welcome) welcome.hidden = false;
     render(stored.r);
     personalise(stored.r);
-  } else gate.hidden = false;
+  } else { gate.hidden = false; ask.hidden = false; }
+  // The useful choice is visible on arrival; no audio/text gate before the visitor can explore.
+  JarvisVoce.prices();
+  document.querySelectorAll("[data-prova-home]").forEach(function (link) { JarvisVoce.prova(link, ""); });
 })();

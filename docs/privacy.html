@@ -6,30 +6,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy · Jarvis</title>
 <meta name="description" content="Come Jarvis tratta i dati: cosa resta sul computer, cosa esce e verso chi, backup, conservazione e diritti.">
-<meta name="theme-color" content="#04070c">
+<meta name="theme-color" content="#060a10">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Sans+Condensed:wght@500;600&amp;display=swap">
-<link rel="stylesheet" href="site.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=20261101b">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="legal-page">
+<a class="skip" href="#contenuto">Vai al contenuto</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="index.html" aria-label="Jarvis, torna al sito"><img src="assets/favicon.png" alt="" width="26" height="26">JARVIS</a>
-    <nav aria-label="Sezioni">
-      <a href="index.html#esempi">Esempi</a>
-      <a href="index.html#piani">Piani</a>
-      <a href="index.html#licenza">Licenza</a>
-      <a href="index.html#domande">Domande</a>
-    </nav>
-    <a class="button small" href="index.html#scarica">Scarica</a>
+    <a class="brand" href="index.html" aria-label="Jarvis, torna al sito"><img src="assets/favicon.png" alt="" width="24" height="24"><span>JARVIS</span></a>
+    <nav class="nav-main" aria-label="Sezioni"><a href="per/index.html">Mestieri</a><a href="index.html#piani">Prezzi</a><a href="dettagli.html#domande">Domande</a><a href="dettagli.html">Come funziona</a></nav>
+    <a class="button small" href="index.html#scarica">Prova gratis</a>
+    <details class="menu"><summary>Menu</summary><nav class="nav-menu" aria-label="Sezioni (menu)"><a href="index.html">Home</a><a href="per/index.html">Tutti i mestieri</a><a href="index.html#piani">Prezzi</a><a href="index.html#scarica">Prova e download</a><a href="dettagli.html">Come funziona, in dettaglio</a><a href="aiuto.html">Aiuto</a></nav></details>
   </div>
 </header>
 
-<main class="legal">
+<main id="contenuto" class="legal">
   <div class="wrap narrow">
-    <p class="back"><a href="index.html#licenza">Torna al sito</a></p>
+    <p class="back"><a href="index.html#piani">Torna al sito</a></p>
     <h1>Informativa sulla privacy</h1>
     <p class="lead-legal">Quali dati usa Jarvis, dove vanno e per quanto tempo restano.</p>
 
@@ -92,12 +91,21 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap foot-row">
-    <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
-    <span>© 2026 Il vero Jarvis · Tutti i diritti riservati</span>
-    <a href="privacy.html">Privacy</a>
-    <a href="https://github.com/redguitars97/jarvis-releases/releases" target="_blank" rel="noopener">Note di rilascio</a>
+  <div class="wrap">
+    <div class="foot-row">
+      <span class="brand small"><img src="assets/favicon.png" alt="" width="20" height="20">JARVIS</span>
+      <a href="index.html">Home</a>
+      <a href="per/index.html">Mestieri</a>
+      <a href="dettagli.html">Come funziona</a>
+      <a href="aiuto.html">Aiuto</a>
+      <a href="condizioni.html">Condizioni di licenza</a>
+      <a href="privacy.html">Privacy</a>
+      <span class="social" id="social" hidden></span>
+    </div>
+    <p class="foot-copy">© 2026 Il vero Jarvis · Tutti i diritti riservati</p>
   </div>
 </footer>
+<script src="config.js"></script>
+<script src="site.js?v=20261101b" defer></script>
 </body>
 </html>

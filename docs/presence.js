@@ -1,6 +1,6 @@
 // The animated presence of Jarvis, the same engine as the app (reactor.js, generated from the app's source).
-// The hero plays a short story on a loop (ready, listens, works, answers, asks for your ok); the "Come lavora"
-// section lets the visitor pick a state. The voice is simulated. Paused when off screen or the tab is hidden; one
+// The main stage follows real audio playback and its measured amplitude when available; the "Come lavora"
+// section lets the visitor pick a simulated state. Paused when off screen or the tab is hidden; one
 // still frame with reduced motion. The second canvas starts only when its section comes near.
 (function () {
   if (!window.JarvisReactor) return;
@@ -28,7 +28,9 @@
     size(); if (window.ResizeObserver) new ResizeObserver(function () { size(); if (reduced) draw(); }).observe(canvas);
     if (window.IntersectionObserver) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(canvas);
     function draw() { engine.draw(ctx, canvas.width, canvas.height, t, false); }
+    var level = null;
     var api = {
+      level: function (read) { level = read; },
       set: function (state) { engine.setMood(MOODS[state]); if (reduced) { engine.settle(); for (var i = 0; i < 60; i++) { t += 1 / 30; engine.step(1 / 30, t, { amp: 0.6, mic: 0.5 }); } draw(); } },
     };
     if (!reduced) requestAnimationFrame(function frame(now) {
@@ -37,34 +39,47 @@
       if (now - last < 1000 / 30 - 3) return;
       var dt = last ? Math.min(0.1, (now - last) / 1000) : 1 / 30; last = now; t += dt;
       if (onTick) onTick(dt);
-      engine.step(dt, t, { amp: voice(t, 0), mic: voice(t * 0.93, 5.3) });
+      engine.step(dt, t, { amp: level ? level() : voice(t, 0), mic: level ? 0 : voice(t * 0.93, 5.3) });
       draw();
     });
     return api;
   }
+  // Another stage on the page (the Officina): the same engine, driven by state, started by the caller.
+  window.JarvisStage = function (canvas) { var stage = mount(canvas); stage.set("idle"); return stage; };
 
-  // Hero: the story on a loop.
+  // The main stage follows actual playback. The state explorer below remains an explicitly simulated demo.
   var heroCanvas = document.getElementById("hero-presence"), caption = document.getElementById("hero-caption");
   if (heroCanvas) {
-    document.querySelector(".presence-stage").classList.add("live");
-    var story = [["idle", "Pronto", 3], ["listen", "Ti ascolto…", 3.5], ["think", "Ci lavoro: piano, ricerca, documenti", 5],
-      ["speak", "Ti rispondo", 4], ["wait", "Aspetto il tuo ok", 4.5]], step = 0, elapsed = 0;
-    var speaking = false;
-    var hero = mount(heroCanvas, function (dt) {
-      if (speaking) return;
-      elapsed += dt;
-      if (elapsed > story[step][2]) { elapsed = 0; step = (step + 1) % story.length; hero.set(story[step][0]); caption.textContent = story[step][1]; caption.dataset.state = story[step][0]; }
+    var figure = heroCanvas.closest(".presence-stage"), speaking = false;
+    figure.classList.add("live");
+    var hero = mount(heroCanvas), context = null, analyser = null, samples = null, source = null;
+    hero.set("idle");
+    hero.level(function () {
+      if (!speaking || !analyser) return 0;
+      analyser.getByteTimeDomainData(samples);
+      var sum = 0;
+      for (var i = 0; i < samples.length; i++) { var n = (samples[i] - 128) / 128; sum += n * n; }
+      return Math.min(1, Math.sqrt(sum / samples.length) * 4);
     });
-    hero.set(reduced ? "think" : "idle");
-    if (reduced) caption.textContent = story[2][1];
-    // «Jarvis parlante» (parlante.js): while a spoken explanation plays, the hero speaks; then the story resumes.
     window.JarvisPresence = {
+      audio: function (audio) {
+        var AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        try {
+          if (!context) { context = new AudioContext(); analyser = context.createAnalyser(); analyser.fftSize = 256; samples = new Uint8Array(analyser.fftSize); }
+          if (source) source.disconnect();
+          source = context.createMediaElementSource(audio);
+          source.connect(context.destination); source.connect(analyser);
+          if (context.state === "suspended") context.resume().catch(function () { /* captions remain available */ });
+        } catch (e) { analyser = null; /* audio works without a reactive waveform */ }
+      },
+      // A state asked by the page (the Officina on a trade page: «Lavora», «Aspetta il tuo ok»), never over the voice.
+      mood: function (state) { if (!speaking) hero.set(state); },
       speak: function (on, label) {
-        if (!on && !speaking) return;
-        speaking = on;
-        var state = on ? "speak" : (reduced ? "think" : story[step][0]);
-        hero.set(state); caption.dataset.state = state;
-        caption.textContent = on ? (label || "Ti parlo") : (reduced ? story[2][1] : story[step][1]);
+        speaking = on; hero.set(on ? "speak" : "idle");
+        figure.classList.toggle("is-speaking", on);
+        caption.dataset.state = on ? "speak" : "idle";
+        caption.textContent = on ? (label || "JARVIS ti parla") : "Dimostrazione in pausa";
       },
     };
   }
