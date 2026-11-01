@@ -119,8 +119,6 @@ restano tuoi: non firma, non deposita, non trasmette, non rappresenta e non fa d
 - **Si collega ai tuoi strumenti:** HubSpot, Pipedrive e Odoo (letture libere, scritture con il tuo ok), e Make, n8n e
   Zapier con un webhook in uscita, firmato. Da internet verso Jarvis non arriva nulla.
 
-Le novità di ogni versione sono sul sito, in [Novità](https://redguitars97.github.io/jarvis-releases/novita.html).
-
 ## Cosa sa fare
 
 | | |
@@ -256,7 +254,8 @@ dove ne segui la risoluzione. Le issue sono pubbliche: rileggila prima di inviar
 
 **macOS 13 o successivo (Apple Silicon e Intel).** Scarica il file `.dmg` per il tuo Mac (`arm64` per Apple Silicon), aprilo e trascina Jarvis in Applicazioni.
 
-**Windows 10 e 11.** Scarica il file `.exe` e aprilo. Se Windows mostra «PC protetto», scegli *Ulteriori informazioni →
+**Windows 10 e 11 (beta).** Scarica il file `.exe` e aprilo. La versione per Windows è in beta e l'installer non è ancora
+firmato: la prima volta Windows SmartScreen mostra «PC protetto», e basta scegliere *Ulteriori informazioni →
 Esegui comunque*. Lo chiede una sola volta.
 
 Al primo avvio Jarvis trova da solo quello che c'è già: i tuoi abbonamenti, i modelli locali, il tuo nome, le cartelle
