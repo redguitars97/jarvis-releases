@@ -174,7 +174,7 @@ comportamento è quello che i controlli automatici dell'app verificano a ogni ve
 <details>
 <summary><b>Procedure di lavoro incluse e mestieri</b></summary>
 
-**Procedure di lavoro incluse.** Jarvis include 55 procedure di lavoro per sviluppo, ricerca, design, marketing e
+**Procedure di lavoro incluse.** Jarvis include 56 procedure di lavoro per sviluppo, ricerca, design, marketing e
 revisione, e per mestieri e piccole attività (commercialisti, avvocati, artigiani ed edilizia, ristorazione, B&B):
 metodi e criteri di consegna, come versioni da verificare, fonti da citare e risultati da controllare. Claude Code e Codex le ricevono come skill native; con le altre connessioni Jarvis le carica con un suo strumento. Sono una guida per il
 modello, non la garanzia che le segua sempre. Competenze di terzi si aggiungono da un link: Jarvis lascia fuori script
@@ -197,7 +197,8 @@ rappresenta e non fa diagnosi.
 <summary><b>Cosa sa fare, in breve</b></summary>
 
 - **Voce.** «Ciao Jarvis», e chiedi; risponde con Giovanni, una voce italiana generata sul computer, senza limiti d'uso.
-  Detta in qualsiasi app con una scorciatoia.
+  Sul Mac con macOS 26 capisce con il riconoscimento della voce di Apple, sul computer e in un istante; altrove con
+  Whisper. Detta in qualsiasi app con una scorciatoia.
 - **Documenti e consegne.** Preventivi in PDF e Word, Excel, presentazioni, grafiche e loghi vettoriali, siti con
   anteprima, link e QR temporanei. Un revisore li ricontrolla, con un modello diverso dall'autore quando ne hai
   collegati più d'uno (altrimenti ti dice che la revisione non è indipendente), al massimo due giri.
@@ -237,6 +238,10 @@ configura da solo. Poi i tuoi abbonamenti, usati fino in fondo; le chiavi API so
 o mancano, con un tetto di spesa al giorno e al mese e una stima prudente prima di ogni chiamata. Si collegano anche
 Grok, Mistral, DeepSeek, Groq e OpenRouter.
 
+**Claude Code e Codex anche senza abbonamento.** Se sono installati, Jarvis li usa anche con i modelli gratuiti per i
+lavori sui file: quelli online di OmniRoute, oppure il modello di Ollama sul tuo computer (con almeno 16 GB di memoria),
+l'unica strada per i progetti riservati. Il tuo abbonamento non passa mai da OmniRoute.
+
 **Gemini.** Con un account Google personale: la chiave di Google AI Studio, che si crea gratis (alcuni modelli gratuiti
 entro i limiti di Google, gli altri a consumo). Dal 18 giugno 2026 Google non serve più Gemini CLI agli account
 personali e non consente di usare Antigravity da un'app come Jarvis con un piano personale. Con una licenza aziendale
@@ -270,7 +275,7 @@ decidere ogni passo.
 <summary><b>Telegram: progetti, squadra e messaggi in attesa</b></summary>
 
 Un gruppo con Argomenti: la chat con Jarvis e un argomento per ogni progetto; un argomento nuovo diventa un progetto
-nell'app. Approvazioni con un tocco, riepilogo del mattino, promemoria; ai vocali risponde anche a voce. `/squadra`
+nell'app, e rinominarlo o eliminarlo aggiorna il progetto (per eliminarlo ti chiede l'ok), e viceversa. Approvazioni con un tocco, riepilogo del mattino, promemoria; ai vocali risponde anche a voce. `/squadra`
 mostra chi c'è nel progetto, `/coda` le richieste e le consegne aperte.
 
 Per rispondere il computer deve essere acceso e Jarvis avviato: non è un servizio cloud attivo a computer spento.
@@ -354,7 +359,7 @@ a installare con il tuo ok:
 
 | Funzione | Cosa serve | Chi lo installa |
 | --- | --- | --- |
-| Voce, ascolto, chat, documenti, grafiche vettoriali | Niente: voce e ascolto sono già nell'installer | Jarvis, da solo |
+| Voce, ascolto, chat, documenti, grafiche vettoriali | Niente: voce e ascolto sono già nell'installer (su macOS 26, se manca, il modello italiano di Apple) | Jarvis, da solo (il modello di Apple con un clic) |
 | Modelli gratuiti sul computer / online | Ollama / OmniRoute, internet per scaricarli, 3–8 GB di spazio per un modello | Jarvis, con un clic |
 | Abbonamento Claude | Claude Code (programma ufficiale di Anthropic) e il tuo accesso | Jarvis, con il programma ufficiale |
 | Abbonamento ChatGPT | Codex (programma ufficiale di OpenAI) e il tuo accesso | Jarvis, con un clic, dal pacchetto ufficiale di OpenAI (circa 170 MB, controllato byte per byte) |
