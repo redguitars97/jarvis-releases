@@ -123,8 +123,8 @@ Tutto il resto, dalla scelta del modello alla squadra, è su
 
 Claude Cowork, Claude Code e Codex sono ottimi assistenti di un solo fornitore. Jarvis non li sostituisce: **li usa,
 insieme**, e ci mette sopra la voce in italiano, una squadra di otto persone che conosce i tuoi clienti, un controllore
-diverso dall'autore, il lavoro consegnato finito e il tuo ok su ciò che esce. Si paga una volta: prima strumenti
-gratuiti, poi gli abbonamenti che hai già, le API solo con un tetto di spesa. Se scrivi codice tutto il giorno, Claude
+diverso dall'autore, il lavoro consegnato finito e il tuo ok su ciò che esce. Si paga una volta: per il lavoro usa
+gli abbonamenti che hai già, per le incombenze e quando i limiti finiscono gli strumenti gratuiti, le API solo con un tetto di spesa. Se scrivi codice tutto il giorno, Claude
 Code e Codex restano eccellenti, e Jarvis li usa come motori. Jarvis lavora sul tuo computer: continua a schermo
 bloccato e, se lo metti in standby, ti avvisa su Telegram e riprende al risveglio.
 
