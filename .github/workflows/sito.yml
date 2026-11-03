@@ -10,6 +10,9 @@ on:
     paths: ["docs/**", "README.md", "CONDIZIONI.md", "PRIVACY.md", ".github/workflows/sito.yml"]
   pull_request:
     paths: ["docs/**", "README.md", "CONDIZIONI.md", "PRIVACY.md"]
+  # Ogni lunedì: un sito citato può sparire senza che il sito cambi.
+  schedule:
+    - cron: "17 6 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -38,16 +41,16 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # Instagram and TikTok refuse automatic checkers (429/403) even when the profile exists: left out, like the
-          # site itself and the download links. The ministries of enterprise and transport (mimit, mise, mit) do not
-          # answer GitHub's runners (timeouts from outside Italy) while they open from Italy: left out too; the app's
-          # tests/app-links.test.ts reads the same pages as Jarvis does.
-          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" --exclude "instagram\.com" --exclude "tiktok\.com" --exclude "(mimit|mise|mit)\.gov\.it" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
+          # site itself and the download links. The ministries of enterprise and transport (mimit, mise, mit) and Consob
+          # do not answer GitHub's runners (timeouts or 503 from outside Italy) while they open from Italy: left out too,
+          # and checked from here with tools/controlla-link.mjs.
+          args: --no-progress --exclude-path docs/reactor.js --exclude "github.io/jarvis-releases" --exclude "releases/latest/download" --exclude "instagram\.com" --exclude "tiktok\.com" --exclude "(mimit|mise|mit)\.gov\.it" --exclude "consob\.it" README.md CONDIZIONI.md PRIVACY.md "docs/**/*.html"
           fail: true
 
   pubblica:
     name: Pubblica su GitHub Pages
     needs: controllo
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.event_name != 'schedule'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
