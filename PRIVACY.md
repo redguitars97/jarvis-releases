@@ -18,6 +18,8 @@ Questa informativa spiega quali dati usa Jarvis, dove vanno e per quanto tempo r
 | Cosa | Dove va | Quando |
 | --- | --- | --- |
 | Il pezzo di conversazione o documento che serve a rispondere | Il modello online che usi (Claude, ChatGPT, OmniRoute e i fornitori gratuiti che unisce, chiavi API) | Solo se usi un modello online; i progetti «riservati» usano solo modelli sul computer |
+| Il testo della finestra di un'app, quando gli chiedi di leggerla o di agire lì | Il modello che risponde (lo stesso della prima riga) | Solo dentro quella richiesta; i progetti «riservati» usano solo modelli sul computer. Password e gestori di password non vengono mai letti |
+| L'indirizzo della pagina che gli chiedi di controllare | Il sito di quella pagina | A ogni controllo, finché non lo togli. Il contenuto resta sul computer: nessun modello lo legge |
 | Messaggi, vocali, foto e posizione | Telegram | Solo se colleghi Telegram e scrivi a Jarvis da lì |
 | Email, inviti, eventi | Il tuo servizio di posta e calendario | Solo quando approvi l'invio |
 | Codice, siti, campagne | GitHub, Netlify, Meta | Solo quando approvi la pubblicazione |
