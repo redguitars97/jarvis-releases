@@ -28,7 +28,7 @@
 **Cos'è.** Un'app per Mac e Windows. Gli parli («Ciao Jarvis») o gli scrivi, anche da Telegram: lavora sui tuoi
 progetti con il tuo abbonamento Claude o ChatGPT, oppure con modelli gratuiti, e ti consegna il lavoro finito.
 
-**Per chi.** Professionisti, freelance e piccole attività di ogni nicchia. 57 mestieri sono già pronti, ognuno con la
+**Per chi.** Professionisti, freelance e piccole attività di ogni nicchia. 58 mestieri sono già pronti, ognuno con la
 sua pagina sul [sito](https://redguitars97.github.io/jarvis-releases/per/); per un lavoro che non è in elenco, Jarvis
 studia il mestiere sulle fonti autorevoli e lo diventa.
 

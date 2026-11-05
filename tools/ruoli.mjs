@@ -519,10 +519,17 @@ const PAGINE = {
       ["«Scrivi le email ai fornitori per i preventivi»", "Le email pronte, che partono solo con il tuo ok."],
       ["«Prepara il piano B per la pioggia»", "Le alternative, con i costi e chi avvisare."],
     ] },
+  "nutrizionista": { gruppo: "professionisti", titolo: "Nutrizionista",
+    perChi: "Per biologi nutrizionisti e studi di nutrizione che preparano piani alimentari e seguono i pazienti nel tempo.",
+    fa: [
+      ["«Prepara la bozza del piano settimanale»", "Una proposta con pasti, quantità e sostituzioni, dalle abitudini e dai vincoli che hai confermato."],
+      ["«Riepiloga il diario alimentare»", "Abitudini, preferenze e punti da chiarire alla prossima visita."],
+      ["«Raccogli i controlli prima della consegna»", "Una checklist di vincoli, allergeni e valori da verificare prima di validare il piano."],
+    ] },
   "personal-trainer": { gruppo: "freelance", titolo: "Personal trainer e coach",
     perChi: "Per chi allena o segue le persone: schede, pacchetti, nuovi clienti e social.",
     fa: [
-      ["«Prepara la scheda di allenamento per un principiante»", "La scheda con esercizi, serie e progressione, da adattare tu alla persona."],
+      ["«Prepara la scheda di allenamento per un principiante»", "Una scheda da rivedere con esercizi, serie, recuperi, criteri di progressione e un registro delle sedute."],
       ["«Scrivi il pacchetto di lezioni con i prezzi»", "I pacchetti chiari, pronti da stampare e da pubblicare."],
       ["«Prepara il questionario d'ingresso»", "Il questionario con le domande e il consenso per i dati."],
       ["«Scrivi i post per presentare il corso»", "I testi e le grafiche, pronti da pubblicare quando scegli tu, con il tuo ok."],
@@ -647,6 +654,7 @@ const VENDITA = {
   "founder-ceo": ["Fondatore, CEO", "Pitch, piano dei 12 mesi e aggiornamenti ai soci: la parte scritta del guidare un'azienda."],
   "fotografo-videomaker": ["Fotografo, videomaker", "Preventivi, liberatorie e consegne delle gallerie: meno ufficio, più tempo dietro l'obiettivo."],
   "event-planner": ["Wedding ed event planner", "Budget, fornitori e scaletta minuto per minuto, con il piano B già pronto."],
+  "nutrizionista": ["Nutrizionista", "Dalle abitudini e dai vincoli a una bozza di piano alimentare da validare."],
   "personal-trainer": ["Personal trainer, coach", "Schede, pacchetti e post per i corsi: più tempo per allenare."],
   "content-creator": ["Content creator", "Media kit, proposte ai brand e piano dei video: i numeri veri, le collaborazioni chiare."],
   "ugc-creator": ["UGC creator", "Listino, script e diritti d'uso: ogni video per i brand venduto con le condizioni scritte."],
@@ -833,7 +841,7 @@ const CREDITO = `Voce «Giovanni» di Pocket TTS (Kyutai), <a href="https://crea
 // The questions a trade asks before trying, with the honest answers (as the home and the app say them).
 function dubbi(r) {
   const piano = PIANO[r.piano];
-  const clienti = r.id === "studio-medico" ? "I dati dei pazienti escono dal computer?" : "I dati dei miei clienti escono dal computer?";
+  const clienti = ["studio-medico", "nutrizionista"].includes(r.id) ? "I dati dei pazienti escono dal computer?" : "I dati dei miei clienti escono dal computer?";
   const privacy = r.privacy ?? "Per i lavori più delicati usa un progetto «riservato»: lavora solo con i modelli sul tuo computer.";
   const atti = r.reserved.map((item) => item.act);
   const riservati = atti.length ? ` Gli atti riservati restano tuoi: mai ${esc(atti.join("; mai "))}. Se glielo chiedi, ti dice chi li compie.` : "";
